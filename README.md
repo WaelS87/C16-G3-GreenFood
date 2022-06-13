@@ -2,4 +2,4 @@
 ## integrantes :
 - Germán Gutiérrez
 - Damián Ezequiel González, 20 años, San Miguel-Bs.As.
-- Wael Fakhrji
+- Wael Fakhrji , 35 años, Lanus-Bs.As
