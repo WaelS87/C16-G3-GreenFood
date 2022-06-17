@@ -9,4 +9,4 @@
 
 ## listado de referentes :
 - (www.thehealthfoodstore.com) : elegi esta pagina porque tiene el parte del header es ordenado muy bien con todo los elementos que buscamos(login y registrarte y carrito de compra).
--
+- (www.finlandiaHealthStore.com) : este pagina esta armada muy bien en una manera muy sencilla (ordenar los productos)
