@@ -10,8 +10,8 @@
 ## listado de referentes :
 - (www.thehealthfoodstore.com) : Elegimos esta pagina porque tiene su parte del header, el cuál es ordenado con todos los elementos que buscamos (login, registrarte y carrito de compra).
 - (www.finlandiaHealthStore.com) : Esta página esta armada muy bien en una manera muy sencilla (ordenar los productos)
-- (https://www.vitacost.com/) :
-- (https://www.healthysupplies.co.uk/) :
+- (https://www.vitacost.com/) : En esta pagina tiene en el body unas imagenes de productos en circulos,  que ademas podriamos utilizarlo como carrusel.
+- (https://www.healthysupplies.co.uk/) : Esta pagina tiene un footer muy bien estructurado y tambien tomamos el carrusel debajo del header.
 - (https://www.vitacost.com/) :
 - (https://www.somosintegra.com.ar/) :
 - (https://fitmarket.com.ar/) :
