@@ -12,6 +12,5 @@
 - (www.finlandiaHealthStore.com) : Esta página esta armada muy bien en una manera muy sencilla (ordenar los productos)
 - (https://www.vitacost.com/) : En esta pagina tiene en el body unas imagenes de productos en circulos,  que ademas podriamos utilizarlo como carrusel.
 - (https://www.healthysupplies.co.uk/) : Esta pagina tiene un footer muy bien estructurado y tambien tomamos el carrusel debajo del header.
-- (https://www.vitacost.com/) :
-- (https://www.somosintegra.com.ar/) :
-- (https://fitmarket.com.ar/) :
+- (https://www.somosintegra.com.ar/) : Orientamos el Home con referencia a esta página.
+- (https://fitmarket.com.ar/) : Otro ejemplo de productos y orientación del proyecto.
