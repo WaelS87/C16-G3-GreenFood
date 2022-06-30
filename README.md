@@ -1,8 +1,8 @@
 # C16-G3-GreenFood
 ## Integrantes :
-- Germán Gutiérrez, 45 años, Salta Capital
+- Germán Gutiérrez, 45 años, Salta-Capital
 - Damián Ezequiel González, 20 años, San Miguel-Bs.As.
-- Wael Fakhrji , 35 años, Lanus-Bs.As
+- Wael Fakhrji, 35 años, Lanus-Bs.As.
 
 ## Temática y público objetivo :
 - Nuestro sitio web es una página de venta de comida saludable, dietética y productos naturales. Como público objetivo nos interesaría enfocarnos en personas que busquen suplementos, comidas, botanas y/o snacks que aporten una mayor nutrición y salud a sus vidas.
