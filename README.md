@@ -4,10 +4,10 @@
 - Damián Ezequiel González, 20 años, San Miguel-Bs.As.
 - Wael Fakhrji , 35 años, Lanus-Bs.As
 
-## Temática del sitio y público objetivo :
-- Nuestro sitio web es una página de venta de comida saludable, Dietética y productos naturales.
+## Temática y público objetivo :
+- Nuestro sitio web es una página de venta de comida saludable, dietética y productos naturales. Como público objetivo nos interesaría enfocarnos en personas que busquen suplementos, comidas, botanas y/o snacks que aporten una mayor nutrición y salud a sus vidas.
 
-## listado de referentes :
+## Referentes :
 - (www.thehealthfoodstore.com) : Elegimos esta pagina porque tiene su parte del header, el cuál es ordenado con todos los elementos que buscamos (login, registrarte y carrito de compra).
 - (www.finlandiaHealthStore.com) : Esta página esta armada muy bien en una manera muy sencilla (ordenar los productos)
 - (https://www.vitacost.com/) : En esta pagina tiene en el body unas imagenes de productos en circulos,  que ademas podriamos utilizarlo como carrusel.
