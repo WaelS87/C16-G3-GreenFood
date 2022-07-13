@@ -14,3 +14,5 @@
 - (https://www.healthysupplies.co.uk/) : Esta pagina tiene un footer muy bien estructurado y tambien tomamos el carrusel debajo del header.
 - (https://www.somosintegra.com.ar/) : Orientamos el Home con referencia a esta página.
 - (https://fitmarket.com.ar/) : Otro ejemplo de productos y orientación del proyecto.
+## link del la Rama develop :
+https://github.com/WaelS87/C16-G3-GreenFood.git
