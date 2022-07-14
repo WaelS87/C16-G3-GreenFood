@@ -2,7 +2,7 @@
 
 Paleta 1:
 
-::root{
+:root{
     --color-negro:#000000;
     --color-verdeOscuro:#1A4D2E;
     --color-amarillo:#FF9F29;
@@ -11,7 +11,7 @@ Paleta 1:
 
 Paleta 2:
 
-::root{
+:root{
     --color-negro:#191A19;
     --color-verdeOscuro:#1E5128;
     --color-verde:#4E9F3D;
@@ -20,7 +20,7 @@ Paleta 2:
 
 Paleta 3:
 
-::root{
+:root{
     --color-blanco:#F7F7F7;
     --color-naranja:#FFB72B;
     --color-amarillo:#FFE61B;
@@ -29,7 +29,7 @@ Paleta 3:
 
 Paleta 4:
 
-::root{
+:root{
     --color-azul:#22577A;
     --color-celeste:#38A3A5;
     --color-verdeAgua:#57CC99;
@@ -38,7 +38,7 @@ Paleta 4:
 
 Paleta 5:
 
-::root{
+:root{
     --color-blanco:#FAF1E6;
     --color-naranja:#FFC074;
     --color-verde:#B6C867;
