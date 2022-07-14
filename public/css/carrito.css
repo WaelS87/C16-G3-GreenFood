@@ -1,0 +1,48 @@
+body main section article.product{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+body main section article div {
+    display: flex;
+   
+   justify-content:end;
+    padding:5px;
+}
+
+body main section article button{
+    width:50%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration-line:underline;
+    margin-bottom: 15px;
+}
+body main section article.product div{
+
+   
+   padding:10px;
+   justify-content: space-between;
+
+}
+body main section article h5{
+  
+    display: flex;
+    align-self: flex-end;
+    height:30%;
+    justify-items: end;
+    justify-content:space-between ;
+ }
+ .product  i{
+    font-size: 12px;
+    height: fit-content;
+ }
+    
+
+   
+    
+
+   
+    
