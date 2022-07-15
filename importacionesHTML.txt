@@ -1,0 +1,87 @@
+-Colores- 
+
+Paleta 1:
+
+:root{
+    --color-negro:#000000;
+    --color-verdeOscuro:#1A4D2E;
+    --color-amarillo:#FF9F29;
+    --color-blanco:#FAF3E3;
+}
+
+Paleta 2:
+
+:root{
+    --color-negro:#191A19;
+    --color-verdeOscuro:#1E5128;
+    --color-verde:#4E9F3D;
+    --color-verdeClaro:#D8E9A8;
+}
+
+Paleta 3:
+
+:root{
+    --color-blanco:#F7F7F7;
+    --color-naranja:#FFB72B;
+    --color-amarillo:#FFE61B;
+    --color-verdeClaro:#B5FE83;
+}
+
+Paleta 4:
+
+:root{
+    --color-azul:#22577A;
+    --color-celeste:#38A3A5;
+    --color-verdeAgua:#57CC99;
+    --color-verde:#80ED99;
+}
+
+Paleta 5:
+
+:root{
+    --color-blanco:#FAF1E6;
+    --color-naranja:#FFC074;
+    --color-verde:#B6C867;
+    --color-verdeOscuro:#01937C;
+}
+
+------------------------------------
+====================================
+
+- Fuentes -
+
+- Work Sans:
+
+(.HTML)
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+(.CSS)
+
+    font-family: 'Work Sans', sans-serif;
+
+- Roboto:
+
+(.HTML)
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+(.CSS)
+
+    font-family: 'Roboto', sans-serif;
+
+
+- Alata:
+
+(.HTML)
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+(.CSS)
+
+    font-family: 'Alata', sans-serif;
