@@ -1,23 +1,17 @@
-body.carro{
-    font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
-}
-
 body main section article div {
     display: flex;
     justify-content:end;
     padding:5px;
-   gap: 4px;
-   margin-bottom: 15px;
+    gap: 4px;
+    margin:6px;
 }
 body main section article button{
     width:50%;
     height: 25px;
     display: flex;
     justify-content: space-between;
-    
-    
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-left: 5px;
     padding:2px 5px;
 }
 body main section article.product div{
@@ -29,61 +23,63 @@ body main section article.product div{
 body main section article div.price{
     display: flex;
     flex-direction: column-reverse;
-    justify-items: end;
-    text-align: center;
+    justify-items:left;
     border: none;
 }
-body main section article div.price h5{
-    border: 1px solid black;
-    padding: 2px 10px;
-    background-color: aquamarine;
-}
 body main section article div.price i{
-    color: red;
-    font-size: large;
+    color:rgb(111, 144, 233);
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+}
+body main section article div.price p{
+    display: flex;
+    justify-items: center;
+    border:1px solid black;
 }
 body main section article div button{
    justify-content: center;
    text-decoration: none;
-   color:blue;
+   color:white;
+   background-color:rgba(21, 59, 68, 1);
 }
 body main section article div button.fin{
-   width:200px;
    background-color: rgba(57, 174, 169, 1);
    color:black;
-   border-style: inset;
+   width:100%;
+   font-weight:bold;
 }
 body main section article div button.con{
-    width:200px;
-  
     border-color: white;
-    border-style: inset;
-   color:black
-
+    color:black;
+    width:100%;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight:bold;
 }
 body main section article div.total{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
- 
-    
 }
 body main section article div.total p{
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid black;
     color:white;
-    
 } 
 body main section article.calc{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border: 1px solid black;
+    border-radius: 25px;
+    margin:10px;
     background-color: rgba(21, 59, 68, 0.65);
 }
+main section article div.total--precio{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}    
 
  
 
