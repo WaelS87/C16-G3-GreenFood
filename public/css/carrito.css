@@ -4,6 +4,7 @@ body main section article div {
     padding:5px;
     gap: 4px;
     margin:6px;
+    font-weight: bold;
 }
 body main section article button{
     width:50%;
@@ -13,12 +14,19 @@ body main section article button{
     margin-bottom: 5px;
     margin-left: 5px;
     padding:2px 5px;
+    font-weight: bold;
 }
 body main section article.product div{
-   padding:10px;
-   justify-content: space-between;
-   gap:8px;
-   border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    justify-content:space-between;
+   
+    border: 1px solid black;
+  
+}
+body main section article.product div img{
+    width: 130px;
 }
 body main section article div.price{
     display: flex;
@@ -26,16 +34,21 @@ body main section article div.price{
     justify-items:left;
     border: none;
 }
+body main section article div.price button{
+    display: none;
+}
 body main section article div.price i{
     color:rgb(111, 144, 233);
     font-size: 150%;
     display: flex;
     justify-content: center;
+   
 }
-body main section article div.price p{
+body main section article div.price h4{
     display: flex;
-    justify-items: center;
-    border:1px solid black;
+    justify-content: center;
+    color: black;
+    padding:2px 5px;
 }
 body main section article div button{
    justify-content: center;
@@ -44,15 +57,14 @@ body main section article div button{
    background-color:rgba(21, 59, 68, 1);
 }
 body main section article div button.fin{
+    
    background-color: rgba(57, 174, 169, 1);
    color:black;
-   width:100%;
    font-weight:bold;
 }
 body main section article div button.con{
     border-color: white;
     color:black;
-    width:100%;
     background-color: rgba(255, 255, 255, 1);
     font-weight:bold;
 }
@@ -60,26 +72,159 @@ body main section article div.total{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 70%;
+
 }
 body main section article div.total p{
     display: flex;
     justify-content: center;
     color:white;
 } 
-body main section article.calc{
+body main section article div.total button{
+    display: flex;
+    
+    width:100%;
+}
+body main section article div.calc{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border: 1px solid black;
     border-radius: 25px;
-    margin:10px;
+    margin:15px;
     background-color: rgba(21, 59, 68, 0.65);
+    padding:10px;
+   
 }
 main section article div.total--precio{
     display: flex;
+    
     justify-content: space-between;
     border-bottom: 1px solid black;
-}    
+   
+}
+.cards__container img {
+    display: none;
+}
+.truck{
+    display:none;
+}
+
+
+/* Tablet */   
+@media(min-width: 768px){
+    body{
+        font-size: 24px;
+        font-family: 'Work Sans', sans-serif;
+        text-shadow: 0 0 2px black;
+        background-color: white;
+    }
+    body main section article.product div img{
+        width: 260px;
+    }
+    body main section article button{
+        display: flex;
+        justify-content: space-between;
+        width:30%;
+        height: 25px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        padding:2px 5px;
+        font-weight: bold;
+    }
+    body main section article div button.sumar, body main section article div button.cantidad {
+        display: none;
+    }
+    body main section article div.price button{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 200px;
+        height: 30px;
+    }
+    body main section article div.price i{
+        margin-bottom: 20px;
+    }
+    body main section article div.calc{
+        display: flex;
+        justify-content: center;
+        width:50%;
+        order:1;
+    }
+    body main section article.d{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .total--precio{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    body main section article div.price i{
+        font-size: 100%;
+    }
+    .cards__container img {
+        display: flex;
+        display:inline-block;
+        background-color: #fff;
+    }
+    div.cards__container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap ;
+        width: 44%;
+        align-content: space-around;
+    }
+    body main section article button.fin, body main section article button.con{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .truck{
+        display:block;
+        color:rgb(47, 115, 192);
+        font-size: 60px;
+        display:flex;
+    }
+}
+@media(min-width: 1024px){
+    body{
+        font-size: 32px;
+        font-family: 'Work Sans', sans-serif;
+        text-shadow: 0 0 2px black;
+        background-color: white;
+    }
+    body main section article.product div img{
+        width: 360px;
+
+    }
+    body main section article button{
+        display: flex;
+        justify-content: space-between;
+        width:36%;
+        height: 45px;
+        font-size: 28px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        padding:2px 5px;
+        font-weight: bold;
+
+    }
+    body main section article div button.cantidad, body main section article div button.sumar{
+        display: none;
+    }
+    body main section article div button.canti,  body main section article div button.suma{
+    display:flex;
+    width:300px;
+    height: fit-content;
+    }
+    body main section article div.price p{
+        width:300px;
+    }
+ 
+}
+
+  
 
  
 
