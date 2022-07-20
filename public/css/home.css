@@ -31,10 +31,12 @@ main{
 
 .home__productos__container{
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
-    margin: 2% 0;
+    padding: 5%;
+    margin: 5% 0;
     justify-content: center;
-    background-color: var(--color-blanco);
+    background-color: var(--color-verdeClaro);
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--color-negro);
 }
@@ -45,3 +47,107 @@ main{
     border-radius: 20px;
     background-color: var(--color-negro);
 }
+
+.producto__superior__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5% 0;
+}
+
+.producto__inferior__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5% 0;
+}
+
+.producto__izquierda{
+    width: 45%;
+}
+
+.producto__derecha{
+    width: 45%;
+}
+
+.producto{
+    color: var(--color-blanco);
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+    object-fit: fill;
+    border-radius: 10px;
+    text-align: right;
+    align-items: flex-end;
+    display: flex;
+}
+
+.p1{
+    background-image: url("/img/home/img\ \(2\).webp");
+}
+
+.p2{
+    background-image: url("/img/home/img\ \(4\).jpg");
+}
+
+.producto__precio{
+    width: 100%;
+    height: fit-content;
+    padding-right: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px ;
+}
+
+.producto__nombre{
+    color: var(--color-negro);
+    text-align: center;
+    margin: 5% 0 0;
+}
+
+.producto__linea{
+    border-right: 1px solid black;
+    height: 10vh;
+    max-width: 2px;
+    padding: 0;
+    margin: 5% 0;
+}
+
+.home__ayuda__container{
+    background-color: var(--color-blanco);
+    width: 100%;
+    margin: 5%;
+    border: 1px solid gray;
+    *border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--color-negro);
+    text-align: center;
+    padding: 10% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ayuda__linea{
+    border-top: 1px solid black;
+    width: 80%;
+    padding: 0;
+    margin: 10% 0;
+}
+
+.ayuda__items{
+    width: 50%;
+    margin: 2% 0 5%;
+}
+
+.ayuda__logo img{
+    border: 1px solid gray;
+    border-radius: 50%;
+    background-color: white;
+    width: 60%;
+}
+
+.ayuda__texto{
+    margin-top: 5%;
+}
+
