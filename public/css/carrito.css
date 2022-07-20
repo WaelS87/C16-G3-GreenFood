@@ -186,6 +186,15 @@ main section article div.total--precio{
         font-size: 60px;
         display:flex;
     }
+    div.cards{
+        justify-content: space-between;
+    }
+ 
+    .truck i{
+        font-size: xx-large;
+    
+    }
+ 
 }
 @media(min-width: 1024px){
     body{
@@ -221,7 +230,17 @@ main section article div.total--precio{
     body main section article div.price p{
         width:300px;
     }
- 
+    .cards__container{
+        display:flex;
+        flex-direction: column;
+    }
+    div.cards{
+        justify-content: space-between;
+        
+    }
+    .truck i{
+        font-size: xx-large;
+    }
 }
 
   
