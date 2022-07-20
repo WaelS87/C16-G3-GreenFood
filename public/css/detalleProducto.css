@@ -1,0 +1,65 @@
+.body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 14px;
+    margin: 20px 0 20px 20px;
+}
+
+.body__img {
+
+    margin: 10% 30%;
+    margin-bottom: 30px;
+
+}
+
+h3,
+h5,
+p {
+    text-align: center;
+    padding: 7px;
+}
+
+.body__agregar {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.body__cantidad,
+.body__carrito,
+.body__comprar,
+.body__consulta {
+    text-align: center;
+    padding: 7px;
+}
+
+.body__comprar__button {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: #D8E9A8;
+}
+
+.body__cantidad {
+    background-color: rgb(195, 185, 185);
+    border-radius: 10px;
+}
+
+.body__carrito__button {
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: #10328f;
+    color: white;
+    font-weight: bolder;
+}
