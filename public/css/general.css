@@ -7,8 +7,8 @@
     /* Paleta 2: */
     *--color-negro:#000000;
     *--color-verdeOscuro:#1A4D2E;
-    *--color-amarillo:#FF9F29;
-    *--color-blanco:#FAF3E3;
+    --color-amarillo:#FF9F29;
+    --color-blanco:#FAF3E3;
     /* Paleta 3: */
     *--color-blanco:#F7F7F7;
     *--color-naranja:#FFB72B;
