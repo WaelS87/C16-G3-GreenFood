@@ -7,12 +7,15 @@ body{
 
 /* Header */
 
+header{
+    display: block;
+}
+
 .greenbar__container{
     background-color: var(--color-verde);
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
-    height: 4vh;
 }
 
 .greenbar__container p {
@@ -28,7 +31,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 10vh;
+    padding: 2%;
 }
 
 .navbar__container i{
@@ -38,29 +41,30 @@ body{
 /* Colocar como boton */
 }
 
-.tittle__container{
+.header__tittle__container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.tittle{
+.header__tittle{
     display: flex;
 }
 
-.nav__word1{
+.white__word{
     width: fit-content;
     color: #fff;
 }
 
-.nav__word2{
+.green__word{
     width: fit-content;
     color: var(--color-verde);
 }
 
-.subtittle{
+.header__subtittle{
     width: fit-content;
     color: #fff;
+    font-size: 14px;
 }
 
 /* Footer */
@@ -146,6 +150,12 @@ Footer{
     font-weight: 400;
 }
 
+@media (min-width:768px){
+    
+    .greenbar__container{
+        display: flex;
+    }    
+}
 
 
 
