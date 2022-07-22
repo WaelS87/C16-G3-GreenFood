@@ -85,3 +85,101 @@ Paleta 5:
 (.CSS)
 
     font-family: 'Alata', sans-serif;
+
+------------------------------------
+
+--HEADER--
+
+    <Header>
+        <div class="greenbar__container">
+            <p>Bienvenido al mundo saludable</p>
+            <p>Envios gratis desde $6000</p>
+            <p>Ofertas todos los días</p>
+        </div>
+        <div class="navbar__container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="header__tittle__container">
+                <div class="header__tittle">
+                    <h1 class="white__word">Green</h1>
+                    <h1 class="green__word">Food</h1>
+                </div>
+                <div class="header__subtittle">
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="navbar__container--1024">
+            <div class="navbar__busqueda">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text">
+            </div>
+            <div class="header__tittle__container">
+                <div class="header__tittle">
+                    <h1 class="white__word">Green</h1>
+                    <h1 class="green__word">Food</h1>
+                </div>
+                <div class="header__subtittle">
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="navbar__loginregister">
+                <span class="header__login__text">Login</span>
+                <span class="header__register__text">Register</span>
+            </div>
+        </div>
+        <div class="header__categories__container">
+            <span class="header__categories">Inicio</span>
+            <span class="header__categories">Dietética</span>
+            <span class="header__categories">Veggie</span>
+            <span class="header__categories">Snacks</span>
+            <span class="header__categories">Suplementos</span>
+            <span class="header__categories">Varios</span>
+        </div>
+    </Header>
+
+--FOOTER--
+
+    <Footer>
+        <div class="suscribe__container">
+            <h2 class="suscribe__tittle">Suscribete y recibe ofertas exclusivas</h2>
+            <input type="text" name="suscription" placeholder="Ingresa tu Email">
+        </div>
+        <div class="consultas__container">
+            <div>
+                <h3>Servicio al cliente</h3>
+                <p>Preguntas Frecuentes</p>
+                <p>Estado de la compra</p>
+                <p>Información de envíos</p>
+            </div>
+            <div>
+                <h3>Recursos</h3>
+                <p>Promociones y Ofertas</p>
+            </div>
+            <div>
+                <h3>Empresa</h3>
+                <p>Sobre Nosotros</p>
+                <p>Términos de Privacidad</p>
+            </div>
+            <div>
+                <h3>Seguinos</h3>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100083228144123"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="paymethods__container">
+            <h3>Medios de pago</h3>
+            <div class="cards__container">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" alt="visa_card">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" alt="mastercard_card">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" alt="americanexpress_card">
+                <img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Paypal.png" alt="paypal_card">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" alt="mercadopago_card">
+            </div>
+        </div>
+        <div class="copyright__container">
+            <small>2022 Green Food S.A. Todos los derechos reservados ©</small>
+        </div>
+    </Footer>
