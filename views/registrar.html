@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/98ce542dfa.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <Header>
         <div class="greenbar__container">
@@ -35,47 +37,42 @@
 
         </div>
     </Header>
-    
+
     <main>
-    <h1>registrar</h1>
-    <form class="form" action="">
-        <div class="form__box">
-            <label class="form__label" for="nombre">
-                <!-- Nombre -->
-            </label>
-            <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
-        </div>
-        <div class="form__box">
-            <label class="form__label" for="email">
-                <!-- Email -->
-            </label>
-            <input class="form__input" type="text" name="email" id="email" placeholder="email">
-        </div>
-        <div class="form__box">
-            <label class="form__label" for="password">
-                <!-- Contraseña -->
-            </label>
-            <input class="form__input" type="password" name="password" id="password" placeholder="contraseña">
-        </div>
-        <div class="form__box">
-            <label class="form__label" for="reingrese contraseña">
-                <!-- Reingrese su contraseña -->
-            </label>
-            <input class="form__input" type="password" name="reingrese password2" id="password2"
-                placeholder="reingrese su contraseña">
-        </div>
-        <div class="form__box">
-            <button class="form__button--cuenta" type="submit">Crear cuenta</button>
-        </div>
-        <div class="form__box">
-            <button class="form__button--google" type="submit">Entrar con google</button>
-        </div>
-        <div class="form__box">
-            <button class="form__button--facebook" type="submit">Entrar con facebook</button>
-            <img src="" alt="">
-        </div>
-    </form>
-</main>
+        <h1>Inicio/registro</h1>
+        <form class="form" action="POST">
+            <div class="form__box">
+                <label class="form__label" for="nombre"></label>
+                <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+            </div>
+            <div class="form__box">
+                <label class="form__label" for="email"></label>
+                <input class="form__input" type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="form__box">
+                <label class="form__label" for="password"></label>
+                <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+            <div class="form__box">
+                <label class="form__label" for="reingrese contraseña"></label>
+                <input class="form__input" type="password" name="reingrese password2" id="password2"
+                    placeholder="Reingrese su contraseña">
+            </div>
+            <div class="form__box">
+                <button class="form__button--cuenta" type="submit">Crear cuenta</button>
+            </div>
+            <div class="form__box">
+                <button class="form__button--google" type="submit">Entrar con Google</button>
+            </div>
+            <div class="truck"><i class="fa-solid fa-truck-fast"></i>
+                <span>Envios a todo el pais</span>
+                <span class="contact">contactanos</span>
+            </div>
+            <div class="form__box">
+                <button class="form__button--facebook" type="submit">Entrar con Facebook</button>
+            </div>
+        </form>
+    </main>
 
     <Footer class="Footer">
         <div class="suscribe__container">
@@ -101,7 +98,8 @@
             <div>
                 <h3>Seguinos</h3>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100083228144123"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100083228144123"><i
+                        class="fa-brands fa-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
@@ -119,6 +117,7 @@
             <h5>2022 Green Food S.A. Todos los derechos reservados</h5>
         </div>
     </Footer>
-    
+
 </body>
+
 </html>
