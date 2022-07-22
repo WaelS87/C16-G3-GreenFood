@@ -4,7 +4,6 @@ body{
     background-color: var(--color-verdeUltraClaro);
 }
 
-
 /* Header */
 
 header{
@@ -22,7 +21,7 @@ header{
     width: 35%;
     color: #fff;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
@@ -38,10 +37,49 @@ header{
     font-size: 26px;
     color: white;
     height: fit-content;
-/* Colocar como boton */
+}
+
+.navbar__container--1024{
+    display: none;
+    background-color: var(--color-negro);
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+}
+
+.navbar__busqueda{
+    background-color: #fff;
+    width: 25%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    color: gray;
+}
+
+.navbar__busqueda input{
+    background-color: none;
+    border: none;
+    width: 90%;
+    height: 90%;
+}
+
+.navbar__busqueda i{
+    margin-left: 2%;
+}
+
+.navbar__loginregister{
+    color: #fff;
+    font-size: 24px;
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 500;
 }
 
 .header__tittle__container{
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,12 +90,10 @@ header{
 }
 
 .white__word{
-    width: fit-content;
     color: #fff;
 }
 
 .green__word{
-    width: fit-content;
     color: var(--color-verde);
 }
 
@@ -65,6 +101,33 @@ header{
     width: fit-content;
     color: #fff;
     font-size: 14px;
+}
+
+.header__categories__container{
+    color: #fff;
+    display: none;
+    background-color: var(--color-negro);
+    border: 1px solid gray;
+    justify-content: space-evenly;
+}
+
+.header__categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0;
+    width: 17%;
+    height: 3vh;
+    border-left: 0.5px solid gray;
+    border-right: 0.5px solid gray;
+}
+
+.header__categories:last-child{
+    border-right: 0;
+}
+
+.header__categories:first-child{
+    border-left: 0;
 }
 
 /* Footer */
@@ -94,7 +157,8 @@ Footer{
     background-color: #fff;
     margin-bottom: 15%;
     width: 80%;
-    height: 3.5vh;
+    border: none;
+    height: 5vh;
 }
 
 .consultas__container{
@@ -105,7 +169,7 @@ Footer{
 
 .consultas__container div{
     width: 45%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .consultas__container div h3{
@@ -136,25 +200,84 @@ Footer{
 
 .cards__container{
     display: flex;
+    width: 80%;
     justify-content: space-evenly;
 }
 
 .cards__container img {
     background-color: #fff;
-    width: 13%;
-    object-fit: contain;
+    width: 40px;
+    height: 25px;
+    object-fit: fill;
+    margin: 5px;
 }
 
-.copyright__container h5{
+.copyright__container{
+    display: flex;
     text-align: center;
+    justify-content: center;
     font-weight: 400;
+    width: 100%;
 }
 
 @media (min-width:768px){
-    
+
+    header, footer{
+        font-size: 18px;
+    }
+
+    /* Header */
+
     .greenbar__container{
         display: flex;
-    }    
+    }
+
+    .greenbar__container p{
+        font-size: 14px;
+    }
+    
+    /* Footer */
+
+    .suscribe__container input{
+        margin-bottom: 10%;
+    }
+
+    .consultas__container div{
+        margin-bottom: 5%;
+    }
+
+    .paymethods__container{
+        margin: 5%;
+    }
+
+    .cards__container img{
+        width: 80px;
+        height: 50px;
+    }
+}
+
+@media (min-width:1024px){
+
+    /* Header */
+
+    .navbar__container{
+        display: none;
+    }
+
+    .navbar__container--1024{
+        display: flex;
+    }
+
+    .header__categories__container{
+        display: flex;
+    }
+
+    /* Footer */
+
+    .consultas__container div{
+        width: 20%;
+        margin-bottom: 0;
+    }
 }
 
 
