@@ -1,3 +1,6 @@
+main section{
+    background-image: none;
+}
 body main section article div {
     display: flex;
     justify-content:end;
@@ -109,6 +112,11 @@ main section article div.total--precio{
 .truck{
     display:none;
 }
+.home__recomendados__container {
+    display:none;
+}
+
+
 
 
 /* Tablet */   
@@ -194,6 +202,24 @@ main section article div.total--precio{
         font-size: xx-large;
     
     }
+    .home__recomendados__container{
+        display: block;
+        height: 600px;
+        flex-wrap: wrap;
+    }
+
+    .recomendado1, .recomendado2, .recomendado3{
+        width: 150px;
+        height: 150px;
+    }
+
+    .recomendado__container, .recomendado__container--768{
+        width: 50%;
+    }
+
+    .recomendado__container--768{
+        display: flex;
+    }
  
 }
 @media(min-width: 1024px){
@@ -240,6 +266,13 @@ main section article div.total--precio{
     }
     .truck i{
         font-size: xx-large;
+    }
+    .home__recomendados__container{
+        height: 400px;
+    }
+
+    .recomendado__container, .recomendado__container--768{
+        width: 25%;
     }
 }
 
