@@ -1,3 +1,38 @@
+:root{
+    /* Paleta 1 */
+    --color-negro:#191A19;
+    --color-verdeOscuro:#1E5128;
+    --color-verde:#4E9F3D;
+    --color-verdeUltraClaro:#D8E9A8;
+    --color-amarillo:#FF9F29;
+    --color-blanco:#FAF3E3;
+    --color-verdeClaro:#80ED99;
+    /* Paleta 2: */
+    *--color-negro:#000000;
+    *--color-verdeOscuro:#1A4D2E;
+    /* Paleta 3: */
+    *--color-blanco:#F7F7F7;
+    *--color-naranja:#FFB72B;
+    *--color-amarillo:#FFE61B;
+    *--color-verdeClaro:#B5FE83;
+    /* Paleta 4: */
+    *--color-azul:#22577A;
+    *--color-celeste:#38A3A5;
+    *--color-verdeAgua:#57CC99;
+    /* Paleta 5: */
+    *--color-blanco:#FAF1E6;
+    *--color-naranja:#FFC074;
+    *--color-verde:#B6C867;
+    *--color-verdeOscuro:#01937C;
+}
+
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    text-shadow: 0 0 2px black;
+}
+
+
 *{
     box-sizing: border-box;
     margin : 0;
@@ -5,3 +40,4 @@
 a{
     text-decoration: none;
 }
+/* Agregar fuente y tamaño */

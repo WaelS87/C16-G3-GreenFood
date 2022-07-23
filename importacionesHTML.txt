@@ -86,9 +86,15 @@ Paleta 5:
 
     font-family: 'Alata', sans-serif;
 
+<<<<<<< HEAD
 
 
     --HEADER--
+=======
+------------------------------------
+
+--HEADER--
+>>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
 
     <Header>
         <div class="greenbar__container">

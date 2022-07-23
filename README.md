@@ -15,5 +15,7 @@
 - (https://www.somosintegra.com.ar/) : Orientamos el Home con referencia a esta página.
 - (https://fitmarket.com.ar/) : Otro ejemplo de productos y orientación del proyecto.
 - (https://www.salutealmacennaturaltuc.com/)
-## link del la Rama develop :
+
+## Link de rama **"Develop"** :
+
 https://github.com/WaelS87/C16-G3-GreenFood.git

@@ -3,9 +3,9 @@
     --color-verdeOscuro: #1E5128;
     --color-verde: #4E9F3D;
     --color-verdeClaro: #D8E9A8;
-
     font-family: 'Alata', sans-serif;
 }
+
 
 header {
     display: block;
@@ -74,7 +74,6 @@ header {
 .main {
     background-color: var(--color-verdeClaro);
     font-family: 'Alata', sans-serif;
-    font-size: 12px;
 }
 
 h1 {
