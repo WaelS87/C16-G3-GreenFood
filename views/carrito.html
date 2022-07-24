@@ -11,9 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
 </head>
-
 <body class="carro">
     <Header>
         <div class="greenbar__container">
@@ -24,15 +22,30 @@
         <div class="navbar__container">
             <i class="fa-solid fa-magnifying-glass"></i>
             <div class="header__tittle__container">
-                <div class="header__tittle">
-                    <h1 class="white__word">Green</h1>
-                    <h1 class="green__word">Food</h1>
-                </div>
-                <div class="header__subtittle">
-                    <p>Lorem ipsum dolor sit amet</p>
-                </div>
+                <a href="/">
+                    <div class="header__tittle">
+                        <h1 class="white__word">Green</h1>
+                        <h1 class="green__word">Food</h1>
+                    </div>
+                    <div class="header__subtittle">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </a>
             </div>
-            <i class="fa-solid fa-bars"></i>
+            <button class="header__burgerbutton">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="header__menu">
+                    <a href="/carrito">
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                    </a>
+                    <a href="/login">
+                        <li>Login</li>
+                    </a>
+                    <a href="/registrar">
+                        <li>Register</li>
+                    </a>
+                </ul>
+            </button>
         </div>
         <div class="navbar__container--1024">
             <div class="navbar__busqueda">
@@ -40,18 +53,21 @@
                 <input type="text">
             </div>
             <div class="header__tittle__container">
-                <div class="header__tittle">
-                    <h1 class="white__word">Green</h1>
-                    <h1 class="green__word">Food</h1>
-                </div>
-                <div class="header__subtittle">
-                    <p>Lorem ipsum dolor sit amet</p>
-                </div>
+                <a href="/">
+                    <div class="header__tittle">
+                        <h1 class="white__word">Green</h1>
+                        <h1 class="green__word">Food</h1>
+                    </div>
+                    <div class="header__subtittle">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </a>
             </div>
-            <div class="navbar__loginregister">
-                <span class="header__login__text">Login</span>
-                <span class="header__register__text">Register</span>
-            </div>
+            <ul class="navbar__loginregister">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/registrar">Register</a></li>
+            </ul>
+            <a class="navbar__carrito" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         <div class="header__categories__container">
             <span class="header__categories">Inicio</span>
@@ -62,7 +78,6 @@
             <span class="header__categories">Varios</span>
         </div>
     </Header>
-   
     <main>
         <section>
             <article>
@@ -113,7 +128,10 @@
                         <img src="/img/footer/Paypal.png" alt="paypal_card">
                         <img src="/img/footer/MercadoPago-DebitCard.png" alt="mercadopago_card">
                     </div>
-                    <div class="truck"><i class="fa-solid fa-truck-fast"></i><p class="envi"><i class="fa-solid fa-star"></i>Envios a Todo el Pais<i class="fa-solid fa-star"></i></p></div>
+                    <div class="truck"><i class="fa-solid fa-truck-fast"></i>
+                        <p class="envi"><i class="fa-solid fa-star"></i>Envios a Todo el Pais<i
+                                class="fa-solid fa-star"></i></p>
+                    </div>
                 </div>
             </article>
         </section>
@@ -164,7 +182,7 @@
                 </div>
                 <div class="recomendado__container">
                     <img src="/img/pan-integral-768x480.jpg" alt="producto">
-                    
+
 
                     <h3 class="recomendado__nombre">Lorem4.</h3>
                     <div class="producto recomendado3">
@@ -179,7 +197,7 @@
             </div>
 
         </section>
-       
+
     </main>
     <Footer>
         <div class="suscribe__container">
@@ -225,4 +243,5 @@
         </div>
     </Footer>
 </body>
+
 </html>

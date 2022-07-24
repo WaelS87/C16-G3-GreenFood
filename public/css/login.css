@@ -27,24 +27,35 @@ main section p.login--parapho {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+   *position: relative;
     padding: 10px;
+    width:100%;
+    flex-wrap: wrap;
 }
 .form__label {
     margin-bottom: 5px;
-    width: 80%;
+    width: 100%;
     color:rgb(228, 85, 144);
+    padding:0 10%;
 }
 .form__input {
     margin-bottom: 5px;
     width: 80%;
     height: 27px;
     display: flex;
-    flex-direction: column;
+    *flex-direction: column;
     align-items: center;
     border: 1px solid black;
     border-radius: 5px;
     background-color: white;
+    
+}
+.form__input input{
+    width:95%;
+    border:none;
+    height: 100%;
+
+
 }
 .form__box__flex {
     display: flex;
@@ -83,12 +94,11 @@ main section p.login--parapho {
 .nav i{
     color:red;
 }
-.mail,
-.lock {
-    width: 70%;
+.mail,.lock {
+    width: 5%;
     text-align: right;
-    position: absolute;
-    bottom: 1em;
+   *position: absolute;
+    *bottom: 1em;
 }
 .google,
 .face {
@@ -116,13 +126,13 @@ h5 i {
     font-size: x-large;
 }
 span {
-    width: 100%;
+    *width: 100%;
     font-weight: bold;
 }
-.lock i,
-.mail i {
-    font-size: medium;
+.form__input i {
+    font-size: small;
     color: rgb(94, 52, 122);
+    margin-right: 5%;
 }
 h6{
     padding:10px;
@@ -146,6 +156,7 @@ h6{
     .form__label {
        width: 40%;
        font-size: 18px;
+       padding:0;
     }
     main section {
        background-repeat: no-repeat;
@@ -171,8 +182,7 @@ h6{
     width: 35%;
     bottom: 0.8em;
 }
-.mail i,
-.lock i{
+.form__input i{
     font-size: large;
 }
 .google,
@@ -219,5 +229,8 @@ h6{
 }
 .inicio{
     font-size: 18px;
+}
+.form__input i{
+    font-size: large;
 }
 }
