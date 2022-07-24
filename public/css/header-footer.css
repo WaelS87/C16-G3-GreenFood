@@ -186,6 +186,33 @@ header{
     border-left: 0;
 }
 
+.header__categories__container{
+    color: #fff;
+    display: none;
+    background-color: var(--color-negro);
+    border: 1px solid gray;
+    justify-content: space-evenly;
+}
+
+.header__categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0;
+    width: 17%;
+    height: 3vh;
+    border-left: 0.5px solid gray;
+    border-right: 0.5px solid gray;
+}
+
+.header__categories:last-child{
+    border-right: 0;
+}
+
+.header__categories:first-child{
+    border-left: 0;
+}
+
 /* Footer */
 
 Footer{
