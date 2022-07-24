@@ -75,7 +75,7 @@ body main section article div.total{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 100%;
 
 }
 body main section article div.total p{
@@ -97,6 +97,8 @@ body main section article div.calc{
     margin:15px;
     background-color: rgba(21, 59, 68, 0.65);
     padding:10px;
+    
+
    
 }
 main section article div.total--precio{
@@ -110,9 +112,18 @@ main section article div.total--precio{
     display: none;
 }
 .truck{
-    display:none;
+    width: 100%;
+    color:rgb(47, 115, 192);;
 }
-.home__recomendados__container {
+p.envi{
+    font-size: 13px;
+    color:rgb(47, 115, 192);
+   
+}
+.envi i{
+    color:gold;
+}
+.home__recomendados__container{
     display:none;
 }
 
@@ -129,6 +140,10 @@ main section article div.total--precio{
     }
     body main section article.product div img{
         width: 260px;
+    }
+    body main section article div.total{
+        width:80%;
+        
     }
     body main section article button{
         display: flex;
@@ -149,14 +164,23 @@ main section article div.total--precio{
         align-items: center;
         width: 200px;
         height: 30px;
+        font-weight: bold;
     }
+    body main section article div.total button{
+        width: 100%;
+        height: 50%;
+        align-items: center;
+       
+    }
+    
     body main section article div.price i{
         margin-bottom: 20px;
     }
     body main section article div.calc{
         display: flex;
         justify-content: center;
-        width:50%;
+        width:40%;
+        height: 200px;
         order:1;
     }
     body main section article.d{
@@ -181,12 +205,14 @@ main section article div.total--precio{
         display: flex;
         flex-direction: row;
         flex-wrap:wrap ;
-        width: 44%;
+        width: 40%;
         align-content: space-around;
     }
     body main section article button.fin, body main section article button.con{
         display: flex;
         flex-wrap: wrap;
+        font-weight: bolder;
+       
     }
     .truck{
         display:block;
@@ -195,31 +221,57 @@ main section article div.total--precio{
         display:flex;
     }
     div.cards{
-        justify-content: space-between;
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
  
     .truck i{
         font-size: xx-large;
     
     }
-    .home__recomendados__container{
-        display: block;
-        height: 600px;
-        flex-wrap: wrap;
-    }
-
-    .recomendado1, .recomendado2, .recomendado3{
-        width: 150px;
-        height: 150px;
-    }
-
-    .recomendado__container, .recomendado__container--768{
-        width: 50%;
-    }
-
-    .recomendado__container--768{
+    p.envi {
+        font-size: 18px;
         display: flex;
+        justify-content: baseline;
     }
+    p.envi i{
+        font-size: small;
+        color: gold;
+    }
+    .home__recomendados__container{
+        display:block;
+    }
+    div.recomendado__container img{
+        width: 160px;
+        height: 140px;
+        border:1px solid black;
+        margin-top: 20px;
+    
+    }
+    .productos__recomendados__container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    
+    }
+    .recomendado__estrellas i{
+        color:gold;
+        font-size: 22px;
+
+    }
+    .producto__precio {
+        color:black;
+        width: 100%;
+        text-align: center;
+    }
+    .productos__tittles{
+        text-align: center;
+    }
+ 
+ 
+   
  
 }
 @media(min-width: 1024px){
@@ -267,13 +319,18 @@ main section article div.total--precio{
     .truck i{
         font-size: xx-large;
     }
-    .home__recomendados__container{
-        height: 400px;
+    body main section article div.total{
+        width:90%;
     }
-
-    .recomendado__container, .recomendado__container--768{
-        width: 25%;
-    }
+    div.recomendado__container img{
+        width: 200px;
+        height: 180px;
+        margin-top: 10px;
+  
+   
+}
+.productos__tittles{
+    text-align: center;
 }
 
   
@@ -287,3 +344,4 @@ main section article div.total--precio{
 
    
     
+}
