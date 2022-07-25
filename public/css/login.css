@@ -1,22 +1,22 @@
 /*celuler*/
 
-main section div.parapho__es h5, .olvide {
+.login__main section div.parapho__es h5, .olvide {
     text-align: center;
     margin-bottom: 15px;
     color: white;
     text-decoration: underline;
     font-size: 12px;
 }
-main h3 {
+.login__main h3 {
     text-align: center;
     color:white;
 }
-main section.login {
+.login__main section.login {
     width:100%;
     background-image: url(/img/comida-ingredientes_1220-4884.webp);
     background-size:cover;
 }
-main section p.login--parapho {
+.login__main section p.login--parapho {
     padding: 10px;
     margin-bottom: 10px;
    /* background-color: rgba(121, 184, 121, 0.87);*/
@@ -114,7 +114,7 @@ main section p.login--parapho {
     justify-content: center;
     align-items: center;
 }
-h5 i {
+.login__main h5 i {
     font-size: xx-small;
 }
 .face i {
@@ -125,7 +125,7 @@ h5 i {
     color: brown;
     font-size: x-large;
 }
-span {
+.login__main span {
     *width: 100%;
     font-weight: bold;
 }
@@ -134,7 +134,7 @@ span {
     color: rgb(94, 52, 122);
     margin-right: 5%;
 }
-h6{
+.login__main h6{
     padding:10px;
     color:red;
 }
@@ -158,7 +158,7 @@ h6{
        font-size: 18px;
        padding:0;
     }
-    main section {
+    .login__main section {
        background-repeat: no-repeat;
         width:100%;
     }
@@ -170,11 +170,11 @@ h6{
         width: 40%;
         height: 35px;
     }
-    main section div.parapho__es h5, .olvide {
+    .login__main section div.parapho__es h5, .olvide {
         font-size: 14px;
         margin-bottom: 20px;
     }
-    span {
+    .login__main span {
         width: 100%;
     }
     .mail,
@@ -203,7 +203,7 @@ h6{
 /*Desktop*/
 
 @media(min-width: 1024px){
-    main section div.parapho__es h5, .olvide{
+    .login__main section div.parapho__es h5, .olvide{
         font-size: 16px;
     }
     .form__label {
