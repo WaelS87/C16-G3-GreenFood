@@ -1,0 +1,236 @@
+/*celuler*/
+
+main section div.parapho__es h5, .olvide {
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: underline;
+    font-size: 12px;
+}
+main h3 {
+    text-align: center;
+    color:white;
+}
+main section.login {
+    width:100%;
+    background-image: url(/img/comida-ingredientes_1220-4884.webp);
+    background-size:cover;
+}
+main section p.login--parapho {
+    padding: 10px;
+    margin-bottom: 10px;
+   /* background-color: rgba(121, 184, 121, 0.87);*/
+   background-color: rgba(255,255,255,0.5);
+}
+
+.form__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   *position: relative;
+    padding: 10px;
+    width:100%;
+    flex-wrap: wrap;
+}
+.form__label {
+    margin-bottom: 5px;
+    width: 100%;
+    color:rgb(228, 85, 144);
+    padding:0 10%;
+}
+.form__input {
+    margin-bottom: 5px;
+    width: 80%;
+    height: 27px;
+    display: flex;
+    *flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    
+}
+.form__input input{
+    width:95%;
+    border:none;
+    height: 100%;
+
+
+}
+.form__box__flex {
+    display: flex;
+    justify-content: center;
+}
+.parapho {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.form__button {
+    width: 75%;
+    height: 27px;
+    background-color: rgb(90, 207, 201);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.form__button .form__button--submit {
+    display: flex;
+    justify-content: center;
+}
+.parapho__es {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: black;
+}
+.form__box__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.nav i{
+    color:red;
+}
+.mail,.lock {
+    width: 5%;
+    text-align: right;
+   *position: absolute;
+    *bottom: 1em;
+}
+.google,
+.face {
+    width: 75%;
+    height: 27px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h5 i {
+    font-size: xx-small;
+}
+.face i {
+    color: blue;
+    font-size:x-large;
+}
+.google i {
+    color: brown;
+    font-size: x-large;
+}
+span {
+    *width: 100%;
+    font-weight: bold;
+}
+.form__input i {
+    font-size: small;
+    color: rgb(94, 52, 122);
+    margin-right: 5%;
+}
+h6{
+    padding:10px;
+    color:red;
+}
+.abajo img{
+   width:70px;
+}
+.abajo{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-between;
+    height: 100%;
+    padding:5px;
+}
+/*Tablet*/
+
+@media(min-width: 768px){
+    .form__label {
+       width: 40%;
+       font-size: 18px;
+       padding:0;
+    }
+    main section {
+       background-repeat: no-repeat;
+        width:100%;
+    }
+    .form__input {
+       height: 35px;
+       width: 40%;
+    }
+    .form__button {
+        width: 40%;
+        height: 35px;
+    }
+    main section div.parapho__es h5, .olvide {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    span {
+        width: 100%;
+    }
+    .mail,
+.lock {
+    width: 35%;
+    bottom: 0.8em;
+}
+.form__input i{
+    font-size: large;
+}
+.google,
+.face {
+    width: 40%;
+    height: 35px;
+}
+.abajo{
+    height: 100px;
+}
+.abajo img{
+    width:130px;
+}
+.inicio{
+    font-size: 14px;;
+}
+}
+/*Desktop*/
+
+@media(min-width: 1024px){
+    main section div.parapho__es h5, .olvide{
+        font-size: 16px;
+    }
+    .form__label {
+        font-size: 22px;
+    }
+    .form__input {
+        height: 45px;
+    }
+    .form__button {
+        
+        height: 40px;
+    }
+    .google,
+.face {
+   
+    height: 40px;
+}
+.face i {
+   font-size:xx-large;
+}
+.google i {
+    font-size: xx-large;
+}
+.inicio{
+    font-size: 18px;
+}
+.form__input i{
+    font-size: large;
+}
+}

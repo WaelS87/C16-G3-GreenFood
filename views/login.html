@@ -1,14 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenFood|Login</title>
+    <script src="https://kit.fontawesome.com/1d9f245b0c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-    <h1>login</h1>
-    
+    <Header>
+        <div class="greenbar__container">
+            <p>Bienvenido al mundo saludable</p>
+            <p>Envios gratis desde $6000</p>
+            <p>Ofertas todos los días</p>
+        </div>
+        <div class="navbar__container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="header__tittle__container">
+                <a href="/">
+                    <div class="header__tittle">
+                        <h1 class="white__word">Green</h1>
+                        <h1 class="green__word">Food</h1>
+                    </div>
+                    <div class="header__subtittle">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </a>
+            </div>
+            <button class="header__burgerbutton">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="header__menu">
+                    <a href="/carrito">
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                    </a>
+                    <a href="/login">
+                        <li>Login</li>
+                    </a>
+                    <a href="/registrar">
+                        <li>Register</li>
+                    </a>
+                </ul>
+            </button>
+        </div>
+        <div class="navbar__container--1024">
+            <div class="navbar__busqueda">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text">
+            </div>
+            <div class="header__tittle__container">
+                <a href="/">
+                    <div class="header__tittle">
+                        <h1 class="white__word">Green</h1>
+                        <h1 class="green__word">Food</h1>
+                    </div>
+                    <div class="header__subtittle">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </a>
+            </div>
+            <ul class="navbar__loginregister">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/registrar">Register</a></li>
+            </ul>
+            <a class="navbar__carrito" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="header__categories__container">
+            <span class="header__categories">Inicio</span>
+            <span class="header__categories">Dietética</span>
+            <span class="header__categories">Veggie</span>
+            <span class="header__categories">Snacks</span>
+            <span class="header__categories">Suplementos</span>
+            <span class="header__categories">Varios</span>
+        </div>
+    </Header>
+    <main>
+        <section class="login">
+            <p class="login--parapho"><a href="/home.html">Inicio</a>/Login</p>
+            <h3>Login :)</h3>
+            <form action="">
+                <div class="form__box">
+                    <label class="form__label" for="usuario">Email</label>
+                    <div class="form__input">
+                        <input type="text" placeholder=" ej : tunombre@email.com" id="usuario" name="email">
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </div>
+
+
+                </div>
+                <div class="form__box">
+                    <label class="form__label" for="password">Contraseña</label>
+                    <div class="form__input">
+                        <input  type="password" placeholder="ingresa tu contraseña" id="password"
+                            name="password">
+                        <i class="fa-solid fa-lock"></i>
+
+                    </div>
+
+
+                </div>
+                <div class="form__box__flex">
+                    <button class="form__button form__button--submit" type="submit"><span class="inicio">INICIAR
+                            SECION</span></button>
+                </div>
+                <h5 class="olvide">¿Olvidaste tu contraseña?</h5>
+                </div>
+                <div class="form__box__flex">
+                    <button class="google" type="text"><i class="fa-brands fa-google"></i><span>Entrar con
+                            Google</span></button>
+                </div>
+                <div class="form__box__flex">
+                    <button class="face" type="text"><i class="fa-brands fa-facebook"></i><span>Entrar con
+                            Facebook</span></button>
+                </div>
+                <div class="parapho__es">
+                    <a href="/views/registrar.html">
+                        <h5>¿No tenés cuenta?&nbsp;<i class="fa-solid fa-circle"></i>&nbsp; Crear cuenta</h5>
+                    </a>
+                </div>
+                <hr>
+                <div class="abajo">
+                    <h6><span><i class="fa-regular fa-envelope"></i></span>&nbsp;CONTACTANOS<br><a
+                            href="greenfoodargentina@gmail.com">greenfoodargentina@gmail.com</a> </h6>
+
+                    <img width="90" src="/img/images.jfif" alt="envio">
+
+                    <h6><span><i class="fa-solid fa-location-dot"></i></span> Argentina</h6>
+                </div>
+        </section>
+    </main>
+    <Footer>
+        <div class="suscribe__container">
+            <h2 class="suscribe__tittle">Suscribete y recibe ofertas exclusivas</h2>
+            <input type="text" name="suscription" placeholder="Ingresa tu Email">
+        </div>
+        <div class="consultas__container">
+            <div>
+                <h3>Servicio al cliente</h3>
+                <p>Preguntas Frecuentes</p>
+                <p>Estado de la compra</p>
+                <p>Información de envíos</p>
+            </div>
+            <div>
+                <h3>Recursos</h3>
+                <p>Promociones y Ofertas</p>
+            </div>
+            <div>
+                <h3>Empresa</h3>
+                <p>Sobre Nosotros</p>
+                <p>Términos de Privacidad</p>
+            </div>
+            <div>
+                <h3>Seguinos</h3>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100083228144123"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="paymethods__container">
+            <h3>Medios de pago</h3>
+            <div class="cards__container">
+                <img src="/img/footer/Visa-DebitCard.png" alt="visa_card">
+                <img src="/img/footer/MasterCard-DebitCard.png" alt="mastercard_card">
+                <img src="/img/footer/American-Express-Card.png" alt="americanexpress_card">
+                <img src="/img/footer/Paypal.png" alt="paypal_card">
+                <img src="/img/footer/MercadoPago-DebitCard.png" alt="mercadopago_card">
+            </div>
+        </div>
+        <div class="copyright__container">
+            <h5>2022 Green Food S.A. Todos los derechos reservados</h5>
+        </div>
+    </Footer>
 </body>
+
 </html>

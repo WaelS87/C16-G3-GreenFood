@@ -4,14 +4,18 @@ body{
     background-color: var(--color-verdeUltraClaro);
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
+
+a{
+    color: #fff;
+}
+
 /* Header */
 
 header{
     display: block;
+    position: sticky;
+    top: 0px;
 }
 
 .greenbar__container{
@@ -25,11 +29,7 @@ header{
     width: 35%;
     color: #fff;
     text-align: center;
-<<<<<<< HEAD
-    font-size: 10px;
-=======
     font-size: 12px;
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
     text-transform: uppercase;
 }
 
@@ -45,12 +45,10 @@ header{
     font-size: 26px;
     color: white;
     height: fit-content;
-<<<<<<< HEAD
 /* Colocar como boton */
 }
 
 .header__tittle__container{
-=======
 }
 
 .navbar__container--1024{
@@ -86,18 +84,66 @@ header{
 .navbar__loginregister{
     color: #fff;
     font-size: 24px;
-    width: 25%;
+    width: 20%;
     display: flex;
     justify-content: space-evenly;
     font-weight: 500;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__carrito{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    width: 5%;
 }
 
 .header__tittle__container{
     width: 50%;
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
+ 
+    *justify-self: center;
+}
+
+.header__tittle__container a{
     display: flex;
+    justify-self: center;
     flex-direction: column;
     align-items: center;
+}
+
+.header__burgerbutton{
+    height: 25px;
+    width: 30px;
+    background: none;
+    border: 0;
+    overflow: hidden;
+}
+
+.header__burgerbutton:hover{
+    background-color: var(--color-negro);
+    color: #fff;
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 1s;
+}
+
+.header__menu{
+    font-size: 20px;
+    padding: 0;
+    list-style: none;
+    height: 80%;
+}
+
+.header__menu li{
+    margin: 15px 0;
 }
 
 .header__tittle{
@@ -105,35 +151,27 @@ header{
 }
 
 .white__word{
-<<<<<<< HEAD
-    width: fit-content;
-=======
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
     color: #fff;
 }
 
 .green__word{
-<<<<<<< HEAD
-    width: fit-content;
-=======
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
     color: var(--color-verde);
 }
 
 .header__subtittle{
-    width: fit-content;
+    width: max-content;
     color: #fff;
     font-size: 14px;
+    text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 .header__categories__container{
     color: #fff;
     display: none;
     background-color: var(--color-negro);
     border: 1px solid gray;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .header__categories{
@@ -155,7 +193,6 @@ header{
     border-left: 0;
 }
 
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
 /* Footer */
 
 Footer{
@@ -183,12 +220,8 @@ Footer{
     background-color: #fff;
     margin-bottom: 15%;
     width: 80%;
-<<<<<<< HEAD
-    height: 3.5vh;
-=======
     border: none;
     height: 5vh;
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
 }
 
 .consultas__container{
@@ -199,11 +232,7 @@ Footer{
 
 .consultas__container div{
     width: 45%;
-<<<<<<< HEAD
-    margin-bottom: 5%;
-=======
     margin-bottom: 10%;
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
 }
 
 .consultas__container div h3{
@@ -234,31 +263,12 @@ Footer{
 
 .cards__container{
     display: flex;
-<<<<<<< HEAD
-=======
     width: 80%;
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
     justify-content: space-evenly;
 }
 
 .cards__container img {
     background-color: #fff;
-<<<<<<< HEAD
-    width: 13%;
-    object-fit: contain;
-}
-
-.copyright__container h5{
-    text-align: center;
-    font-weight: 400;
-}
-
-@media (min-width:768px){
-    
-    .greenbar__container{
-        display: flex;
-    }    
-=======
     width: 40px;
     height: 25px;
     object-fit: fill;
@@ -319,10 +329,12 @@ Footer{
 
     .navbar__container--1024{
         display: flex;
+        height: 70px;
     }
 
     .header__categories__container{
         display: flex;
+        height: 30px;
     }
 
     /* Footer */
@@ -331,13 +343,8 @@ Footer{
         width: 20%;
         margin-bottom: 0;
     }
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
 }
 
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
