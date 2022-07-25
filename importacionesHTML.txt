@@ -99,15 +99,30 @@ Paleta 5:
         <div class="navbar__container">
             <i class="fa-solid fa-magnifying-glass"></i>
             <div class="header__tittle__container">
-                <div class="header__tittle">
-                    <h1 class="white__word">Green</h1>
-                    <h1 class="green__word">Food</h1>
-                </div>
-                <div class="header__subtittle">
-                    <p>Lorem ipsum dolor sit amet</p>
-                </div>
+                <a href="/">
+                    <div class="header__tittle">
+                        <h1 class="white__word">Green</h1>
+                        <h1 class="green__word">Food</h1>
+                    </div>
+                    <div class="header__subtittle">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </a>
             </div>
-            <i class="fa-solid fa-bars"></i>
+            <button class="header__burgerbutton">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="header__menu">
+                    <a href="/carrito">
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                    </a>
+                    <a href="/login">
+                        <li>Login</li>
+                    </a>
+                    <a href="/registrar">
+                        <li>Register</li>
+                    </a>
+                </ul>
+            </button>
         </div>
         <div class="navbar__container--1024">
             <div class="navbar__busqueda">
@@ -115,18 +130,21 @@ Paleta 5:
                 <input type="text">
             </div>
             <div class="header__tittle__container">
-                <div class="header__tittle">
-                    <h1 class="white__word">Green</h1>
-                    <h1 class="green__word">Food</h1>
-                </div>
-                <div class="header__subtittle">
-                    <p>Lorem ipsum dolor sit amet</p>
-                </div>
+                <a href="/">
+                    <div class="header__tittle">
+                        <h1 class="white__word">Green</h1>
+                        <h1 class="green__word">Food</h1>
+                    </div>
+                    <div class="header__subtittle">
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                </a>
             </div>
-            <div class="navbar__loginregister">
-                <span class="header__login__text">Login</span>
-                <span class="header__register__text">Register</span>
-            </div>
+            <ul class="navbar__loginregister">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/registrar">Register</a></li>
+            </ul>
+            <a class="navbar__carrito" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         <div class="header__categories__container">
             <span class="header__categories">Inicio</span>
@@ -172,11 +190,15 @@ Paleta 5:
         <div class="paymethods__container">
             <h3>Medios de pago</h3>
             <div class="cards__container">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" alt="visa_card">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" alt="mastercard_card">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" alt="americanexpress_card">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png"
+                    alt="visa_card">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png"
+                    alt="mastercard_card">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                    alt="americanexpress_card">
                 <img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Paypal.png" alt="paypal_card">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" alt="mercadopago_card">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png"
+                    alt="mercadopago_card">
             </div>
         </div>
         <div class="copyright__container">
