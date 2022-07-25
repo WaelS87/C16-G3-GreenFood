@@ -2,6 +2,10 @@ a{
     color: #fff;
 }
 
+a{
+    color: #fff;
+}
+
 /* Header */
 
 header{
@@ -359,8 +363,3 @@ Footer{
         margin-bottom: 0;
     }
 }
-
-
-
-
-
