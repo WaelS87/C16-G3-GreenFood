@@ -17,10 +17,6 @@
 - (https://www.salutealmacennaturaltuc.com/)
 - (https://www.salutealmacennaturaltuc.com/)
 
-<<<<<<< HEAD
-## link del la Rama develop :
-=======
 ## Link de rama **"Develop"** :
 
->>>>>>> 43f93d84d590ac3e6635bf27eaa2069fa7ced8b4
 https://github.com/WaelS87/C16-G3-GreenFood.git

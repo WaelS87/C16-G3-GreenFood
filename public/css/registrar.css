@@ -5,33 +5,33 @@
     --color-verdeClaro: #D8E9A8;
 }
 
-.container__form form {
+.registrar__main .container__form form {
     background-color: var(--color-verdeClaro);
 }
 
-.container__cuentas {
+.registrar__main .container__cuentas {
     align-items: center;
 
 }
 
-.registrar__h1 {
+.registrar__main .registrar__h1 {
     font-size: 18px;
     margin: 30px 0 0 30px;
 }
 
-.form__box {
+.registrar__main .form__box {
     flex: auto;
     margin: 10px 0;
     text-align: center;
     color: white;
 }
 
-::placeholder {
+.registrar__main ::placeholder {
     color: grey;
     font-weight: bold;
 }
 
-.form__input {
+.registrar__main .form__input {
     width: 250px;
     height: 45px;
     border: none;
@@ -40,7 +40,7 @@
     text-align: center;
 }
 
-.form__button--cuenta {
+.registrar__main .form__button--cuenta {
     color: white;
     background-color: var(--color-verde);
     width: 250px;
@@ -52,7 +52,7 @@
     border-radius: 10px;
 }
 
-.form__button--google {
+.registrar__main .form__button--google {
     display: flex;
     width: 250px;
     height: 45px;
@@ -65,19 +65,19 @@
     flex-wrap: nowrap;
 }
 
-.form__box__google {
+.registrar__main .form__box__google {
     display: flex;
     justify-content: center;
 }
 
-.logoGoogle {
+.registrar__main .logoGoogle {
     *justify-content: flex-start;
     *position: relative;
     *top: -43px;
     *left: -90px;
 }
 
-.form__button--facebook {
+.registrar__main .form__button--facebook {
     width: 250px;
     height: 45px;
     background-color: #3c5c9c;
@@ -91,34 +91,34 @@
 
 }
 
-.logoFacebook {
+.registrar__main .logoFacebook {
     *position: relative;
     *top: -92px;
     *left: -90px;
 }
 
-.registrar__truck {
+.registrar__main .registrar__truck {
     display: none;
 }
 
-.form__contact {
+.registrar__main .form__contact {
     display: none;
 }
 
 
 @media(min-width:768px) {
 
-    .form__input {
+    .registrar__main .form__input {
         width: 350px;
     }
 
-    .form__button--cuenta,
-    .form__button--google,
-    .form__button--facebook {
+    .registrar__main .form__button--cuenta,
+    .registrar__main .form__button--google,
+    .registrar__main .form__button--facebook {
         width: 350px;
     }
 
-    .form__button--google {
+    .registrar__main .form__button--google {
         display: flex;
         justify-content: center;
         flex-wrap: wrap-reverse;
@@ -131,25 +131,25 @@
         *margin-left: 50px;
     }
 
-    .logoGoogle {
+    .registrar__main .logoGoogle {
         *position: relative;
         *top: 15px;
         *left: -310px;
     }
 
-    .form__button--facebook {
+    .registrar__main .form__button--facebook {
         *position: relative;
         *top: -90px;
         *left: 25px;
     }
 
-    .logoFacebook {
+    .registrar__main .logoFacebook {
         *position: relative;
         *top: -75px;
         *left: -284px;
     }
 
-    .registrar__truck {
+    .registrar__main .registrar__truck {
         display: block;
         background-color: var(--color-verdeClaro);
         width: 150px;
@@ -158,7 +158,7 @@
         *right: 20px;
     }
 
-    .contact {
+    .registrar__main .contact {
         display: none;
     }
 }
@@ -166,48 +166,48 @@
 
 @media(min-width: 1024px) {
 
-    .container__form form {
+    .registrar__main .container__form form {
         margin-top: 80px;
     }
 
-    .registrar h1 {
+    .registrar__main .registrar h1 {
         font-size: 18px;
         margin: 100px 0 20px 100px;
     }
 
-    .form__button--google {
+    .registrar__main .form__button--google {
         *position: relative;
         *left: 400px;
         *bottom: 300px;
         border-radius: 10px;
     }
 
-    .logoGoogle {
+    .registrar__main .logoGoogle {
         *position: relative;
         *top: -285px;
         *left: 80px;
     }
 
-    .form__button--facebook {
+    .registrar__main .form__button--facebook {
         *position: relative;
         *left: 425px;
         *top: -405px;
         border-radius: 10px;
     }
 
-    .logoFacebook {
+    .registrar__main .logoFacebook {
         *position: relative;
         *top: -390px;
         *left: 110px;
     }
 
-    .registrar__truck {
+    .registrar__main .registrar__truck {
         *position: relative;
         *left: 80px;
         *top: -270px;
     }
 
-    .form__contact {
+    .registrar__main .form__contact {
         text-transform: uppercase;
         color: grey;
         *position: relative;
