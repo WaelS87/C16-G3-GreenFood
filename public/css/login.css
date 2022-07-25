@@ -7,6 +7,10 @@ main section div.parapho__es h5, .olvide {
     text-decoration: underline;
     font-size: 12px;
 }
+div.abajo a{
+    color:black;
+}
+
 main h3 {
     text-align: center;
     color:white;
