@@ -5,18 +5,23 @@
     --color-verdeClaro: #D8E9A8;
 }
 
-.form {
+.container__form form {
     background-color: var(--color-verdeClaro);
 }
 
-h1 {
+.container__cuentas {
+    align-items: center;
+
+}
+
+.registrar__h1 {
     font-size: 18px;
-    margin: 30px 0 20px 35px;
+    margin: 30px 0 0 30px;
 }
 
 .form__box {
     flex: auto;
-    margin: 40px 40px 30px 0;
+    margin: 10px 0;
     text-align: center;
     color: white;
 }
@@ -40,7 +45,7 @@ h1 {
     background-color: var(--color-verde);
     width: 250px;
     height: 45px;
-    padding: 10px;
+    padding: 5px;
     font-weight: bolder;
     text-transform: uppercase;
     border: none;
@@ -48,6 +53,7 @@ h1 {
 }
 
 .form__button--google {
+    display: flex;
     width: 250px;
     height: 45px;
     border: 1px solid black;
@@ -55,12 +61,20 @@ h1 {
     padding: 10px 10px 10px 40px;
     border-radius: 20px;
     margin-left: 0px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.form__box__google {
+    display: flex;
+    justify-content: center;
 }
 
 .logoGoogle {
-    position: relative;
-    top: -43px;
-    left: -90px;
+    *justify-content: flex-start;
+    *position: relative;
+    *top: -43px;
+    *left: -90px;
 }
 
 .form__button--facebook {
@@ -72,18 +86,18 @@ h1 {
     border: none;
     padding: 10px 10px 10px 40px;
     border-radius: 20px;
-    position: relative;
-    top: -50px;
+    *position: relative;
+    *top: -50px;
 
 }
 
 .logoFacebook {
-    position: relative;
-    top: -92px;
-    left: -90px;
+    *position: relative;
+    *top: -92px;
+    *left: -90px;
 }
 
-.truck {
+.registrar__truck {
     display: none;
 }
 
@@ -105,40 +119,43 @@ h1 {
     }
 
     .form__button--google {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
         width: 350px;
         height: 45px;
         border: 1px solid black;
         font-weight: bolder;
         padding: 10px 10px 10px 40px;
         border-radius: 20px;
-        margin-left: 50px;
+        *margin-left: 50px;
     }
 
     .logoGoogle {
-        position: relative;
-        top: 15px;
-        left: -310px;
+        *position: relative;
+        *top: 15px;
+        *left: -310px;
     }
 
     .form__button--facebook {
-        position: relative;
-        top: -90px;
-        left: 25px;
+        *position: relative;
+        *top: -90px;
+        *left: 25px;
     }
 
     .logoFacebook {
-        position: relative;
-        top: -75px;
-        left: -284px;
+        *position: relative;
+        *top: -75px;
+        *left: -284px;
     }
 
-    .truck {
+    .registrar__truck {
         display: block;
         background-color: var(--color-verdeClaro);
         width: 150px;
-        position: relative;
-        bottom: 30px;
-        right: 20px;
+        *position: relative;
+        *bottom: 30px;
+        *right: 20px;
     }
 
     .contact {
@@ -149,53 +166,52 @@ h1 {
 
 @media(min-width: 1024px) {
 
-    .form {
+    .container__form form {
         margin-top: 80px;
     }
 
-    h1 {
+    .registrar h1 {
         font-size: 18px;
         margin: 100px 0 20px 100px;
     }
 
     .form__button--google {
-        position: relative;
-        left: 400px;
-        bottom: 300px;
+        *position: relative;
+        *left: 400px;
+        *bottom: 300px;
         border-radius: 10px;
     }
 
     .logoGoogle {
-        position: relative;
-        top: -285px;
-        left: 80px;
+        *position: relative;
+        *top: -285px;
+        *left: 80px;
     }
 
     .form__button--facebook {
-        position: relative;
-        left: 425px;
-        top: -405px;
+        *position: relative;
+        *left: 425px;
+        *top: -405px;
         border-radius: 10px;
     }
 
     .logoFacebook {
-        position: relative;
-        top: -390px;
-        left: 110px;
+        *position: relative;
+        *top: -390px;
+        *left: 110px;
     }
 
-
-    .truck {
-        position: relative;
-        left: 80px;
-        top: -270px;
+    .registrar__truck {
+        *position: relative;
+        *left: 80px;
+        *top: -270px;
     }
 
     .form__contact {
         text-transform: uppercase;
         color: grey;
-        position: relative;
-        bottom: 150px;
-        right: 320px;
+        *position: relative;
+        *bottom: 150px;
+        *right: 320px;
     }
 }
