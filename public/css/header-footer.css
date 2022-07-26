@@ -40,9 +40,6 @@ header{
 /* Colocar como boton */
 }
 
-.header__tittle__container{
-}
-
 .navbar__container--1024{
     display: none;
     background-color: var(--color-negro);

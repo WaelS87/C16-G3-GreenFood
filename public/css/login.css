@@ -1,14 +1,14 @@
 /*celuler*/
 
 .login__main section div.parapho__es h5,
-.olvide {
+.login__main .olvide {
     text-align: center;
     margin-bottom: 15px;
     color: white;
     text-decoration: underline;
     font-size: 12px;
 }
-div.abajo a{
+.login__main div.abajo a{
     color:black;
 }
 
@@ -113,7 +113,7 @@ div.abajo a{
 }
 
 .login__main .mail,
-.lock {
+.login__main .lock {
     width: 5%;
     text-align: right;
     *position: absolute;
@@ -248,7 +248,7 @@ div.abajo a{
 @media(min-width: 1024px) {
 
     .login__main section div.parapho__es h5,
-    .olvide {
+    .login__main .olvide {
         font-size: 16px;
     }
 
