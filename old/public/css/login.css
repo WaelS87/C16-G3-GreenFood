@@ -1,0 +1,289 @@
+/*celuler*/
+
+.login__main section div.parapho__es h5,
+.login__main .olvide {
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.login__main div.abajo a{
+    color:black;
+}
+
+.login__main h3 {
+    text-align: center;
+    color: white;
+}
+
+.login__main section.login {
+    width: 100%;
+    background-image: url(/img/comida-ingredientes_1220-4884.webp);
+    background-size: cover;
+}
+
+.login__main section p.login--parapho {
+    padding: 10px;
+    margin-bottom: 10px;
+    /* background-color: rgba(121, 184, 121, 0.87);*/
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.login__main .form__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    *position: relative;
+    padding: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.login__main .form__label {
+    margin-bottom: 5px;
+    width: 100%;
+    color: rgb(228, 85, 144);
+    padding: 0 10%;
+}
+
+.login__main .form__input {
+    margin-bottom: 5px;
+    width: 80%;
+    height: 27px;
+    display: flex;
+    *flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+.login__main .form__input input {
+    width: 95%;
+    border: none;
+    height: 100%;
+
+
+}
+
+.login__main .form__box__flex {
+    display: flex;
+    justify-content: center;
+}
+
+.login__main .parapho {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.login__main .form__button {
+    width: 75%;
+    height: 27px;
+    background-color: rgb(90, 207, 201);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.login__main .form__button .form__button--submit {
+    display: flex;
+    justify-content: center;
+}
+
+.login__main .parapho__es {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.login__main .form__box__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login__main .nav i {
+    color: red;
+}
+
+.login__main .mail,
+.login__main .lock {
+    width: 5%;
+    text-align: right;
+    *position: absolute;
+    *bottom: 1em;
+}
+
+.login__main .google,
+.login__main .face {
+    width: 75%;
+    height: 27px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__main h5 i {
+    font-size: xx-small;
+}
+
+.login__main .face i {
+    color: blue;
+    font-size: x-large;
+}
+
+.login__main .google i {
+    color: brown;
+    font-size: x-large;
+}
+
+.login__main span {
+    *width: 100%;
+    font-weight: bold;
+}
+
+.login__main .form__input i {
+    font-size: small;
+    color: rgb(94, 52, 122);
+    margin-right: 5%;
+}
+
+.login__main h6 {
+    padding: 10px;
+    color: red;
+}
+
+.login__main .abajo img {
+    width: 70px;
+}
+
+.login__main .abajo {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    padding: 5px;
+}
+
+/*Tablet*/
+
+@media(min-width: 768px) {
+    .login__main .form__label {
+        width: 40%;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .login__main section {
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .login__main .form__input {
+        height: 35px;
+        width: 40%;
+    }
+
+    .login__main .form__button {
+        width: 40%;
+        height: 35px;
+    }
+
+    .login__main section div.parapho__es h5,
+    .olvide {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .login__main span {
+        width: 100%;
+    }
+
+    .login__main .mail,
+    .login__main .lock {
+        width: 35%;
+        bottom: 0.8em;
+    }
+
+    .login__main .form__input i {
+        font-size: large;
+    }
+
+    .login__main .google,
+    .login__main .face {
+        width: 40%;
+        height: 35px;
+    }
+
+    .login__main .abajo {
+        height: 100px;
+    }
+
+    .login__main .abajo img {
+        width: 130px;
+    }
+
+    .login__main .inicio {
+        font-size: 14px;
+        ;
+    }
+}
+
+/*Desktop*/
+
+@media(min-width: 1024px) {
+
+    .login__main section div.parapho__es h5,
+    .login__main .olvide {
+        font-size: 16px;
+    }
+
+    .login__main .form__label {
+        font-size: 22px;
+    }
+
+    .login__main .form__input {
+        height: 45px;
+    }
+
+    .login__main .form__button {
+
+        height: 40px;
+    }
+
+    .login__main .google,
+    .login__main .face {
+
+        height: 40px;
+    }
+
+    .login__main .face i {
+        font-size: xx-large;
+    }
+
+    .login__main .google i {
+        font-size: xx-large;
+    }
+
+    .login__main .inicio {
+        font-size: 18px;
+    }
+
+    .login__main .form__input i {
+        font-size: large;
+    }
+}

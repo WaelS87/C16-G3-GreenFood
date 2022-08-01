@@ -1,0 +1,392 @@
+.detalle__main {
+    display: flex;
+    background-color: var(--color-verdeUltraClaro);
+    font-family: 'Alata', sans-serif;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detalle__main .detalle__seccion{
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detalle__main .detalle__h1 {
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.detalle__main .container {
+    width: 80%;
+    display: flex;
+}
+
+.detalle__main .main__div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+.detalle__main .main__div img {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
+.detalle__main .main__images {
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.detalle__main .main__images img{
+    width: 80%;
+    height: 25%;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
+.detalle__main .container2 {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.detalle__main .main__detalle__tittle {
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--color-verdeOscuro);
+    border-radius: 5px;
+    color: var(--color-blanco);
+    text-shadow: 1px 1px black;
+}
+
+.detalle__main .main__detalle__precio,
+.detalle__main .main__detalle__cuotas,
+.detalle__main .main__detalle p {
+    width: fit-content;
+    text-align: center;
+    padding: 7px;
+    background-color: var(--color-verdeOscuro);
+    border-radius: 5px;
+    color: var(--color-blanco);
+    text-shadow: 1px 1px black;
+}
+
+.detalle__main .main__detalle {
+    height: fit-content;
+}
+
+.detalle__main .main__agregar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.detalle__main .main__cantidad,
+.detalle__main .main____detalle__carrito,
+.detalle__main .main__comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    *padding: 7px;
+}
+
+
+.main__detalle__envios{
+    text-align: center;
+}
+
+.detalle__main .main__consulta{
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.detalle__main .main__cantidad {
+    display: flex;
+    background-color: rgb(195, 185, 185);
+    border-radius: 7px;
+    align-self: center;
+    gap: 5px;
+}
+
+.detalle__main .main__cantidad--up,
+.detalle__main .main__cantidad--down {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(195, 185, 185);
+    font-weight: bolder;
+    padding: 2px;
+}
+
+.detalle__main .main__agregar .main__cantidad {
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 10px;
+    background-color: rgb(195, 185, 185);
+}
+
+.detalle__main .main__detalle__carrito__button {
+    border-radius: 15px;
+    font-size: 10px;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: var(--color-verdeOscuro);
+    color: white;
+    font-weight: bolder;
+}
+
+.detalle__main .area__consulta{
+    width: 90px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 15px 0 0 15px;
+    list-style: none;
+    padding: 0 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalle__main .main__consulta--button {
+    border-radius: 0 15px 15px 0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    background-color: var(--color-verdeOscuro);
+    color: white;
+    font-weight: bolder;
+}
+
+.detalle__main .main__consulta p {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.detalle__main .main__comprar__button {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: #4E9F3D;
+    *margin-bottom: 30px;
+}
+
+.detalle__main .boxTittle p {
+    display: none;
+}
+
+.detalle__main .detalle__truck {
+    display: none;
+    *justify-self: left;
+    width: 100%;
+    text-align: left;
+}
+
+.detalle__main .detalle__truck img {
+    width: 120px;
+}
+
+.detalle__main .home__recomendados__container {
+    display: none;
+}
+
+
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+    .detalle__main{
+        
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .detalle__main .detalle__h1{
+        width: 80%;
+        text-align: left;
+        font-size: 18px;
+        
+    }
+
+    .detalle__main .detalle__seccion{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 60vh;
+        padding: 15px 0;
+        background-color: var(--color-blanco);
+    }
+
+    .detalle__main .container{
+        width: 40%;
+        height: 250px;
+        justify-content: center;
+    }
+
+    .detalle__main .main__images{
+        height: 150px;
+        width: 20%;
+    }
+
+    .detalle__main .main__images img {
+        width: 60%;
+        height: 25%;
+    }
+
+    .detalle__main .container2{
+        align-items: flex-start;
+    }
+
+    .detalle__main .main__consulta{
+        width: 60%;
+    }
+
+    .detalle__main .main__detalle__tittle, .detalle__main .main__detalle__precio, .detalle__main .main__detalle__cuotas {
+        background-color: rgba(225, 225, 225, 0);
+        color: black;
+    }
+
+    .detalle__main .registar h1 {
+        font-size: 16px;
+        margin: 100px 0px 0px 100px;
+    }
+
+    .detalle__main .main__div--img {
+        width: 270px;
+        height: 400px;
+        border-radius: 20px;
+        *position: relative;
+        *top: 90%;
+        *left: 230px;
+    }
+
+    .detalle__main .main__images {
+        *width: 110px;
+        *height: 110px;
+        *position: relative;
+        *bottom: 172px;
+        *left: 160px;
+        *border-radius: 10px;
+        *margin: 7px;
+    }
+
+    .detalle__main .container2 {
+        *position: relative;
+        *bottom: 400px;
+        *left: 600px;
+    }
+
+    .detalle__main .detalle__truck {
+        display: block;
+        *position: relative;
+        *display: block;
+        *top: -20px;
+        *left: 100px;
+    }
+
+    .detalle__main .home__recomendados__container {
+        *display: none;
+    }
+}
+
+
+
+/*  DESKTOP  */
+
+@media (min-width:1024px) {
+
+    .detalle__main .container{
+        height: 100%;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .detalle__main .container .main__div, .container .main__div img{
+        display: flex;
+        justify-content: center;
+        height: 90%;
+    }
+
+    .detalle__main .container .main__images{
+        height: 50%;
+    }
+
+    .detalle__main .detalle__truck {
+        display: block;
+    }
+
+    .detalle__main .home__recomendados__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .detalle__main .home__recomendados__container .productos__tittles{
+        text-align: center;
+        *width: 100%;
+        justify-content: center;
+    }
+
+    .detalle__main div .recomendado__container img {
+        *width: 160px;
+        height: 140px;
+        border: 1px solid black;
+        margin-top: 20px;
+    }
+
+    .detalle__main .productos__recomendados__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .detalle__main .recomendado__estrellas i {
+        color: gold;
+        font-size: 22px;
+    }
+
+    .detalle__main .producto__precio {
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+
+    .detalle__main div.recomendado__container img {
+        width: 200px;
+        height: 180px;
+        margin-top: 10px;
+    }
+}

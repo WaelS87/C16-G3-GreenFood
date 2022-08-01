@@ -1,0 +1,24 @@
+{
+  "name": "c16-g3-greenfood",
+  "version": "1.0.0",
+  "description": "- Germán Gutiérrez, 45 años, Salta Capital\r - Damián Ezequiel González, 20 años, San Miguel-Bs.As.\r - Wael Fakhrji , 35 años, Lanus-Bs.As",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaelS87/C16-G3-GreenFood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaelS87/C16-G3-GreenFood/issues"
+  },
+  "homepage": "https://github.com/WaelS87/C16-G3-GreenFood#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
