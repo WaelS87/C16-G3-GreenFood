@@ -31,6 +31,7 @@ body{
     font-family: 'Work Sans', sans-serif;
     text-shadow: 0 0 2px black;
     background-color: var(--color-verdeUltraClaro);
+    *background-image: url("../images/comida-ingredientes_1220-4884.webp");
 }
 
 

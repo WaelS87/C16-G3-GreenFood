@@ -9,7 +9,7 @@
 
 .detalle__main .detalle__seccion{
     display: flex;
-    height: 60vh;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
 }

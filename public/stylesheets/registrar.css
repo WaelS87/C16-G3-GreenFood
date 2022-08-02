@@ -4,18 +4,23 @@
     --color-verde: #4E9F3D;
 }
 
-.registrar__main .container__form form {
-    background-color: var(--color-verdeUltraClaro);
+.registrar__main{
+    background-image: url("../images/comida-ingredientes_1220-4884.webp");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .registrar__main .container__cuentas {
     align-items: center;
-
 }
 
 .registrar__main .registrar__h1 {
     font-size: 18px;
     margin-top: 30px;
+    color: #efefef;
 }
 
 .registrar__main .form__box {
@@ -64,45 +69,23 @@
     width: 250px;
     height: 45px;
     font-weight: bolder;
-    padding: 0px 5% 0 0;
     border-radius: 20px;
-    margin-left: 0px;
     justify-content: center;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-}
 
-.registrar__main .form__box__google, .registrar__main .form__button--facebook {
-    display: flex;
-    justify-content: center;
+    border: none;
 }
 
 .registrar__main .logoGoogle {
-    *justify-content: flex-start;
-    *position: relative;
-    *top: -43px;
-    *left: -90px;
+    background-color: #efefef;
+    color: var(--color-negro);
 }
 
 .registrar__main .form__button--facebook {
-    width: 250px;
-    height: 45px;
     background-color: #3c5c9c;
     color: white;
-    font-weight: bolder;
-    border: none;
-    *padding: 10px 10px 10px 40px;
-    border-radius: 20px;
-    *position: relative;
-    *top: -50px;
-
-}
-
-.registrar__main .logoFacebook {
-    *position: relative;
-    *top: -92px;
-    *left: -90px;
 }
 
 .registrar__main .registrar__truck {
@@ -126,40 +109,9 @@
         width: 350px;
     }
 
-    .registrar__main .form__button--google {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap-reverse;
-        width: 350px;
-        height: 45px;
-        border: 1px solid black;
-        font-weight: bolder;
-        padding: 10px 10px 10px 40px;
-        border-radius: 20px;
-        *margin-left: 50px;
-    }
-
-    .registrar__main .logoGoogle {
-        *position: relative;
-        *top: 15px;
-        *left: -310px;
-    }
-
-    .registrar__main .form__button--facebook {
-        *position: relative;
-        *top: -90px;
-        *left: 25px;
-    }
-
-    .registrar__main .logoFacebook {
-        *position: relative;
-        *top: -75px;
-        *left: -284px;
-    }
-
     .registrar__main .registrar__truck {
         display: block;
-        background-color: var(--color-verdeUltraClaro);
+        *background-color: var(--color-verdeUltraClaro);
         width: 150px;
         *position: relative;
         *bottom: 30px;
@@ -174,52 +126,24 @@
 
 @media(min-width: 1024px) {
 
-    .registrar__main .container__form form {
-        margin-top: 80px;
+    .registrar__main{
+        height: 100vh;
     }
 
-    .registrar__main .registrar h1 {
-        font-size: 18px;
-        margin: 100px 0 20px 100px;
+    .registrar__main .registrar__h1{
+        height: 50px;
     }
 
     .registrar__main .form__button--google {
-        *position: relative;
-        *left: 400px;
-        *bottom: 300px;
         border-radius: 10px;
-    }
-
-    .registrar__main .logoGoogle {
-        *position: relative;
-        *top: -285px;
-        *left: 80px;
     }
 
     .registrar__main .form__button--facebook {
-        *position: relative;
-        *left: 425px;
-        *top: -405px;
         border-radius: 10px;
-    }
-
-    .registrar__main .logoFacebook {
-        *position: relative;
-        *top: -390px;
-        *left: 110px;
-    }
-
-    .registrar__main .registrar__truck {
-        *position: relative;
-        *left: 80px;
-        *top: -270px;
     }
 
     .registrar__main .form__contact {
         text-transform: uppercase;
         color: grey;
-        *position: relative;
-        *bottom: 150px;
-        *right: 320px;
     }
 }

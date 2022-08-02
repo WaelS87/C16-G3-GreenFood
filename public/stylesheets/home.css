@@ -1,10 +1,20 @@
 /* Main */
 
-main{
+.home__main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.home__seccion1, .home__seccion2{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url("../images/comida-ingredientes_1220-4884.webp");
+    background-size: cover;
 }
 
 .home__banner__container{
@@ -161,7 +171,7 @@ main{
 .home__ayuda__container{
     background-color: var(--color-blanco);
     width: 100%;
-    margin: 5%;
+    *margin: 5%;
     border: 1px solid gray;
     box-shadow: 2px 2px 2px var(--color-negro);
     text-align: center;

@@ -1,169 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenFood|Home</title>
-    <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/98ce542dfa.js" crossorigin="anonymous"></script>
-</head>
+<%- include("./partials/head") %> 
 
 <body>
-    <Header>
-        <div class="greenbar__container">
-            <p>Bienvenido al mundo saludable</p>
-            <p>Envios gratis desde $6000</p>
-            <p>Ofertas todos los días</p>
-        </div>
-        <div class="navbar__container">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <div class="header__tittle__container">
-                <a href="/">
-                    <div class="header__tittle">
-                        <h1 class="white__word">Green</h1>
-                        <h1 class="green__word">Food</h1>
+    <%- include("./partials/header") %> 
+    <main class="home__main">
+        <section class="home__seccion1">
+            <div class="home__banner__container">
+                <div class="home__banner__tittles">
+                    <h1 class="green__word">Ofertas</h1>
+                    <h1 class="white__word">desde 25%</h1>
+                </div>
+                <div class="home__banner__buttons">
+                    <input type="radio" name="banner__selector" checked>
+                    <input type="radio" name="banner__selector">
+                    <input type="radio" name="banner__selector">
+                </div>
+            </div>
+            <div class="home__productos__container">
+                <h1 class="productos__tittles">
+                    <span class="white__word">Combos</span>
+                    <span class="green__word">Green</span>
+                </h1>
+                <div class="producto__superior__container">
+                    <div class="producto__izquierda">
+                        <a href="/products/detail">
+                        <div class="producto p1">
+                            <h4 class="producto__precio">$xxxx</h4>
+                        </div>    
+                        </a>
+                        
+                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
                     </div>
-                    <div class="header__subtittle">
-                        <p>Lorem ipsum dolor sit amet</p>
+                    <div class="producto__linea linea__dos"></div>
+                    <div class="producto__central">
+                        <a href="/detalleProducto">
+                        <div class="producto p3">
+                            <h4 class="producto__precio">$xxxx</h4>
+                        </div>    
+                        </a>
+                        
+                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
                     </div>
-                </a>
-            </div>
-            <button class="header__burgerbutton">
-                <i class="fa-solid fa-bars"></i>
-                <ul class="header__menu">
-                    <a href="/carrito">
-                        <li><i class="fa-solid fa-cart-shopping"></i></li>
-                    </a>
-                    <a href="/login">
-                        <li>Login</li>
-                    </a>
-                    <a href="/registrar">
-                        <li>Register</li>
-                    </a>
-                </ul>
-            </button>
-        </div>
-        <div class="navbar__container--1024">
-            <div class="navbar__busqueda">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text">
-            </div>
-            <div class="header__tittle__container">
-                <a href="/">
-                    <div class="header__tittle">
-                        <h1 class="white__word">Green</h1>
-                        <h1 class="green__word">Food</h1>
+                    <div class="producto__linea"></div>
+                    <div class="producto__derecha">
+                        <a href="/detalleProducto">
+                        <div class="producto p2">
+                            <h4 class="producto__precio">$xxxx</h4>
+                        </div>    
+                        </a>
+                        
+                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
                     </div>
-                    <div class="header__subtittle">
-                        <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="producto__inferior__container">
+                    <div class="producto__izquierda">
+                        <a href="/detalleProducto">
+                        <div class="producto p2">
+                            <h4 class="producto__precio">$xxxx</h4>
+                        </div>    
+                        </a>
+                        
+                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
                     </div>
-                </a>
-            </div>
-            <ul class="navbar__loginregister">
-                <li><a href="/login">Login</a></li>
-                <li><a href="/registrar">Register</a></li>
-            </ul>
-            <a class="navbar__carrito" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="header__categories__container">
-            <span class="header__categories">Inicio</span>
-            <span class="header__categories">Dietética</span>
-            <span class="header__categories">Veggie</span>
-            <span class="header__categories">Snacks</span>
-            <span class="header__categories">Suplementos</span>
-            <span class="header__categories">Varios</span>
-        </div>
-    </Header>
-    <main>
-        <section class="home__banner__container">
-            <div class="home__banner__tittles">
-                <h1 class="green__word">Ofertas</h1>
-                <h1 class="white__word">desde 25%</h1>
-            </div>
-            <div class="home__banner__buttons">
-                <input type="radio" name="banner__selector" checked>
-                <input type="radio" name="banner__selector">
-                <input type="radio" name="banner__selector">
-            </div>
-        </section>
-        <section class="home__productos__container">
-            <h1 class="productos__tittles">
-                <span class="white__word">Combos</span>
-                <span class="green__word">Green</span>
-            </h1>
-            <div class="producto__superior__container">
-                <div class="producto__izquierda">
-                    <a href="/detalleProducto">
-                    <div class="producto p1">
-                        <h4 class="producto__precio">$xxxx</h4>
-                    </div>    
-                    </a>
-                    
-                    <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
+                    <div class="producto__linea linea__dos"></div>
+                    <div class="producto__central">
+                        <a href="/detalleProducto">
+                        <div class="producto p3">
+                            <h4 class="producto__precio">$xxxx</h4>
+                        </div>    
+                        </a>
+                        
+                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
+                    </div>
+                    <div class="producto__linea"></div>
+                    <div class="producto__derecha">
+                        <a href="/detalleProducto">
+                        <div class="producto p1">
+                            <h4 class="producto__precio">$xxxx</h4>
+                        </div>    
+                        </a>
+                        
+                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
+                    </div>
                 </div>
-                <div class="producto__linea linea__dos"></div>
-                <div class="producto__central">
-                    <a href="/detalleProducto">
-                    <div class="producto p3">
-                        <h4 class="producto__precio">$xxxx</h4>
-                    </div>    
-                    </a>
-                    
-                    <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
+                <div class="producto__buttons">
+                    <input type="radio" name="producto__selector" checked>
+                    <input type="radio" name="producto__selector">
+                    <input type="radio" name="producto__selector">
                 </div>
-                <div class="producto__linea"></div>
-                <div class="producto__derecha">
-                    <a href="/detalleProducto">
-                    <div class="producto p2">
-                        <h4 class="producto__precio">$xxxx</h4>
-                    </div>    
-                    </a>
-                    
-                    <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                </div>
-            </div>
-            <div class="producto__inferior__container">
-                <div class="producto__izquierda">
-                    <a href="/detalleProducto">
-                    <div class="producto p2">
-                        <h4 class="producto__precio">$xxxx</h4>
-                    </div>    
-                    </a>
-                    
-                    <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                </div>
-                <div class="producto__linea linea__dos"></div>
-                <div class="producto__central">
-                    <a href="/detalleProducto">
-                    <div class="producto p3">
-                        <h4 class="producto__precio">$xxxx</h4>
-                    </div>    
-                    </a>
-                    
-                    <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                </div>
-                <div class="producto__linea"></div>
-                <div class="producto__derecha">
-                    <a href="/detalleProducto">
-                    <div class="producto p1">
-                        <h4 class="producto__precio">$xxxx</h4>
-                    </div>    
-                    </a>
-                    
-                    <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                </div>
-            </div>
-            <div class="producto__buttons">
-                <input type="radio" name="producto__selector" checked>
-                <input type="radio" name="producto__selector">
-                <input type="radio" name="producto__selector">
             </div>
         </section>
         <section class="home__ayuda__container">
@@ -194,115 +120,72 @@
                 <h4 class="ayuda__texto">Nutrición</h4>
             </div>
         </section>
-        <section class="home__banner2__container">
-            <h1 class="green__word txtizq">¡Todo</h1>
-            <h1 class="white__word txtder">lo que</h1>
-            <h1 class="white__word txtizq">necesitas</h1>
-            <h1 class="green__word txtder">y más!</h1>
-        </section>
-        <section class="home__recomendados__container home__productos__container">
-            <h1 class="productos__tittles">
-                <span class="white__word">Productos</span>
-                <span class="green__word">Preferidos</span>
-            </h1>
-            <div class="productos__recomendados__container">
-                <div class="recomendado__container">
-                    <h3 class="recomendado__nombre">Lorem.</h3>
-                    <div class="producto recomendado1">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-                <div class="recomendado__container">
-                    <h3 class="recomendado__nombre">Lorem2.</h3>
-                    <div class="producto recomendado2">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-                <div class="recomendado__container">
-
-                    <h3 class="recomendado__nombre">Lorem3.</h3>
-                    <div class="producto recomendado3">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-                <div class="recomendado__container--768">
-
-                    <h3 class="recomendado__nombre">Lorem4.</h3>
-                    <div class="producto recomendado3">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
+        <section class="home__seccion2">
+            <div class="home__banner2__container">
+                <h1 class="green__word txtizq">¡Todo</h1>
+                <h1 class="white__word txtder">lo que</h1>
+                <h1 class="white__word txtizq">necesitas</h1>
+                <h1 class="green__word txtder">y más!</h1>
             </div>
-
+            <div class="home__recomendados__container home__productos__container">
+                <h1 class="productos__tittles">
+                    <span class="white__word">Productos</span>
+                    <span class="green__word">Preferidos</span>
+                </h1>
+                <div class="productos__recomendados__container">
+                    <div class="recomendado__container">
+                        <h3 class="recomendado__nombre">Lorem.</h3>
+                        <div class="producto recomendado1">
+                            <h3 class="recomendado__estrellas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </h3>
+                            <h3 class="producto__precio">$XXXX</h3>
+                        </div>
+                    </div>
+                    <div class="recomendado__container">
+                        <h3 class="recomendado__nombre">Lorem2.</h3>
+                        <div class="producto recomendado2">
+                            <h3 class="recomendado__estrellas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </h3>
+                            <h3 class="producto__precio">$XXXX</h3>
+                        </div>
+                    </div>
+                    <div class="recomendado__container">
+    
+                        <h3 class="recomendado__nombre">Lorem3.</h3>
+                        <div class="producto recomendado3">
+                            <h3 class="recomendado__estrellas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </h3>
+                            <h3 class="producto__precio">$XXXX</h3>
+                        </div>
+                    </div>
+                    <div class="recomendado__container--768">
+    
+                        <h3 class="recomendado__nombre">Lorem4.</h3>
+                        <div class="producto recomendado3">
+                            <h3 class="recomendado__estrellas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </h3>
+                            <h3 class="producto__precio">$XXXX</h3>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
         </section>
+        
     </main>
-    <Footer>
-        <div class="suscribe__container">
-            <h2 class="suscribe__tittle">Suscribete y recibe ofertas exclusivas</h2>
-            <input type="text" name="suscription" placeholder="Ingresa tu Email">
-        </div>
-        <div class="consultas__container">
-            <div>
-                <h3>Servicio al cliente</h3>
-                <p>Preguntas Frecuentes</p>
-                <p>Estado de la compra</p>
-                <p>Información de envíos</p>
-            </div>
-            <div>
-                <h3>Recursos</h3>
-                <p>Promociones y Ofertas</p>
-            </div>
-            <div>
-                <h3>Empresa</h3>
-                <p>Sobre Nosotros</p>
-                <p>Términos de Privacidad</p>
-            </div>
-            <div>
-                <h3>Seguinos</h3>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100083228144123"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </div>
-        <div class="paymethods__container">
-            <h3>Medios de pago</h3>
-            <div class="cards__container">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png"
-                    alt="visa_card">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png"
-                    alt="mastercard_card">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
-                    alt="americanexpress_card">
-                <img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-Paypal.png" alt="paypal_card">
-                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png"
-                    alt="mercadopago_card">
-            </div>
-        </div>
-        <div class="copyright__container">
-            <small>2022 Green Food S.A. Todos los derechos reservados ©</small>
-        </div>
-    </Footer>
+    <%- include("./partials/footer") %> 
 </body>
 
 </html>

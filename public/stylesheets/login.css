@@ -19,11 +19,12 @@
 
 .login__main section.login {
     width: 100%;
-    background-image: url(/img/comida-ingredientes_1220-4884.webp);
+    background-image: url("../images/comida-ingredientes_1220-4884.webp");
     background-size: cover;
 }
 
-.login__main section p.login--parapho {
+.login--parapho {
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     /* background-color: rgba(121, 184, 121, 0.87);*/

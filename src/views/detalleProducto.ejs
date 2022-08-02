@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("./partials/head") %> 
+
+<body>
+    <%- include("./partials/header") %> 
+
+    <main class="detalle__main">
+        <h1 class="detalle__h1">Inicio/Producto/<bold>Detalle</bold>
+        </h1>
+        
+        <section class="detalle__seccion">
+            <div class="container">
+                <div class="main__images">
+                    <img src="/images/pan-integral-768x480.jpg" alt="image 2">
+                    <img src="/images/pan-integral-768x480.jpg" alt="image 3">
+                    <img src="/images/pan-integral-768x480.jpg" alt="image 4">
+                </div>
+                <div class="main__div">
+                    <img class="main__div--img" width="200px" src="/images/pan-integral-768x480.jpg" alt="imagen producto">
+                </div>
+            </div>
+            <div class="container2">
+                <h3 class="main__detalle__tittle">Detalle de producto</h3>
+                <h4 class="main__detalle__precio">$1.000</h4>
+                <h5 class="main__detalle__cuotas">12 cuotas de $100</h5>
+                <div class="main__agregar">
+                    <div class="main__cantidad">
+                        <button class="main__cantidad--up">-</button>
+                        <span>value</span>
+                        <button class="main__cantidad--down">+</button>
+                    </div>
+                    <div class="main__detalle__carrito">
+                        <button class="main__detalle__carrito__button">Agregar al carrito</button>
+                    </div>
+                </div>
+                <h5 class="main__detalle__envios">Envios gratis desde $6.000</h5>
+                <div class="main__consulta">
+                    <textarea class="area__consulta"></textarea>
+                    <button class="main__consulta--button">consulta</button>
+                    <p>No se cual es mi codigo postal</p>
+                </div>
+                <div class="main__comprar">
+                    <button class="main__comprar__button">comprar</button>
+                </div>
+            </div>
+        </section>
+        <div class="boxTittle">
+            <p>tambien podes probar...</p>
+        </div>
+        <section class="home__recomendados__container">
+            <h1 class="productos__tittles">
+                <span class="white__word">Productos</span>
+                <span class="green__word">Recomendados</span>
+            </h1>
+            <hr>
+            <div class="productos__recomendados__container">
+                <div class="recomendado__container">
+                    <h3 class="recomendado__nombre">Lorem.</h3>
+                    <div class="producto recomendado1">
+                        <h3 class="recomendado__estrellas">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </h3>
+                        <h3 class="producto__precio">$XXXX</h3>
+                    </div>
+                </div>
+                <div class="recomendado__container">
+                    <h3 class="recomendado__nombre">Lorem2.</h3>
+                    <div class="producto recomendado2">
+                        <h3 class="recomendado__estrellas">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </h3>
+                        <h3 class="producto__precio">$XXXX</h3>
+                    </div>
+                </div>
+                <div class="recomendado__container">
+                    <h3 class="recomendado__nombre">Lorem3.</h3>
+                    <div class="producto recomendado3">
+                        <h3 class="recomendado__estrellas">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </h3>
+                        <h3 class="producto__precio">$XXXX</h3>
+                    </div>
+                </div>
+                <div class="recomendado__container">
+                    <h3 class="recomendado__nombre">Lorem4.</h3>
+                    <div class="producto recomendado3">
+                        <h3 class="recomendado__estrellas">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </h3>
+                        <h3 class="producto__precio">$XXXX</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="detalle__truck">
+            <img src="/images/envio-1.png" alt="logoEnvio">
+        </div>
+    </main>
+
+    <%- include("./partials/footer") %> 
+
+</body>
+
+</html>
