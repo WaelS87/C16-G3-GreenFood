@@ -40,6 +40,8 @@ header{
     }
 }
 
+/* ------------------ */
+
 .navbar__container{
     background-color: var(--color-negro);
     display: flex;
@@ -65,7 +67,7 @@ header{
 
 .navbar__busqueda{
     background-color: #fff;
-    width: 25%;
+    width: 30%;
     height: 5vh;
     display: flex;
     align-items: center;
@@ -85,10 +87,15 @@ header{
     margin-left: 2%;
 }
 
+.userNav__container{
+    width: 30%;
+    display: flex;
+}
+
 .navbar__loginregister{
     color: #fff;
     font-size: 24px;
-    width: 20%;
+    width: 70%;
     display: flex;
     justify-content: space-evenly;
     font-weight: 500;
@@ -100,13 +107,19 @@ header{
     display: flex;
     justify-content: center;
     font-size: 32px;
-    width: 5%;
+    width: 15%;
+}
+
+.navbar__profile{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    width: 15%;
 }
 
 .header__tittle__container{
-    width: 50%;
- 
-    *justify-self: center;
+    width: 30%;
+    justify-self: auto;
 }
 
 .header__tittle__container a{
