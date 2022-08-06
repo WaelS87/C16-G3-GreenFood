@@ -6,7 +6,7 @@
     --color-verdeUltraClaro:#D8E9A8;
     --color-amarillo:#FF9F29;
     --color-blanco:#FAF3E3;
-    --color-verdeClaro:#80ED99;
+    *--color-verdeClaro:#80ED99;
     /* Paleta 2: */
     *--color-negro:#000000;
     *--color-verdeOscuro:#1A4D2E;
@@ -14,7 +14,7 @@
     *--color-blanco:#F7F7F7;
     *--color-naranja:#FFB72B;
     *--color-amarillo:#FFE61B;
-    *--color-verdeClaro:#B5FE83;
+    --color-verdeClaro:#B5FE83;
     /* Paleta 4: */
     *--color-azul:#22577A;
     *--color-celeste:#38A3A5;
