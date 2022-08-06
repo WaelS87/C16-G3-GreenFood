@@ -1,5 +1,8 @@
-.carrito__main section{
-    background-image: none;
+.carrito__main{
+    background-image: url('/images/comida-ingredientes_1220-4884.webp');
+    
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 .carrito__main section article div {
     display: flex;
@@ -8,6 +11,10 @@
     gap: 4px;
     margin:6px;
     font-weight: bold;
+}
+.carrito__main section article div p,i{
+    color:white;
+    margin-left: 5px;
 }
  .carrito__main section article button{
     width:50%;
@@ -116,8 +123,8 @@
     color:rgb(47, 115, 192);;
 }
 .carrito__main p.envi{
-    font-size: 13px;
-    color:rgb(47, 115, 192);
+    font-size: 12px;
+    color:gold;
    
 }
 .carrito__main .envi i{
@@ -136,6 +143,9 @@
     background-color: #fff;
     margin: 0;
 
+}
+.carrito__main .truck i{
+    color:gold;
 }
 
 
@@ -237,10 +247,11 @@
  
     .carrito__main .truck i{
         font-size: xx-large;
+        color:gold;
     
     }
     .carrito__main p.envi {
-        font-size: 18px;
+        font-size: 16px;
         display: flex;
         justify-content: baseline;
     }
@@ -248,7 +259,7 @@
         font-size: small;
         color: gold;
     }
-    .carrito__recomendados__container{
+    .carrito__main .carrito__recomendados__container{
         display:block;
     }
     .carrito__main div.recomendado__container img{
@@ -275,8 +286,16 @@
         width: 100%;
         text-align: center;
     }
-    .carrito__main .productos__tittles{
+    h1.productos__tittles{
+       
         text-align: center;
+        justify-content: center;
+        width:100%;
+    }
+    h3.recomendado__nombre{
+        font-size: 24px ;
+        width: fit-content;
+
     }
  
 
@@ -312,10 +331,10 @@
      .carrito__main section article div button.cantidad, .carrito__main section article div button.sumar{
         display: none;
     }
-     .carrito__main section article div button.canti,  .carrito__main section article div button.suma{
-    display:flex;
-    width:300px;
-    height: fit-content;
+    .carrito__main section article div button.canti,  .carrito__main section article div button.suma{
+       display:flex;
+       width:300px;
+       height: fit-content;
     }
      .carrito__main section article div.price p{
         width:300px;
@@ -340,20 +359,17 @@
         margin-top: 10px;
   
    
-}
-.productos__tittles{
-    text-align: center;
-}
+    }
+    h1.productos__tittles{
+        font-size: 36px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    h3.recomendado__nombre{
+        font-size: 24px ;
+        width: fit-content;
 
-  
+    }
 
- 
-
-
-
-   
-    
-
-   
-    
 }
