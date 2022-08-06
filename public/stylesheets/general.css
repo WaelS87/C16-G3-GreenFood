@@ -34,6 +34,9 @@ body{
     *background-image: url("../images/comida-ingredientes_1220-4884.webp");
 }
 
+.header__adminNavbar__container{
+    display: none;
+}
 
 *{
     box-sizing: border-box;
