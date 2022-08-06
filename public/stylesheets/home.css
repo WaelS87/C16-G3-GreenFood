@@ -19,10 +19,11 @@
 
 .home__banner__container{
     width: 100%;
+    display: none;
     background-image: url("/images/home/img\ \(1\).jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
+    *display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -41,6 +42,61 @@
     accent-color: var(--color-verde);
     margin: 2% 0 2%;
 }
+
+/* Nuevo banner-Slider */
+
+.home__slider__container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.home__slider__container ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite alternate linear;
+}
+
+.home__slider__container li {
+    height: 150px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.home__slider__container h1{
+    width: fit-content;
+}
+
+.bannertitle1{
+    background-image: url("../../images/home/img (1).jpg");
+}
+.bannertitle2{
+    background-image: url("../../images/banner.jpg");
+}
+.bannertitle3{
+    background-image: url("../../images/banner2.webp");
+}
+.bannertitle4{
+    background-image: url("../../images/banner3.jpg");
+}
+
+@keyframes cambio {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+}
+
+/* ----------------------------- */
 
 .home__productos__container{
     display: flex;

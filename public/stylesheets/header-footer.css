@@ -11,19 +11,33 @@ header{
     z-index: 100;
 }
 
-.greenbar__container{
+.greenSlider__container{
     background-color: var(--color-verde);
     display: none;
-    justify-content: space-around;
+    overflow: hidden;
+}
+
+.greenSlider__container .greenSlide-track{
+    display: flex;
+    animation: scroll 20s linear infinite;
     align-items: center;
 }
 
-.greenbar__container p {
-    width: 35%;
+.greenSlider__container .greenSlide-track p {
+    width: 400px;
     color: #fff;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(35%);
+    }
+    100% {
+        transform: translateX(-95%);
+    }
 }
 
 .navbar__container{
@@ -142,10 +156,12 @@ header{
 
 .white__word{
     color: #fff;
+    text-shadow: 2px 2px 2px black;
 }
 
 .green__word{
     color: var(--color-verde);
+    text-shadow: 2px 2px 2px black;
 }
 
 .header__subtittle{
@@ -360,11 +376,11 @@ Footer{
 
     /* Header */
 
-    .greenbar__container{
+    .greenSlider__container{
         display: flex;
     }
 
-    .greenbar__container p{
+    .greenSlider__container .greenSlide-track p{
         font-size: 14px;
     }
     
