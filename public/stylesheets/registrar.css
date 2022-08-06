@@ -7,7 +7,6 @@
 .registrar__main{
     background-image: url("../images/comida-ingredientes_1220-4884.webp");
     background-size: cover;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,6 +41,7 @@
     border-radius: 10px;
     background-color: #efefef;
     text-align: center;
+    margin: 2px 0;
 }
 
 .registrar__main .form__button--cuenta {
@@ -54,6 +54,7 @@
     text-transform: uppercase;
     border: none;
     border-radius: 10px;
+    margin: 5px 0 10px 0;
 }
 
 .registrar__main .form__button--google img, .registrar__main .form__button--facebook img{
@@ -74,7 +75,6 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-
     border: none;
 }
 
@@ -94,6 +94,25 @@
 
 .registrar__main .form__contact {
     display: none;
+}
+
+.registrar__main h6 {
+    padding: 10px;
+    color: red;
+}
+
+.registrar__main .abajo img {
+    width: 70px;
+}
+
+.registrar__main .abajo {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    padding: 5px;
 }
 
 
@@ -121,25 +140,30 @@
     .registrar__main .contact {
         display: none;
     }
+
+    .registrar__main .abajo img {
+        width: 130px;
+    }
+
+    .registrar__main .abajo {
+        height: 100px;
+    }
 }
 
 
 @media(min-width: 1024px) {
 
-    .registrar__main{
-        height: 100vh;
-    }
 
     .registrar__main .registrar__h1{
         height: 50px;
     }
 
     .registrar__main .form__button--google {
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     .registrar__main .form__button--facebook {
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     .registrar__main .form__contact {

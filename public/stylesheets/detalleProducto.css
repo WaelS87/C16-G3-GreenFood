@@ -1,6 +1,8 @@
 .detalle__main {
     display: flex;
-    background-color: var(--color-verdeUltraClaro);
+    background-image: url("../images/comida-ingredientes_1220-4884.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Alata', sans-serif;
     justify-content: center;
     align-items: center;
@@ -9,14 +11,16 @@
 
 .detalle__main .detalle__seccion{
     display: flex;
-    height: 100vh;
+    height: 65vh;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .detalle__main .detalle__h1 {
     font-size: 12px;
     margin: 20px 0;
+    color: white
 }
 
 .detalle__main .container {
@@ -64,7 +68,6 @@
     gap: 5px;
 }
 
-
 .detalle__main .main__detalle__tittle {
     padding: 0 5px;
     font-size: 14px;
@@ -84,8 +87,6 @@
     padding: 7px;
     background-color: var(--color-verdeOscuro);
     border-radius: 5px;
-    color: var(--color-blanco);
-    text-shadow: 1px 1px black;
 }
 
 .detalle__main .main__detalle {
@@ -108,7 +109,6 @@
     text-align: center;
     *padding: 7px;
 }
-
 
 .main__detalle__envios{
     text-align: center;
@@ -233,8 +233,14 @@
         width: 80%;
         text-align: left;
         font-size: 18px;
-        
+       
     }
+
+    .detalle__seccion {
+/*         background-image: url("../images/comida-ingredientes_1220-4884.webp");
+ */        background-size: cover;
+
+    } 
 
     .detalle__main .detalle__seccion{
         flex-direction: row;
@@ -244,8 +250,8 @@
         width: 100%;
         height: 60vh;
         padding: 15px 0;
-        background-color: var(--color-blanco);
-    }
+/*         background-color: var(--color-blanco);
+ */    }
 
     .detalle__main .container{
         width: 40%;
@@ -273,7 +279,7 @@
 
     .detalle__main .main__detalle__tittle, .detalle__main .main__detalle__precio, .detalle__main .main__detalle__cuotas {
         background-color: rgba(225, 225, 225, 0);
-        color: black;
+        color: white;
     }
 
     .detalle__main .registar h1 {
