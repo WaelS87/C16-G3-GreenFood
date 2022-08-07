@@ -1,8 +1,13 @@
 <Header>
-    <div class="greenbar__container">
-        <p>Bienvenido al mundo saludable</p>
-        <p>Envios gratis desde $6000</p>
-        <p>Ofertas todos los días</p>
+    <div class="greenSlider__container">
+        <div class="greenSlide-track">
+            <p>Bienvenido al mundo saludable</p>
+            <p>Envios gratis desde $6000</p>
+            <p>Ofertas todos los días</p>
+            <p>Productos en descuento</p>
+            <p>Tu vida más saludable</p>
+        </div>
+        
     </div>
     <div class="navbar__container">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -48,11 +53,15 @@
                 </div>
             </a>
         </div>
-        <ul class="navbar__loginregister">
-            <li><a href="/users/login">Login</a></li>
-            <li><a href="/users/register">Register</a></li>
-        </ul>
-        <a class="navbar__carrito" href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+        <div class="userNav__container">
+            <ul class="navbar__loginregister">
+                <li><a href="/users/login">Login</a></li>
+                <li><a href="/users/register">Register</a></li>
+            </ul>
+            <a class="navbar__carrito" href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="navbar__profile" href="/users/profile"><i class="fa-solid fa-circle-user"></i></a>
+        </div>
+        
     </div>
     <div class="header__categories__container">
         <span class="header__categories">Inicio</span>
@@ -61,5 +70,13 @@
         <span class="header__categories">Snacks</span>
         <span class="header__categories">Suplementos</span>
         <span class="header__categories">Varios</span>
+    </div>
+    <div class="header__adminNavbar__container">
+        <ul>
+            <li><a href="/users/adminProfile">Perfil</a></li>
+            <li><a href="/products/addProduct">Agregar</a></li>
+            <li><a href="/products/editProduct">Editar</a></li>
+            <li><a href="/products/deleteProduct">Eliminar</a></li>
+        </ul>
     </div>
 </Header>

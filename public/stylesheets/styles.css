@@ -1,7 +1,17 @@
+/* Styles general & index */
 @import'./general.css';
 @import'./home.css';
-@import'./carrito.css';
-@import'./detalleProducto.css';
-@import'./login.css';
-@import'./registrar.css';
 @import"./header-footer.css";
+
+/* Products styles */
+@import'./products/carrito.css';
+@import'./products/detalleProducto.css';
+@import"./products/addProduct.css";
+@import"./products/editProduct.css";
+@import"./products/deleteProduct.css";
+
+/* Users styles */
+@import"./users/profile.css";
+@import"./users/adminProfile.css";
+@import'./users/login.css';
+@import'./users/registrar.css';

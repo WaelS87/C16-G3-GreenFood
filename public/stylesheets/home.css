@@ -19,13 +19,15 @@
 
 .home__banner__container{
     width: 100%;
+    display: none;
     background-image: url("/images/home/img\ \(1\).jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
+    *display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .home__banner__tittles{
@@ -40,6 +42,61 @@
     accent-color: var(--color-verde);
     margin: 2% 0 2%;
 }
+
+/* Nuevo banner-Slider */
+
+.home__slider__container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.home__slider__container ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite alternate linear;
+}
+
+.home__slider__container li {
+    height: 150px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.home__slider__container h1{
+    width: fit-content;
+}
+
+.bannertitle1{
+    background-image: url("../../images/home/img (1).jpg");
+}
+.bannertitle2{
+    background-image: url("../../images/banner.jpg");
+}
+.bannertitle3{
+    background-image: url("../../images/banner2.webp");
+}
+.bannertitle4{
+    background-image: url("../../images/banner3.jpg");
+}
+
+@keyframes cambio {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+}
+
+/* ----------------------------- */
 
 .home__productos__container{
     display: flex;
@@ -208,16 +265,26 @@
     width: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url("/images/home/banner2.jpg");
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 3% 0;
+}
+
+.txtizq{
+    text-align: right;
+    padding-right: 0.5%;
+}
+
+.txtder{
+    text-align: left;
+    padding-left: 0.5%;
 }
 
 .home__recomendados__container{
     height: 650px;
+    margin-top: 0;
 }
 
 .productos__recomendados__container{
@@ -312,7 +379,7 @@
     }
 
     .home__productos__container{
-        height: 600px;
+        height: 500px;
     }
 
     .productos__tittles{
@@ -342,17 +409,7 @@
 
     .home__banner2__container h1{
         font-size: 40px;
-        width: 45%;
-    }
-
-    .txtizq{
-        text-align: right;
-        padding-right: 0.5%;
-    }
-
-    .txtder{
-        text-align: left;
-        padding-left: 0.5%;
+        *width: 45%;
     }
 
     .home__ayuda__container{
@@ -389,7 +446,6 @@
 @media (min-width:1024px){
 
     .home__productos__container{
-        height: 500px;
         padding: 2%;
         align-content: space-around;
     }
@@ -441,5 +497,12 @@
 
     .recomendado__container, .recomendado__container--768{
         width: 25%;
+    }
+
+    .home__seccion2{
+        height: fit-content;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
     }
 }
