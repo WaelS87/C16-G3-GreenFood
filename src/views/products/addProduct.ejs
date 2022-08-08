@@ -3,6 +3,33 @@
     <%- include("../partials/head") %> 
 <body class="addProduct">
     <%- include("../partials/header") %> 
+    <main class="addProduct__main">
+        <section class="form__container">
+            <h1>Agregar</h1>
+            <form action="">
+                <div>
+                    <label for="name">Nombre del producto</label>
+                    <input type="text" id="name" placeholder="Agregue un nombre">
+                </div>
+                <div>
+                    <label for="description">Descripción</label>
+                    <input type="text" id="description" placeholder="Agregue una descripción">
+                </div>
+                <div>
+                    <label for="image">Imagen</label>
+                    <input type="text" id="image" placeholder="Agregue una imagen">
+                </div>
+                <div>
+                    <label for="categorie">Categoria</label>
+                    <input type="text" id="categorie" placeholder="Agregue una categoria">
+                </div>
+                <div>
+                    <label for="price">Precio</label>
+                    <input type="text" id="price" placeholder="Agregue un precio">
+                </div>                
+            </form>
+        </section>
+    </main>
     <%- include("../partials/footer") %> 
 </body>
 </html>
