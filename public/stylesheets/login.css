@@ -348,3 +348,9 @@
         height: 45px;
     }
 }
+@media(min-width:1440px){
+    .form__box__flex .google img, .form__box__flex .face img{
+        width:30px;
+    }
+
+}
