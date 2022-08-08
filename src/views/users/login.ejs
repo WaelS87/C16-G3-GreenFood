@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("../partials/head") %> 
+
+    <body>
+        <%- include("../partials/header") %> 
+        <main class="login__main">
+            <section class="login">
+                <p class="login--parapho"><a href="/">Inicio</a>/Login</p>
+                <h3>Login :)</h3>
+                <form action="">
+                    <div class="form__box">
+                        <div class="form__input">
+                            
+                            <input  type="text" name="email" id="email" placeholder="email">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="form__box">
+                        <div class="form__input">
+                            
+                            <input  type="password" name="password" id="password" placeholder="Contraseña">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="form__box__flex">
+                        <button class="form__button form__button--submit" type="submit"><span class="inicio">INICIAR
+                                SECION</span></button>
+                    </div>
+                    <h5 class="olvide">¿Olvidaste tu contraseña?</h5>
+                    </div>
+                    <div class="form__box__flex">
+                        <button class="google" type="submit">
+                            <label>Entrar con Google</label> 
+                            <img  width="40px" src="/images/googleLogo.png" alt="logoGoogle">
+                        </button>
+                    </div>
+                    <div class="form__box__flex">
+                        <button class="face" type="submit">
+                            <label>Entrar con Facebook</label> 
+                            <img width="40px" src="/images/Facebook.png" alt="logoFacebook">
+                        </button>
+                    </div>
+                    <div class="parapho__es">
+                        <a href="/views/registrar.html">
+                            <h5>¿No tenés cuenta?&nbsp;<i class="fa-solid fa-circle"></i>&nbsp; Crear cuenta</h5>
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="abajo">
+                        <h6><span><i class="fa-regular fa-envelope"></i></span>&nbsp;CONTACTANOS<br><a
+                                href="greenfoodargentina@gmail.com">greenfoodargentina@gmail.com</a> </h6>
+
+                        <img width="90" src="/images/images.jfif" alt="envio">
+
+                        <h6><span><i class="fa-solid fa-location-dot"></i></span> Argentina</h6>
+                    </div>
+            </section>
+        </main>
+            <%- include("../partials/footer") %> 
+    </body>
+
+</html>
