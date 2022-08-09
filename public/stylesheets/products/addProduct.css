@@ -1,6 +1,6 @@
 .addProduct__main{
     width: 100%;
-    height: 100vh;
+    *height: 100vh;
     display: flex;
     background-image: url(../../images/comida-ingredientes_1220-4884.webp);
     background-size: cover;
@@ -10,7 +10,8 @@
 
 .form__container{
     width: 80%;
-    height: 90vh;
+    *height: 90vh;
+    margin: 5% 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,31 +21,94 @@
 }
 
 .form__container h1{
-    margin: 30px;
+    margin: 15px;
     color: white;
-}
-
-.form__container div{
-    display: flex;
-    flex-wrap: wrap;
-    height: 100px;
-    width: 100%;
+    text-shadow: 2px 2px 2px black;
 }
 
 .form__container form{
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: 80%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    *justify-content: space-evenly;
 }
 
-.form__container form input{
+.form__l--container,.form__r--container{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+}
+
+.form__l--container div,
+.form__r--container div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+}
+
+.form__l--container label,
+.form__r--container label{
+    height: 40px;
+}
+
+.form__l--container input,
+.form__r--container input{
     height: 40px;
     width: 100%;
     padding: 0 5px;
     border: none;
     border-radius: 5px;
+}
+
+.form__l--container select{
+    border: none;
+    width: 100%;
+    height: 40px;
+
+}
+
+.form__r--container textarea{
+    height: 200px;
+    border: none;
+}
+
+.actionButtons__container{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin: 0 5%;
+}
+
+.actionButtons__container button,
+.actionButtons__container p{
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 5px;
+}
+
+.cancelar__button{
+    height: 40px;
+    background-color: rgba(236, 14, 14, 0.877);
+}
+
+@media (min-width: 768px){
+    .form__container form{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .form__l--container,
+    .form__r--container{
+        width: 50%;
+    }
 }
