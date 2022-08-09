@@ -3,6 +3,49 @@
     <%- include("../partials/head") %>  
 <body class="editProduct">
     <%- include("../partials/header") %> 
+    <main class="addProduct__main">
+        <section class="form__container">
+            <h1>Editar</h1>
+            <form action="">
+                <div class="form__l--container">
+                    <div>
+                        <label for="name">Nombre del producto</label>
+                        <select name="name" type="text" id="name" placeholder="Agregue un nombre">
+                            <option value="" hidden selected>Seleccione un producto</option>
+                            <option value="product1">Producto 1</option>
+                            <option value="product2">Producto 2</option>
+                            <option value="product3">Producto 3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="categorie">Categoria</label>
+                        <select name="categorie" type="text" id="categorie">
+                            <option value="" hidden selected>Seleccione...</option>
+                            <option value="detetica">Dietética</option>
+                            <option value="veggie">Veggie</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="suplementos">Suplementos</option>
+                            <option value="varios">Varios</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="price">Precio</label>
+                        <input name="price" type="text" id="price" placeholder="Agregue un precio">
+                    </div>
+                </div>
+                <div class="form__r--container">
+                    <div>
+                        <label for="image">Imagen</label>
+                        <input name="image" type="text" id="image" placeholder="Agregue una imagen">
+                    </div>
+                    <div>
+                        <label for="description">Descripción</label>
+                        <textarea name="descripción" type="text" id="description" placeholder="Agregue una descripción" cols="50"></textarea>
+                    </div>
+                </div>                
+            </form>
+        </section>
+    </main>
     <%- include("../partials/footer") %> 
 </body>
 </html>
