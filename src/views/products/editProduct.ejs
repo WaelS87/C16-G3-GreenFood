@@ -36,13 +36,17 @@
                 <div class="form__r--container">
                     <div>
                         <label for="image">Imagen</label>
-                        <input name="image" type="text" id="image" placeholder="Agregue una imagen">
+                        <input name="image" type="file" id="image" placeholder="Agregue una imagen">
                     </div>
                     <div>
                         <label for="description">Descripción</label>
                         <textarea name="descripción" type="text" id="description" placeholder="Agregue una descripción" cols="50"></textarea>
                     </div>
-                </div>                
+                </div>
+                <div class="actionButtons__container">
+                    <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
+                    <a href="/"><button class="enviar__button">Terminar</button> </a>
+                </div>
             </form>
         </section>
     </main>
