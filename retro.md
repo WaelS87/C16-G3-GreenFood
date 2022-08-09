@@ -31,3 +31,29 @@
 ## **Dejar de hacer**:
 - Dedicar menos tiempo a inconvenientes sin solución.
 - No tomar tareas en exceso.
+
+------------------------------------------------------
+
+# **Retrospectiva para el Sprint 3**
+
+## **Empezar a hacer**:
+- Dividir las tareas que sean similares al mismo integrante, para evitar diferencias en vistas.
+- Buscar más tiempos para reunirse.
+- Organizar las tareas por orden.
+
+## **Hacer más**:
+- Agilidad en tareas.
+- Reuniones de apoyo.
+
+## **Seguir Haciendo**:
+- Poner un margen de tiempo.
+- Distribuir mejor tiempos de tareas.
+- Trabajar en colaboración
+
+## **Hacer menos**:
+- Sobre cargarse de tareas.
+- Trabajar con dudas / planear con dudas sobre la realización del proyecto.
+
+## **Dejar de hacer**:
+- Procrastinar tareas.
+- Olvidar los objetivos principales de los dailys y weacklys.
