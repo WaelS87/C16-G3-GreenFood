@@ -1,4 +1,7 @@
 /*celuler*/
+.login__main {
+    background-image:url('../../images/comida-ingredientes_1220-4884.webp')
+}
 
 .login__main section div.parapho__es h5,
 .login__main .olvide {
@@ -46,6 +49,7 @@
     width: 100%;
     color: rgb(228, 85, 144);
     padding: 0 10%;
+    
 }
 
 .login__main .form__input {
@@ -53,25 +57,53 @@
     width: 80%;
     height: 27px;
     display: flex;
-    *flex-direction: column;
     align-items: center;
-    border: 1px solid black;
     border-radius: 5px;
     background-color: white;
+   
+  
 
+}
+.form__input  button{
+   
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+   
+    justify-content: space-between;
+  
+   
+   
+}
+.login__main ::placeholder {
+    color: grey;
+    font-weight: bold;
+  
 }
 
 .login__main .form__input input {
-    width: 95%;
+  
     border: none;
-    height: 100%;
-
-
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    width: 90%;
 }
 
 .login__main .form__box__flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    
+    
+}
+.login__main .form__box__flex button{
+    justify-content: space-between;
+ 
+}
+.login__main .form__box__flex img{
+    width:10%;
+   
 }
 
 .login__main .parapho {
@@ -83,7 +115,7 @@
 .login__main .form__button {
     width: 75%;
     height: 27px;
-    background-color: rgb(90, 207, 201);
+    background-color: #4E9F3D;
     color: white;
     border: none;
     border-radius: 20px;
@@ -93,6 +125,7 @@
 .login__main .form__button .form__button--submit {
     display: flex;
     justify-content: center;
+   
 }
 
 .login__main .parapho__es {
@@ -107,6 +140,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+   
 }
 
 .login__main .nav i {
@@ -117,19 +151,35 @@
 .login__main .lock {
     width: 5%;
     text-align: right;
-    *position: absolute;
-    *bottom: 1em;
+   
 }
 
-.login__main .google,
+.login__main .google{
+    width: 75%;
+    height: 27px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
 .login__main .face {
     width: 75%;
     height: 27px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 20px;
     color: black;
-    background-color: white;
+    background-color: #3c5c9c;
+    color: white;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -143,6 +193,7 @@
 .login__main .face i {
     color: blue;
     font-size: x-large;
+   
 }
 
 .login__main .google i {
@@ -179,6 +230,7 @@
     height: 100%;
     padding: 5px;
 }
+
 
 /*Tablet*/
 
@@ -250,7 +302,7 @@
 
     .login__main section div.parapho__es h5,
     .login__main .olvide {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .login__main .form__label {
@@ -259,6 +311,9 @@
 
     .login__main .form__input {
         height: 45px;
+    }
+    .form__input input{
+        font-size: 22px;
     }
 
     .login__main .form__button {
@@ -272,13 +327,8 @@
         height: 40px;
     }
 
-    .login__main .face i {
-        font-size: xx-large;
-    }
-
-    .login__main .google i {
-        font-size: xx-large;
-    }
+    
+  
 
     .login__main .inicio {
         font-size: 18px;
@@ -287,4 +337,23 @@
     .login__main .form__input i {
         font-size: large;
     }
+    .form__box__flex label{
+        font-size: 22px;
+    }
+    .login__main h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .parapho__es h5{
+        font-size: 22px;
+    }
+    .login__main .google,.login__main .face{
+        height: 45px;
+    }
+}
+@media(min-width:1440px){
+    .form__box__flex .google img, .form__box__flex .face img{
+        width:30px;
+    }
+
 }

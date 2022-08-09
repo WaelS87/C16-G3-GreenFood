@@ -88,11 +88,12 @@
 .registrar__main .form__button--facebook {
     background-color: #3d5d9d;
     color: white;
+    margin-bottom: 20px;
 }
 
-.registrar__main .registrar__truck {
+/* .registrar__main .registrar__truck {
     display: none;
-}
+} */
 
 .registrar__main .form__contact {
     display: none;
@@ -104,7 +105,7 @@
 }
 
 .registrar__main .abajo img {
-    width: 70px;
+    
 }
 
 .registrar__main .abajo {

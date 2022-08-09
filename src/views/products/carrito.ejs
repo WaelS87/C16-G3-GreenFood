@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<<<<<<< HEAD:src/views/carrito.ejs
+<%- include("./partials/head") %>
+
+    <body class="carro">
+        <%- include("./partials/header") %>
+            <main class="carrito__main">
+                <section>
+                    <article>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p>Su Carrito</p>
+=======
     <%- include("../partials/head") %> 
 
 <body class="carro">
@@ -42,91 +54,102 @@
                         <div class="total--precio">
                             <p>TOTAL</p>
                             <p>$$$$</p>
+>>>>>>> b510557594a319704037c18b7341d64f938f6a5b:src/views/products/carrito.ejs
                         </div>
-                        <button class="fin">Finalizar Compra</button>
-                        <button class="con">Continuar Comprando</button>
-                    </div>
-                </div>
-                <div class="cards__container">
-                    <div class="cards">
-                        <img src="/images/footer/Visa-DebitCard.png" alt="visa_card">
-                        <img src="/images/footer/MasterCard-DebitCard.png" alt="mastercard_card">
-                        <img src="/images/footer/American-Express-Card.png" alt="americanexpress_card">
-                        <img src="/images/footer/Paypal.png" alt="paypal_card">
-                        <img src="/images/footer/MercadoPago-DebitCard.png" alt="mercadopago_card">
-                    </div>
-                    <div class="truck"><i class="fa-solid fa-truck-fast"></i>
-                        <p class="envi"><i class="fa-solid fa-star"></i>Envios a Todo el Pais<i
-                                class="fa-solid fa-star"></i></p>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <hr>
-        <section class="carrito__recomendados__container home__productos__container">
-            <h1 class="productos__tittles">
-                <span class="white__word">Productos</span>
-                <span class="green__word">Preferidos</span>
-            </h1>
-            <hr>
-            <div class="productos__recomendados__container">
-                <div class="recomendado__container">
-                    <img src="/img/producto3.jpg" alt="producto">
-                    <h3 class="recomendado__nombre">Lorem.</h3>
-                    <div class="producto recomendado1">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-                <div class="recomendado__container">
-                    <img src="/img/producto2.jpg" alt="producto">
-                    <h3 class="recomendado__nombre">Lorem2.</h3>
-                    <div class="producto recomendado2">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-                <div class="recomendado__container">
-                    <img height="140" src="/img/producto1.webp" alt="producto">
+                    </article>
+                    <article>
+                        <button>
+                            Ordenar Por <i class="fa-solid fa-sort-down"></i>
+                        </button>
+                    </article>
+                    <article class="product">
+                        <div>
+                            <img src="/images/pan-integral-768x480.jpg" alt="">
+                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, magnam?</h5>
+                            <div class="price">
+                                <button class="suma">Sumar Al Carrito</button>
+                                <button class="canti">-&nbsp;&nbsp;&nbsp;&nbsp; Cantidad
+                                    &nbsp;&nbsp;&nbsp;&nbsp;+</button>
+                                <h4>0000$</h4>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <button class="sumar">Sumar Al Carrito</button>
+                            <button class="cantidad">-&nbsp;&nbsp;&nbsp;&nbsp; Cantidad
+                                &nbsp;&nbsp;&nbsp;&nbsp;+</button>
+                        </div>
+                    </article>
+                    <article class="d">
+                        <div class="calc">
+                            <div class="total">
+                                <div class="total--precio">
+                                    <p>TOTAL</p>
+                                    <p>$$$$</p>
+                                </div>
+                                <button class="fin">Finalizar Compra</button>
+                                <button class="con">Continuar Comprando</button>
+                            </div>
+                        </div>
+                        <div class="cards__container">
+                            <div class="cards">
+                                <img src="/images/footer/Visa-DebitCard.png" alt="visa_card">
+                                <img src="/images/footer/MasterCard-DebitCard.png" alt="mastercard_card">
+                                <img src="/images/footer/American-Express-Card.png" alt="americanexpress_card">
+                                <img src="/images/footer/Paypal.png" alt="paypal_card">
+                                <img src="/images/footer/MercadoPago-DebitCard.png" alt="mercadopago_card">
+                            </div>
+                            <div class="truck"><i class="fa-solid fa-truck-fast"></i>
+                                <p class="envi"><i class="fa-solid fa-star"></i>Envios a Todo el Pais<i
+                                        class="fa-solid fa-star"></i></p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <hr>
+                <section class="carrito__recomendados__container ">
+                    <h1 class="productos__tittles">
+                        <span class="white__word">Productos</span>
+                        <span class="green__word">Preferidos</span>
+                    </h1>
+                    <hr>
+                    <div class="productos__recomendados__container">
+                        <div class="recomendado__container">
+                            <img src="/images/producto3.jpg" alt="producto">
+                            <h3 class="recomendado__nombre">hm</h3>
+                            <h4 class="recomendado__nombre">650$</h4>
 
-                    <h3 class="recomendado__nombre">Lorem3.</h3>
-                    <div class="producto recomendado3">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
+                        </div>
+                        <div class="recomendado__container">
+                            <img src="/images/producto2.jpg" alt="producto">
+                            <h3 class="recomendado__nombre">Yogure Natural</h3>
+                            <h4 class="recomendado__nombre">450$</h4>
+
+                        </div>
+                        <div class="recomendado__container">
+                            <img src="/images/producto1.webp" alt="producto">
+                            <h3 class="recomendado__nombre">Hamburgesa Veggie</h3>
+                            <h4 class="recomendado__nombre">800$</h4>
+
+                        </div>
+
+
+
+
                     </div>
-                </div>
-                <div class="recomendado__container">
-                    <img src="/img/pan-integral-768x480.jpg" alt="producto">
 
+                </section>
 
-                    <h3 class="recomendado__nombre">Lorem4.</h3>
-                    <div class="producto recomendado3">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
+<<<<<<< HEAD:src/views/carrito.ejs
+            </main>
+            <%- include("./partials/footer") %>
+    </body>
+=======
     </main>
     <%- include("../partials/footer") %> 
 </body>
+>>>>>>> b510557594a319704037c18b7341d64f938f6a5b:src/views/products/carrito.ejs
 
 </html>
