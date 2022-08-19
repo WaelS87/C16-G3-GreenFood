@@ -1,4 +1,13 @@
+
+
 module.exports = {
+    index: (req, res) => {
+		const Products= require('../data/products.json')
+		return res.render('products',{
+		   Products
+		})
+
+	},
     detail : (req,res) => {
         return res.render("products/detalleProducto")
     },
