@@ -12,7 +12,7 @@
 
 .detalle__main .detalle__seccion{
     display: flex;
-    height: 65vh;
+    height: 500px;
     flex-direction: column;
     align-items: center;
     color: white;

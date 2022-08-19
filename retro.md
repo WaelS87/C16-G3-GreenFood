@@ -57,3 +57,23 @@
 ## **Dejar de hacer**:
 - Procrastinar tareas.
 - Olvidar los objetivos principales de los dailys y weacklys.
+
+------------------------------------------------------
+
+# **Retrospectiva para el Sprint 4**
+
+## **Empezar a hacer**:
+- Reducir tiempos de reunión daily
+
+## **Hacer más**:
+- Tomar tiempos de estudio para ponerse al día
+
+## **Seguir Haciendo**:
+- Margenes de tiempo
+- Reuniones de apoyo
+
+## **Hacer menos**:
+- Trabajar con dudas
+
+## **Dejar de hacer**:
+- Procrastinar tareas
