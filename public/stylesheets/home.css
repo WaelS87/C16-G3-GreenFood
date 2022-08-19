@@ -357,6 +357,23 @@
     margin: 0 2px;
 }
 
+.listadeejemlo{
+    position: absolute;
+    width: 100%;
+    color: aliceblue;
+}
+
+.izquierdaejemplo{
+    left: 50px;
+    position: absolute;
+}
+
+.derechaejemplo{
+    right: 0;
+    bottom: 50%;
+    position: absolute;
+}
+
 @media (min-width:768px){
 
     main{
