@@ -9,6 +9,8 @@
 @import"./products/addProduct.css";
 @import"./products/editProduct.css";
 @import"./products/deleteProduct.css";
+@import'./products/allProducts.css';
+
 
 /* Users styles */
 @import"./users/profile.css";

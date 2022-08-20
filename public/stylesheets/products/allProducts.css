@@ -1,0 +1,21 @@
+
+.allProducts__main{
+    background-color: rgb(6, 46, 46);
+}
+.allProducts__main__section{
+    width:100%;
+    text-align: center;
+
+}
+.allProducts__main__section h2{
+    
+    background-color: rgba(255,255, 255, 0.5);
+    margin-bottom: 10px;
+    padding:10px;
+}
+.allProducts__main__section p{
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    padding:10px;
+    margin-bottom: 10px;
+}

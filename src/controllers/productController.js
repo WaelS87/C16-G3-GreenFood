@@ -8,9 +8,9 @@ const toThousand = n => n.toString().replace((/\B(?=(\d{3})+(?!\d))/g, "."));
 
 module.exports = {
     index: (req, res) => {
-		const Products= require('../data/products.json')
-		return res.render('products',{
-		   Products,
+		const products= require('../data/products.json')
+		return res.render('products/products',{
+		   products,
            toThousand
 		})
 
