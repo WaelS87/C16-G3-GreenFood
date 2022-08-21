@@ -6,11 +6,11 @@
     <main class="addProduct__main">
         <section class="form__container">
             <h1>Agregar</h1>
-            <form action="">
+            <form action="/products/storeProduct" method="POST">
                 <div class="form__l--container">
                     <div>
-                        <label for="name">Nombre del producto</label>
-                        <input name="name" type="text" id="name" placeholder="Agregue un nombre">
+                        <label for="title">Nombre del producto</label>
+                        <input name="title" type="text" id="title" placeholder="Agregue un nombre">
                     </div>
                     <div>
                         <label for="categorie">Categoria</label>
@@ -34,13 +34,17 @@
                         <input name="image" type="file" id="image" placeholder="Agregue una imagen">
                     </div>
                     <div>
+                        <label for="discount">Descuento</label>
+                        <input name="discount" type="number" id="discount" min="0" max="100" step="5">
+                    </div>
+                    <div>
                         <label for="description">Descripción</label>
-                        <textarea name="descripción" type="text" id="description" placeholder="Agregue una descripción" cols="50"></textarea>
+                        <textarea name="description" type="text" id="description" placeholder="Agregue una descripción" cols="50"></textarea>
                     </div>
                 </div>
                 <div class="actionButtons__container">
                     <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
-                    <a href="/"><button class="enviar__button">Enviar</button> </a>
+                    <button class="enviar__button">Enviar</button>
                 </div>
                                
             </form>

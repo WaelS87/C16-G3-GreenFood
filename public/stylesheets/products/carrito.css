@@ -12,7 +12,7 @@
     margin:6px;
     font-weight: bold;
 }
-.carrito__main section article div p,i{
+.carrito__main section article div p,.carrito__main i{
     color:white;
     margin-left: 5px;
 }
@@ -286,13 +286,13 @@
         width: 100%;
         text-align: center;
     }
-    h1.productos__tittles{
+    .carrito__main h1.productos__tittles{
        
         text-align: center;
         justify-content: center;
         width:100%;
     }
-    h3.recomendado__nombre{
+    .carrito__main h3.recomendado__nombre{
         font-size: 24px ;
         width: fit-content;
 
@@ -360,13 +360,13 @@
   
    
     }
-    h1.productos__tittles{
+    .carrito__main h1.productos__tittles{
         font-size: 36px;
         justify-content: center;
         text-align: center;
         align-items: center;
     }
-    h3.recomendado__nombre{
+    .carrito__main h3.recomendado__nombre{
         font-size: 24px ;
         width: fit-content;
 

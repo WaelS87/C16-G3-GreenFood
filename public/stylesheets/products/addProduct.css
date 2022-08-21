@@ -73,7 +73,7 @@
 }
 
 .form__r--container textarea{
-    height: 200px;
+    height: 100px;
     border: none;
 }
 
@@ -99,6 +99,10 @@
 .cancelar__button{
     height: 40px;
     background-color: rgba(236, 14, 14, 0.877);
+}
+
+.enviar__button{
+    cursor: pointer;
 }
 
 @media (min-width: 768px){
