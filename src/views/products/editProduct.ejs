@@ -12,9 +12,9 @@
                         <label for="name">Nombre del producto</label>
                         <select name="name" type="text" id="name" placeholder="Agregue un nombre">
                             <option value="" hidden selected>Seleccione un producto</option>
-                            <option value="product1">Producto 1</option>
-                            <option value="product2">Producto 2</option>
-                            <option value="product3">Producto 3</option>
+                            <% products.forEach(producto => { %>
+                                <option value=""><%= producto.title %></option>
+                            <% }) %>
                         </select>
                     </div>
                     <div>

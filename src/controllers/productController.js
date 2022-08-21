@@ -37,6 +37,9 @@ module.exports = {
         return res.render("products/deleteProduct")
     },
     editProduct : (req,res) => {
-        return res.render("products/editProduct")
+        const products = loadProducts();
+        return res.render("products/editProduct", {
+            products
+        })
     }
 }
