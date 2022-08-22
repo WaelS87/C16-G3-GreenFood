@@ -4,7 +4,12 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     detail : (req,res) => {
-        return res.render("products/detalleProducto")
+        const products = loadProducts()
+		const product = products.find(product => product.id === +req.params.id)
+        return res.render("products/detalleProducto",{
+			product,
+			toThousand
+		})
     },
     carrito : (req,res) => {
         return res.render("products/carrito")
@@ -36,10 +41,21 @@ module.exports = {
     deleteProduct : (req,res) => {
         return res.render("products/deleteProduct")
     },
-    editProduct : (req,res) => {
-        const products = loadProducts();
-        return res.render("products/editProduct", {
+    select : (req,res) => {
+        const products = loadProducts()
+        return res.render("products/editProduct-selector", {
             products
         })
+    },
+    selected : (req,res) => {
+        const productId = +req.body.id
+        return res.redirect(productId)
+    },
+    editProduct : (req,res) => {
+        const products = loadProducts()
+		const product = products.find(product => product.id === +req.params.id)
+        return res.render("products/editProduct" ,{
+			product
+		})
     }
 }

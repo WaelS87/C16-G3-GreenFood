@@ -21,9 +21,11 @@
                 </div>
             </div>
             <div class="container2">
-                <h3 class="main__detalle__tittle">Detalle de producto</h3>
-                <h4 class="main__detalle__precio">$1.000</h4>
-                <h5 class="main__detalle__cuotas">12 cuotas de $100</h5>
+                <h3 class="main__detalle__tittle"><%= product.title %> </h3>
+                <h4 class="main__detalle__precio">$<%= toThousand((product.price)*290) %> </h4>
+                <% if ((product.price)*290 > 1000) { %>
+                    <h5 class="main__detalle__cuotas">12 cuotas de $<%= ((product.price)*290)/12 %> </h5>
+                <% } %>
                 <div class="main__agregar">
                     <div class="main__cantidad">
                         <button class="main__cantidad--up">-</button>

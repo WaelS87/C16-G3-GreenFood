@@ -1,0 +1,25 @@
+<%- include("../partials/head") %> 
+<body class="addProduct">
+    <%- include("../partials/header") %>
+    <main class="addProduct__main">
+        <section class="form__container">
+            <h1>Selecciona un producto</h1>
+            <form action="/products/editProduct/" method="post">
+                <div>
+                    <label for="id">Producto</label>
+                    <select name="id" id="id">
+                        <option value="" hidden selected>Seleccione un producto</option>
+                        <% products.forEach(producto => { %>
+                            <option value="<%= producto.id %>"><%= producto.title %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="actionButtons__container">
+                    <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
+                    <button class="enviar__button">Editar</button>
+                </div>
+            </form>
+        </section>
+    </main> 
+    <%- include("../partials/footer") %> 
+</body>
