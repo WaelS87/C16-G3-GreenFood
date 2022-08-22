@@ -196,7 +196,23 @@
       "description": "Esta jarra de filtro de agua de vidrio de Ecobud le permite disfrutar de agua filtrada purificada de gran sabor día y noche, en interiores o exteriores, fría o a temperatura ambiente. Esta increíble jarra es fácil de usar y filtra todos los extras desagradables de su agua potable , incluidos el cloro, el fluoruro y otros contaminantes y bacterias.",
       "image": "variosWater20.jpg",
       "brand": "Ecobud"
+   },
+   {
+      "id": 21,
+      "title": "ejemplo1",
+      "description": "asdf",
+      "price": 3500,
+      "discount": 5,
+      "image": "defaul-image.png",
+      "category": "detetica"
+   },
+   {
+      "id": 22,
+      "title": "ejemplo2",
+      "description": "wqerqweryyy",
+      "price": 3550,
+      "discount": 15,
+      "image": "defaul-image.png",
+      "category": "suplementos"
    }
-  
-
 ]

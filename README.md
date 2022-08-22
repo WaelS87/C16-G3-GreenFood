@@ -15,7 +15,6 @@
 - (https://www.somosintegra.com.ar/) : Orientamos el Home con referencia a esta página.
 - (https://fitmarket.com.ar/) : Otro ejemplo de productos y orientación del proyecto.
 - (https://www.salutealmacennaturaltuc.com/)
-- (https://www.salutealmacennaturaltuc.com/)
 
 ## Link de rama **"Develop"** :
 

@@ -3,24 +3,29 @@ const productController = require('../controllers/productController');
 var router = express.Router();
 
 
-    
 
-const { detail, carrito, addProduct, deleteProduct, editProduct, store,products } = require("../controllers/productController")
+const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, select, selected, update,products, selectDelete } = require("../controllers/productController")
 
 router
+    .get('/products',index)
+    /* Mostrar detalle del producto*/
+    .get("/detail/:id", detail)
 
-
-    .get('/products',productController.index)
-      
-    .get("/detail", detail)
     /* Mostrar el carrito */
     .get("/carrito", carrito)
     /* Agregar un producto */
     .get("/addProduct", addProduct)
     .post("/storeProduct", store)
     /* Eliminar un producto */
-    
-    .delete('/deleteProduct/:id',deleteProduct)
-    .get("/editProduct", editProduct)
-    .put("/updateProduct", /* update */)
+
+
+    .get("/selectDelete",selectDelete)
+    .delete('/deleteProduct',deleteProduct)
+    /* Editar un producto */
+    .get("/selectEditProduct", select)
+    .post("/editProduct", selected)
+    .get("/editProduct/:id", editProduct)
+    .put("/update/:id", update)
+
+
 module.exports = router;

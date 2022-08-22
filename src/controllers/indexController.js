@@ -4,6 +4,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     home :  (req,res) => {
-        res.render('home', {  })
+        res.render('home', {
+            title : "home" })
     }
 }

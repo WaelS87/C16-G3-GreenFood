@@ -7,25 +7,25 @@
             <main class="deleteProduct__main">
                 <section class="form__container">
                     <h1>Eliminar Productos</h1>
-                   
-                        <div class="form__l--container">
-                            <% products.forEach(product=> { %>
-                                <div>
-                                    <label for="name">
-                                        <%= product.title %>
-                                    </label>
-                                    <form action="/products/deleteProduct/<%=id %>?_method=DELETE " method="POST">
-                                        <button><a href="/products/deleteProduct/<%= product.id %> ">Eliminar</a></button>
-                
+
+                    <div class="form__l--container">
+                        <% products.forEach(product=> { %>
+                            <div>
+                                <label for="name">
+                                    <%= product.title %>
+                                </label>
+                                <form action="/products/deleteProduct/<%=product.id %>?_method=DELETE " method="POST">
+                                    <button><a href="/products/deleteProduct/<%= product.id %> ">Eliminar</a></button>
+
 
 
                                     <% }) %>
 
 
-                                     
-                    </form>
 
-                    </div>
+                                </form>
+
+                            </div>
                     </div>
 
                 </section>
