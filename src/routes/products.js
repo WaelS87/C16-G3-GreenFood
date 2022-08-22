@@ -19,8 +19,8 @@ router
     .get("/addProduct", addProduct)
     .post("/storeProduct", store)
     /* Eliminar un producto */
-    .get("/deleteProduct", deleteProduct)
-    /* Editar un producto */
+    
+    .delete('/deleteProduct/:id',deleteProduct)
     .get("/editProduct", editProduct)
     .put("/updateProduct", /* update */)
 module.exports = router;

@@ -1,45 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include("../partials/head",{title:'Todos Los Productos'}) %>
-
     <body>
         <%- include("../partials/header") %>
             <main class="allProducts__main">
+                <h2>Todos Los Productos</h2>
                 <section class="allProducts__main__section">
-                    <div>
-                        <h2>Todos Los Productos</h2>
-                    </div>
                     <% products.forEach(({title,price,image})=>{ %>
-                        <div>
-
+                        <div class="allProducts__div">
                             <article class="allProducts__article">
                                 <p>
                                     <%= title %>
                                 </p>
-
-                                <figure>
-                                    <img width='150' height="300" src="/images/productos/<%= image %> "
-                                        alt="imagen de producto">
-                                </figure>
-
+                                    <a href="./detalleProducto"><img width='150' height="300" src="/images/productos/<%= image %> "
+                                        alt="imagen de producto"></a>
                                 <h2>
                                     $<%=price %>
                                 </h2>
-                               
                             </article>
-                            </a>
-
+                            <hr>
                         </div>
-
-                        <% }) %>
-                        <hr>
-
+                    <% }) %>
+                    <hr>
                 </section>
             </main>
-
-
-
-
             <%- include("../partials/footer") %>
     </body>
 

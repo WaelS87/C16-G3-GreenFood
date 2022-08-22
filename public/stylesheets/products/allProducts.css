@@ -7,11 +7,12 @@
     text-align: center;
 
 }
-.allProducts__main__section h2{
+ h2{
     
     background-color: rgba(255,255, 255, 0.5);
     margin-bottom: 10px;
     padding:10px;
+    text-align: center;
 }
 .allProducts__main__section p{
     background-color: rgba(0, 0, 0, 0.5);
@@ -19,3 +20,35 @@
     padding:10px;
     margin-bottom: 10px;
 }
+@media(min-width: 768px){
+    .allProducts__main__section{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+     
+    
+    .allProducts__main__section h2{
+    
+        background-color: rgba(255,255, 255, 0.5);
+        margin-bottom: 20px;
+        padding:10px;
+        align-items: center;
+
+    }
+   
+
+    
+    div.allProducts__div{
+        width:23%;
+        margin:5px;
+        padding:10px;
+        border-radius: 5px;
+       
+    }
+    .allProducts__main__section p{
+        font-size: 16px;
+    }
+}
+

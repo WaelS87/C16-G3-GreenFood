@@ -45,9 +45,14 @@ module.exports = {
 
 		return res.redirect("/")
     },
-    deleteProduct : (req,res) => {
-        return res.render("products/deleteProduct")
-    },
+    deleteProduct:(req,res) => {
+        const id = +req.params.id
+        const products= loadProducts()
+        const productModify = products.filter(product=>product.id !== +id) 
+        storeProducts(productModify)
+        return res.render('/products')
+            
+        },
     editProduct : (req,res) => {
         return res.render("products/editProduct")
     }
