@@ -1,11 +1,11 @@
 <%- include("../partials/head") %> 
-<body class="addProduct">
+<body class="addProduct editProduct-selector">
     <%- include("../partials/header") %>
     <main class="addProduct__main">
         <section class="form__container">
             <h1>Selecciona un producto</h1>
             <form action="/products/editProduct/" method="post">
-                <div>
+                <div class="productSelector__container">
                     <label for="id">Producto</label>
                     <select name="id" id="id">
                         <option value="" hidden selected>Seleccione un producto</option>

@@ -21,6 +21,7 @@
 }
 
 .form__container h1{
+    height: 50px;
     margin: 15px;
     color: white;
     text-shadow: 2px 2px 2px black;

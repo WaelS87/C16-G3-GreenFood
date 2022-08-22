@@ -7,15 +7,22 @@ module.exports = {
         const products = loadProducts()
 		const product = products.find(product => product.id === +req.params.id)
         return res.render("products/detalleProducto",{
+            title : "Detalle del producto",
 			product,
 			toThousand
 		})
     },
     carrito : (req,res) => {
-        return res.render("products/carrito")
+        return res.render("products/carrito",{
+            title : "Carrito"
+        })
     },
     addProduct : (req,res) => {
-        return res.render("products/addProduct")
+        const products = loadProducts()
+        return res.render("products/addProduct",{
+            title : "Agregar producto",
+            products
+        })
     },
     store : (req,res) => {
         const {title, price, discount, description, category} = req.body
@@ -39,11 +46,14 @@ module.exports = {
 		return res.redirect("/")
     },
     deleteProduct : (req,res) => {
-        return res.render("products/deleteProduct")
+        return res.render("products/deleteProduct", {
+            title : "Eliminar producto"
+        })
     },
     select : (req,res) => {
         const products = loadProducts()
         return res.render("products/editProduct-selector", {
+            title : "Selección de producto",
             products
         })
     },
@@ -54,8 +64,35 @@ module.exports = {
     editProduct : (req,res) => {
         const products = loadProducts()
 		const product = products.find(product => product.id === +req.params.id)
-        return res.render("products/editProduct" ,{
+        return res.render("products/editProduct", {
+            title : "Editar producto",
 			product
 		})
+    },
+    update : (req,res) => {
+        const products = loadProducts();
+
+        const {id} = +req.params;
+        let {title, price,discount, description, category, image} = req.body;
+
+        const productModify = products.map(product => {
+            if(product.id === +id){
+                return {
+                    ...product,
+                    title : title.trim(),
+                    description : description.trim(),
+                    price : +price,
+                    discount : +discount,
+                    category,
+                    image
+                }
+            }else{
+                return product
+            }
+        })
+
+        storeProducts(productModify)
+
+        return res.redirect('/products/detail/' + id);
     }
 }

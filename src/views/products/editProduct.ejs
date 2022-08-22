@@ -6,19 +6,17 @@
     <main class="addProduct__main">
         <section class="form__container">
             <h1>Editar</h1>
-            <form action="">
+            <form >
                 <div class="form__l--container">
                     <div>
                         <label for="name">Nombre del producto</label>
-                        <select name="name" type="text" id="name" placeholder="Agregue un nombre">
-                            <option value="" hidden selected>Seleccione un producto</option>
-                            <option value=""></option>
+                        <input name="title" type="text" id="title" placeholder="Agregue un nombre" value="<%= product.title %> ">
                         </select>
                     </div>
                     <div>
-                        <label for="categorie">Categoria</label>
-                        <select name="categorie" type="text" id="categorie">
-                            <option value="" hidden selected>Seleccione...</option>
+                        <label for="category">Categoria</label>
+                        <select name="category" type="text" id="category">
+                            <option value="<%= product.category %>" hidden selected><%= product.category %> </option>
                             <option value="detetica">Dietética</option>
                             <option value="veggie">Veggie</option>
                             <option value="snacks">Snacks</option>
@@ -28,22 +26,26 @@
                     </div>
                     <div>
                         <label for="price">Precio</label>
-                        <input name="price" type="text" id="price" placeholder="Agregue un precio">
+                        <input name="price" type="text" id="price" placeholder="Agregue un precio" value="<%= product.price %>">
                     </div>
                 </div>
                 <div class="form__r--container">
                     <div>
                         <label for="image">Imagen</label>
-                        <input name="image" type="file" id="image" placeholder="Agregue una imagen">
+                        <input name="image" type="file" id="image" placeholder="Agregue una imagen" value="<%= product.image %>">
+                    </div>
+                    <div>
+                        <label for="discount">Descuento</label>
+                        <input name="discount" type="number" id="discount" min="0" max="100" step="5" value="<%= product.discount %>">
                     </div>
                     <div>
                         <label for="description">Descripción</label>
-                        <textarea name="descripción" type="text" id="description" placeholder="Agregue una descripción" cols="50"></textarea>
+                        <textarea name="descripción" type="text" id="description" placeholder="Agregue una descripción" cols="50"><%= product.description %></textarea>
                     </div>
                 </div>
                 <div class="actionButtons__container">
                     <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
-                    <a href="/"><button class="enviar__button">Terminar</button> </a>
+                    <button class="enviar__button">Terminar</button>
                 </div>
             </form>
         </section>
