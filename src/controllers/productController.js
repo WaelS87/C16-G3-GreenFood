@@ -72,27 +72,24 @@ module.exports = {
     update : (req,res) => {
         const products = loadProducts();
 
-        const {id} = +req.params;
-        let {title, price,discount, description, category, image} = req.body;
+        const {title, price,discount, description, category, image} = req.body;
 
         const productModify = products.map(product => {
-            if(product.id === +id){
+            if(product.id === +req.params.id){
                 return {
                     ...product,
                     title : title.trim(),
                     description : description.trim(),
                     price : +price,
                     discount : +discount,
-                    category,
-                    image
+                    category : category.trim()
                 }
-            }else{
-                return product
             }
+            return product
         })
 
         storeProducts(productModify)
 
-        return res.redirect('/products/detail/' + id);
+        return res.redirect('/products/detail/' + req.params.id);
     }
 }

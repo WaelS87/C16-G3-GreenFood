@@ -6,7 +6,7 @@
     <main class="addProduct__main">
         <section class="form__container">
             <h1>Editar</h1>
-            <form >
+            <form action="/products/update/<%=product.id%>?_method=PUT" method="POST">
                 <div class="form__l--container">
                     <div>
                         <label for="name">Nombre del producto</label>
@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <label for="description">Descripción</label>
-                        <textarea name="descripción" type="text" id="description" placeholder="Agregue una descripción" cols="50"><%= product.description %></textarea>
+                        <textarea name="description" type="text" id="description" placeholder="Agregue una descripción" cols="50"><%= product.description %></textarea>
                     </div>
                 </div>
                 <div class="actionButtons__container">
