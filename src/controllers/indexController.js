@@ -8,7 +8,9 @@ module.exports = {
     home :  (req,res) => {
         const products = loadProducts()
         res.render('home', { 
-            products
+            products,
+            title : "home"
          })
+
     }
 }
