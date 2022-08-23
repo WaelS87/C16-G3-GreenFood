@@ -16,7 +16,7 @@ module.exports = {
 
 	},
     detail : (req,res) => {
-        const products = loadProducts()
+        
 		const product = products.find(product => product.id === +req.params.id)
         return res.render("products/detalleProducto",{
             title : "Detalle del producto",
@@ -59,18 +59,19 @@ module.exports = {
     },
     selectDelete : (req,res) =>{
         const products= loadProducts()
-       return res.render('products/deleteProduct',{
-        products
-       })
+        return res.render('products/deleteProducts',{
+            products,
+            
+        })
 
     },
 
     deleteProduct:(req,res) => {
-        const id = +req.params.id
+        
         const products= loadProducts()
-        const productModify = products.filter(product=>product.id !== +id) 
+        const productModify = products.filter(product=>product.id !== +req.params.id) 
         storeProducts(productModify)
-        return res.redirect('/products')
+        return res.redirect('/')
             
         },
     
