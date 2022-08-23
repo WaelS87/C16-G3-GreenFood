@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("../partials/head",{title:'Todos Los Productos'}) %>
+    <body>
+        <%- include("../partials/header") %>
+            <main class="allProducts__main">
+                <h2>Todos Los Productos</h2>
+                <section class="allProducts__main__section">
+                    <% products.forEach(({title,price,image})=>{ %>
+                        <div class="allProducts__div">
+                            <article class="allProducts__article">
+                                <p>
+                                    <%= title %>
+                                </p>
+                                    <a href="./detalleProducto"><img width='150' height="300" src="/images/productos/<%= image %> "
+                                        alt="imagen de producto"></a>
+                                <h2>
+                                    $<%=price %>
+                                </h2>
+                            </article>
+                            <hr>
+                        </div>
+                    <% }) %>
+                    <hr>
+                </section>
+            </main>
+            <%- include("../partials/footer") %>
+    </body>
+
+</html>
