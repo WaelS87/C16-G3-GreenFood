@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include("../partials/head",{title:'Todos Los Productos'}) %>
-    <body>
+    <body class="allProducts">
         <%- include("../partials/header") %>
             <main class="allProducts__main">
-                <h2>Todos Los Productos</h2>
+                <h2 class="allProducts__price">Todos Los Productos</h2>
                 <section class="allProducts__main__section">
-                    <% products.forEach(({title,price,image,id})=>{ %>
-                        <div class="allProducts__div">
-                            <article class="allProducts__article">
-                                <p>
-                                    <%= title %>
-                                </p>
-                                    <a href="./detalleProducto/<%= id %> "><img width='150' height="300" src="/images/productos/<%= image %> "
-                                        alt="imagen de producto"></a>
-                                <h2>
-                                    $<%=price %>
-                                </h2>
-                            </article>
-                            <hr>
-                        </div>
+                    <% products.forEach(({title,price,image,id,discount})=>{ %>
+                        <a href="/products/detalleProducto/<%= id %> ">
+                            <div class="allProducts__div">
+                                <article class="allProducts__article">
+                                    <p class="allProducts__title"><%= title %></p>
+                                    <img width='150' height="300" src="/images/productos/<%= image %> " alt="imagen de producto">
+                                    <div class="allProducts__price">
+                                        <h2>$<%= toThousand(price)%></h2><p><%= discount %> %off</p>
+                                    </div>
+                                    
+                                </article>
+                                <hr>
+                            </div>
+                        </a>
+                        
                     <% }) %>
                     <hr>
                 </section>

@@ -7,7 +7,7 @@ var router = express.Router();
 const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, select, selected, update,products, selectDelete } = require("../controllers/productController")
 
 router
-    .get('/products',index)
+    .get('/',index)
     /* Mostrar detalle del producto*/
     .get("/detalleProducto/:id", detail)
     /* Mostrar el carrito */
