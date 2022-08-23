@@ -214,5 +214,23 @@
       "discount": 15,
       "image": "defaul-image.png",
       "category": "suplementos"
+   },
+   {
+      "id": 23,
+      "title": "ejemplo 3",
+      "description": "descripción",
+      "price": 32000,
+      "discount": 20,
+      "image": "defaul-image.png",
+      "category": "varios"
+   },
+   {
+      "id": 24,
+      "title": "ejemplo 4",
+      "description": "cualquiera",
+      "price": 2222,
+      "discount": 10,
+      "image": "defaul-image.png",
+      "category": "veggie"
    }
 ]
