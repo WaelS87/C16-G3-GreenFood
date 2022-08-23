@@ -6,13 +6,13 @@
             <main class="allProducts__main">
                 <h2>Todos Los Productos</h2>
                 <section class="allProducts__main__section">
-                    <% products.forEach(({title,price,image})=>{ %>
+                    <% products.forEach(({title,price,image,id})=>{ %>
                         <div class="allProducts__div">
                             <article class="allProducts__article">
                                 <p>
                                     <%= title %>
                                 </p>
-                                    <a href="./detalleProducto"><img width='150' height="300" src="/images/productos/<%= image %> "
+                                    <a href="./detalleProducto/<%= id %> "><img width='150' height="300" src="/images/productos/<%= image %> "
                                         alt="imagen de producto"></a>
                                 <h2>
                                     $<%=price %>

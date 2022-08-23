@@ -9,8 +9,7 @@ const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, se
 router
     .get('/products',index)
     /* Mostrar detalle del producto*/
-    .get("/detail/:id", detail)
-
+    .get("/detalleProducto/:id", detail)
     /* Mostrar el carrito */
     .get("/carrito", carrito)
     /* Agregar un producto */
