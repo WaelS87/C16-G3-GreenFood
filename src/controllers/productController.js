@@ -103,7 +103,7 @@ module.exports = {
                     ...product,
                     title : title.trim(),
                     description : description.trim(),
-                    price : +price,
+                    price : +price*130,
                     discount : +discount,
                     category : category.trim()
                 }
@@ -113,6 +113,6 @@ module.exports = {
 
         storeProducts(productModify)
 
-        return res.redirect('/products/detail/' + req.params.id);
+        return res.redirect('/products/detalleProducto/' + req.params.id);
     }
 }
