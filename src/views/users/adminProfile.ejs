@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include("../partials/head") %> 
-<body class="adminProfile">
-    <%- include("../partials/header") %> 
-    <main class="adminProfile__main">
-        <section class="adminProfile__section">
-            
+<%- include("../partials/head") %>
 
-        </section>
-    </main>
-    <%- include("../partials/footer") %> 
-</body>
+    <body class="adminProfile">
+        <%- include("../partials/header") %>
+            <main class="adminProfile__main">
+                <section class="adminProfile__section">
+                    <h1>Editar Perfil</h1>
+                    <form action="" class="adminProfile__form">
+                        <div class="adminProfile__form__l--container">
+                            <div class="adminProfile__imgPerfil">
+                                <img src="/images/perfil por defecto.jpg" alt="imagenPerfil">
+                                <input name="image" type="file" id="image" placeholder="Seleccionar foto">
+                            </div>
+                                <div class="form__box">
+                                <label class="form__label" for="nombre">Nombre</label>
+                                <input class="form__input" type="text" id="nombre" value="">
+                                <!-- etiqueta EJS name.user-->
+                            </div>
+                            <div class="form__box">
+                                <label class="form__label" for="apellido">Apellido</label>
+                                <input class="form__input" type="text" id="apellido" value="">
+                            </div>
+                            <div class="form__box">
+                                <label class="form__label" for="usuario">Nombre de usuario</label>
+                                <input class="form__input" type="text" id="usuario" value="">
+                            </div>
+                            <div class="form__box">
+                                <label class="form__label" for="email">Correo electrónico</label>
+                                <input class="form__input" type="email" id="email" value="" disabled>
+                            </div>
+                            <div class="form__box__flex--checkbox">
+                                <h5>Nacionalidad</h5>
+                                <hr>
+                                <div class="adminProfile__form__flex--checkbox">
+                                    <input class="form__input--checkbox" value="f" type="radio" id="argentino"
+                                        name="nacionalidad">
+                                    <label for="argentino">Argentino</label>
+                                </div>
+                                <div class="form__flex--checkbox">
+                                    <input class="form__input--checkbox" value="m" type="radio" id="latinoamerica"
+                                        name="nacionalidad">
+                                    <label for="latinoamerica">Latinoamérica</label>
+                                </div>
+                                <div class="form__flex--checkbox">
+                                    <input class="form__input--checkbox" value="n" type="radio" id="otro"
+                                        name="nacionalidad">
+                                    <label for="otro">Otro</label>
+                                </div>
+                            </div>
+                            <div class="actionButtons__container">
+                                <a href="/users/adminProfile">
+                                    <p class="cancelar__button">Cancelar</p>
+                                </a>
+                                <a href="/"><button class="enviar__button">Terminar</button> </a>
+                            </div>
+                </section>
+            </main>
+            <%- include("../partials/footer") %>
+    </body>
+
 </html>
