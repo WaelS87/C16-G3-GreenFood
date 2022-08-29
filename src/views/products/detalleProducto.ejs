@@ -17,13 +17,17 @@
                     <img src="/images/pan-integral-768x480.jpg" alt="image 4">
                 </div>
                 <div class="main__div">
-                    <img class="main__div--img" width="200px" src="/images/pan-integral-768x480.jpg" alt="imagen producto">
+                    <img class="main__div--img" src="/images/productos/<%= product.image %> " alt="imagen producto">
                 </div>
             </div>
             <div class="container2">
-                <h3 class="main__detalle__tittle">Detalle de producto</h3>
-                <h4 class="main__detalle__precio">$1.000</h4>
-                <h5 class="main__detalle__cuotas">12 cuotas de $100</h5>
+                <h2 class="main__detalle__tittle"><%= product.title %> </h2>
+                <div class="main__detalle__precio">
+                    <h3 style="font-size: 28px;">$<%= toThousand(product.price) %> </h3><p style="margin: 0 2%; width: 100px;"> <%= product.discount %>% OFF</p>
+                </div>
+                <% if (product.price > 1000) { %>
+                    <h5 class="main__detalle__cuotas">12 cuotas de $<%= ((product.price)/12).toFixed(2) %> </h5>
+                <% } %>
                 <div class="main__agregar">
                     <div class="main__cantidad">
                         <button class="main__cantidad--up">-</button>
@@ -43,6 +47,9 @@
                 <div class="main__comprar">
                     <button class="main__comprar__button">comprar</button>
                 </div>
+            </div>
+            <div class="detalleProducto__description__container">
+                <p><%= product.description %></p>
             </div>
         </section>
         <div class="boxTittle">

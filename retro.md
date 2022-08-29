@@ -77,3 +77,23 @@
 
 ## **Dejar de hacer**:
 - Procrastinar tareas
+
+-----------------------------------------------------
+
+# **Retrospectiva para el Sprint 5**
+
+## **Empezar a hacer**:
+- Intentar hacer zoom todos los días de la semana hábiles. (Lunes-Viernes)
+- Ponerle más esfuerzo a la entrega del sprint
+
+## **Hacer más**:
+- Determinar tiempos fijos
+
+## **Seguir Haciendo**:
+- Aclarar un tiempo para entregas de trabajos y ponerse al día con las tareas del curso.
+
+## **Hacer menos**:
+- Llegar al sprint sin las clases al día.
+
+## **Dejar de hacer**:
+- No comunicarse en ninguna ocasión.

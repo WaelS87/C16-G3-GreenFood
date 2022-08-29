@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("../partials/head",{title:'Eliminar productos'}) %>
+
+    <body class="addProduct">
+        <%- include("../partials/header") %>
+            <main class="addProduct__main">
+                <section class="form__container">
+                    <h1>Selecciona un producto</h1>
+                    <form action="/products/deleteProduct/<%= products.id %>?_method=DELETE " method="post">
+                        <div class="productSelector__container">
+                            <label for="id">Producto</label>
+                            <select name="id" id="id">
+                                <option value="" hidden selected>Seleccione un producto</option>
+                                <% products.forEach(product => { %>
+                                    <option value="<%= product.id %>"><%= product.title %></option>
+                                <% }) %>
+                               
+                            </select>
+                        </div>
+                        
+                        <div class="actionButtons__container">
+                            <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
+                            <button class="btn btn-danger" type="submit">Eliminar producto</button>
+                            
+                                        
+                                
+                                    
+                                
+                        </div>
+                    </form>
+                </section>
+               
+            </main>
+
+            <%- include("../partials/footer") %>
+    </body>
+
+</html>

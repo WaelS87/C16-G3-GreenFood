@@ -288,6 +288,7 @@
 
 .productos__recomendados__container{
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     padding: 4% 0;

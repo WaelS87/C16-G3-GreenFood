@@ -1,0 +1,52 @@
+[
+    {
+        "Id": 1,
+        "Nombre": "ezequiel",
+        "Apellido": "",
+        "Email": "",
+        "Nombre_Usuario": "",
+        "Constraseña": "",
+        "Category": "administrador",
+        "Image": ""
+    },
+    {
+        "Id": 2,
+        "Nombre": "wael",
+        "Apellido": "",
+        "Email": "",
+        "Nombre_Usuario": "",
+        "Constraseña": "",
+        "Category": "administrador",
+        "Image": ""
+    },
+    {
+        "Id": 3,
+        "Nombre": "nati",
+        "Apellido": "",
+        "Email": "",
+        "Nombre_Usuario": "",
+        "Constraseña": "",
+        "Category": "administrador",
+        "Image": ""
+    },
+    {
+        "Id": 4,
+        "Nombre": "german",
+        "Apellido": "",
+        "Email": "",
+        "Nombre_Usuario": "",
+        "Constraseña": "",
+        "Category": "administrador",
+        "Image": ""
+    },
+    {
+        "Id": 5,
+        "Nombre": "usuario",
+        "Apellido": "",
+        "Email": "",
+        "Nombre_Usuario": "",
+        "Constraseña": "",
+        "Category": "normal",
+        "Image": ""
+    }
+]

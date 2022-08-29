@@ -1,0 +1,32 @@
+.editProduct-selector .form__container form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+}
+
+.editProduct-selector .form__container form .productSelector__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.editProduct-selector .form__container form div label{
+    height: 40px;
+    font-size: 20px;
+}
+
+.editProduct-selector .form__container form div select{
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+}
+
+.editProduct-selector .form__container .actionButtons__container{
+    margin: 0;
+}
