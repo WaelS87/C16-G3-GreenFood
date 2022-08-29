@@ -6,13 +6,14 @@
         <%- include("../partials/header") %>
             <main class="adminProfile__main">
                 <section class="adminProfile__section">
-                    <h1>Editar Perfil</h1>
+                    <h1>Tu Perfil - Administrador</h1>
                     <form action="" class="adminProfile__form">
                         <div class="adminProfile__form__l--container">
                             <div class="adminProfile__imgPerfil">
                                 <img src="/images/perfil por defecto.jpg" alt="imagenPerfil">
                                 <input name="image" type="file" id="image" placeholder="Seleccionar foto">
                             </div>
+                            <div class="adminProfile__formulario">
                                 <div class="form__box">
                                 <label class="form__label" for="nombre">Nombre</label>
                                 <input class="form__input" type="text" id="nombre" value="">
@@ -30,30 +31,31 @@
                                 <label class="form__label" for="email">Correo electrónico</label>
                                 <input class="form__input" type="email" id="email" value="" disabled>
                             </div>
-                            <div class="form__box__flex--checkbox">
-                                <h5>Nacionalidad</h5>
-                                <hr>
-                                <div class="adminProfile__form__flex--checkbox">
-                                    <input class="form__input--checkbox" value="f" type="radio" id="argentino"
-                                        name="nacionalidad">
-                                    <label for="argentino">Argentino</label>
-                                </div>
-                                <div class="form__flex--checkbox">
-                                    <input class="form__input--checkbox" value="m" type="radio" id="latinoamerica"
-                                        name="nacionalidad">
-                                    <label for="latinoamerica">Latinoamérica</label>
-                                </div>
-                                <div class="form__flex--checkbox">
-                                    <input class="form__input--checkbox" value="n" type="radio" id="otro"
-                                        name="nacionalidad">
-                                    <label for="otro">Otro</label>
-                                </div>
+                            <div class="form__box">
+                                <label class="form__label" for="password">Contraseña</label>
+                                <input class="form__input" type="text" id="password" value="">
+                                <input class="adminProfile__cambiar__contraseña__form__box" type="checkbox"> Mostrar
                             </div>
-                            <div class="actionButtons__container">
-                                <a href="/users/adminProfile">
-                                    <p class="cancelar__button">Cancelar</p>
+                            <div class="adminProfile__cambiar__contraseña">
+                            <p>Cambiar Contraseña</p>
+                            <div class="adminProfile__cambiar__contraseña__form__box">
+                                <label class="form__label" for="new_password">Nueva Contraseña</label>
+                                <input class="form__input" type="text" id="new_password" value="">
+                            </div>
+                            <div class="adminProfile__cambiar__contraseña__form__box">
+                            <label class="form__label" for="new_password_ok">Repetir Contraseña</label>
+                            <input class="form__input" type="text" id="new_password_ok" value="">
+                        </div>
+                        </div>
+                    </div>
+                        </div>
+                            <div class="adminProfile__actionButtons__container">
+                                <a href="/">
+                                    <button class="adminProfile__cancelar__button">Cancelar</button>
                                 </a>
-                                <a href="/"><button class="enviar__button">Terminar</button> </a>
+                                <a href="/">
+                                    <button class="adminProfile__enviar__button">Editar Perfil</button> 
+                                </a>
                             </div>
                 </section>
             </main>

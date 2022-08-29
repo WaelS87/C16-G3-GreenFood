@@ -1,22 +1,28 @@
+.adminProfile{
+    display: flex;
+    flex-direction: column;
+}
+
 .adminProfile__main{
-    height: 100vh;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url("../../images/comida-ingredientes_1220-4884.webp");
     background-size: cover;
+    flex-direction: column;
+    padding: 15px;
 }
 
 .adminProfile__section{
-    width: 80%;
-    height: 80%;
     background-color: var(--color-verdeClaro);
     border-radius: 5px;
     box-shadow: 2px 2px 2px var(--color-negro);
 }
 
 .adminProfile__section h1 {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -24,25 +30,36 @@
     display: flex;
     margin: 0 auto;
     justify-content: center;
-    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
 }
 
 .adminProfile__imgPerfil img {
     display: flex;
     width: 200px;
-    padding-top: 15px;
-
 }
 
 .adminProfile__imgPerfil input {
     color: black;
     font-size: 10px;
-    padding-top: 15px;
+    padding-top: 5px;
     margin: 0 auto
 }
 
 .adminProfile__form{
     background-color: var(--color-verdeClaro);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.adminProfile__formulario{
+    justify-content: start;
+}
+
+.adminProfile__formulario label {
+    padding: 10px;
 }
 
 .adminProfile__form__flex--checkbox {
@@ -55,8 +72,51 @@
 
 .adminProfile__form__l--container {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 8px;
+}
+
+.adminProfile__actionButtons__container {
+    display: flex;
+    justify-content: right;
+    margin-right: 15px;
+    padding: 10px;
+    gap: 5px;
+}
+
+.adminProfile__cancelar__button {
+    background-color: rgba(236, 14, 14, 0.877);
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+.adminProfile__enviar__button {
+    background-color: beige;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.adminProfile__checkbox p {
+    font-size: 12px;
+}
+
+.adminProfile__cambiar__contraseña {
+    background-color: #D8E9A8;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+.adminProfile__cambiar__contraseña p {
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+}
+
+.adminProfile__cambiar__contraseña__form__box {
+    font-size: 12px;
 }
