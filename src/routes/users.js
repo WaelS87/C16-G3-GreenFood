@@ -7,7 +7,7 @@ const { login, register, profile, adminProfile } = require("../controllers/userC
 router
   .get('/login', login)
   .get('/register', register)
-  .get("/profile", profile)
-  .get("/adminProfile", adminProfile)
+  .get("/:Category", profile)
+  
 
 module.exports = router;

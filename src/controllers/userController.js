@@ -13,7 +13,7 @@ module.exports = {
     },
     profile : (req,res) => {
         const users = loadUsers(); 
-        const user = users.find(user => user.id === +req.params.id)
+        const user = users.find(user => user.Category === req.params.Category)
        
         return res.render("users/profile", {
             title : "Perfil",
@@ -22,15 +22,4 @@ module.exports = {
 
     },
         
-
-    adminProfile : (req,res) => {
-        const users = loadUsers(); 
-        const user = users.find(user => user.id === +req.params.id)
-       
-        return res.render("users/adminProfile", {
-            title : "Perfil Administrativo",
-            user       
-        })
-
-    }
 }

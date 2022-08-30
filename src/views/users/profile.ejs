@@ -6,36 +6,40 @@
     <body class="adminProfile">
         <main class="adminProfile__main">
             <section class="adminProfile__section">
-                <h1>Tu Perfil</h1>
+                <% if (user.Category === "normal") { %>
+                    <h1>Tu Perfil</h1>
+               <% } else { %>
+                <h1> Perfil <%= user.Category %> </h1>
+                <% } %>
                 <form action="" class="adminProfile__form">
-                    <div class="adminProfile__form__l--container">
-                        <div class="adminProfile__imgPerfil">
-                            <img src="/images/<%= user.Image ? user.Image : 'perfil por defecto.jpg' %> " alt="imagenPerfil">
-                            <input name="image" type="file" id="image" placeholder="Seleccionar foto">
-                        </div>
-                        <div class="adminProfile__formulario">
-                            <div class="form__box">
-                            <label class="form__label" for="nombre">Nombre</label>
-                            <input class="form__input" type="text" id="nombre" value="<%= user.Nombre %>">
-                        </div>
+                <div class="adminProfile__form__l--container">
+                    <div class="adminProfile__imgPerfil">
+                        <img src="/images/<%= user.Image ? user.Image : 'perfil por defecto.jpg' %> " alt="imagenPerfil">
+                        <input name="image" type="file" id="image" placeholder="Seleccionar foto">
+                    </div>
+                    <div class="adminProfile__formulario">
                         <div class="form__box">
-                            <label class="form__label" for="apellido">Apellido</label>
-                            <input class="form__input" type="text" id="apellido" value="<%= user.Apellido %>">
-                        </div>
-                        <div class="form__box">
-                            <label class="form__label" for="usuario">Nombre de usuario</label>
-                            <input class="form__input" type="text" id="usuario" value="<%= user.Nombre_Usuario %>">
-                        </div>
-                        <div class="form__box">
-                            <label class="form__label" for="email">Correo electrónico</label>
-                            <input class="form__input" type="email" id="email" value="<%= user.Email %>">
-                        </div>
-                        <div class="form__box">
-                            <label class="form__label" for="password">Contraseña</label>
-                            <input class="form__input" type="text" id="password" value="<%= user.Contraseña %>">
-                            <input type="checkbox"> 
-                            <label class="adminProfile__mostrar__contraseña">Mostrar</label>
-                        </div>
+                        <label class="form__label" for="nombre">Nombre</label>
+                        <input class="form__input" type="text" id="nombre" value="<%= user.Nombre %>">
+                    </div>
+                    <div class="form__box">
+                        <label class="form__label" for="apellido">Apellido</label>
+                        <input class="form__input" type="text" id="apellido" value="<%= user.Apellido %>">
+                    </div>
+                    <div class="form__box">
+                        <label class="form__label" for="usuario">Nombre de usuario</label>
+                        <input class="form__input" type="text" id="usuario" value="<%= user.Nombre_Usuario %>">
+                    </div>
+                    <div class="form__box">
+                        <label class="form__label" for="email">Correo electrónico</label>
+                        <input class="form__input" type="email" id="email" value="<%= user.Email %>">
+                    </div>
+                    <div class="form__box">
+                        <label class="form__label" for="password">Contraseña</label>
+                        <input class="form__input" type="text" id="password" value="<%= user.Contraseña %>">
+                        <input type="checkbox"> 
+                        <label class="adminProfile__mostrar__contraseña">Mostrar</label>
+                    </div>
                           <!-- <div class="adminProfile__cambiar__contraseña">
                     <p>Cambiar Contraseña</p>
                     <div class="adminProfile__cambiar__contraseña__form__box">
@@ -49,6 +53,7 @@
                     </div>
                 </div>
                     </div>
+                </form>
                         <div class="adminProfile__actionButtons__container">
                             <a href="/">
                                 <button class="adminProfile__cancelar__button">Cancelar</button>
