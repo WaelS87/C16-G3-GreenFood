@@ -1,7 +1,13 @@
 const {loadProducts, storeProducts} = require("../data/productsModule")
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
+       
+var camelSentence = function camelSentence(str) {
+    return  (" " + str).toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, function(match, chr)
+    {
+        return chr.toUpperCase();
+    });
+}
 
 module.exports = {
     index: (req, res) => {
@@ -121,13 +127,6 @@ module.exports = {
         const categoryParams = req.params.category;
 
         const productsCategory = products.find(({category}) => category === categoryParams)
-        
-        var camelSentence = function camelSentence(str) {
-            return  (" " + str).toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, function(match, chr)
-            {
-                return chr.toUpperCase();
-            });
-        }
 
         if(productsCategory){
             return res.render("products/categorieStore",{
@@ -137,8 +136,24 @@ module.exports = {
                 camelSentence,
                 toThousand
             })
-        } else {
+        }/*  else {
             return res.redirect("/")
-        }
+        } */
+    },
+    search : (req,res) => {
+        const products = loadProducts()
+		const result = products.filter(product => product.title.toLowerCase().includes(req.query.keywords.toLowerCase()))
+
+		return res.render("products/searchProducts",{
+            title : "Busqueda",
+			products : result,
+			keywords : req.query.keywords,
+			toThousand,
+            camelSentence
+		})
+
+        return res.render("products/searchProducts", {
+            title : "Busqueda"
+        })
     }
 }

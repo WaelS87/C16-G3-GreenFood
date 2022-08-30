@@ -46,8 +46,11 @@
     </div>
     <div class="navbar__container--1024">
         <div class="navbar__busqueda">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text">
+            <form action="/products/search" method="get">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" name="keywords">
+            </form>
+            
         </div>
         <div class="header__tittle__container">
             <a href="/">
@@ -72,11 +75,11 @@
     </div>
     <div class="header__categories__container">
         <span class="header__categories"><a href="/" class="header__categories">Inicio</a></span>
-        <span class="header__categories"><a href="/products/dietetica" class="header__categories">Dietética</a></span>
-        <span class="header__categories"><a href="/products/veggie" class="header__categories">Veggie</a></span>
-        <span class="header__categories"><a href="/products/snacks" class="header__categories">Snacks</a></span>
-        <span class="header__categories"><a href="/products/suplementos" class="header__categories">Suplementos</a></span>
-        <span class="header__categories"><a href="/products/varios" class="header__categories">Varios</a></span>
+        <span class="header__categories"><a href="/products/categories/dietetica" class="header__categories">Dietética</a></span>
+        <span class="header__categories"><a href="/products/categories/veggie" class="header__categories">Veggie</a></span>
+        <span class="header__categories"><a href="/products/categories/snacks" class="header__categories">Snacks</a></span>
+        <span class="header__categories"><a href="/products/categories/suplementos" class="header__categories">Suplementos</a></span>
+        <span class="header__categories"><a href="/products/categories/varios" class="header__categories">Varios</a></span>
         <span class="header__categories"><a href="/products" class="header__categories">Todos</a></span>
     </div>
     <div class="header__adminNavbar__container">
