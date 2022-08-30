@@ -53,7 +53,7 @@ module.exports = {
 
 		storeProducts(productsModify);
 
-		return res.redirect("/")
+		return res.redirect("/products")
     },
     selectDelete : (req,res) =>{
         const products= loadProducts()
@@ -68,7 +68,7 @@ module.exports = {
         const products= loadProducts()
         const productModify = products.filter(product=>product.id !== productId) 
         storeProducts(productModify)
-        return res.redirect('../../products/products')
+        return res.redirect('../')
     },
     select : (req,res) => {
         const products = loadProducts()
@@ -114,5 +114,31 @@ module.exports = {
         storeProducts(productModify)
 
         return res.redirect('/products/detalleProducto/' + req.params.id);
+    },
+    categorieStore : (req,res) => {
+        const products = loadProducts();
+        //const category = products.find(product => product.category === +req.params.category)
+        const categoryParams = req.params.category;
+
+        const productsCategory = products.find(({category}) => category === categoryParams)
+        
+        var camelSentence = function camelSentence(str) {
+            return  (" " + str).toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, function(match, chr)
+            {
+                return chr.toUpperCase();
+            });
+        }
+
+        if(productsCategory){
+            return res.render("products/categorieStore",{
+                title : "category",
+                products,
+                categoryParams,
+                camelSentence,
+                toThousand
+            })
+        } else {
+            return res.redirect("/")
+        }
     }
 }

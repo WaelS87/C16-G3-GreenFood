@@ -1,10 +1,7 @@
 var express = require('express');
-const productController = require('../controllers/productController');
 var router = express.Router();
 
-
-
-const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, select, selected, update,products, selectDelete } = require("../controllers/productController")
+const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, select, selected, update,products, selectDelete, categorieStore } = require("../controllers/productController")
 
 router
     .get('/',index)
@@ -23,6 +20,8 @@ router
     .post("/editProduct", selected)
     .get("/editProduct/:id", editProduct)
     .put("/update/:id", update)
+    /* Mostrar productos por categoría (navbar) */
+    .get("/:category", categorieStore)
 
 
 module.exports = router;
