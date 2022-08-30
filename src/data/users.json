@@ -1,47 +1,53 @@
 [
-    {
-        "Id": 1,
-        "Nombre": "ezequiel",
-        "Apellido": "",
-        "Email": "",
-        "Constraseña": "",
-        "Category": "administrador",
-        "Image": ""
-    },
-    {
-        "Id": 2,
-        "Nombre": "wael",
-        "Apellido": "",
-        "Email": "",
-        "Constraseña": "",
-        "Category": "administrador",
-        "Image": ""
-    },
-    {
-        "Id": 3,
-        "Nombre": "nati",
-        "Apellido": "",
-        "Email": "",
-        "Constraseña": "",
-        "Category": "administrador",
-        "Image": ""
-    },
-    {
-        "Id": 4,
-        "Nombre": "german",
-        "Apellido": "",
-        "Email": "",
-        "Constraseña": "",
-        "Category": "administrador",
-        "Image": ""
-    },
-    {
-        "Id": 5,
-        "Nombre": "usuario",
-        "Apellido": "",
-        "Email": "",
-        "Constraseña": "",
-        "Category": "normal",
-        "Image": ""
-    }
+   {
+      "Id": 1,
+      "Nombre": "ezequiel",
+      "Apellido": "",
+      "Email": "",
+      "Constraseña": "",
+      "Category": "administrador",
+      "Image": ""
+   },
+   {
+      "Id": 2,
+      "Nombre": "wael",
+      "Apellido": "",
+      "Email": "",
+      "Constraseña": "",
+      "Category": "administrador",
+      "Image": ""
+   },
+   {
+      "Id": 3,
+      "Nombre": "nati",
+      "Apellido": "",
+      "Email": "",
+      "Constraseña": "",
+      "Category": "administrador",
+      "Image": ""
+   },
+   {
+      "Id": 4,
+      "Nombre": "german",
+      "Apellido": "",
+      "Email": "",
+      "Constraseña": "",
+      "Category": "administrador",
+      "Image": ""
+   },
+   {
+      "Id": 5,
+      "Nombre": "usuario",
+      "Apellido": "",
+      "Email": "",
+      "Constraseña": "",
+      "Category": "normal",
+      "Image": ""
+   },
+   {
+      "id": null,
+      "fullname": "",
+      "email": "",
+      "password": ""
+   }
 ]

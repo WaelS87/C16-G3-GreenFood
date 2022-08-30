@@ -11,26 +11,34 @@
         <p class="login--parapho"><a href="/">Inicio</a>/register</p>
 <!--         <h1 class="registrar__h1">Registro 😁</h1>
  -->        <div class="container__form">
-            <form class="form" action="POST">
+            <form class="form" action="/users/register" method="post">
                 <div class="form__box">
-                    <label class="form__label" for="nombre"></label>
-                    <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+                   
+                    <input class="form__input" type="text" name="fullname" id="nombre" placeholder="Nombre y apellido">
                 </div>
                 <div class="form__box">
-                    <label class="form__label" for="email"></label>
+                    
                     <input class="form__input" type="text" name="email" id="email" placeholder="email">
                 </div>
                 <div class="form__box">
-                    <label class="form__label" for="password"></label>
+                   
                     <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña">
                 </div>
                 <div class="form__box">
-                    <label class="form__label" for="reingrese contraseña"></label>
-                    <input class="form__input" type="password" name="reingrese password2" id="password2"
+                    
+                    <input class="form__input" type="password" name="password2" id="password2"
                         placeholder="Reingrese su contraseña">
                 </div>
                 <div class="form__box">
+                    <input style="opacity:1;" type="checkbox" data-required="1" name="terminos">
+                    <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acceptar los<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> términos y condiciones</a></label>
+                </div>
+               
+                <div class="form__box">
                     <button class="form__button--cuenta" type="submit">Crear cuenta</button>
+                </div>
+                <div class="form__box">
+                    <span>¿Ya Estàs Registrado?</span> <a href="/users/login">:) Ingresà</a>
                 </div>
             </form>
         </div>
@@ -44,7 +52,7 @@
             </div>
             <div class="form__box">
                 <button class="form__button--facebook" type="submit">
-                    <h3>Entrar con Facebook</h6> 
+                    <h3>Entrar con Facebook</h3> 
                     <img class="logoFacebook" width="40px" src="/images/Facebook.png" alt="logoFacebook">
                 </button>
                 
