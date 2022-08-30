@@ -21,7 +21,7 @@
 }
 
 .adminProfile__section h1 {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 10px;
     text-align: center;
 }
@@ -32,6 +32,7 @@
     justify-content: center;
     padding-bottom: 10px;
     flex-direction: column;
+    margin-top: 15px;
 }
 
 .adminProfile__imgPerfil img {
@@ -55,7 +56,12 @@
 }
 
 .adminProfile__formulario{
+    display: flex;
     justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .adminProfile__formulario label {
@@ -76,6 +82,7 @@
     align-items: center;
     flex-direction: column;
     gap: 8px;
+    padding: 10px;
 }
 
 .adminProfile__actionButtons__container {
@@ -83,7 +90,8 @@
     justify-content: right;
     margin-right: 15px;
     padding: 10px;
-    gap: 5px;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .adminProfile__cancelar__button {
@@ -117,6 +125,6 @@
     padding: 5px;
 }
 
-.adminProfile__cambiar__contraseña__form__box {
-    font-size: 12px;
+.adminProfile__mostrar__contraseña {
+    font-size: 14px;
 }

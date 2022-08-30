@@ -12,9 +12,7 @@ const storeProducts = (products) => {
 }
 
 const loadUsers = () => { 
-    const usersFilePath = path.join(__dirname, '../data/users.json'); 
-    const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));     
-    return users
+    return JSON.parse(fs.readFileSync(path.join(__dirname, 'users.json'),'utf-8'));
 }
 
 module.exports = {
