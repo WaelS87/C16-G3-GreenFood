@@ -130,7 +130,7 @@ module.exports = {
 
         if(productsCategory){
             return res.render("products/categorieStore",{
-                title : "category",
+                title : categoryParams,
                 products,
                 categoryParams,
                 camelSentence,
