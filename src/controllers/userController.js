@@ -13,7 +13,7 @@ module.exports = {
     },
     profile : (req,res) => {
         const users = loadUsers(); 
-        const user = users.find(user => user.Category === req.params.Category)
+        const user = users.find(user => user.Id === +req.params.Id)
        
         return res.render("users/profile", {
             title : "Perfil",
