@@ -109,7 +109,7 @@ module.exports = {
                     ...product,
                     title : title.trim(),
                     description : description.trim(),
-                    price : +price*130,
+                    price : +price,
                     discount : +discount,
                     category : category.trim()
                 }
