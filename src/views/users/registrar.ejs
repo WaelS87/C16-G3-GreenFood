@@ -5,12 +5,11 @@
 <%- include("../partials/head") %>
 
 <body>
-    <%- include("../partials/header") %> 
+<%- include("../partials/header") %>
 
     <main class="registrar__main">
         <p class="login--parapho"><a href="/">Inicio</a>/register</p>
-<!--         <h1 class="registrar__h1">Registro 😁</h1>
- -->        <div class="container__form">
+        <div class="container__form">
             <form class="form" action="POST">
                 <div class="form__box">
                     <label class="form__label" for="nombre"></label>
@@ -22,7 +21,8 @@
                 </div>
                 <div class="form__box">
                     <label class="form__label" for="password"></label>
-                    <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña">
+                    <input class="form__input" type="password" name="password" id="password"
+                        placeholder="Contraseña">
                 </div>
                 <div class="form__box">
                     <label class="form__label" for="reingrese contraseña"></label>
@@ -37,17 +37,15 @@
         <div class="container__cuentas">
             <div class="form__box__google">
                 <button class="form__button--google" type="submit">
-                    <h3>Entrar con Google</h6> 
+                    <h3>Entrar con Google</h6>
                     <img class="logoGoogle" width="40px" src="/images/googleLogo.png" alt="logoGoogle">
                 </button>
-                
             </div>
             <div class="form__box">
                 <button class="form__button--facebook" type="submit">
-                    <h3>Entrar con Facebook</h6> 
+                    <h3>Entrar con Facebook</h6>
                     <img class="logoFacebook" width="40px" src="/images/Facebook.png" alt="logoFacebook">
                 </button>
-                
             </div>
         </div>
         <div class="form__contact">
@@ -55,23 +53,28 @@
             <p>e-commerce@greenfood.com.ar</p>
             <p>Argentina</p>
         </div>
-        <!-- <div>
+                <!-- <div>
             <img class="registrar__truck" src="/images/envio-1.png" alt="logoEnvio">
         </div> -->
         <div class="abajo">
-            <h6><span><i class="fa-regular fa-envelope"></i></span>&nbsp;CONTACTANOS<br><a
-                    href="greenfoodargentina@gmail.com">greenfoodargentina@gmail.com</a> </h6>
-
+            <h6>
+                <span>
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+                &nbsp;CONTACTANOS<br>
+                <a href="greenfoodargentina@gmail.com">greenfoodargentina@gmail.com</a>
+            </h6>
             <img width="90" src="/images/envio-1.png" alt="envio">
-
-            <h6><span><i class="fa-solid fa-location-dot"></i></span> Argentina</h6>
+            <h6>
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                </span>
+                Argentina
+            </h6>
         </div>
+    </main>
 
-
-            </main>
-
-            <%- include("../partials/footer") %>
-
-    </body>
+<%- include("../partials/footer") %>
+</body>
 
 </html>

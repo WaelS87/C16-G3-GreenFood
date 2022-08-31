@@ -14,17 +14,17 @@
     align-items: center;
 }
 
-.registrar__main .container__cuentas {
+.container__cuentas {
     align-items: center;
 }
 
-.registrar__main .registrar__h1 {
+.registrar__h1 {
     font-size: 18px;
     margin-top: 30px;
     color: #efefef;
 }
 
-.registrar__main .form__box {
+.form__box {
     flex: auto;
     margin: 10px 0;
     text-align: center;
@@ -36,7 +36,7 @@
     font-weight: bold;
 }
 
-.registrar__main .form__input {
+.form__input {
     width: 250px;
     height: 45px;
     border: none;
@@ -46,7 +46,7 @@
     margin: 2px 0;
 }
 
-.registrar__main .form__button--cuenta {
+.form__button--cuenta {
     color: white;
     background-color: var(--color-verde);
     width: 250px;
@@ -59,15 +59,16 @@
     margin: 5px 0 10px 0;
 }
 
-.registrar__main .form__button--google img, .registrar__main .form__button--facebook img{
+.form__button--google img, .form__button--facebook img{
     width: 10%;
+    border-radius: 50%;
 }
 
-.registrar__main .form__button--google h3, .registrar__main .form__button--facebook h3{
+.form__button--google h3, .form__button--facebook h3{
     width: 85%;
 }
 
-.registrar__main .form__button--google, .registrar__main .form__button--facebook {
+.form__button--google, .form__button--facebook {
     display: flex;
     width: 250px;
     height: 45px;
@@ -80,13 +81,13 @@
     border: none;
 }
 
-.registrar__main .logoGoogle {
+.logoGoogle {
     background-color: #efefef;
     color: var(--color-negro);
 }
 
-.registrar__main .form__button--facebook {
-    background-color: #3d5d9d;
+.form__button--facebook {
+    background-color: #4a6ea8;
     color: white;
     margin-bottom: 20px;
 }
@@ -95,7 +96,7 @@
     display: none;
 } */
 
-.registrar__main .form__contact {
+.form__contact {
     display: none;
 }
 
@@ -104,7 +105,7 @@
     color: red;
 }
 
-.registrar__main .abajo {
+.abajo {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -117,17 +118,17 @@
 
 @media(min-width:768px) {
 
-    .registrar__main .form__input {
+    .form__input {
         width: 350px;
     }
 
-    .registrar__main .form__button--cuenta,
-    .registrar__main .form__button--google,
-    .registrar__main .form__button--facebook {
+    .form__button--cuenta,
+    .form__button--google,
+    .form__button--facebook {
         width: 350px;
     }
 
-    .registrar__main .registrar__truck {
+    .registrar__truck {
         display: block;
         *background-color: var(--color-verdeUltraClaro);
         width: 150px;
@@ -136,15 +137,15 @@
         *right: 20px;
     }
 
-    .registrar__main .contact {
+    .contact {
         display: none;
     }
 
-    .registrar__main .abajo img {
+    .abajo img {
         width: 130px;
     }
 
-    .registrar__main .abajo {
+    .abajo {
         height: 100px;
     }
 }
@@ -153,19 +154,19 @@
 @media(min-width: 1024px) {
 
 
-    .registrar__main .registrar__h1{
+    .registrar__h1{
         height: 50px;
     }
 
-    .registrar__main .form__button--google {
+    .form__button--google {
         border-radius: 20px;
     }
 
-    .registrar__main .form__button--facebook {
+    .form__button--facebook {
         border-radius: 20px;
     }
 
-    .registrar__main .form__contact {
+    .form__contact {
         text-transform: uppercase;
         color: grey;
     }
