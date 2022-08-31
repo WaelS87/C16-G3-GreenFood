@@ -20,3 +20,6 @@ module.exports = {
         })
     }
 }
+
+/* if(req.body.recordame)
+res.cookie("green food", {maxAge:1000*60}) */

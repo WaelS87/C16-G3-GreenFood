@@ -122,6 +122,18 @@
     margin-bottom: 10px;
 }
 
+.login__main .form__box__checkbox {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.login__main .check__box--recordame {
+    color: white;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
 .login__main .form__button .form__button--submit {
     display: flex;
     justify-content: center;
