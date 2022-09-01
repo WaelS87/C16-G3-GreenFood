@@ -14,31 +14,42 @@
             <form class="form" action="/users/register" method="post">
                 <div class="form__box">
                    
-                    <input class="form__input" type="text" name="fullname" id="nombre" placeholder="Nombre y apellido">
+                    <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.nombre ? errors.nombre.msg : null%></p>
+                    
+                </div>
+                    
+                <div class="form__box">
+                    
+                   <input class="form__input" type="text" name="apellido" id="nombre" placeholder="Apellido">
+                   <p style="color:red;font-size: 16px;"><%= locals.errors && errors.apellido ? errors.apellido.msg : null%></p>
                 </div>
                 <div class="form__box">
                     
-                    <input class="form__input" type="text" name="email" id="email" placeholder="email">
+                    <input class="form__input" type="text" name="email" id="email" placeholder="Email">
+                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.email ? errors.email.msg : null%></p>
                 </div>
                 <div class="form__box">
                    
                     <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña">
+                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password ? errors.password.msg : null%></p>
                 </div>
                 <div class="form__box">
                     
-                    <input class="form__input" type="password" name="password2" id="password2"
-                        placeholder="Reingrese su contraseña">
+                    <input class="form__input" type="password" name="password2" id="password2" placeholder="Reingrese su contraseña">
+                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password2 ? errors.password2.msg : null%></p>
                 </div>
                 <div class="form__box">
-                    <input style="opacity:1;" type="checkbox" data-required="1" name="terminos">
-                    <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acceptar los<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> términos y condiciones</a></label>
+                    <input style="font-size: xx-large;" type="checkbox"  name="terminos">
+                    <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acceptar<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> términos y condiciones</a></label>
+                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.terminos ? errors.terminos.msg : null%></p>
                 </div>
                
                 <div class="form__box">
                     <button class="form__button--cuenta" type="submit">Crear cuenta</button>
                 </div>
                 <div class="form__box">
-                    <span>¿Ya Estàs Registrado?</span> <a href="/users/login">:) Ingresà</a>
+                    <span style="color:aqua; margin-bottom: 40px;padding:10px">¿Ya Estàs Registrado?</span> <a href="/users/login" style="color:blanchedalmond">:) Ingresà</a>
                 </div>
             </form>
         </div>
