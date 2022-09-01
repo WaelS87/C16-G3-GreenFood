@@ -1,5 +1,6 @@
 const { loadUsers, storeUsers } = require('../data/usersModule')
-const {validationResult } = require('express-validator');
+const { validationResult } = require('express-validator');
+const bcrypt = require('bcrypt');
 
 
 module.exports = {
@@ -20,27 +21,30 @@ module.exports = {
     },
     registerNuevo: (req, res) => {
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            const { nombre, apellido, email, password } = req.body;
-            let users = loadUsers()
-            let userNew = {
-
-                Id: users.length > 0 ? users[users.length - 1].Id + 1 : 1,
-                Nombre: nombre.trim(),
-                Apellido: apellido.trim(),
-                Email: email.trim(),
-                Password: password,
-                Category: 'normal'
-
+        if(errors.isEmpty()){
+            const {nombre,apellido,email,password} = req.body;
+            let users = loadUsers();
+    
+            let newUser = {
+                Id : users.length > 0 ? users[users.length - 1].Id + 1 : 1,
+                Name : nombre.trim(),
+                Apellido : apellido.trim(),
+                Email : email.trim(),
+                password : bcrypt.hashSync(password,12),
+                Category : 'normal'
+                
             }
-            let userModify = [...users, userNew]
-            storeUsers(userModify);
-            return res.redirect('/users/login')
+    
+            let usersModify = [...users, newUser];
+    
+            storeUsers(usersModify);
+    
+            return res.redirect('/users/login');
         }else{
-            return res.render('users/registrar', {
-                title: 'Registero',
-                errors: errors.mapped(),
-                old: req.body
+            return res.render("users/registrar",{
+                title: 'Registrar',
+                errors : errors.mapped(),
+                old : req.body
             })
         }
     },

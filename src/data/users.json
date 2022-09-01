@@ -10,8 +10,8 @@
    },
    {
       "Id": 2,
-      "Nombre": "wael",
-      "Apellido": "",
+      "Nombre": "Wael",
+      "Apellido": "Fakhrji",
       "Email": "",
       "Constraseña": "",
       "Category": "administrador",
@@ -43,6 +43,13 @@
       "Constraseña": "",
       "Category": "normal",
       "Image": ""
+   },
+   {
+      "Id": 6,
+      "Name": "Wael",
+      "Apellido": "Fakhrji",
+      "Email": "wfakhrji@gmail.com",
+      "password": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
+      "Category": "normal"
    }
-  
 ]

@@ -6,6 +6,7 @@ const registerValidator = require('../validation/registerValidator')
 /* GET users listing. */
 router
   .get('/login', login)
+  //.get('/login',processLogin)
   .get('/register', register)
   .post('/register',registerValidator,registerNuevo)
   .get("/profile", profile)

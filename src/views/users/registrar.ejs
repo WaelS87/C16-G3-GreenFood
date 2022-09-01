@@ -11,22 +11,22 @@
         <p class="login--parapho"><a href="/">Inicio</a>/register</p>
 <!--         <h1 class="registrar__h1">Registro 😁</h1>
  -->        <div class="container__form">
-            <form class="form" action="/users/register" method="post">
+            <form class="form" action="" method="post">
                 <div class="form__box">
                    
-                    <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.nombre ? errors.nombre.msg : null%></p>
                     
                 </div>
                     
                 <div class="form__box">
                     
-                   <input class="form__input" type="text" name="apellido" id="nombre" placeholder="Apellido">
+                   <input class="form__input" type="text" name="apellido" id="nombre" placeholder="Apellido" value="<%= locals.old && old.apellido ? old.apellido : null %>">
                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.apellido ? errors.apellido.msg : null%></p>
                 </div>
                 <div class="form__box">
                     
-                    <input class="form__input" type="text" name="email" id="email" placeholder="Email">
+                    <input class="form__input" type="text" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>">
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.email ? errors.email.msg : null%></p>
                 </div>
                 <div class="form__box">
