@@ -1,28 +1,30 @@
 var express = require('express');
-const productController = require('../controllers/productController');
 var router = express.Router();
 
+const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, select, selected, update, selectDelete, categorieStore, search } = require("../controllers/productController")
 
-
-const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, select, selected, update,products, selectDelete } = require("../controllers/productController")
+const {addProductValidator, editProductValidator} = require("../validations")
 
 router
+    /* Página principal de productos */
     .get('/',index)
-    /* Mostrar detalle del producto*/
-    .get("/detalleProducto/:id", detail)
-    /* Mostrar el carrito */
+    /* Busqueda de productos */
+    .get("/search", search)
+    /* Carrito de compra*/
     .get("/carrito", carrito)
     /* Agregar un producto */
     .get("/addProduct", addProduct)
-    .post("/storeProduct", store)
+    .post("/storeProduct", addProductValidator, store)
     /* Eliminar un producto */
-    .get("/selectDelete",selectDelete)
-    .delete('/deleteProduct',deleteProduct)
+    .get("/selectDelete", selectDelete)
+    .delete('/deleteProduct', deleteProduct)
     /* Editar un producto */
     .get("/selectEditProduct", select)
     .post("/editProduct", selected)
     .get("/editProduct/:id", editProduct)
-    .put("/update/:id", update)
-
-
+    .put("/update/:id", editProductValidator, update)
+    /* Mostrar productos por categoría (navbar) */
+    .get("/categories/:category", categorieStore)
+    /* Mostrar detalle del producto*/
+    .get("/detalleProducto/:id", detail)
 module.exports = router;

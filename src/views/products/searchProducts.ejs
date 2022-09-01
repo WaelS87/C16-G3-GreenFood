@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include("../partials/head",{title:'Todos Los Productos'}) %>
-    <body class="allProducts">
-        <%- include("../partials/header") %>
-            <main class="allProducts__main">
-                <h2 class="allProducts__price">Todos Los Productos</h2>
+    <%- include("../partials/head") %>
+    <body>
+        <%- include("../partials/header") %> 
+        <main class="allProducts__main">
+            <% if (products.length > 0) { %>
+                <h2 class="allProducts__price">Resultados de: "<%= camelSentence(keywords) %>"</h2>
                 <section class="allProducts__main__section">
                     <% products.forEach(({title,price,image,id,discount})=>{ %>
                         <a href="/products/detalleProducto/<%= id %> ">
@@ -22,10 +23,12 @@
                         </a>
                         
                     <% }) %>
-                    <hr>
                 </section>
-            </main>
-            <%- include("../partials/footer") %>
-    </body>
-
+            <% } else { %>
+                <h2 class="allProducts__price">No hay resultados de: "<%= camelSentence(keywords) %>"</h2>
+            <% } %>
+            
+        </main>
+        <%- include("../partials/footer") %>     
+    </body> 
 </html>

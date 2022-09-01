@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("../partials/head") %> 
+    <body class="<%= categoryParams %> ">
+        <%- include("../partials/header") %> 
+
+        <main class="allProducts__main">
+            <h2 class="allProducts__price"><%= camelSentence(categoryParams) %> </h2>
+            <section class="allProducts__main__section">
+                <% products.forEach(product => { %>
+                    <% if (product.category === categoryParams ) { %>
+                        <a href="/products/detalleProducto/<%= product.id %> ">
+                            <div class="allProducts__div">
+                                <article class="allProducts__article">
+                                    <p class="allProducts__title"><%= product.title %></p>
+                                    <img width='150' height="300" src="/images/productos/<%= product.image %> " alt="imagen de producto">
+                                    <div class="allProducts__price">
+                                        <h2>$<%= toThousand(product.price)%></h2><p><%= product.discount %>% OFF</p>
+                                    </div>
+                                    
+                                </article>
+                                <hr>
+                            </div>
+                        </a>
+                    <% } %>
+                <% }) %>
+            </section>
+            
+        </main>
+
+        
+        <h1><%=  %> </h1>
+        <%- include("../partials/footer") %> 
+    </body>
+</html>

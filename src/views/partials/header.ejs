@@ -22,28 +22,35 @@
                 </div>
             </a>
         </div>
-        <button class="header__burgerbutton">
+        <button type="button" class="header__burgerbutton">
             <i class="fa-solid fa-bars"></i>
             <ul class="header__menu">
-                <a href="/carrito">
-                    <li><i class="fa-solid fa-cart-shopping"></i></li>
-                </a>
-                <a href="/users/adminProfile">
-                    <li><i class="fa-solid fa-circle-user"></i></li>
-                </a>
-                <a href="/users/login">
-                    <li>Login</li>
-                </a>
-                <a href="/users/registrar">
-                    <li>Register</li>
-                </a>
+                
+                    <li>
+                        <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                
+                    <li>
+                        <a href="/users/adminProfile"><i class="fa-solid fa-circle-user"></i></a>
+                    </li>
+                
+                    <li>
+                        <a href="/users/login">Login</a>
+                    </li>
+                
+                    <li>
+                        <a href="/users/register">Register</a>
+                    </li>
             </ul>
         </button>
     </div>
     <div class="navbar__container--1024">
         <div class="navbar__busqueda">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text">
+            <form action="/products/search" method="get">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" name="keywords" placeholder="¿Qué andas buscando?">
+            </form>
+            
         </div>
         <div class="header__tittle__container">
             <a href="/">
@@ -67,13 +74,13 @@
         
     </div>
     <div class="header__categories__container">
-        <span class="header__categories"><a href="/" class="header__categories">Inicio</a></span>
-        <span class="header__categories">Dietética</span>
-        <span class="header__categories">Veggie</span>
-        <span class="header__categories">Snacks</span>
-        <span class="header__categories">Suplementos</span>
-        <span class="header__categories">Varios</span>
-        <span class="header__categories"><a href="/products" class="header__categories">Todos</a></span>
+        <span class="header__categories inicioEdge"><a href="/" class="header__categories">Inicio</a></span>
+        <span class="header__categories dieteticaEdge"><a href="/products/categories/dietetica" class="header__categories">Dietética</a></span>
+        <span class="header__categories veggieEdge"><a href="/products/categories/veggie" class="header__categories">Veggie</a></span>
+        <span class="header__categories snacksEdge"><a href="/products/categories/snacks" class="header__categories">Snacks</a></span>
+        <span class="header__categories suplementosEdge"><a href="/products/categories/suplementos" class="header__categories">Suplementos</a></span>
+        <span class="header__categories variosEdge"><a href="/products/categories/varios" class="header__categories">Varios</a></span>
+        <span class="header__categories todosEdge"><a href="/products" class="header__categories">Todos</a></span>
     </div>
     <div class="header__adminNavbar__container">
         <ul>
