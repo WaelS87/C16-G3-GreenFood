@@ -33,10 +33,10 @@ header{
 
 @keyframes scroll {
     0% {
-        transform: translateX(50%);
+        transform: translateX(65%);
     }
     100% {
-        transform: translateX(-95%);
+        transform: translateX(-90%);
     }
 }
 
