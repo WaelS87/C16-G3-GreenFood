@@ -3,7 +3,7 @@ var router = express.Router();
 
 const { detail, carrito, addProduct, deleteProduct, editProduct,index, store, select, selected, update, selectDelete, categorieStore, search } = require("../controllers/productController")
 
-const {addProductValidator} = require("../validations")
+const {addProductValidator, editProductValidator} = require("../validations")
 
 router
     /* Página principal de productos */
@@ -22,7 +22,7 @@ router
     .get("/selectEditProduct", select)
     .post("/editProduct", selected)
     .get("/editProduct/:id", editProduct)
-    .put("/update/:id", update)
+    .put("/update/:id", editProductValidator, update)
     /* Mostrar productos por categoría (navbar) */
     .get("/categories/:category", categorieStore)
     /* Mostrar detalle del producto*/

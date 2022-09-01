@@ -1,3 +1,4 @@
 module.exports = {
-    addProductValidator : require("./addProductValidator")
+    addProductValidator : require("./addProductValidator"),
+    editProductValidator : require("./editProductValidator")
 }

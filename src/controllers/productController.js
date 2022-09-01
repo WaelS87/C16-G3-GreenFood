@@ -112,27 +112,41 @@ module.exports = {
 		})
     },
     update : (req,res) => {
-        const products = loadProducts();
 
-        const {title, price,discount, description, category, image} = req.body;
+        const errors = validationResult(req)
+        
+        if(errors.isEmpty()){
+            const products = loadProducts();
 
-        const productModify = products.map(product => {
-            if(product.id === +req.params.id){
-                return {
-                    ...product,
-                    title : title.trim(),
-                    description : description.trim(),
-                    price : +price,
-                    discount : +discount,
-                    category : category.trim()
+            const {title, price,discount, description, category, image} = req.body;
+
+            const productModify = products.map(product => {
+                if(product.id === +req.params.id){
+                    return {
+                        ...product,
+                        title : title.trim(),
+                        description : description.trim(),
+                        price : +price,
+                        discount : +discount,
+                        category : category.trim()
+                    }
                 }
-            }
-            return product
-        })
+                return product
+            })
 
-        storeProducts(productModify)
+            storeProducts(productModify)
 
-        return res.redirect('/products/detalleProducto/' + req.params.id);
+            return res.redirect('/products/detalleProducto/' + req.params.id);
+        
+        } else {
+            return res.render("products/editProduct", {
+                title : "Editar producto",
+                errors : errors.mapped(),
+                product : req.body
+            })
+        }
+
+        
     },
     categorieStore : (req,res) => {
         const products = loadProducts();
