@@ -31,6 +31,15 @@
     padding:10px;
     margin-bottom: 10px;
 }
+.home .inicioEdge,
+.dietetica .dieteticaEdge,
+.veggie .veggieEdge,
+.snacks .snacksEdge,
+.suplementos .suplementosEdge,
+.varios .variosEdge,
+.allProducts .todosEdge{
+    border-bottom: 3px solid var(--color-verde);
+}
 @media(min-width: 768px){
     .allProducts__main__section{
         display:flex;

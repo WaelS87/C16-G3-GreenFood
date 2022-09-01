@@ -1,4 +1,5 @@
 const {loadProducts, storeProducts} = require("../data/productsModule")
+const {validationResult} = require("express-validator")
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
        
@@ -41,25 +42,37 @@ module.exports = {
     },
     store : (req,res) => {
 
-        const {title, price, discount, description, category} = req.body
+        const errors = validationResult(req) 
 
-		const products = loadProducts()
+        if(errors.isEmpty()){
 
-		const newProduct = {
-			id : (products[products.length -1].id + 1),
-			title : title.trim(),
-			description : description.trim(),
-			price : +price,
-			discount : +discount, 
-			image : "defaul-image.png",
-			category
-		}
+            const {title, price, discount, description, category} = req.body
 
-		const productsModify = [...products, newProduct]
+		    const products = loadProducts()
 
-		storeProducts(productsModify);
+		    const newProduct = {
+		    	id : (products[products.length -1].id + 1),
+		    	title : title.trim(),
+		    	description : description.trim(),
+		    	price : +price,
+		    	discount : +discount, 
+		    	image : "defaul-image.png",
+		    	category
+		    }
 
-		return res.redirect("/products")
+		    const productsModify = [...products, newProduct]
+
+		    storeProducts(productsModify);
+
+		    return res.redirect("/products")
+        } else {
+            return res.render("products/addProduct",{
+                title: "Agregar producto",
+                old : req.body,
+                errors : errors.mapped()
+            })
+        }
+
     },
     selectDelete : (req,res) =>{
         const products= loadProducts()
@@ -99,27 +112,41 @@ module.exports = {
 		})
     },
     update : (req,res) => {
-        const products = loadProducts();
 
-        const {title, price,discount, description, category, image} = req.body;
+        const errors = validationResult(req)
+        
+        if(errors.isEmpty()){
+            const products = loadProducts();
 
-        const productModify = products.map(product => {
-            if(product.id === +req.params.id){
-                return {
-                    ...product,
-                    title : title.trim(),
-                    description : description.trim(),
-                    price : +price*130,
-                    discount : +discount,
-                    category : category.trim()
+            const {title, price,discount, description, category, image} = req.body;
+
+            const productModify = products.map(product => {
+                if(product.id === +req.params.id){
+                    return {
+                        ...product,
+                        title : title.trim(),
+                        description : description.trim(),
+                        price : +price,
+                        discount : +discount,
+                        category : category.trim()
+                    }
                 }
-            }
-            return product
-        })
+                return product
+            })
 
-        storeProducts(productModify)
+            storeProducts(productModify)
 
-        return res.redirect('/products/detalleProducto/' + req.params.id);
+            return res.redirect('/products/detalleProducto/' + req.params.id);
+        
+        } else {
+            return res.render("products/editProduct", {
+                title : "Editar producto",
+                errors : errors.mapped(),
+                product : req.body
+            })
+        }
+
+        
     },
     categorieStore : (req,res) => {
         const products = loadProducts();
@@ -130,7 +157,7 @@ module.exports = {
 
         if(productsCategory){
             return res.render("products/categorieStore",{
-                title : "category",
+                title : categoryParams,
                 products,
                 categoryParams,
                 camelSentence,

@@ -132,7 +132,7 @@
    {
       "id": 14,
       "title": "Synergy Natural Organic",
-      "price": 540800,
+      "price": 4160,
       "discount": 20,
       "description": "Una sinergia vegana, naturalmente perfecta, que combina los superalimentos verdes más nutritivos de la naturaleza: los CUATRO PODEROSOS: espirulina, clorella, hierba de cebada y hierba de trigo.",
       "image": "suplementosPowder14jpg.jpg",
@@ -197,6 +197,6 @@
       "description": "Esta jarra de filtro de agua de vidrio de Ecobud le permite disfrutar de agua filtrada purificada de gran sabor día y noche, en interiores o exteriores, fría o a temperatura ambiente. Esta increíble jarra es fácil de usar y filtra todos los extras desagradables de su agua potable , incluidos el cloro, el fluoruro y otros contaminantes y bacterias.",
       "image": "variosWater20.jpg",
       "brand": "Ecobud",
-      "category": ""
+      "category": "varios"
    }
 ]
