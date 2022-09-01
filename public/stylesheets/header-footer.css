@@ -36,7 +36,7 @@ header{
         transform: translateX(65%);
     }
     100% {
-        transform: translateX(-90%);
+        transform: translateX(-95%);
     }
 }
 
