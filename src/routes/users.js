@@ -3,7 +3,7 @@ var router = express.Router();
 
 const { login, register, profile, adminProfile,condiciones,registerNuevo } = require("../controllers/userController")
 const registerValidator = require('../validation/registerValidator')
-
+const userSessionCheck = require('../middleware/userSessionCheck');
 /* GET users listing. */
 router
   .get('/login', login)

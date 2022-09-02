@@ -198,5 +198,14 @@
       "image": "variosWater20.jpg",
       "brand": "Ecobud",
       "category": "varios"
+   },
+   {
+      "id": 21,
+      "title": "ejemplo 1",
+      "description": "referente retreterter",
+      "price": 10,
+      "discount": 0,
+      "image": "defaul-image.jpeg",
+      "category": "detetica"
    }
 ]

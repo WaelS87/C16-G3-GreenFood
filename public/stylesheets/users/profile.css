@@ -66,6 +66,7 @@
 
 .profile__formulario label {
     padding: 10px;
+    color: black;
 }
 
 .profile__form__flex--checkbox {
