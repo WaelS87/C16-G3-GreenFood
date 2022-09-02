@@ -5,11 +5,72 @@
 
     <body>
         <%- include("../partials/header") %> 
-        <main class="login__main">
-            <section class="login">
+        <main class="registrar__main">
+            <!-- <section class="login"> -->
                 <p class="login--parapho"><a href="/">Inicio</a>/Login</p>
-                <h3>Login :)</h3>
-                <form action="">
+
+            
+
+                <h3 class="login__ingresa">Ingresá 😉</h3>
+                <div class="container__form">
+                    <form class="form" action="POST">
+                        
+                        <div class="form__box">
+                            <label class="form__label" for="email"></label>
+                            <input class="form__input" type="text" name="email" id="email" placeholder="email">
+                        </div>
+                        <div class="form__box">
+                            <label class="form__label" for="password"></label>
+                            <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña">
+                        </div>
+                        
+                        <div class="form__box">
+                            <button class="form__button--cuenta" type="submit">Iniciar sesión</button>
+                        </div>
+                        <h5 class="olvide">¿Olvidaste tu contraseña?</h5>
+                        <h5 class="olvide"><a href="/users/register">¿No tenés cuenta?, ¡registrate!</a></h5>
+                    </form>
+                </div>
+                <div class="container__cuentas">
+                    <div class="form__box__google">
+                        <button class="form__button--google" type="submit">
+                            <h3>Entrar con Google</h6>
+                            <img class="logoGoogle" width="40px" src="/images/googleLogo.png" alt="logoGoogle">
+                        </button>
+                    </div>
+                    <div class="form__box">
+                        <button class="form__button--facebook" type="submit">
+                            <h3>Entrar con Facebook</h6>
+                            <img class="logoFacebook" width="40px" src="/images/Facebook.png" alt="logoFacebook">
+                        </button>
+                    </div>
+                </div>
+                <div class="form__contact">
+                    <h5>contactanos</h5>
+                    <p>e-commerce@greenfood.com.ar</p>
+                    <p>Argentina</p>
+                </div>
+                        <!-- <div>
+                    <img class="registrar__truck" src="/images/envio-1.png" alt="logoEnvio">
+                </div> -->
+                <div class="abajo">
+                    <h6>
+                        <span>
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+                        &nbsp;CONTACTANOS<br>
+                        <a href="greenfoodargentina@gmail.com">greenfoodargentina@gmail.com</a>
+                    </h6>
+                    <img width="90" src="/images/envio-1.png" alt="envio">
+                    <h6>
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        Argentina
+                    </h6>
+                </div>
+                <!-- <form action="">
+
                     <div class="form__box">
                         <div class="form__input">
                             
@@ -25,11 +86,11 @@
                         </div>
                     </div>
                     <div class="form__box__flex">
-                        <button class="form__button form__button--submit" type="submit"><span class="inicio">INICIAR
-                                SECION</span></button>
+                        <button class="form__button form__button--submit" type="submit"><span class="inicio">Iniciar sesión</span></button>
                     </div>
                     <h5 class="olvide">¿Olvidaste tu contraseña?</h5>
                     </div>
+                    
                     <div class="form__box__flex">
                         <button class="google" type="submit">
                             <label>Entrar con Google</label> 
@@ -56,7 +117,8 @@
 
                         <h6><span><i class="fa-solid fa-location-dot"></i></span> Argentina</h6>
                     </div>
-            </section>
+                </form> -->
+<!--             </section> -->
         </main>
             <%- include("../partials/footer") %> 
     </body>
