@@ -1,9 +1,9 @@
-.adminProfile{
+.profile{
     display: flex;
     flex-direction: column;
 }
 
-.adminProfile__main{
+.profile__main{
     height: 60%;
     display: flex;
     justify-content: center;
@@ -14,19 +14,19 @@
     padding: 15px;
 }
 
-.adminProfile__section{
+.profile__section{
     background-color: var(--color-verdeClaro);
     border-radius: 5px;
     box-shadow: 2px 2px 2px var(--color-negro);
 }
 
-.adminProfile__section h1 {
+.profile__section h1 {
     padding-top: 30px;
     padding-bottom: 10px;
     text-align: center;
 }
 
-.adminProfile__imgPerfil {
+.profile__imgPerfil {
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -35,19 +35,19 @@
     margin-top: 15px;
 }
 
-.adminProfile__imgPerfil img {
+.profile__imgPerfil img {
     display: flex;
     width: 200px;
 }
 
-.adminProfile__imgPerfil input {
+.profile__imgPerfil input {
     color: black;
     font-size: 10px;
     padding-top: 5px;
     margin: 0 auto
 }
 
-.adminProfile__form{
+.profile__form{
     background-color: var(--color-verdeClaro);
     padding-left: 10px;
     padding-right: 10px;
@@ -55,7 +55,7 @@
     border-radius: 5px;
 }
 
-.adminProfile__formulario{
+.profile__formulario{
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -64,19 +64,19 @@
     margin-top: 15px;
 }
 
-.adminProfile__formulario label {
+.profile__formulario label {
     padding: 10px;
 }
 
-.adminProfile__form__flex--checkbox {
+.profile__form__flex--checkbox {
     font-size: 12px;
 }
 
-.adminProfile__form__flex--checkbox.radio {
+.profile__form__flex--checkbox.radio {
     font-size: 12px;
 }
 
-.adminProfile__form__l--container {
+.profile__form__l--container {
     display: flex;
     justify-content: center;
     align-items: center;
