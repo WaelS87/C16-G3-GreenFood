@@ -4,11 +4,7 @@ const bcrypt = require('bcrypt');
 
 
 module.exports = {
-    login: (req, res) => {
-        return res.render("users/login", {
-            title: "Ingresar"
-        })
-    },
+
     register: (req, res) => {
         return res.render("users/registrar", {
             title: "Registro"
@@ -21,30 +17,46 @@ module.exports = {
     },
     registerNuevo: (req, res) => {
         let errors = validationResult(req);
-        if(errors.isEmpty()){
-            const {nombre,apellido,email,password} = req.body;
+        if (errors.isEmpty()) {
+            const { nombre, apellido, email, password } = req.body;
             let users = loadUsers();
-    
+
             let newUser = {
-                Id : users.length > 0 ? users[users.length - 1].Id + 1 : 1,
-                Name : nombre.trim(),
-                Apellido : apellido.trim(),
-                Email : email.trim(),
-                password : bcrypt.hashSync(password,12),
-                Category : 'normal'
-                
+                Id: users.length > 0 ? users[users.length - 1].Id + 1 : 1,
+                Nombre: nombre.trim(),
+                Apellido: apellido.trim(),
+                Email: email.trim(),
+                password: bcrypt.hashSync(password, 12),
+                Category: 'normal'
+
             }
-    
+
             let usersModify = [...users, newUser];
-    
+
             storeUsers(usersModify);
-    
+
             return res.redirect('/users/login');
-        }else{
-            return res.render("users/registrar",{
+        } else {
+            return res.render("users/registrar", {
                 title: 'Registrar',
-                errors : errors.mapped(),
-                old : req.body
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+    },
+    login: (req, res) => {
+        return res.render("users/login", {
+            title: "login"
+        })
+    },
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            return res.redirect('profile')
+        } else {
+            return res.render("users/login", {
+                title: 'ingresar',
+                errors: errors.mapped(),
             })
         }
     },
