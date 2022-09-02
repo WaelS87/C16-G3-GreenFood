@@ -1,6 +1,7 @@
 /*celuler*/
-.login__main {
-    background-image:url('../../images/comida-ingredientes_1220-4884.webp')
+/* .login__main {
+    background-image:url('../../images/comida-ingredientes_1220-4884.webp');
+    background-size: cover;
 }
 
 .login__main section div.parapho__es h5,
@@ -11,35 +12,43 @@
     text-decoration: underline;
     font-size: 12px;
 }
+
 .login__main div.abajo a{
     color:black;
 }
-
-.login__main h3 {
+ */
+.login__ingresa{
     text-align: center;
     color: white;
 }
-
+.olvide {
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: underline;
+    font-size: 12px;
+}
+/* 
 .login__main section.login {
     width: 100%;
     background-image: url("../images/comida-ingredientes_1220-4884.webp");
     background-size: cover;
 }
-
+ */
 .login--parapho {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    /* background-color: rgba(121, 184, 121, 0.87);*/
+    
     background-color: rgba(255, 255, 255, 0.5);
 }
-
+/* 
 .login__main .form__box {
     display: flex;
     flex-direction: column;
     align-items: center;
     *position: relative;
-    padding: 10px;
+    *padding: 10px;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -53,13 +62,13 @@
 }
 
 .login__main .form__input {
-    margin-bottom: 5px;
-    width: 80%;
+    margin: 10px 0;
+    *width: 80%;
     height: 27px;
     display: flex;
     align-items: center;
     border-radius: 5px;
-    background-color: white;
+    *background-color: white;
    
   
 
@@ -83,12 +92,13 @@
 }
 
 .login__main .form__input input {
-  
+    background-color: #efefef;
     border: none;
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
     width: 90%;
+
 }
 
 .login__main .form__box__flex {
@@ -242,7 +252,7 @@
     height: 100%;
     padding: 5px;
 }
-
+ */
 
 /*Tablet*/
 

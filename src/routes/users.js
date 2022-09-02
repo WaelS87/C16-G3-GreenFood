@@ -9,5 +9,6 @@ router
   .get('/register', register)
   .get("/profile", profile)
   .get("/adminProfile", adminProfile)
-
+/*   .get('/logout', logout)
+ */
 module.exports = router;
