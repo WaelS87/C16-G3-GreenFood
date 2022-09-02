@@ -6,14 +6,14 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 const session = require('express-session');
 
-//const localsUserCheck = require('./middleware/localsUserCheck');
+const localsUserCheck = require('./middleware/localsUserCheck');
 
-//const cookieCheck = require('./middleware/cookieCheck')
+const cookieCheck = require('./middleware/cookieCheck')
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require("./routes/products");
-const productController = require('./controllers/productController');
 
 var app = express();
 
@@ -27,15 +27,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride("_method"));
-/* app.use(session ({
+app.use(session ({
   secret : 'greenFood',
   resave : false,
   saveUninitialized : true
-})); */
+}));
 
-//app.use(cookieCheck);
+app.use(cookieCheck);
 
-//app.use(localsUserCheck)
+app.use(localsUserCheck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
