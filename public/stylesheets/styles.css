@@ -18,6 +18,5 @@
 
 /* Users styles */
 @import"./users/profile.css";
-@import"./users/adminProfile.css";
 @import'./users/login.css';
 @import'./users/registrar.css';
