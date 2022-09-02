@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-const { login, register, profile, adminProfile,condiciones,registerNuevo } = require("../controllers/userController")
-const registerValidator = require('../validation/registerValidator')
+const { login, register, profile, condiciones,registerNuevo } = require("../controllers/userController")
+const { registerValidator, loginValidator} = require('../validations')
 const userSessionCheck = require('../middleware/userSessionCheck');
 /* GET users listing. */
 router
   .get('/login', login)
-  //.get('/login',processLogin)
+  .post('/login', loginValidator, processLogin)
   .get('/register', register)
   .get("/profile/:Id", profile)
   .post('/register',registerValidator,registerNuevo)
