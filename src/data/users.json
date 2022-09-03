@@ -3,8 +3,8 @@
       "Id": 1,
       "Nombre": "ezequiel",
       "Apellido": "gonzalez",
-      "Email": "ezedrojas@gmail.com",
-      "Constraseña": "123123",
+      "Email": "ezedrojas03@gmail.com",
+      "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
       "Category": "administrador",
       "Image": ""
    },
@@ -43,5 +43,13 @@
       "Constraseña": "",
       "Category": "normal",
       "Image": ""
+   },
+   {
+      "Id": 6,
+      "Nombre": "usuario",
+      "Apellido": "ejemplo",
+      "Email": "emailejemplo@gmail.com",
+      "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
+      "Category": "normal"
    }
 ]

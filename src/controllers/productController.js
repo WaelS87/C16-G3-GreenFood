@@ -15,7 +15,8 @@ module.exports = {
 		const products= require('../data/products.json')
 		return res.render('products/products',{
 		   products,
-           toThousand
+           toThousand,
+           session: req.session.userLogin
 		})
 
 	},
@@ -25,19 +26,22 @@ module.exports = {
         return res.render("products/detalleProducto",{
             title : "Detalle del producto",
 			product,
-			toThousand
+			toThousand,
+            session: req.session.userLogin
 		})
     },
     carrito : (req,res) => {
         return res.render("products/carrito",{
-            title : "Carrito"
+            title : "Carrito",
+            session: req.session.userLogin
         })
     },
     addProduct : (req,res) => {
         const products = loadProducts()
         return res.render("products/addProduct",{
             title : "Agregar producto",
-            products
+            products,
+            session: req.session.userLogin
         })
     },
     store : (req,res) => {
@@ -69,7 +73,8 @@ module.exports = {
             return res.render("products/addProduct",{
                 title: "Agregar producto",
                 old : req.body,
-                errors : errors.mapped()
+                errors : errors.mapped(),
+                session: req.session.userLogin
             })
         }
 
@@ -77,7 +82,9 @@ module.exports = {
     selectDelete : (req,res) =>{
         const products= loadProducts()
         return res.render('products/deleteProducts',{
-            products
+            products,
+            title: "Eliminar productos",
+            session: req.session.userLogin
         })
 
     },
@@ -93,7 +100,8 @@ module.exports = {
         const products = loadProducts()
         return res.render("products/editProduct-selector", {
             title : "Selección de producto",
-            products
+            products,
+            session: req.session.userLogin
         })
     },
     selected : (req,res) => {
@@ -108,7 +116,8 @@ module.exports = {
 		const product = products.find(product => product.id === +req.params.id)
         return res.render("products/editProduct", {
             title : "Editar producto",
-			product
+			product,
+            session: req.session.userLogin
 		})
     },
     update : (req,res) => {
@@ -142,7 +151,8 @@ module.exports = {
             return res.render("products/editProduct", {
                 title : "Editar producto",
                 errors : errors.mapped(),
-                product : req.body
+                product : req.body,
+                session: req.session.userLogin
             })
         }
 
@@ -155,17 +165,16 @@ module.exports = {
 
         const productsCategory = products.find(({category}) => category === categoryParams)
 
-        if(productsCategory){
-            return res.render("products/categorieStore",{
-                title : categoryParams,
-                products,
-                categoryParams,
-                camelSentence,
-                toThousand
-            })
-        }/*  else {
-            return res.redirect("/")
-        } */
+
+        return res.render("products/categorieStore",{
+            title : categoryParams,
+            products,
+            categoryParams,
+            camelSentence,
+            toThousand,
+            session: req.session.userLogin
+        })
+
     },
     search : (req,res) => {
         const products = loadProducts()
@@ -176,11 +185,8 @@ module.exports = {
 			products : result,
 			keywords : req.query.keywords,
 			toThousand,
-            camelSentence
+            camelSentence,
+            session: req.session.userLogin
 		})
-
-        return res.render("products/searchProducts", {
-            title : "Busqueda"
-        })
     }
 }

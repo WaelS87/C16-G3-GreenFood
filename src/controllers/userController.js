@@ -7,37 +7,42 @@ const bcrypt = require('bcrypt');
 module.exports = {
     login: (req, res) => {
         return res.render("users/login", {
-            title: "Ingresar"
+            title: "Ingresar",
+            session: req.session.userLogin
         })
     },
+
     processLogin: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let {Id, Nombre, Category, image} = loadUsers().find(user => user.email === req.body.email);
+            let {Id, Category} = loadUsers().find(user => user.Email === req.body.email);
 
-            req.session.userLogin ={
+            req.session.userLogin = {
                 Id,
-                username,
-                Nombre,
-                Category,
-                image
+                Category
             }
-        }
 
-        //SESSION
-        
-
-        //COOKIES
-        if(req.body.recordame){
-            return res.cookie("greenFood", req.ingresar,{
+            res.cookie("greenFood", req.session.userLogin,{
                 maxAge : 1000 * 60
             })
+            
+            return res.redirect("/")
+
+        } else {
+
+            return res.render("users/login",{
+                title : "Ingresar",
+                errors : errors.mapped(),
+                session : req.session
+            })
+
         }
     },
 
     register: (req, res) => {
         return res.render("users/registrar", {
-            title: "Registro"
+            title: "Registro",
+            session : req.session.userLogin
         })
     },
 
@@ -67,7 +72,8 @@ module.exports = {
             return res.render("users/registrar",{
                 title: 'Registrar',
                 errors : errors.mapped(),
-                old : req.body
+                old : req.body,
+                session: req.session.userLogin
             })
         }
     },
@@ -76,20 +82,28 @@ module.exports = {
         const users = loadUsers(); 
         const user = users.find(user => user.Id === +req.params.Id)
        
-        return res.render("users/profile", {
-            title : "Perfil",
-            user     
-        })
-    },
+        if(req.session.userLogin){
+            return res.render("users/profile", {
+                title : "Perfil",
+                user,
+                session: req.session.userLogin
+            })
+        } else {
+            return res.redirect("/users/login")
+        }
         
+    },
         
     condiciones: (req, res) => {
         return res.render('users/condiciones', {
-            title: 'condiciones'
+            title: 'condiciones',
+            session: req.session.userLogin
         })
-    }/* ,
+    },
+
     logout : (req, res) => {
         req.session.destroy();
+        res.cookie("greenFood", null, {maxAge: -1})
         return res.redirect('/')
-    } */
+    }
 }
