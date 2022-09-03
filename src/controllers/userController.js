@@ -66,7 +66,7 @@ module.exports = {
     processLogin: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            return res.redirect('profile')
+            return res.redirect('home')
         } else {
             return res.render("users/login", {
                 title: 'ingresar',
