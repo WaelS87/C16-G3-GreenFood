@@ -101,9 +101,6 @@ module.exports = {
         return res.render("users/adminProfile", {
             title: "Perfil Administrativo"
         })
-    }/* ,
-    logout : (req, res) => {
-        req.session.destroy();
-        return res.redirect('/')
-    } */
+    }
 }
+   

@@ -2,9 +2,9 @@
    {
       "Id": 1,
       "Nombre": "ezequiel",
-      "Apellido": "",
-      "Email": "",
-      "Constraseña": "",
+      "Apellido": "gonzalez",
+      "Email": "ezedrojas03@gmail.com",
+      "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
       "Category": "administrador",
       "Image": ""
    },
@@ -12,8 +12,8 @@
       "Id": 2,
       "Nombre": "Wael",
       "Apellido": "Fakhrji",
-      "Email": "",
-      "Constraseña": "",
+      "Email": "wfakhrji@gmail.com",
+      "Constraseña": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
       "Category": "administrador",
       "Image": ""
    },

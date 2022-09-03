@@ -9,9 +9,9 @@ router
   .get('/login', login)
   .post('/login',loginValidator,processLogin)
   .get('/register', register)
-  .get("/profile/:Id", profile)
-  .post('/register',registerValidator,registerNuevo)
-  .get('/condiciones',condiciones)
-  
+  .get("/profile/:Id", userSessionCheck, profile)
+  .post('/register', registerValidator,registerNuevo)
+  .get('/condiciones', condiciones)
+  .get("/logout", logout)
 
 module.exports = router;

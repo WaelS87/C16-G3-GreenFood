@@ -271,14 +271,14 @@ header{
     border-right: 0px;
 }
 
-.adminProfile .header__categories__container,
+.administrador .header__categories__container,
 .addProduct .header__categories__container,
 .editProduct .header__categories__container,
 .deleteProduct .header__categories__container{
     display: none;
 }
 
-.adminProfile .header__adminNavbar__container,
+.administrador .header__adminNavbar__container,
 .addProduct .header__adminNavbar__container,
 .editProduct .header__adminNavbar__container,
 .deleteProduct .header__adminNavbar__container{

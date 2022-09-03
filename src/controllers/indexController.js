@@ -7,9 +7,10 @@ module.exports = {
     
     home :  (req,res) => {
         const products = loadProducts()
-        res.render('home', { 
+        return res.render('home', { 
             products,
-            title : "home"
+            title : "Home",
+            session : req.session.userLogin
          })
 
     }
