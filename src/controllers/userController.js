@@ -105,5 +105,36 @@ module.exports = {
         req.session.destroy();
         res.cookie("greenFood", null, {maxAge: -1})
         return res.redirect('/')
+    },
+
+    update : (req,res) => {
+
+        const errors = validationResult(req)
+        
+        if(errors.isEmpty()){
+            const users = loadUsers();
+
+            const {nombre, apellido, email, constraseña, image} = req.body;
+
+            const userModify = users.map(user => {
+                if(user.id === +req.params.id){
+                    return {
+                        ...user,
+                        nombre : nombre.trim(),
+                        apellido : apellido.trim(),
+                        email : email.trim(),
+                        constraseña : constraseña.trim(),
+                    }
+                }
+                return user
+            })
+
+            storeUsers(userModify)
+
+            return res.redirect('/users/profile/' + req.params.id);
+        
+        } else {
+            return res.redirect("/") 
+            }
+        }    
     }
-}

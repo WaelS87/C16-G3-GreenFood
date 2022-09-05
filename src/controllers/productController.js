@@ -96,6 +96,7 @@ module.exports = {
         storeProducts(productModify)
         return res.redirect('../')
     },
+
     select : (req,res) => {
         const products = loadProducts()
         return res.render("products/editProduct-selector", {
@@ -120,6 +121,7 @@ module.exports = {
             session: req.session.userLogin
 		})
     },
+
     update : (req,res) => {
 
         const errors = validationResult(req)
