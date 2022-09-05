@@ -9,7 +9,7 @@ router
   .get('/login', login)
   .post('/login', loginValidator, processLogin)
   .get('/register', register)
-  .get("/profile/:Id", userSessionCheck, profile)
+  .get("/profile/:id", userSessionCheck, profile)
   .post('/register', registerValidator,registerNuevo)
   .get('/condiciones', condiciones)
   .get("/logout", logout)

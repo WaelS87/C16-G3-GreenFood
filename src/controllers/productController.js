@@ -15,8 +15,7 @@ module.exports = {
 		const products= require('../data/products.json')
 		return res.render('products/products',{
 		   products,
-           toThousand,
-           session: req.session.userLogin
+           toThousand
 		})
 
 	},
@@ -26,22 +25,19 @@ module.exports = {
         return res.render("products/detalleProducto",{
             title : "Detalle del producto",
 			product,
-			toThousand,
-            session: req.session.userLogin
+			toThousand
 		})
     },
     carrito : (req,res) => {
         return res.render("products/carrito",{
-            title : "Carrito",
-            session: req.session.userLogin
+            title : "Carrito"
         })
     },
     addProduct : (req,res) => {
         const products = loadProducts()
         return res.render("products/addProduct",{
             title : "Agregar producto",
-            products,
-            session: req.session.userLogin
+            products
         })
     },
     store : (req,res) => {
@@ -73,8 +69,7 @@ module.exports = {
             return res.render("products/addProduct",{
                 title: "Agregar producto",
                 old : req.body,
-                errors : errors.mapped(),
-                session: req.session.userLogin
+                errors : errors.mapped()
             })
         }
 
@@ -83,8 +78,7 @@ module.exports = {
         const products= loadProducts()
         return res.render('products/deleteProducts',{
             products,
-            title: "Eliminar productos",
-            session: req.session.userLogin
+            title: "Eliminar productos"
         })
 
     },
@@ -101,8 +95,7 @@ module.exports = {
         const products = loadProducts()
         return res.render("products/editProduct-selector", {
             title : "Selección de producto",
-            products,
-            session: req.session.userLogin
+            products
         })
     },
     selected : (req,res) => {
@@ -117,8 +110,7 @@ module.exports = {
 		const product = products.find(product => product.id === +req.params.id)
         return res.render("products/editProduct", {
             title : "Editar producto",
-			product,
-            session: req.session.userLogin
+			product
 		})
     },
 
@@ -153,8 +145,7 @@ module.exports = {
             return res.render("products/editProduct", {
                 title : "Editar producto",
                 errors : errors.mapped(),
-                product : req.body,
-                session: req.session.userLogin
+                product : req.body
             })
         }
 
@@ -173,8 +164,7 @@ module.exports = {
             products,
             categoryParams,
             camelSentence,
-            toThousand,
-            session: req.session.userLogin
+            toThousand
         })
 
     },
@@ -187,8 +177,7 @@ module.exports = {
 			products : result,
 			keywords : req.query.keywords,
 			toThousand,
-            camelSentence,
-            session: req.session.userLogin
+            camelSentence
 		})
     }
 }

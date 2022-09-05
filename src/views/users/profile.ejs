@@ -3,14 +3,14 @@
 <%- include("../partials/head") %> 
 
     
-<body class="profile <%= session.Category %>">
+<body class="profile <%= locals.userLogin.category %>">
     <%- include("../partials/header") %> 
     <main class="profile__main">
         <section class="profile__section">
-            <% if (user.Category === "normal") { %>
+            <% if (user.category === "normal") { %>
                 <h1>Tu Perfil</h1>
             <% } else { %>
-            <h1> Perfil <%= user.Category %> </h1>
+            <h1> Perfil <%= user.category %> </h1>
             <% } %>
             <form action="" class="profile__form">
             <div class="profile__form__l--container">
@@ -21,6 +21,7 @@
                 <div class="profile__formulario">
                     <div class="profile__form__box">
                     <label class="form__label" for="nombre">Nombre</label>
+<<<<<<< HEAD
                     <input class="form__input" type="text" id="nombre" name="nombre" value="<%= user.nombre %>">
                 </div>
                 <div class="profile__form__box">
@@ -39,9 +40,29 @@
                     <label class="form__label" for="password">Contraseña</label>
                     <input class="form__input" type="text" id="password" name="password" value="<%= user.contraseña %>">
                     <div class="profile__mostrar">
+=======
+                    <input class="form__input" type="text" id="nombre" value="<%= user.nombre %>">
+                </div>
+                <div class="profile__form__box">
+                    <label class="form__label" for="apellido">Apellido</label>
+                    <input class="form__input" type="text" id="apellido" value="<%= user.apellido %>">
+                </div>
+                <div class="profile__form__box">
+                    <label class="form__label" for="usuario">Nombre de usuario</label>
+                    <input class="form__input" type="text" id="usuario" value="<%= user.nombreUsuario %>">
+                </div>
+                <div class="profile__form__box">
+                    <label class="form__label" for="email">Correo electrónico</label>
+                    <input class="form__input" type="email" id="email" value="<%= user.email %>">
+                </div>
+                <div class="profile__form__box">
+                    <label class="form__label" for="password">Contraseña</label>
+                    <input class="form__input" type="password" id="password">
+                    <!-- <div class="profile__mostrar">
+>>>>>>> e3fbc2c14bcb798b4372b5191739ebd420a43a9b
                         <input type="checkbox"> 
                         <label class="profile__mostrar__contraseña">Mostrar</label>
-                    </div>
+                    </div> -->
                 </div>
                         <!-- <div class="adminProfile__cambiar__contraseña">
                 <p>Cambiar Contraseña</p>

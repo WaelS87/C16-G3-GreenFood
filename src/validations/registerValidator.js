@@ -15,7 +15,7 @@ module.exports=[
         .notEmpty().withMessage('Debe Entrar Tu mail').bail()
         .isEmail().withMessage('Email no es Valido').bail()
         .custom((value,{req})=> {
-            let user = users.find(user => user.Email === value.trim())
+            let user = users.find(user => user.email === value.trim())
             if(user){
                 return false
             }else{
