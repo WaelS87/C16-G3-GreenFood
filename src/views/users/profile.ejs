@@ -19,27 +19,29 @@
                     <input name="image" type="file" id="image" placeholder="Seleccionar foto">
                 </div>
                 <div class="profile__formulario">
-                    <div class="form__box">
+                    <div class="profile__form__box">
                     <label class="form__label" for="nombre">Nombre</label>
                     <input class="form__input" type="text" id="nombre" value="<%= user.Nombre %>">
                 </div>
-                <div class="form__box">
+                <div class="profile__form__box">
                     <label class="form__label" for="apellido">Apellido</label>
                     <input class="form__input" type="text" id="apellido" value="<%= user.Apellido %>">
                 </div>
-                <div class="form__box">
+                <div class="profile__form__box">
                     <label class="form__label" for="usuario">Nombre de usuario</label>
                     <input class="form__input" type="text" id="usuario" value="<%= user.Nombre_Usuario %>">
                 </div>
-                <div class="form__box">
+                <div class="profile__form__box">
                     <label class="form__label" for="email">Correo electrónico</label>
                     <input class="form__input" type="email" id="email" value="<%= user.Email %>">
                 </div>
-                <div class="form__box">
+                <div class="profile__form__box">
                     <label class="form__label" for="password">Contraseña</label>
                     <input class="form__input" type="text" id="password" value="<%= user.Contraseña %>">
-                    <input type="checkbox"> 
-                    <label class="profile__mostrar__contraseña">Mostrar</label>
+                    <div class="profile__mostrar">
+                        <input type="checkbox"> 
+                        <label class="profile__mostrar__contraseña">Mostrar</label>
+                    </div>
                 </div>
                         <!-- <div class="adminProfile__cambiar__contraseña">
                 <p>Cambiar Contraseña</p>

@@ -51,5 +51,13 @@
       "Email": "emailejemplo@gmail.com",
       "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
       "Category": "normal"
+   },
+   {
+      "Id": 7,
+      "Nombre": "Natalia",
+      "Apellido": "Lionti",
+      "Email": "nataliasaxo@gmail.com",
+      "Constraseña": "$2b$12$.BnHhuN8jt3xXtPGlbYKyeHUVxS7YUmrWpRtQro3kyzOoknjyrm3i",
+      "Category": "normal"
    }
 ]
