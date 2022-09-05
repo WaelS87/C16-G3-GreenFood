@@ -29,9 +29,9 @@
                     <li>
                         <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
-                <% if (session) { %>
+                <% if (locals.userLogin) { %>
                     <li>
-                        <a href="/users/profile/<%= session.Id %> "><i class="fa-solid fa-circle-user"></i></a>
+                        <a href="/users/profile/<%= locals.userLogin.Id %> "><i class="fa-solid fa-circle-user"></i></a>
                     </li>
                 <% } %>
                     
@@ -68,11 +68,11 @@
         <div class="userNav__container">
             <ul class="navbar__loginregister">
                 <li><a class="navbar__carrito" href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <% if (!session) { %>
+            <% if (!locals.userLogin) { %>
                 <li><a href="/users/login">Login</a></li>
                 <li><a href="/users/register">Register</a></li>
             <% } else { %>     
-                <li><a class="navbar__profile" href="/users/profile/<%= session.Id %> "><i class="fa-solid fa-circle-user"></i></a></li>
+                <li><a class="navbar__profile" href="/users/profile/<%= locals.userLogin.Id %> "><i class="fa-solid fa-circle-user"></i></a></li>
             <% } %>
             </ul>
         </div>

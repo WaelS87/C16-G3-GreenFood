@@ -7,8 +7,7 @@ const bcrypt = require('bcrypt');
 module.exports = {
     login: (req, res) => {
         return res.render("users/login", {
-            title: "Ingresar",
-            session: req.session.userLogin
+            title: "Ingresar"
         })
     },
 
@@ -23,7 +22,7 @@ module.exports = {
             }
 
             res.cookie("greenFood", req.session.userLogin,{
-                maxAge : 1000 * 60
+                maxAge : 1000 * 30
             })
             
             return res.redirect("/")
@@ -32,8 +31,7 @@ module.exports = {
 
             return res.render("users/login",{
                 title : "Ingresar",
-                errors : errors.mapped(),
-                session : req.session
+                errors : errors.mapped()
             })
 
         }
@@ -41,8 +39,7 @@ module.exports = {
 
     register: (req, res) => {
         return res.render("users/registrar", {
-            title: "Registro",
-            session : req.session.userLogin
+            title: "Registro"
         })
     },
 
@@ -72,8 +69,7 @@ module.exports = {
             return res.render("users/registrar",{
                 title: 'Registrar',
                 errors : errors.mapped(),
-                old : req.body,
-                session: req.session.userLogin
+                old : req.body
             })
         }
     },
@@ -85,8 +81,7 @@ module.exports = {
         if(req.session.userLogin){
             return res.render("users/profile", {
                 title : "Perfil",
-                user,
-                session: req.session.userLogin
+                user
             })
         } else {
             return res.redirect("/users/login")
@@ -96,8 +91,7 @@ module.exports = {
         
     condiciones: (req, res) => {
         return res.render('users/condiciones', {
-            title: 'condiciones',
-            session: req.session.userLogin
+            title: 'condiciones'
         })
     },
 
