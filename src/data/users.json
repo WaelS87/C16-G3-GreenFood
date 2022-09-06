@@ -1,12 +1,13 @@
 [
    {
       "id": 1,
-      "nombre": "ezequiel",
-      "apellido": "gonzalez",
+      "nombre": "Damian Ezequiel",
+      "apellido": "Gonzalez Galarza",
       "email": "ezedrojas03@gmail.com",
-      "contraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
+      "contraseña": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
       "category": "administrador",
-      "image": ""
+      "image": "",
+      "nombreUsuario": "EzeD03"
    },
    {
       "id": 2,

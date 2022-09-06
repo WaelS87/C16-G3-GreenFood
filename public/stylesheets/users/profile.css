@@ -99,13 +99,16 @@
     background-color: rgba(236, 14, 14, 0.877);
     border-radius: 5px;
     font-family: 'Work Sans', sans-serif;
-
+    cursor: pointer;
 }
 
 .profile__enviar__button {
+    color: var(--color-negro);
     background-color: beige;
     border-radius: 5px;
     font-family: 'Work Sans', sans-serif;
+    border: 2px solid var(--color-negro);
+    cursor: pointer;
 }
 
 .profile__checkbox p {
@@ -132,8 +135,14 @@
 
 .profile__form__box{
     display: flex;
-    flex-direction: column;
+    *flex-direction: column;
     align-items: center;
+}
+
+.profile__form__box label{
+    display: flex;
+    justify-content: right;
+    width: 200px;
 }
 
 .profile__mostrar{

@@ -10,82 +10,52 @@
             <% if (user.category === "normal") { %>
                 <h1>Tu Perfil</h1>
             <% } else { %>
-            <h1> Perfil <%= user.category %> </h1>
+            <h1> ¡Bienvenido de vuelta <%= user.nombre %>! </h1>
             <% } %>
-            <form action="" class="profile__form">
-            <div class="profile__form__l--container">
-                <div class="profile__imgPerfil">
-                    <img src="/images/<%= user.image ? user.image : 'perfil por defecto.jpg' %> " alt="imagenPerfil">
-                    <input name="image" type="file" id="image" placeholder="Seleccionar foto">
+            <form action="?_method=PUT" method="post" class="profile__form">
+                <div class="profile__form__l--container">
+                    <div class="profile__imgPerfil">
+                        <img src="/images/<%= user.image ? user.image : 'perfil por defecto.jpg' %> " alt="imagenPerfil">
+                        <input name="image" type="file" id="image" placeholder="Seleccionar foto">
+                    </div>
+                    <div class="profile__formulario">
+                        <div class="profile__form__box">
+                            <label class="form__label" for="nombre">Nombre</label>
+                            <input class="form__input" type="text" id="nombre" name="nombre" value="<%= user.nombre %>">
+                            <p class="errorText"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %></p>
+                        </div>
+                        <div class="profile__form__box">
+                            <label class="form__label" for="apellido">Apellido</label>
+                            <input class="form__input" type="text" id="apellido" name="apellido" value="<%= user.apellido %>">
+                            <p class="errorText"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
+                        </div>
+                        <div class="profile__form__box">
+                            <label class="form__label" for="usuario">Nombre de usuario</label>
+                            <input class="form__input" type="text" id="usuario" name="nombreUsuario" value="<%= user.nombreUsuario %>">
+                            <p class="errorText"><%= locals.errors && errors.nombreUsuario ? errors.nombreUsuario.msg : null %></p>
+                        </div>
+                        <div class="profile__form__box">
+                            <label class="form__label" for="email">Correo electrónico</label>
+                            <input class="form__input" type="email" id="email" name="email" value="<%= user.email %>">
+                            <p class="errorText"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
+                        </div>
+                        <div class="profile__form__box">
+                            <label class="form__label" for="password">Contraseña</label>
+                            <input class="form__input" type="password" id="password" name="password">
+                            <p class="errorText"><%= locals.errors && errors.password ? errors.password.msg : null %></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="profile__formulario">
-                    <div class="profile__form__box">
-                    <label class="form__label" for="nombre">Nombre</label>
-<<<<<<< HEAD
-                    <input class="form__input" type="text" id="nombre" name="nombre" value="<%= user.nombre %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="apellido">Apellido</label>
-                    <input class="form__input" type="text" id="apellido" name="apellido" value="<%= user.apellido %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="usuario">Nombre de usuario</label>
-                    <input class="form__input" type="text" id="usuario" name="nombre_usuario" value="<%= user.nombre_usuario %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="email">Correo electrónico</label>
-                    <input class="form__input" type="email" id="email" name="email" value="<%= user.email %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="password">Contraseña</label>
-                    <input class="form__input" type="text" id="password" name="password" value="<%= user.contraseña %>">
-                    <div class="profile__mostrar">
-=======
-                    <input class="form__input" type="text" id="nombre" value="<%= user.nombre %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="apellido">Apellido</label>
-                    <input class="form__input" type="text" id="apellido" value="<%= user.apellido %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="usuario">Nombre de usuario</label>
-                    <input class="form__input" type="text" id="usuario" value="<%= user.nombreUsuario %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="email">Correo electrónico</label>
-                    <input class="form__input" type="email" id="email" value="<%= user.email %>">
-                </div>
-                <div class="profile__form__box">
-                    <label class="form__label" for="password">Contraseña</label>
-                    <input class="form__input" type="password" id="password">
-                    <!-- <div class="profile__mostrar">
->>>>>>> e3fbc2c14bcb798b4372b5191739ebd420a43a9b
-                        <input type="checkbox"> 
-                        <label class="profile__mostrar__contraseña">Mostrar</label>
-                    </div> -->
-                </div>
-                        <!-- <div class="adminProfile__cambiar__contraseña">
-                <p>Cambiar Contraseña</p>
-                <div class="adminProfile__cambiar__contraseña__form__box">
-                    <label class="form__label" for="new_password">Nueva Contraseña</label>
-                    <input class="form__input" type="text" id="new_password" value="">
-                </div>
-                <div class="adminProfile__cambiar__contraseña__form__box">
-                <label class="form__label" for="new_password_ok">Repetir Contraseña</label>
-                <input class="form__input" type="text" id="new_password_ok" value="">
-            </div> -->
-                </div>
-            </div>
+                <div class="profile__actionButtons__container">
+                    <a href="/users/logout">
+                        <div class="profile__enviar__button">Cerrar sesión</div>
+                    </a>
+                    <a href="/">
+                        <button class="profile__cancelar__button">Cancelar</button>
+                    </a>
+                    <button type="submit" class="profile__enviar__button">Guardar Perfil</button>
                 </div>
             </form>
-                    <div class="profile__actionButtons__container">
-                        <a href="/">
-                            <button class="profile__cancelar__button">Cancelar</button>
-                        </a>
-                        <a href="/profile/:id">
-                            <button class="profile__enviar__button">Editar Perfil</button> 
-                        </a>
-                    </div>
         </section>
     </main>
     <%- include("../partials/footer") %> 

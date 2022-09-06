@@ -1,7 +1,7 @@
 const session = require("express-session")
 const { loadUsers, storeUsers } = require('../data/usersModule')
 const { validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 
 
 module.exports = {
@@ -55,9 +55,8 @@ module.exports = {
                 nombre : nombre.trim(),
                 apellido : apellido.trim(),
                 email : email.trim(),
-                constraseña : bcrypt.hashSync(password,12),
+                constraseña : bcryptjs.hashSync(password,12),
                 Category : 'normal'
-                
             }
     
             let usersModify = [...users, newUser];
@@ -105,10 +104,11 @@ module.exports = {
 
         const errors = validationResult(req)
         
+
         if(errors.isEmpty()){
             const users = loadUsers();
 
-            const {nombre, apellido, email, constraseña, image} = req.body;
+            const {nombre, apellido, email, password, nombreUsuario, image} = req.body;
 
             const userModify = users.map(user => {
                 if(user.id === +req.params.id){
@@ -116,8 +116,9 @@ module.exports = {
                         ...user,
                         nombre : nombre.trim(),
                         apellido : apellido.trim(),
+                        nombreUsuario: nombreUsuario.trim(),
                         email : email.trim(),
-                        constraseña : constraseña.trim(),
+                        /* contraseña : bcryptjs.hashSync(password,12) */
                     }
                 }
                 return user
@@ -128,7 +129,14 @@ module.exports = {
             return res.redirect('/users/profile/' + req.params.id);
         
         } else {
-            return res.redirect("/") 
-            }
-        }    
-    }
+            const users = loadUsers(); 
+            const user = users.find(user => user.id === +req.params.id)
+
+            return res.render("users/profile", {
+                title : "Perfil",
+                errors : errors.mapped(),
+                user
+            })
+        }
+    }    
+}
