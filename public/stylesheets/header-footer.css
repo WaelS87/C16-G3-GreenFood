@@ -67,11 +67,12 @@ header{
 
 .navbar__busqueda{
     background-color: #fff;
-    width: 300px;
+    width: 350px;
     height: 35px;
     border-radius: 5px;
     color: gray;
     overflow: hidden;
+    *margin-left: 20px;
 }
 
 .navbar__busqueda form{
@@ -138,7 +139,7 @@ header{
 }
 
 .header__tittle__container{
-    width: 30%;
+    width: fit-content;
     justify-self: auto;
 }
 

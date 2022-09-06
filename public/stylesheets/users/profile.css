@@ -24,6 +24,19 @@
     padding-top: 30px;
     padding-bottom: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.profile__section h1 .green__word{
+    margin-left: 5px;
+}
+
+.profile__section h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
 }
 
 .profile__imgPerfil {

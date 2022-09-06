@@ -33,124 +33,6 @@ module.exports = {
             title : "Carrito"
         })
     },
-    addProduct : (req,res) => {
-        const products = loadProducts()
-        return res.render("products/addProduct",{
-            title : "Agregar producto",
-            products
-        })
-    },
-    store : (req,res) => {
-
-        const errors = validationResult(req) 
-
-        if(errors.isEmpty()){
-
-            const {title, price, discount, description, category} = req.body
-
-		    const products = loadProducts()
-
-		    const newProduct = {
-		    	id : (products[products.length -1].id + 1),
-		    	title : title.trim(),
-		    	description : description.trim(),
-		    	price : +price,
-		    	discount : +discount, 
-		    	image : "defaul-image.jpeg",
-		    	category
-		    }
-
-		    const productsModify = [...products, newProduct]
-
-		    storeProducts(productsModify);
-
-		    return res.redirect("/products")
-        } else {
-            return res.render("products/addProduct",{
-                title: "Agregar producto",
-                old : req.body,
-                errors : errors.mapped()
-            })
-        }
-
-    },
-    selectDelete : (req,res) =>{
-        const products= loadProducts()
-        return res.render('products/deleteProducts',{
-            products,
-            title: "Eliminar productos"
-        })
-
-    },
-    deleteProduct:(req,res) => {
-
-        const productId = +req.body.id
-        const products= loadProducts()
-        const productModify = products.filter(product=>product.id !== productId) 
-        storeProducts(productModify)
-        return res.redirect('../')
-    },
-
-    select : (req,res) => {
-        const products = loadProducts()
-        return res.render("products/editProduct-selector", {
-            title : "Selección de producto",
-            products
-        })
-    },
-    selected : (req,res) => {
-
-        const productId = +req.body.id
-        return res.redirect(productId)
-
-    },
-
-    editProduct : (req,res) => {
-        const products = loadProducts()
-		const product = products.find(product => product.id === +req.params.id)
-        return res.render("products/editProduct", {
-            title : "Editar producto",
-			product
-		})
-    },
-
-    update : (req,res) => {
-
-        const errors = validationResult(req)
-        
-        if(errors.isEmpty()){
-            const products = loadProducts();
-
-            const {title, price,discount, description, category, image} = req.body;
-
-            const productModify = products.map(product => {
-                if(product.id === +req.params.id){
-                    return {
-                        ...product,
-                        title : title.trim(),
-                        description : description.trim(),
-                        price : +price,
-                        discount : +discount,
-                        category : category.trim()
-                    }
-                }
-                return product
-            })
-
-            storeProducts(productModify)
-
-            return res.redirect('/products/detalleProducto/' + req.params.id);
-        
-        } else {
-            return res.render("products/editProduct", {
-                title : "Editar producto",
-                errors : errors.mapped(),
-                product : req.body
-            })
-        }
-
-        
-    },
     categorieStore : (req,res) => {
         const products = loadProducts();
         //const category = products.find(product => product.category === +req.params.category)
@@ -179,5 +61,151 @@ module.exports = {
 			toThousand,
             camelSentence
 		})
+    },
+    /* ADMIN CONTROLLERS */
+    
+    addProduct : (req,res) => {
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const products = loadProducts()
+            return res.render("products/addProduct",{
+                title : "Agregar producto",
+                products
+            })
+        } else {
+            return res.redirect("/")
+        }
+        
+    },
+    store : (req,res) => {
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const errors = validationResult(req) 
+
+            if(errors.isEmpty()){
+
+                const {title, price, discount, description, category} = req.body
+
+                const products = loadProducts()
+
+                const newProduct = {
+                    id : (products[products.length -1].id + 1),
+                    title : title.trim(),
+                    description : description.trim(),
+                    price : +price,
+                    discount : +discount, 
+                    image : "defaul-image.jpeg",
+                    category
+                }
+
+                const productsModify = [...products, newProduct]
+
+                storeProducts(productsModify);
+
+                return res.redirect("/products")
+            } else {
+                return res.render("products/addProduct",{
+                    title: "Agregar producto",
+                    old : req.body,
+                    errors : errors.mapped()
+                })
+            }
+        } else {
+            return res.redirect("/")
+        }
+    },
+
+    selectDelete : (req,res) =>{
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const products= loadProducts()
+            return res.render('products/deleteProducts',{
+                products,
+                title: "Eliminar productos"
+            })
+        } else {
+            return res.redirect("/")
+        }
+    },
+
+    deleteProduct:(req,res) => {
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const productId = +req.body.id
+            const products= loadProducts()
+            const productModify = products.filter(product=>product.id !== productId) 
+            storeProducts(productModify)
+            return res.redirect('../')
+        } else {
+            return res.redirect("/")
+        }
+    },
+
+    select : (req,res) => {
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const products = loadProducts()
+            return res.render("products/editProduct-selector", {
+                title : "Selección de producto",
+                products
+            })
+        } else {
+            return res.redirect("/")
+        }
+    },
+    selected : (req,res) => {
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const productId = +req.body.id
+            return res.redirect(productId)
+        } else {
+            return res.redirect("/")
+        }
+    },
+
+    editProduct : (req,res) => {
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const products = loadProducts()
+            const product = products.find(product => product.id === +req.params.id)
+            return res.render("products/editProduct", {
+                title : "Editar producto",
+                product
+            })
+        } else {
+            return res.redirect("/")
+        }
+    },
+
+    update : (req,res) => {
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+            const errors = validationResult(req)
+        
+            if(errors.isEmpty()){
+                const products = loadProducts();
+
+                const {title, price,discount, description, category, image} = req.body;
+
+                const productModify = products.map(product => {
+                    if(product.id === +req.params.id){
+                        return {
+                            ...product,
+                            title : title.trim(),
+                            description : description.trim(),
+                            price : +price,
+                            discount : +discount,
+                            category : category.trim()
+                        }
+                    }
+                    return product
+                })
+
+                storeProducts(productModify)
+
+                return res.redirect('/products/detalleProducto/' + req.params.id);
+            
+            } else {
+                return res.render("products/editProduct", {
+                    title : "Editar producto",
+                    errors : errors.mapped(),
+                    product : req.body
+                })
+            }
+        } else {
+            return res.redirect("/")
+        }
     }
 }

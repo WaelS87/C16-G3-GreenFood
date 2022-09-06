@@ -14,11 +14,11 @@ module.exports = {
     processLogin: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let {id, Category} = loadUsers().find(user => user.email === req.body.email);
+            let {id, category} = loadUsers().find(user => user.email === req.body.email);
 
             req.session.userLogin = {
                 id,
-                Category
+                category
             }
 
             res.cookie("greenFood", req.session.userLogin,{

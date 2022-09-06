@@ -3,14 +3,15 @@
 <%- include("../partials/head") %> 
 
     
-<body class="profile <%= locals.userLogin.category %>">
+<body class="profile <%= user.category %>">
     <%- include("../partials/header") %> 
     <main class="profile__main">
         <section class="profile__section">
             <% if (user.category === "normal") { %>
-                <h1>Tu Perfil</h1>
+                <h1 class="white__word">¡Bienvenido <p class="green__word"><%= user.nombre %></p>!</h1>
             <% } else { %>
-            <h1> ¡Bienvenido de vuelta <%= user.nombre %>! </h1>
+                <h1 class="white__word">¡Bienvenido de vuelta <p class="green__word"><%= user.nombre %></p>!</h1>
+                <h2 class="white__word">¿Qué tal has estado?</h2>
             <% } %>
             <form action="?_method=PUT" method="post" class="profile__form">
                 <div class="profile__form__l--container">
