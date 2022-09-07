@@ -4,7 +4,7 @@
 
 **El integrante Ezequiel se encargó de la reestructuración del proyecto con Express junto a la maquetación de las vistas de "Perfil" tanto usuario común como usuario Administador, además de la creación de las vistas solicitadas para la futura creación y edición de productos que se aproxima en el Sprint 4.**
 
-------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 
 **Integrante Germán**
 
@@ -21,3 +21,25 @@
 **Integrante Ezequiel**
 
 - Bastante complejo pero sencillo para completar en una semana. Se encargó de la edición y creación de productos.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+**Integrante Germán**
+
+- Con menos complejidad, con ganas de hacer un poco más de tareas pero a gusto con lo hecho.
+- Se encargó de Cookies, Session y agregó imagen a la creación de producto.
+
+**Integrante Wael** 
+
+- Con la misma complejidad y ritmo que el sprint anterior, conforme con lo heho.
+- Encargado de validaciones de "Login" y "Register", y se está encargando opcionalmente del Multer.
+
+**Integrante Natalia**
+
+- Con mayor complejidad de lo hecho hasta ahora, pero pudo adaptarse y completar lo acordado, con ganas de hacer un poco más.
+- Encargada de la vista de Profile, tanto Usuario Administrador y Usuario Normal con formularios y edicion de perfil.
+
+**Integrante Ezequiel**
+
+- Con igual y quizas hasta un poco más que el sprint anterior, bastante conforme con las tareas realizadas.
+- Validaciones de Productos, solucion de errores y detalles en Header, vistas de Visita y exclusivas para Usuario y Administrador.

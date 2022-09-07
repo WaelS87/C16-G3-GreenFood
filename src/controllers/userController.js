@@ -1,22 +1,41 @@
 const session = require("express-session")
 const { loadUsers, storeUsers } = require('../data/usersModule')
 const { validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 
 
 module.exports = {
+    login: (req, res) => {
+        return res.render("users/login", {
+            title: "Ingresar"
+        })
+    },
 
- 
-        //SESSION
-        /* let {Id, Nombre, Category, image} = loadUsers().find(user => user.email === req.body.email);
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            let {id, category} = loadUsers().find(user => user.email === req.body.email);
 
-        req.session.userLogin ={
-            Id,
-            username,
-            Nombre,
-            Category,
-            image
-        } */
+            req.session.userLogin = {
+                id,
+                category
+            }
+
+            res.cookie("greenFood", req.session.userLogin,{
+                maxAge : 1000 * 30
+            })
+            
+            return res.redirect("/")
+
+        } else {
+
+            return res.render("users/login",{
+                title : "Ingresar",
+                errors : errors.mapped()
+            })
+
+        }
+    },
 
         //COOKIES
       /*   if(req.body.recordame){
@@ -36,13 +55,12 @@ module.exports = {
             let users = loadUsers();
 
             let newUser = {
-                Id: users.length > 0 ? users[users.length - 1].Id + 1 : 1,
-                Nombre: nombre.trim(),
-                Apellido: apellido.trim(),
-                Email: email.trim(),
-                password: bcrypt.hashSync(password, 12),
-                Category: 'normal'
-
+                id : users.length > 0 ? users[users.length - 1].Id + 1 : 1,
+                nombre : nombre.trim(),
+                apellido : apellido.trim(),
+                email : email.trim(),
+                constraseña : bcryptjs.hashSync(password,12),
+                Category : 'normal'
             }
 
             let usersModify = [...users, newUser];
@@ -53,8 +71,8 @@ module.exports = {
         } else {
             return res.render("users/registrar", {
                 title: 'Registrar',
-                errors: errors.mapped(),
-                old: req.body
+                errors : errors.mapped(),
+                old : req.body
             })
         }
     },
@@ -78,12 +96,17 @@ module.exports = {
     },
     profile : (req,res) => {
         const users = loadUsers(); 
-        const user = users.find(user => user.Id === +req.params.Id)
+        const user = users.find(user => user.id === +req.params.id)
        
-        return res.render("users/profile", {
-            title : "Perfil",
-            user     
-        })
+        if(req.session.userLogin){
+            return res.render("users/profile", {
+                title : "Perfil",
+                user
+            })
+        } else {
+            return res.redirect("/users/login")
+        }
+        
     },
         
         
@@ -93,14 +116,50 @@ module.exports = {
         })
     },
 
-    
-   
-   
-   
-    adminProfile: (req, res) => {
-        return res.render("users/adminProfile", {
-            title: "Perfil Administrativo"
-        })
-    }
+    logout : (req, res) => {
+        req.session.destroy();
+        res.cookie("greenFood", null, {maxAge: -1})
+        return res.redirect('/')
+    },
+
+    update : (req,res) => {
+
+        const errors = validationResult(req)
+        
+
+        if(errors.isEmpty()){
+            const users = loadUsers();
+
+            const {nombre, apellido, email, password, nombreUsuario, image} = req.body;
+
+            const userModify = users.map(user => {
+                if(user.id === +req.params.id){
+                    return {
+                        ...user,
+                        nombre : nombre.trim(),
+                        apellido : apellido.trim(),
+                        nombreUsuario: nombreUsuario.trim(),
+                        email : email.trim(),
+                        /* contraseña : bcryptjs.hashSync(password,12) */
+                    }
+                }
+                return user
+            })
+
+            storeUsers(userModify)
+
+            return res.redirect('/users/profile/' + req.params.id);
+        
+        } else {
+            const users = loadUsers(); 
+            const user = users.find(user => user.id === +req.params.id)
+
+            return res.render("users/profile", {
+                title : "Perfil",
+                errors : errors.mapped(),
+                user
+            })
+        }
+    }    
 }
    
