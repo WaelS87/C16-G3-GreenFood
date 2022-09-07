@@ -6,7 +6,7 @@
     <main class="addProduct__main">
         <section class="form__container">
             <h1>Agregar</h1>
-            <form action="/products/storeProduct" method="POST">
+            <form action="/products/storeProduct" method="POST" enctype="multipart/form-data">
                 <div class="form__l--container">
                     <div>
                         <label for="title">Nombre del producto</label>
@@ -34,7 +34,7 @@
                 <div class="form__r--container">
                     <div>
                         <label for="image">Imagen</label>
-                        <input name="image" type="file" id="image" placeholder="Agregue una imagen">
+                        <input  accept="image/*" name="image" type="file" id="image" placeholder="Agregue una imagen">
                     </div>
                     <div>
                         <label for="discount">Descuento</label>

@@ -45,6 +45,7 @@ module.exports = {
         })
     },
     store : (req,res) => {
+        
 
         const errors = validationResult(req) 
 
@@ -60,7 +61,7 @@ module.exports = {
 		    	description : description.trim(),
 		    	price : +price,
 		    	discount : +discount, 
-		    	image : "defaul-image.jpeg",
+		    	image : req.file ? req.file.filename : "defaul-image.jpeg",
 		    	category
 		    }
 
