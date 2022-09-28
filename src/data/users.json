@@ -4,7 +4,7 @@
       "nombre": "Damian Ezequiel",
       "apellido": "Gonzalez Galarza",
       "email": "ezedrojas03@gmail.com",
-      "contraseña": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
+      "contraseña": "$2a$12$ghPjwpleM/tTge5qaONFw.xpCVimpAZxVjVG8uzPMpPlLTCRmcVUa",
       "category": "administrador",
       "image": "",
       "nombreUsuario": "EzeD03"
@@ -50,8 +50,9 @@
       "nombre": "usuario",
       "apellido": "ejemplo",
       "email": "emailejemplo@gmail.com",
-      "contraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
-      "category": "normal"
+      "contraseña": "$2a$12$AG5bdIA6xLSxetvS7qeQaO7DxDpvH.yAFnOY5U.Mtq11NrC7Tf7py",
+      "category": "normal",
+      "nombreUsuario": ""
    },
    {
       "id": 7,

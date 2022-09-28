@@ -51,12 +51,12 @@ module.exports = {
             let users = loadUsers();
     
             let newUser = {
-                id : users.length > 0 ? users[users.length - 1].Id + 1 : 1,
+                id : users.length > 0 ? users[users.length - 1].id + 1 : 1,
                 nombre : nombre.trim(),
                 apellido : apellido.trim(),
                 email : email.trim(),
                 constraseña : bcryptjs.hashSync(password,12),
-                Category : 'normal'
+                category : 'normal'
             }
     
             let usersModify = [...users, newUser];
@@ -118,7 +118,7 @@ module.exports = {
                         apellido : apellido.trim(),
                         nombreUsuario: nombreUsuario.trim(),
                         email : email.trim(),
-                        /* contraseña : bcryptjs.hashSync(password,12) */
+                        contraseña : bcryptjs.hashSync(password,12)
                     }
                 }
                 return user
