@@ -7,7 +7,7 @@ const userSessionCheck = require('../middleware/userSessionCheck');
 /* GET users listing. */
 router
   .get('/login', login)
-  .post('/login', loginValidator, processLogin)
+  .post('/login',loginValidator,processLogin)
   .get('/register', register)
   .get("/profile/:id", userSessionCheck, profile)
   .post('/register', registerValidator,registerNuevo)

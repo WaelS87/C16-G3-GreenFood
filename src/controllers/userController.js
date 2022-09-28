@@ -37,19 +37,23 @@ module.exports = {
         }
     },
 
+        //COOKIES
+      /*   if(req.body.recordame){
+            res.cookie("greenFood", req.ingresar,{
+            maxAge : 1000 * 60
+        }) */
+    
     register: (req, res) => {
         return res.render("users/registrar", {
             title: "Registro"
         })
     },
-
-    
     registerNuevo: (req, res) => {
         let errors = validationResult(req);
-        if(errors.isEmpty()){
-            const {nombre,apellido,email,password} = req.body;
+        if (errors.isEmpty()) {
+            const { nombre, apellido, email, password } = req.body;
             let users = loadUsers();
-    
+
             let newUser = {
                 id : users.length > 0 ? users[users.length - 1].id + 1 : 1,
                 nombre : nombre.trim(),
@@ -58,21 +62,38 @@ module.exports = {
                 constraseña : bcryptjs.hashSync(password,12),
                 category : 'normal'
             }
-    
+
             let usersModify = [...users, newUser];
-    
+
             storeUsers(usersModify);
-    
+
             return res.redirect('/users/login');
-        }else{
-            return res.render("users/registrar",{
+        } else {
+            return res.render("users/registrar", {
                 title: 'Registrar',
                 errors : errors.mapped(),
                 old : req.body
             })
         }
     },
-
+    login: (req, res) => {
+        return res.render("users/login", {
+            title: "login"
+        })
+    },
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            return res.redirect('home')
+        } else {
+            return res.render("users/login", {
+                title: 'ingresar',
+                errors: errors.mapped(),
+            })
+        }
+    
+   
+    },
     profile : (req,res) => {
         const users = loadUsers(); 
         const user = users.find(user => user.id === +req.params.id)
@@ -87,6 +108,7 @@ module.exports = {
         }
         
     },
+        
         
     condiciones: (req, res) => {
         return res.render('users/condiciones', {
@@ -140,3 +162,4 @@ module.exports = {
         }
     }    
 }
+   
