@@ -49,7 +49,7 @@
       "Id": 6,
       "name": "usuario",
       "surname": "ejemplo",
-      "Email": "emailejemplo@gmail.com",
+      "email": "emailejemplo@gmail.com",
       "password": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
       "rolId": "normal"
    },
@@ -57,7 +57,7 @@
       "Id": 7,
       "name": "Nicolas",
       "surname": "Gut",
-      "Email": "nic@gm.com",
+      "email": "nic@gm.com",
       "password": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
       "rolId": "normal"
    }
