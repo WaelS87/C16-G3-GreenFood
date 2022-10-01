@@ -1,6 +1,6 @@
 const { check,body } = require('express-validator');
 const users = require('../data/usersModule').loadUsers();
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 
 module.exports = [
     check('email').toLowerCase()

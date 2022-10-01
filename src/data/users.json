@@ -4,7 +4,7 @@
       "nombre": "Damian Ezequiel",
       "apellido": "Gonzalez Galarza",
       "email": "ezedrojas03@gmail.com",
-      "contraseña": "$2a$12$ghPjwpleM/tTge5qaONFw.xpCVimpAZxVjVG8uzPMpPlLTCRmcVUa",
+      "contraseña": "$2a$12$AG5bdIA6xLSxetvS7qeQaO7DxDpvH.yAFnOY5U.Mtq11NrC7Tf7py",
       "category": "administrador",
       "image": "",
       "nombreUsuario": "EzeD03"
@@ -20,12 +20,11 @@
    },
    {
       "id": 3,
-      "nombre": "nati",
-      "apellido": "",
-      "email": "",
-      "contraseña": "",
-      "category": "administrador",
-      "image": ""
+      "nombre": "Natalia",
+      "apellido": "Lionti",
+      "email": "nataliasaxo@gmail.com",
+      "contraseña": "$2b$12$.BnHhuN8jt3xXtPGlbYKyeHUVxS7YUmrWpRtQro3kyzOoknjyrm3i",
+      "category": "administrador"
    },
    {
       "id": 4,
@@ -34,15 +33,6 @@
       "email": "",
       "contraseña": "",
       "category": "administrador",
-      "image": ""
-   },
-   {
-      "id": 5,
-      "nombre": "usuario",
-      "apellido": "",
-      "email": "",
-      "contraseña": "",
-      "category": "normal",
       "image": ""
    },
    {
@@ -56,10 +46,10 @@
    },
    {
       "id": 7,
-      "nombre": "Natalia",
-      "apellido": "Lionti",
-      "email": "nataliasaxo@gmail.com",
-      "contraseña": "$2b$12$.BnHhuN8jt3xXtPGlbYKyeHUVxS7YUmrWpRtQro3kyzOoknjyrm3i",
+      "nombre": "Damian Ezequiel",
+      "apellido": "Gonzalez Galarza",
+      "email": "eziusxperttingxd@gmail.com",
+      "contraseña": "$2a$12$QhZRN6cnjR.k/56pQnank.4ugT2jysqmdeLm5EkVB.NhuJwE86g66",
       "category": "normal"
    }
 ]

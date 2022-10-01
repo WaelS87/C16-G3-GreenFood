@@ -59,7 +59,7 @@ module.exports = {
                 nombre : nombre.trim(),
                 apellido : apellido.trim(),
                 email : email.trim(),
-                constraseña : bcryptjs.hashSync(password,12),
+                contraseña : bcryptjs.hashSync(password,12),
                 category : 'normal'
             }
 
@@ -84,7 +84,7 @@ module.exports = {
     processLogin: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            return res.redirect('home')
+            return res.redirect('/')
         } else {
             return res.render("users/login", {
                 title: 'ingresar',
