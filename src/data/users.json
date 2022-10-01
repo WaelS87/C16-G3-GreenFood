@@ -46,7 +46,6 @@
       "image": ""
    },
    {
-<<<<<<< HEAD
       "Id": 6,
       "Nombre": "usuario",
       "Apellido": "ejemplo",
@@ -61,22 +60,5 @@
       "Email": "nic@gm.com",
       "Constraseña": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
       "Category": "normal"
-=======
-      "id": 6,
-      "nombre": "usuario",
-      "apellido": "ejemplo",
-      "email": "emailejemplo@gmail.com",
-      "contraseña": "$2a$12$AG5bdIA6xLSxetvS7qeQaO7DxDpvH.yAFnOY5U.Mtq11NrC7Tf7py",
-      "category": "normal",
-      "nombreUsuario": ""
-   },
-   {
-      "id": 7,
-      "nombre": "Natalia",
-      "apellido": "Lionti",
-      "email": "nataliasaxo@gmail.com",
-      "contraseña": "$2b$12$.BnHhuN8jt3xXtPGlbYKyeHUVxS7YUmrWpRtQro3kyzOoknjyrm3i",
-      "category": "normal"
->>>>>>> 5c993a713fea22a97926c770cdc150feb48ca43f
    }
 ]
