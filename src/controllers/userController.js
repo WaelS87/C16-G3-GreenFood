@@ -76,24 +76,6 @@ module.exports = {
             })
         }
     },
-    login: (req, res) => {
-        return res.render("users/login", {
-            title: "login"
-        })
-    },
-    processLogin: (req, res) => {
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            return res.redirect('/')
-        } else {
-            return res.render("users/login", {
-                title: 'ingresar',
-                errors: errors.mapped(),
-            })
-        }
-    
-   
-    },
     profile : (req,res) => {
         const users = loadUsers(); 
         const user = users.find(user => user.id === +req.params.id)
