@@ -6,9 +6,9 @@
 
 .registrar__main{
         
-    background-image: url('/images/comida-ingredientes_1220-4884.webp');
+    *background-image: url('/images/comida-ingredientes_1220-4884.webp');
     *background-image: url("../images/comida-ingredientes_1220-4884.webp");
-    background-size: cover;
+    *background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;

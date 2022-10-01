@@ -2,8 +2,6 @@
     width: 100%;
     *height: 100vh;
     display: flex;
-    background-image: url(../../images/comida-ingredientes_1220-4884.webp);
-    background-size: cover;
     justify-content: center;
     align-items: center;
 }

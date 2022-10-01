@@ -16,7 +16,7 @@
 .allProducts__main__section{
     width:100%;
     text-align: center;
-    background-color: var(--color-negro);
+    background-color: #191a1988;
 }
 .allProducts__main .allProducts__price{
     color: var(--color-negro);
