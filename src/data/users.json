@@ -1,50 +1,52 @@
 [
    {
-      "Id": 1,
-      "Nombre": "ezequiel",
-      "Apellido": "gonzalez",
-      "Email": "ezedrojas03@gmail.com",
-      "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
-      "Category": "administrador",
-      "Image": ""
+      "id": 1,
+      "nombre": "Damian Ezequiel",
+      "apellido": "Gonzalez Galarza",
+      "email": "ezedrojas03@gmail.com",
+      "contraseña": "$2a$12$ghPjwpleM/tTge5qaONFw.xpCVimpAZxVjVG8uzPMpPlLTCRmcVUa",
+      "category": "administrador",
+      "image": "",
+      "nombreUsuario": "EzeD03"
    },
    {
-      "Id": 2,
-      "Nombre": "Wael",
-      "Apellido": "Fakhrji",
-      "Email": "wfakhrji@gmail.com",
-      "Constraseña": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
-      "Category": "administrador",
-      "Image": ""
+      "id": 2,
+      "nombre": "Wael",
+      "apellido": "Fakhrji",
+      "email": "wfakhrji@gmail.com",
+      "contraseña": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
+      "category": "administrador",
+      "image": ""
    },
    {
-      "Id": 3,
-      "Nombre": "nati",
-      "Apellido": "",
-      "Email": "",
-      "Constraseña": "",
-      "Category": "administrador",
-      "Image": ""
+      "id": 3,
+      "nombre": "nati",
+      "apellido": "",
+      "email": "",
+      "contraseña": "",
+      "category": "administrador",
+      "image": ""
    },
    {
-      "Id": 4,
-      "Nombre": "german",
-      "Apellido": "",
-      "Email": "",
-      "Constraseña": "",
-      "Category": "administrador",
-      "Image": ""
+      "id": 4,
+      "nombre": "german",
+      "apellido": "",
+      "email": "",
+      "contraseña": "",
+      "category": "administrador",
+      "image": ""
    },
    {
-      "Id": 5,
-      "Nombre": "usuario",
-      "Apellido": "",
-      "Email": "",
-      "Constraseña": "",
-      "Category": "normal",
-      "Image": ""
+      "id": 5,
+      "nombre": "usuario",
+      "apellido": "",
+      "email": "",
+      "contraseña": "",
+      "category": "normal",
+      "image": ""
    },
    {
+<<<<<<< HEAD
       "Id": 6,
       "Nombre": "usuario",
       "Apellido": "ejemplo",
@@ -59,5 +61,22 @@
       "Email": "nic@gm.com",
       "Constraseña": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
       "Category": "normal"
+=======
+      "id": 6,
+      "nombre": "usuario",
+      "apellido": "ejemplo",
+      "email": "emailejemplo@gmail.com",
+      "contraseña": "$2a$12$AG5bdIA6xLSxetvS7qeQaO7DxDpvH.yAFnOY5U.Mtq11NrC7Tf7py",
+      "category": "normal",
+      "nombreUsuario": ""
+   },
+   {
+      "id": 7,
+      "nombre": "Natalia",
+      "apellido": "Lionti",
+      "email": "nataliasaxo@gmail.com",
+      "contraseña": "$2b$12$.BnHhuN8jt3xXtPGlbYKyeHUVxS7YUmrWpRtQro3kyzOoknjyrm3i",
+      "category": "normal"
+>>>>>>> 5c993a713fea22a97926c770cdc150feb48ca43f
    }
 ]

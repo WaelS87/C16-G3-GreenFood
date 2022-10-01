@@ -60,18 +60,19 @@ header{
 .navbar__container--1024{
     display: none;
     background-color: var(--color-negro);
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 2%;
 }
 
 .navbar__busqueda{
     background-color: #fff;
-    width: 30%;
-    height: 5vh;
+    width: 350px;
+    height: 35px;
     border-radius: 5px;
     color: gray;
     overflow: hidden;
+    *margin-left: 20px;
 }
 
 .navbar__busqueda form{
@@ -107,14 +108,15 @@ header{
 }
 
 .userNav__container{
-    width: 30%;
+    width: 25%;
     display: flex;
+    justify-content: center;
 }
 
 .navbar__loginregister{
     color: #fff;
     font-size: 24px;
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     font-weight: 500;
@@ -126,18 +128,18 @@ header{
     display: flex;
     justify-content: center;
     font-size: 32px;
-    width: 15%;
+    width: 100%;
 }
 
 .navbar__profile{
     display: flex;
     justify-content: center;
     font-size: 32px;
-    width: 15%;
+    width: 100%;
 }
 
 .header__tittle__container{
-    width: 30%;
+    width: fit-content;
     justify-self: auto;
 }
 

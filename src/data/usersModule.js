@@ -3,7 +3,6 @@ const path = require('path');
 
 const loadUsers =() => {
     return JSON.parse(fs.readFileSync(path.join(__dirname, 'users.json'),'utf-8'));
-
 };
 
 const storeUsers = (users) => {
