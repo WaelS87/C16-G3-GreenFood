@@ -1,0 +1,211 @@
+[
+   {
+      "id": 1,
+      "name": "Grass Roots Organic",
+      "price": 2796,
+      "discount": 20,
+      "description": "Estas semillas de chía premium de Grass Roots son aptas para veganos, sin gluten y 100 % naturales, repletas de omega 3, fibra, proteínas, vitaminas y minerales. Una sola cucharada proporciona 3 g de omega 3 ALA y 6 g de fibra dietética, junto con una gama de otras vitaminas esenciales, minerales y antioxidantes. Un antiguo superalimento, las semillas de chía también están cargadas de antioxidantes que ayudan a combatir los radicales libres que dañan las células",
+      "image": "dieteticaChia01.jpg",
+      "brand": "Grass Roots",
+      "categoryId": "dietetica"
+   },
+   {
+      "id": 2,
+      "name": "Essential Hemp Organic",
+      "price": 2990,
+      "discount": 20,
+      "description": "Este aceite superior de semilla de cáñamo prensado en frío de Essential Hemp es apto para veganos, rico en nutrientes y 100 % orgánico certificado, hecho de semillas de cáñamo orgánicas frescas. Con cada botella hecha de hasta 30,000 semillas de cáñamo, este aceite de semilla de cáñamo es un alimento nutricional potente y repleto de antioxidantes, fitoesteroles, vitaminas, minerales y ácidos grasos esenciales (Omega 3, 6 y 9)",
+      "image": "dieteticaOil02.jpg",
+      "brand": "Essential Hemp",
+      "categoryId": "dietetica"
+   },
+   {
+      "id": 3,
+      "name": "Macro Mike",
+      "price": 8190,
+      "discount": 20,
+      "description": "Este suplemento 100 % natural de Macro Mike está formulado con una mezcla nutritiva de supervegetales orgánicos y está repleto de antioxidantes, vitaminas y minerales para ayudarte a sentirte increíble. Combinando hierba de cebada orgánica, espirulina y col rizada, esta mezcla de superalimentos naturales le dará a tu cuerpo el impulso que necesita para mantenerte rindiendo al máximo!",
+      "image": "dieteticaGreens03.jpg",
+      "brand": "Macro Mike",
+      "categoryId": "dietetica"
+   },
+   {
+      "id": 4,
+      "name": "NTS Health",
+      "price": 4680,
+      "discount": 20,
+      "description": "Esta bebida gaseosa probiótica de NTS Health es una fuente inagotable de probióticos fermentados que presenta antioxidantes, aminoácidos, vitaminas, enzimas y miles de millones de microorganismos beneficiosos a base de alimentos por porción. Un superalimento probiótico natural, contiene miles de millones de organismos y presenta múltiples cepas de beneficios organismos intestinales, incluidos acidophilus y bifidus en forma viva, que ofrecen el mejor apoyo digestivo",
+      "image": "dieteticaGluten04.jpg",
+      "brand": "NTS Health",
+      "categoryId": "dietetica"
+   },
+   {
+      "id": 5,
+      "name": "Forbidden Foods",
+      "price": 1040,
+      "discount": 20,
+      "description": "Sin gluten, 100 % orgánico certificado y 98 % sin grasa. Rico en antioxidantes, el arroz negro es la alternativa deliciosa para aquellos que buscan disfrutar de un arroz alto en proteínas con bajo índice glucémico que está repleto de vitaminas y minerales. Con un toque de aromas dulces y hermosos, inmediatamente te enamorarás del delicioso sabor a nuez.",
+      "image": "veggieBlackRice05.jpg",
+      "brand": "Forbidden Foods",
+      "categoryId": "veggie"
+   },
+   {
+      "id": 6,
+      "name": "The Ginger People",
+      "price": 6500,
+      "discount": 20,
+      "description": "Este jugo de cúrcuma totalmente natural y sin azúcar de The Ginger People es conveniente, está listo para recetas y se puede usar en lugar de la cúrcuma fresca. Sin ningún ingrediente artificial y con un 99 % de jugo de cúrcuma, puede beberlo solo, agregarlo al agua o salpique sobre sus ensaladas favoritas",
+      "image": "veggieJuice06.jpg",
+      "brand": "The Ginger People",
+      "categoryId": "veggie"
+   },
+   {
+      "id": 7,
+      "name": "Nutritionist Choice",
+      "price": 1560,
+      "discount": 20,
+      "description": "Esta deliciosa sopa de miso instantánea sin glutamato monosódico de Nutritionist Choice es apta para veganos, totalmente natural y libre de transgénicos, hecha de miso orgánico y arroz integral orgánico. Conveniente y fácil de preparar, es la opción ideal para una comida ligera o un refrigerio saludable.",
+      "image": "veggieSoup07.jpg",
+      "brand": "Nutritionist Choice",
+      "categoryId": "veggie"
+   },
+   {
+      "id": 8,
+      "name": "The Ginger People",
+      "price": 5720,
+      "discount": 20,
+      "description": "Estos masticables de jengibre deliciosamente picantes de The Ginger People son dulces masticables llenos de sabor y sin gluten que son totalmente naturales y estimulantes. Hechos con un 10 % de jengibre premium cultivado de manera sostenible, no solo son una excelente opción de refrigerio saludable.",
+      "image": "veggieChews08.jpg",
+      "brand": "The Ginger People",
+      "categoryId": "veggie"
+   },
+   {
+      "id": 9,
+      "name": "Keto Naturals Cheddar",
+      "price": 6760,
+      "discount": 20,
+      "description": "Hechas con harina de almendras, queso cheddar real y cubiertas con semillas de lino y sésamo, estas delicias saludables totalmente naturales son ridículamente bajas en carbohidratos, ricas en proteínas y completamente libres de rellenos, sabores artificiales y conservantes.",
+      "image": "snacksKeto09.jpg",
+      "brand": "Keto",
+      "categoryId": "snacks"
+   },
+   {
+      "id": 10,
+      "name": "Nudus Broccoli Sea",
+      "price": 4420,
+      "discount": 20,
+      "description": "Elaborado con brócoli cultivado en Australia, secado al aire hasta una perfección crujiente con una retención óptima de nutrientes. Con una simple adición de sal marina, estos deliciosos chips saludables son el refrigerio perfecto sin culpa que se puede disfrutar en cualquier momento de ¡El dia!.",
+      "image": "snacksNuduBites10.jpg",
+      "brand": "Nudusbites",
+      "categoryId": "snacks"
+   },
+   {
+      "id": 11,
+      "name": "Vege Chips Chicken",
+      "price": 2990,
+      "discount": 20,
+      "description": "Vege Chips no contienen gluten, son veganos y 100 % naturales, se cocinan maravillosamente en aceite de girasol y no contienen colorantes ni ingredientes artificiales. Con menos de 100 calorías por ración de 20 g y una combinación perfecta de hierbas y saborizantes estilo pollo, estos ¡los chips saludables son la opción ideal y libre de culpa para saciar cualquier antojo de bocadillos!.",
+      "image": "snacksVege11.jpg",
+      "brand": "Ajitas",
+      "categoryId": "snacks"
+   },
+   {
+      "id": 12,
+      "title": "Health Guru Sea",
+      "price": 5720,
+      "discount": 20,
+      "description": "Estas deliciosas bolitas de coliflor de Health Guru son aptas para veganos, sin gluten y 100 % naturales, bellamente horneadas con 50 % de coliflor real liofilizada para una máxima retención de nutrientes.",
+      "image": "snacksGuru12.jpg",
+      "brand": "Health Guru",
+      "categoryId": "snacks"
+   },
+   {
+      "id": 13,
+      "title": "Martin & Pleasance",
+      "price": 1170,
+      "discount": 20,
+      "description": "Esta bebida multivitamínica efervescente premium de Martin & Pleasence es una mezcla altamente biodisponible, apta para veganos y 100 % natural que se crea utilizando polvos de jugo de frutas naturales.",
+      "image": "suplementosVitC13.jpg",
+      "brand": "Martin & Pleasance ",
+      "categoryId": "suplementos"
+   },
+   {
+      "id": 14,
+      "title": "Synergy Natural Organic",
+      "price": 4160,
+      "discount": 20,
+      "description": "Una sinergia vegana, naturalmente perfecta, que combina los superalimentos verdes más nutritivos de la naturaleza: los CUATRO PODEROSOS: espirulina, clorella, hierba de cebada y hierba de trigo.",
+      "image": "suplementosPowder14jpg.jpg",
+      "brand": "Synergy Natural",
+      "categoryId": "suplementos"
+   },
+   {
+      "id": 15,
+      "title": "Green Nutritionals",
+      "price": 4160,
+      "discount": 20,
+      "description": "Este suplemento premium de espirulina rico en nutrientes de Green Nutritionals es una potencia de más de 100 nutrientes sinérgicos, que se absorben 16 veces más eficazmente que las multivitaminas sintéticas inferiores. En una forma de tableta conveniente y fácil de usar.",
+      "image": "suplementosSpirulina15.jpg",
+      "brand": "Green Nutritionals",
+      "categoryId": "suplementos"
+   },
+   {
+      "id": 16,
+      "title": "Essential Hemp Organic",
+      "price": 4160,
+      "discount": 20,
+      "description": "Esta proteína de cáñamo premium de Essential Hemp es una proteína en polvo orgánica 100 % certificada, sin granos y apta para veganos que cuenta con un perfil completo de aminoácidos. Hecha con Hemp Gold y polvo de cacao orgánico, está cargada con proteína altamente biodisponible y fácil de digerir eso es bueno para tu intestino.",
+      "image": "suplementosOil16.jpg",
+      "brand": "Essential Hemp",
+      "categoryId": "suplementos"
+   },
+   {
+      "id": 17,
+      "name": "Koala Eco Natural",
+      "price": 3380,
+      "discount": 20,
+      "description": "Este gel de baño totalmente natural y calmante de Koala Eco está hecho con una selección de los ingredientes aromáticos más hermosos de la naturaleza que alivian el estrés y están cargados de propiedades antiinflamatorias.",
+      "image": "variosWash17.jpg",
+      "brand": "Koala Eco",
+      "categoryId": "varios"
+   },
+   {
+      "id": 18,
+      "name": "Summer Salt Body",
+      "price": 2340,
+      "discount": 20,
+      "description": "Este lujoso exfoliante de inspiración hawaiana de Summer Salt Body está bellamente elaborado con ingredientes 100 % naturales y orgánicos que cuidan la piel y la pulen, exfolian y humectan en profundidad. Con sal marina rica en minerales combinada con aceite de jojoba nutritivo y aceite de coco orgánico. , ¡este exfoliante natural hidratante limpiará profundamente tu piel y te dejará con un increíble brillo natural!.",
+      "image": "variosBodySalt18.jpg",
+      "brand": "Summer Salt Body",
+      "categoryId": "varios"
+   },
+   {
+      "id": 19,
+      "name": "stuff Men's Natural",
+      "price": 1560,
+      "discount": 20,
+      "description": "Este increíble gel de lavado facial para hombres de STUFF está formulado con ingredientes 100 % naturales, que incluyen aloe vera, carbón y aceite de almendras, que trabajan juntos para calmar y limpiar profundamente la piel. Libre de cualquier ingrediente desagradable, ¡este lavado de cara natural sacará a relucir el operador suave debajo de cada taza áspera!.",
+      "image": "variosFace19.jpg",
+      "brand": "stuff",
+      "categoryId": "varios"
+   },
+   {
+      "id": 20,
+      "name": "Ecobud Gentoo",
+      "price": 14560,
+      "discount": 20,
+      "description": "Esta jarra de filtro de agua de vidrio de Ecobud le permite disfrutar de agua filtrada purificada de gran sabor día y noche, en interiores o exteriores, fría o a temperatura ambiente. Esta increíble jarra es fácil de usar y filtra todos los extras desagradables de su agua potable , incluidos el cloro, el fluoruro y otros contaminantes y bacterias.",
+      "image": "variosWater20.jpg",
+      "brand": "Ecobud",
+      "categoryId": "varios"
+   },
+   {
+      "id": 21,
+      "name": "ejemplo 1",
+      "description": "referente retreterter",
+      "price": 10,
+      "discount": 0,
+      "image": "defaul-image.jpeg",
+      "categoryId": "detetica"
+   }
+]
