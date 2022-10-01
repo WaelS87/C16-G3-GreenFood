@@ -51,5 +51,13 @@
       "Email": "emailejemplo@gmail.com",
       "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
       "Category": "normal"
+   },
+   {
+      "Id": 7,
+      "Nombre": "Nicolas",
+      "Apellido": "Gut",
+      "Email": "nic@gm.com",
+      "Constraseña": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
+      "Category": "normal"
    }
 ]
