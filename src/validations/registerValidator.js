@@ -3,12 +3,12 @@ const users = require('../data/usersModule').loadUsers();
 module.exports=[
     check('nombre')
         .notEmpty().withMessage('Debe Entrar Tu Nombre Por Favor....').bail()
-        .isAlpha().withMessage('Por Favor ingrése Tu Nombre Bien').bail()
+        /* .isAlpha().withMessage('Por Favor ingrése Tu Nombre Bien').bail() */
         .isLength({min:3}).withMessage('Por Favor ingrése Tu Nombre Bien'),
 
     check('apellido')
         .notEmpty().withMessage('Debe Entrar Tu Apellido Por Favor....').bail()
-        .isAlpha().withMessage('Por Favor ingrése Tu Apellido Bien').bail()
+        /* .isAlpha().withMessage('Por Favor ingrése Tu Apellido Bien').bail() */
         .isLength({min:3}).withMessage('Por Favor ingrése Tu Apellido Bien'),
 
     body('email').toLowerCase()

@@ -15,6 +15,7 @@
     justify-content: center;
     background-image: url("../images/comida-ingredientes_1220-4884.webp");
     background-size: cover;
+    background-attachment: fixed
 }
 
 .home__banner__container{

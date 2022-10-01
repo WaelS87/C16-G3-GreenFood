@@ -59,7 +59,7 @@ module.exports = {
                 nombre : nombre.trim(),
                 apellido : apellido.trim(),
                 email : email.trim(),
-                constraseña : bcryptjs.hashSync(password,12),
+                contraseña : bcryptjs.hashSync(password,12),
                 category : 'normal'
             }
 
@@ -75,24 +75,6 @@ module.exports = {
                 old : req.body
             })
         }
-    },
-    login: (req, res) => {
-        return res.render("users/login", {
-            title: "login"
-        })
-    },
-    processLogin: (req, res) => {
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            return res.redirect('home')
-        } else {
-            return res.render("users/login", {
-                title: 'ingresar',
-                errors: errors.mapped(),
-            })
-        }
-    
-   
     },
     profile : (req,res) => {
         const users = loadUsers(); 
