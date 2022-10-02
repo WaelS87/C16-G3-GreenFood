@@ -1,0 +1,64 @@
+[
+   {
+      "id": 1,
+      "name": "Damian Ezequiel",
+      "surname": "Gonzalez Galarza",
+      "email": "ezedrojas03@gmail.com",
+      "password": "$2a$12$ghPjwpleM/tTge5qaONFw.xpCVimpAZxVjVG8uzPMpPlLTCRmcVUa",
+      "rolId": "administrador",
+      "avatar": "",
+      "nombreUsuario": "EzeD03"
+   },
+   {
+      "id": 2,
+      "name": "Wael",
+      "surname": "Fakhrji",
+      "email": "wfakhrji@gmail.com",
+      "password": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
+      "rolId": "administrador",
+      "avatar": ""
+   },
+   {
+      "id": 3,
+      "name": "nati",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "rolId": "administrador",
+      "avatar": ""
+   },
+   {
+      "id": 4,
+      "name": "german",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "rolId": "administrador",
+      "avatar": ""
+   },
+   {
+      "id": 5,
+      "name": "usuario",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "rolId": "normal",
+      "avatar": ""
+   },
+   {
+      "Id": 6,
+      "name": "usuario",
+      "surname": "ejemplo",
+      "email": "emailejemplo@gmail.com",
+      "password": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
+      "rolId": "normal"
+   },
+   {
+      "Id": 7,
+      "name": "Nicolas",
+      "surname": "Gut",
+      "email": "nic@gm.com",
+      "password": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
+      "rolId": "normal"
+   }
+]

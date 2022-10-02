@@ -97,3 +97,25 @@
 
 ## **Dejar de hacer**:
 - No comunicarse en ninguna ocasión.
+
+-----------------------------------------------------
+
+# **Retrospectiva para el Sprint 5**
+
+## **Empezar a hacer**:
+- Adelantar pequeños trabajos.
+- Realizar reuniones lo más necesario posible.
+
+## **Hacer más**:
+- Comunicarse lo máximo posible
+- Realizar más tareas opcionales con el tiempo disponible
+
+## **Seguir Haciendo**:
+- Reuniones de apoyo
+
+## **Hacer menos**:
+- No subir las modificaciones al momento de realizarlas.
+
+## **Dejar de hacer**:
+- No jugar a contratiempo
+- No procrastinar tareas

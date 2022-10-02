@@ -3,6 +3,7 @@
 - Germán Gutiérrez, 45 años, Salta-Capital
 - Damián Ezequiel González, 20 años, San Miguel-Bs.As.
 - Wael Fakhrji, 35 años, Lanus-Bs.As.
+- Natalia Lionti, 34 años, San Miguel-Bs.AS.
 
 ## Temática y público objetivo :
 - Somos desarrolladores con el proyecto de crear nuestro primer sitio web. Tomamos de idea una página de venta de comida saludable, dietética y productos naturales. Como público objetivo nos interesaría enfocarnos en personas que busquen suplementos, comidas, botanas y/o snacks que aporten una mayor nutrición y salud a sus vidas.
