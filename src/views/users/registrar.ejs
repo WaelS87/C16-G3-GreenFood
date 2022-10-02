@@ -44,7 +44,11 @@
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password2 ? errors.password2.msg : null%></p>
                 </div>
                 <div class="form__box">
-                    <input style="font-size: xx-large;" type="checkbox"  name="terminos">
+                    <label for="image">Subi Tu Imagen (OPCIONAL)</label><br>
+                    <input accept="image/*" name="image" type="file" id="image">
+                </div><br>
+                <div class="form__box">
+                    <input  style="font-size: xx-large;" type="checkbox"  name="terminos">
                     <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acceptar<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> términos y condiciones</a></label>
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.terminos ? errors.terminos.msg : null%></p>
                 </div>

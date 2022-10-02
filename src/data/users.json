@@ -43,13 +43,5 @@
       "Constraseña": "",
       "Category": "normal",
       "Image": ""
-   },
-   {
-      "Id": 6,
-      "Nombre": "usuario",
-      "Apellido": "ejemplo",
-      "Email": "emailejemplo@gmail.com",
-      "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
-      "Category": "normal"
    }
 ]

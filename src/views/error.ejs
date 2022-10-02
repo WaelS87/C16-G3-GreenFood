@@ -1,3 +1,7 @@
 <h1><%= message %></h1>
 <h2><%= error.status %></h2>
 <pre><%= error.stack %></pre>
+
+<div class="profile__imgPerfil">
+    <img src="/images/<%= user.Image ? user.Image : 'perfil por defecto.jpg' %> " alt="imagenPerfil">
+    <input name="image" type="file" id="image" placeholder="Seleccionar foto">

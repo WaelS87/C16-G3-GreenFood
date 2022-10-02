@@ -61,7 +61,7 @@ module.exports = {
 		    	description : description.trim(),
 		    	price : +price,
 		    	discount : +discount, 
-		    	image : req.file ? req.file.filename : "defaul-image.jpeg",
+		    	image : req.file ? req.file.filename:"defaul-image.jpeg",
 		    	category
 		    }
 

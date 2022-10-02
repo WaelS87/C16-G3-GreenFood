@@ -14,11 +14,11 @@
             <% } %>
             <form action="" class="profile__form">
             <div class="profile__form__l--container">
-                <div class="profile__imgPerfil">
-                    <img src="/images/<%= user.Image ? user.Image : 'perfil por defecto.jpg' %> " alt="imagenPerfil">
-                    <input name="image" type="file" id="image" placeholder="Seleccionar foto">
+              
                 </div>
                 <div class="profile__formulario">
+                    <label class="form__label" for="image">Nombre</label>
+                    <img width='150' height="300" src="/images/users/<%= user.image %> " name="image" alt="imagen de producto">
                     <div class="form__box">
                     <label class="form__label" for="nombre">Nombre</label>
                     <input class="form__input" type="text" id="nombre" value="<%= user.Nombre %>">

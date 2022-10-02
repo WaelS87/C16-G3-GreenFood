@@ -59,7 +59,9 @@ module.exports = {
                 Apellido : apellido.trim(),
                 Email : email.trim(),
                 Constraseña : bcrypt.hashSync(password,12),
+                Image : req.file ? req.file.filename :"perfil por defecto.jpg",
                 Category : 'normal'
+                
                 
             }
     
