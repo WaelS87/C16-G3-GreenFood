@@ -9,10 +9,18 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       file: {
-        type: Sequelize.TEXT
+        allowNull: false,
+        type: Sequelize.STRING
       },
       userId: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Users'
+          },
+          key : 'id'
+        }
       },
       createdAt: {
         allowNull: false,
@@ -20,6 +28,10 @@ module.exports = {
       },
       updatedAt: {
         allowNull: false,
+        type: Sequelize.DATE
+      },
+      deletedAt: {
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
