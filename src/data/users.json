@@ -1,47 +1,59 @@
 [
    {
       "id": 1,
-      "nombre": "Damian Ezequiel",
-      "apellido": "Gonzalez Galarza",
+      "name": "Damian Ezequiel",
+      "surname": "Gonzalez Galarza",
       "email": "ezedrojas03@gmail.com",
-      "contraseña": "$2a$12$AG5bdIA6xLSxetvS7qeQaO7DxDpvH.yAFnOY5U.Mtq11NrC7Tf7py",
-      "category": "administrador",
-      "image": "",
+      "password": "$2a$12$ghPjwpleM/tTge5qaONFw.xpCVimpAZxVjVG8uzPMpPlLTCRmcVUa",
+      "rolId": 1,
       "nombreUsuario": "EzeD03"
    },
    {
       "id": 2,
-      "nombre": "Wael",
-      "apellido": "Fakhrji",
+      "name": "Wael",
+      "surname": "Fakhrji",
       "email": "wfakhrji@gmail.com",
-      "contraseña": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
-      "category": "administrador",
-      "image": ""
+      "password": "$2b$12$a5hzdZwceU1rb1a2M.RJoucC0RLYcnanReqn0s1GM3HOAjHAugb9a",
+      "rolId": 1
    },
    {
       "id": 3,
-      "nombre": "Natalia",
-      "apellido": "Lionti",
-      "email": "nataliasaxo@gmail.com",
-      "contraseña": "$2b$12$.BnHhuN8jt3xXtPGlbYKyeHUVxS7YUmrWpRtQro3kyzOoknjyrm3i",
-      "category": "administrador"
+      "name": "nati",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "rolId": 1
    },
    {
       "id": 4,
-      "nombre": "german",
-      "apellido": "",
+      "name": "german",
+      "surname": "",
       "email": "",
-      "contraseña": "",
-      "category": "administrador",
-      "image": ""
+      "password": "",
+      "rolId": 1
    },
    {
-      "Id": 5,
-      "Nombre": "usuario",
-      "Apellido": "",
-      "Email": "",
-      "Constraseña": "",
-      "Category": "normal",
-      "Image": ""
+      "id": 5,
+      "name": "usuario",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "rolId": 2
+   },
+   {
+      "Id": 6,
+      "name": "usuario",
+      "surname": "ejemplo",
+      "email": "emailejemplo@gmail.com",
+      "password": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
+      "rolId": 2
+   },
+   {
+      "Id": 7,
+      "name": "Nicolas",
+      "surname": "Gut",
+      "email": "nic@gm.com",
+      "password": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
+      "rolId": 2
    }
 ]

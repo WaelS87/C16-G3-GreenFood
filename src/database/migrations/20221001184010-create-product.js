@@ -10,25 +10,25 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        type: Sequelize.INTEGER
       },
       discount: {
+        allowNull: false,
         type: Sequelize.INTEGER,
-        defaultValue:0
+        defaultValue : 0
       },
       description: {
-        type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: false,
+        type: Sequelize.TEXT
       },
       categoryId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        References : {
+        references : {
           model : {
             tableName : 'Categories'
           },
@@ -40,7 +40,10 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        type: Sequelize.DATE
+      },
+      deletedAt: {
+        allowNull: true,
         type: Sequelize.DATE
       }
     });

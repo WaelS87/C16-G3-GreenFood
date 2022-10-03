@@ -10,8 +10,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       orderId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
-        allowNull: false, References : {
+        references : {
           model : {
             tableName : 'Orders'
           },
@@ -19,9 +20,9 @@ module.exports = {
         }
       },
       productId: {
-        type: Sequelize.INTEGER,
         allowNull: false,
-        References : {
+        type: Sequelize.INTEGER,
+        references : {
           model : {
             tableName : 'Products'
           },
@@ -34,6 +35,10 @@ module.exports = {
       },
       updatedAt: {
         allowNull: false,
+        type: Sequelize.DATE
+      },
+      deletedAt: {
+        allowNull: true,
         type: Sequelize.DATE
       }
     });

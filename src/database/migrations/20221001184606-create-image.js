@@ -10,12 +10,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       file: {
-        type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: false,
+        type: Sequelize.STRING
       },
       productId: {
-        type: Sequelize.INTEGER,
         allowNull: false,
+        type: Sequelize.INTEGER,
         references : {
           model : {
             tableName : 'Products'
@@ -29,6 +29,10 @@ module.exports = {
       },
       updatedAt: {
         allowNull: false,
+        type: Sequelize.DATE
+      },
+      deletedAt: {
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
