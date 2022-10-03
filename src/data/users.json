@@ -36,20 +36,28 @@
       "image": ""
    },
    {
-      "id": 6,
+      "id": 5,
       "nombre": "usuario",
-      "apellido": "ejemplo",
-      "email": "emailejemplo@gmail.com",
-      "contraseña": "$2a$12$AG5bdIA6xLSxetvS7qeQaO7DxDpvH.yAFnOY5U.Mtq11NrC7Tf7py",
+      "apellido": "",
+      "email": "",
+      "contraseña": "",
       "category": "normal",
-      "nombreUsuario": ""
+      "image": ""
    },
    {
-      "id": 7,
-      "nombre": "Damian Ezequiel",
-      "apellido": "Gonzalez Galarza",
-      "email": "eziusxperttingxd@gmail.com",
-      "contraseña": "$2a$12$QhZRN6cnjR.k/56pQnank.4ugT2jysqmdeLm5EkVB.NhuJwE86g66",
-      "category": "normal"
+      "Id": 6,
+      "Nombre": "usuario",
+      "Apellido": "ejemplo",
+      "Email": "emailejemplo@gmail.com",
+      "Constraseña": "$2b$12$knVvnX5IuHswfpEDkQdU2eNP8MZAQusw1fEl0/j9gRv8tipZL5F0e",
+      "Category": "normal"
+   },
+   {
+      "Id": 7,
+      "Nombre": "Nicolas",
+      "Apellido": "Gut",
+      "Email": "nic@gm.com",
+      "Constraseña": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
+      "Category": "normal"
    }
 ]
