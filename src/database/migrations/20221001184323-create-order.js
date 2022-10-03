@@ -10,10 +10,17 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       total: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultVlue:0
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        model : {
+          tableName : 'Users'
+        },
+        key : 'id'
+      
       },
       createdAt: {
         allowNull: false,
