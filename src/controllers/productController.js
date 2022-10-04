@@ -12,11 +12,17 @@ var camelSentence = function camelSentence(str) {
 
 module.exports = {
     index: (req, res) => {
-		const products= require('../data/products.json')
-		return res.render('products/products',{
-		   products,
-           toThousand
-		})
+		db.Product.findAll({
+            include:['images']
+        })
+        .then(products =>{ 
+            return res.render('products/products',{
+               products,
+               toThousand
+            })
+        })
+        .catch((error)=>console.log(error))
+		
 
 	},
     detail : (req,res) => {

@@ -6,12 +6,12 @@
             <main class="allProducts__main">
                 <h2 class="allProducts__price">Todos Los Productos</h2>
                 <section class="allProducts__main__section">
-                    <% products.forEach(({title,price,image,id,discount})=>{ %>
+                    <% products.forEach(({title,price,images,id,discount})=>{ %>
                         <a href="/products/detalleProducto/<%= id %> ">
                             <div class="allProducts__div">
                                 <article class="allProducts__article">
                                     <p class="allProducts__title"><%= title %></p>
-                                    <img width='150' height="300" src="/images/productos/<%= image %> " alt="imagen de producto">
+                                    <img width='150' height="300" src="/images/productos/<%= image[0].file %> " alt="imagen de producto">
                                     <div class="allProducts__price">
                                         <h2>$<%= toThousand(price)%></h2><p><%= discount %>% OFF</p>
                                     </div>
