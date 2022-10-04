@@ -87,7 +87,6 @@ module.exports = {
 
     },
     deleteProduct:(req,res) => {
-
         const productId = +req.body.id
         const products= loadProducts()
         const productModify = products.filter(product=>product.id !== productId) 
