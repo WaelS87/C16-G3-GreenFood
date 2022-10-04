@@ -37,12 +37,6 @@ module.exports = {
         }
     },
 
-        //COOKIES
-      /*   if(req.body.recordame){
-            res.cookie("greenFood", req.ingresar,{
-            maxAge : 1000 * 60
-        }) */
-    
     register: (req, res) => {
         return res.render("users/registrar", {
             title: "Registro"
