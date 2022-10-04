@@ -150,6 +150,7 @@ module.exports = {
             return res.redirect("/")
         }
     },
+    
     selected : (req,res) => {
         if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
             const productId = +req.body.id

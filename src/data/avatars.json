@@ -1,23 +1,30 @@
 [
     {
-        "avatar" : ""
+        "userId": 1,
+        "file" : "perfil por defecto.jpg"
     },
     {
-        "avatar" : ""
+        "userId": 2,
+        "file" : "perfil por defecto.jpg"
     },
     {
-        "avatar" : ""
+        "userId": 3,
+        "file" : "perfil por defecto.jpg"
     },
     {
-        "avatar" : ""
+        "userId": 4,
+        "file" : "perfil por defecto.jpg"
     },
     {
-        "avatar" : ""
+        "userId": 5,
+        "file" : "perfil por defecto.jpg"
     },
     {
-        "avatar" : ""
+        "userId": 6,
+        "file" : "perfil por defecto.jpg"
     },
     {
-        "avatar" : ""
+        "userId": 7,
+        "file" : "perfil por defecto.jpg"
     }
 ]

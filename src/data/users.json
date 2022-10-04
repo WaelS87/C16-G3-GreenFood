@@ -1,15 +1,13 @@
 [
    {
-      "id": 1,
       "name": "Damian Ezequiel",
       "surname": "Gonzalez Galarza",
       "email": "ezedrojas03@gmail.com",
       "password": "$2a$12$ghPjwpleM/tTge5qaONFw.xpCVimpAZxVjVG8uzPMpPlLTCRmcVUa",
       "rolId": 1,
-      "nombreUsuario": "EzeD03"
+      "username": "EzeD03"
    },
    {
-      "id": 2,
       "name": "Wael",
       "surname": "Fakhrji",
       "email": "wfakhrji@gmail.com",
@@ -17,7 +15,6 @@
       "rolId": 1
    },
    {
-      "id": 3,
       "name": "nati",
       "surname": "",
       "email": "",
@@ -25,7 +22,6 @@
       "rolId": 1
    },
    {
-      "id": 4,
       "name": "german",
       "surname": "",
       "email": "",
@@ -33,7 +29,6 @@
       "rolId": 1
    },
    {
-      "id": 5,
       "name": "usuario",
       "surname": "",
       "email": "",
@@ -41,7 +36,6 @@
       "rolId": 2
    },
    {
-      "Id": 6,
       "name": "usuario",
       "surname": "ejemplo",
       "email": "emailejemplo@gmail.com",
@@ -49,7 +43,6 @@
       "rolId": 2
    },
    {
-      "Id": 7,
       "name": "Nicolas",
       "surname": "Gut",
       "email": "nic@gm.com",
