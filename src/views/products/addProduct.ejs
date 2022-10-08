@@ -17,6 +17,9 @@
                         <label for="category">Categoria</label>
                         <select name="category" type="text" id="category">
                             <option value="" hidden selected>Seleccione...</option>
+                            <% categories.forEach(({id, name}) => { %>
+                                <option value="<%= id %>"><%= name %></option>
+                            <% }) %>
                             <option value="detetica">Dietética</option>
                             <option value="veggie">Veggie</option>
                             <option value="snacks">Snacks</option>
@@ -50,8 +53,7 @@
                 <div class="actionButtons__container">
                     <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
                     <button class="enviar__button">Enviar</button>
-                </div>
-                               
+                </div>    
             </form>
         </section>
     </main>

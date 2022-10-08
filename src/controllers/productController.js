@@ -118,11 +118,25 @@ module.exports = {
 
     addProduct : (req,res) => {
         if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
-            const products = loadProducts()
+            /* const products = loadProducts()
             return res.render("products/addProduct",{
                 title : "Agregar producto",
                 products
+            }) */
+
+            db.Category.findAll({
+                attributes : ["id", "name"],
+                order : ["name"]
             })
+                .then(categories => {
+                    return res.render("products/addProduct", {
+                        categories,
+                        title : "Agregar producto",
+
+                    })
+                })
+                .catch(error => console.log(error))
+
         } else {
             return res.redirect("/")
         }

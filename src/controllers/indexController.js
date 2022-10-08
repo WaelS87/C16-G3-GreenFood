@@ -6,12 +6,16 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     
-    home :  (req,res) => {
-        const products = loadProducts()
-        return res.render('home', { 
-            products,
-            title : "Home"
-         })
-
+    home : (req,res) => {
+        db.Product.findAll({
+            include:['images','category']
+        })
+        .then(products => {
+            return res.render('home', { 
+                products,
+                title : "Home"
+            })
+        })
+        .catch((error)=>console.log(error))
     }
 }
