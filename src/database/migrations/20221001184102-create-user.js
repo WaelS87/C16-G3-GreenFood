@@ -31,10 +31,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       avatar: {
-<<<<<<< HEAD
-=======
         
->>>>>>> carro_wael
         type: Sequelize.STRING
       },
       rolId: {

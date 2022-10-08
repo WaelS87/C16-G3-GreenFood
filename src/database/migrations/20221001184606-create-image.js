@@ -30,10 +30,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-<<<<<<< HEAD
-=======
         
->>>>>>> carro_wael
         type: Sequelize.DATE
       },
       deletedAt: {

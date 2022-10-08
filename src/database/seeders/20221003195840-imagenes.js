@@ -15,7 +15,7 @@ imagesDB.forEach(({images}, index) => {
   }
 })
 
-
+/* 
 
 const imagesDB = require("../../data/images.json")
 
@@ -24,21 +24,10 @@ const images = imagesDB.map(image => {
     ...image,
     createdAt : new Date()
   }
-})
+}) */
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-<<<<<<< HEAD
-    
-    await queryInterface.bulkInsert('Images', images, {});
-
-  },
-
-  async down (queryInterface, Sequelize) {
-    
-    await queryInterface.bulkDelete('Images', null, {});
-
-=======
    
     await queryInterface.bulkInsert('Images', imagesProducts, {});
     
@@ -48,6 +37,5 @@ module.exports = {
  
      await queryInterface.bulkDelete('Images', null, {});
      
->>>>>>> carro_wael
   }
 };
