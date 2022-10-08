@@ -48,8 +48,6 @@ module.exports = {
             title : "Carrito"
         })
     },
-<<<<<<< HEAD
-=======
     addProduct : (req,res) => {
         const products = loadProducts()
         return res.render("products/addProduct",{
@@ -173,7 +171,6 @@ module.exports = {
 
         
     },
->>>>>>> carro_wael
     categorieStore : (req,res) => {
         const products = loadProducts();
         //const category = products.find(product => product.category === +req.params.category)
@@ -201,10 +198,6 @@ module.exports = {
 			keywords : req.query.keywords,
 			toThousand,
             camelSentence
-<<<<<<< HEAD
-		})
-    },
-=======
 		})*/
         const {keywords}= req.query;
         db.Product.findAll({
@@ -245,7 +238,6 @@ module.exports = {
     .catch(error=>console.log(error))
 },
     /* ADMIN CONTROLLERS */
->>>>>>> carro_wael
     
     /* ADMIN CONTROLLERS */
 
