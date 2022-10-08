@@ -1,4 +1,21 @@
 'use strict';
+const imagesDB = require('../../data/images.json')
+
+const imagesProducts = [];
+
+imagesDB.forEach(({images}, index) => {
+  
+  for (let i = 0; i < images.length; i++) {
+
+    imagesProducts.push({
+      file : images[i],
+      productId : index + 1,
+      createdAt : new Date()
+    })
+  }
+})
+
+
 
 const imagesDB = require("../../data/images.json")
 
@@ -11,6 +28,7 @@ const images = imagesDB.map(image => {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
+<<<<<<< HEAD
     
     await queryInterface.bulkInsert('Images', images, {});
 
@@ -20,5 +38,16 @@ module.exports = {
     
     await queryInterface.bulkDelete('Images', null, {});
 
+=======
+   
+    await queryInterface.bulkInsert('Images', imagesProducts, {});
+    
+  },
+
+  async down (queryInterface, Sequelize) {
+ 
+     await queryInterface.bulkDelete('Images', null, {});
+     
+>>>>>>> carro_wael
   }
 };

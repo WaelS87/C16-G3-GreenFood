@@ -12,21 +12,29 @@
         <section class="detalle__seccion">
             <div class="container">
                 <div class="main__images">
-                    <img src="/images/pan-integral-768x480.jpg" alt="image 2">
-                    <img src="/images/pan-integral-768x480.jpg" alt="image 3">
-                    <img src="/images/pan-integral-768x480.jpg" alt="image 4">
+                  
+                    <a href="/images/productos/<%= product.images[1].file %>"><img width=200 height=200 src="/images/productos/<%= product.images[1].file %> "alt="image 2"></a>
+                    <a href="/images/productos/<%= product.images[2].file %>"><img width=200 height=200 src="/images/productos/<%= product.images[2].file %> "alt="image 3"></a>
+                    <a href="/images/productos/<%= product.images[3].file %>"><img width=200 height=200 src="/images/productos/<%= product.images[3].file %> "alt="image 4"></a>
                 </div>
                 <div class="main__div">
-                    <img class="main__div--img" src="/images/productos/<%= product.image %> " alt="imagen producto">
+                  
+                    <a href="/images/productos/<%= product.images[0].file %>"><img class="main__div--img" src="/images/productos/<%= product.images[0].file %> " alt="imagen producto"></a>
                 </div>
             </div>
             <div class="container2">
-                <h2 class="main__detalle__tittle"><%= product.title %> </h2>
+                <h2 class="main__detalle__tittle"><%= product.name %> </h2>
                 <div class="main__detalle__precio">
-                    <h3 style="font-size: 28px;">$<%= toThousand(product.price) %> </h3><p style="margin: 0 2%; width: 100px;"> <%= product.discount %>% OFF</p>
-                </div>
+                    <h3 style="font-size: 28px;text-decoration-line: line-through;">$<%= toThousand(product.price) %> </h3><p style="margin: 0 2%; width: 100px;"> <%= product.discount %>% OFF</p>
+                </div>   
+                    <h1  style="font-size: 22px;">Precio Final  
+                          $<%= toThousand(product.price - (product.price * product.discount) /100) %>
+                    </h1>
+           
+                    
+                
                 <% if (product.price > 1000) { %>
-                    <h5 class="main__detalle__cuotas">12 cuotas de $<%= ((product.price)/12).toFixed(2) %> </h5>
+                    <h5 >12 cuotas de $<%= ((product.price)/12).toFixed(2) %> </h5>
                 <% } %>
                 <div class="main__agregar">
                     <div class="main__cantidad">
