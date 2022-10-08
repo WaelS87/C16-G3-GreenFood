@@ -17,6 +17,7 @@
     flex-wrap: wrap;
     align-items: center;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .detalle__main .detalle__h1 {
@@ -308,16 +309,6 @@
         *left: 230px;
     }
 
-    .detalle__main .main__images {
-        *width: 110px;
-        *height: 110px;
-        *position: relative;
-        *bottom: 172px;
-        *left: 160px;
-        *border-radius: 10px;
-        *margin: 7px;
-    }
-
     .detalle__main .container2 {
         *position: relative;
         *bottom: 400px;
@@ -358,7 +349,7 @@
     }
 
     .detalle__main .container .main__images{
-        height: 50%;
+        height: 300px;
     }
 
     .detalle__main .detalle__truck {

@@ -20,7 +20,8 @@ module.exports = {
         .then(products =>{ 
             return res.render('products/products',{
                products,
-               toThousand
+               toThousand,
+               title : "Todos los productos"
             })
         })
         .catch((error)=>console.log(error))
@@ -33,10 +34,9 @@ module.exports = {
         })
         .then((product)=>{
             return res.render("products/detalleProducto",{
-                name : "Detalle del producto",
+                title : "Detalle del producto",
                 product,
                 toThousand
-           
         })
        
       
@@ -117,7 +117,7 @@ module.exports = {
     /* ADMIN CONTROLLERS */
 
     addProduct : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        //if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
             /* const products = loadProducts()
             return res.render("products/addProduct",{
                 title : "Agregar producto",
@@ -131,41 +131,45 @@ module.exports = {
                 .then(categories => {
                     return res.render("products/addProduct", {
                         categories,
-                        title : "Agregar producto",
-
+                        title : "Agregar producto"
                     })
                 })
                 .catch(error => console.log(error))
 
-        } else {
+        /* } else {
             return res.redirect("/")
-        }
+        } */
         
     },
     
     store : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        //if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
             const errors = validationResult(req) 
 
             if(errors.isEmpty()){
 
-                const {title, price, discount, description, category} = req.body
+                db.Product.create({
+                    ...req.body,
+                    name : req.body.name.trim(),
+                    description : req.body.description.trim()
+                })
+                    .then(product => {
+                        if (req.files.length) {
+                            let images = req.files.map(({filename}) => {
+                                return {
+                                    file : filename,
+                                    productId : product.id
+                                }
+                            })
+                            db.Image.bulkCreate(images, {
+                                validate : true
+                            }).then( (result) => console.log(result))
+                        } else {
 
-                const products = loadProducts()
-
-                const newProduct = {
-                    id : (products[products.length -1].id + 1),
-                    title : title.trim(),
-                    description : description.trim(),
-                    price : +price,
-                    discount : +discount, 
-                    image : "defaul-image.jpeg",
-                    category
-                }
-
-                const productsModify = [...products, newProduct]
-
-                storeProducts(productsModify);
+                        }
+                        return res.redirect("/products")
+                    })
+                    .catch(error => console.log(error))
 
                 return res.redirect("/products")
             } else {
@@ -175,9 +179,9 @@ module.exports = {
                     errors : errors.mapped()
                 })
             }
-        } else {
+        /* } else {
             return res.redirect("/")
-        }
+        } */
     },
 
     selectDelete : (req,res) =>{
