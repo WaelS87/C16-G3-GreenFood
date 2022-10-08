@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include("../partials/head",{title:'Todos Los Productos'}) %>
-    <body class="allProducts">
-        <%- include("../partials/header") %>
-            <main class="allProducts__main">
-                <h2 class="allProducts__price">Todos Los Productos</h2>
-                <section class="allProducts__main__section">
-                    <% products.forEach(({title,price,images,id,discount})=>{ %>
-                        <a href="/products/detalleProducto/<%= id %> ">
-                            <div class="allProducts__div">
-                                <article class="allProducts__article">
-                                    <p class="allProducts__title"><%= title %></p>
-                                    <img width='150' height="300" src="/images/productos/<%= image[0].file %> " alt="imagen de producto">
-                                    <div class="allProducts__price">
-                                        <h2>$<%= toThousand(price)%></h2><p><%= discount %>% OFF</p>
-                                    </div>
-                                    
-                                </article>
-                                <hr>
-                            </div>
-                        </a>
-                        
-                    <% }) %>
-                    <hr>
-                </section>
-            </main>
-            <%- include("../partials/footer") %>
-    </body>
+  <%- include("../partials/head",{name:'Todos Los Productos'}) %>
+  <body class="allProducts">
+    <%- include("../partials/header") %>
+    <main class="allProducts__main">
+      <h2 class="allProducts__price">Todos Los Productos</h2>
+      <section class="allProducts__main__section">
+        <% products.forEach(({name,price,images,id,discount,category})=>{ %>
+        <a href="/products/detalleProducto/<%= id %> ">
+          <div class="allProducts__div">
+            <article class="allProducts__article">
+              <div
+                style="
+                  color: rgb(211, 226, 123);
+                  font-size: 24px;
+                  background-color: rgb(83, 71, 192);
+                "
+              >
+                <%= category.name %>
+              </div>
+              <p class="allProducts__title"><%= name %></p>
+            
 
+              <img
+                width="150"
+                height="300"
+                src="/images/productos/<%= images[0].file %> "
+                alt="imagen de producto"
+              />
+              <% if (discount > 0) { %>
+              <p class="allProducts__price">
+                <span>$<%= price %></span>
+                /
+                <b><%= discount %>% OFF</b>
+              </p>
+              <p
+                class="allProducts__price"
+                style="color: rgb(124, 8, 27); font-size: x-large"
+              >
+                Precio Final $<%= toThousand(price - (price * discount) /100) %>
+              </p>
+              <% }else{ %>
+
+              <p class="allProducts__price">$<%= toThousand(price) %></p>
+              <% } %>
+            </article>
+            <hr />
+          </div>
+        </a>
+
+        <% }) %>
+        <hr />
+      </section>
+    </main>
+    <%- include("../partials/footer") %>
+  </body>
 </html>

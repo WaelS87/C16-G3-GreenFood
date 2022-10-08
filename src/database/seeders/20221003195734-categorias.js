@@ -2,7 +2,7 @@
 
 const categories = [
   {
-    name : "Dietetica",
+    name : "Dietética",
     createdAt : new Date()
   },
   {
