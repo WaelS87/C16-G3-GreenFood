@@ -2,6 +2,7 @@ const {loadProducts, storeProducts} = require("../data/productsModule")
 const {validationResult} = require("express-validator")
 const db = require('../database/models');
 const { Op } = require("sequelize");
+const category = require("../database/models/category");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
        
@@ -49,7 +50,7 @@ module.exports = {
         })
     },
     categorieStore : (req,res) => {
-        const products = loadProducts();
+     /*    const products = loadProducts();
         //const category = products.find(product => product.category === +req.params.category)
         const categoryParams = req.params.category;
 
@@ -64,7 +65,32 @@ module.exports = {
             toThousand
         })
 
-    },
+    }, */
+
+    	db.Category.findOne( {
+            where : {
+                name: req.params.category
+            },
+            
+            include: [
+                {
+                    association: "products",
+                    include:['images']
+                }
+            ]
+        })
+        .then(category =>{ 
+            return res.render('products/categorieStore',{
+               category,
+               toThousand,
+               camelSentence,
+               categoryParams : req.params.category
+            })
+        })
+        .catch((error)=>console.log(error))
+		
+
+	},
     search : (req,res) => {
        /* const products = loadProducts()
 		const result = products.filter(product => product.title.toLowerCase().includes(req.query.keywords.toLowerCase()))
