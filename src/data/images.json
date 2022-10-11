@@ -1,86 +1,66 @@
 [
-    {
-        "productId": 1,
-        "file": "dieteticaChia01.jpg"
-    },
-    {
-        "productId": 2,
-        "file": "dieteticaOil02.jpg"
-    },
-    {
-        "productId": 3,
-        "file": "dieteticaGreens03.jpg"
-    },
-    {
-        "productId": 4,
-        "file": "dieteticaGluten04.jpg"
-    },
-    {
-        "productId": 5,
-        "file": "veggieBlackRice05.jpg"
-    },
-    {
-        "productId": 6,
-        "file": "veggieJuice06.jpg"
-    },
-    {
-        "productId": 7,
-        "file": "veggieSoup07.jpg"
-    },
-    {
-        "productId": 8,
-        "file": "veggieChews08.jpg"
-    },
-    {
-        "productId": 9,
-        "file": "snacksKeto09.jpg"
-    },
-    {
-        "productId": 10,
-        "file": "snacksNuduBites10.jpg"
-    },
-    {
-        "productId": 11,
-        "file": "snacksVege11.jpg"
-    },
-    {
-        "productId": 12,
-        "file": "snacksGuru12.jpg"
-    },
-    {
-        "productId": 13,
-        "file": "suplementosVitC13.jpg"
-    },
-    {
-        "productId": 14,
-        "file": "suplementosPowder14jpg.jpg"
-    },
-    {
-        "productId": 15,
-        "file": "suplementosSpirulina15.jpg"
-    },
-    {
-        "productId": 16,
-        "file": "suplementosOil16.jpg"
-    },
-    {
-        "productId": 17,
-        "file": "variosWash17.jpg"
-    },
-    {
-        "productId": 18,
-        "file": "variosBodySalt18.jpg"
-    },
-    {
-        "productId": 19,
-        "file": "variosFace19.jpg"
-    },
-    {
-        "productId": 20,
-        "file": "variosWater20.jpg"
-    },
-    {
-        "productId": 21,
-        "file": "defaul-image.jpeg"
-    }
+  {
+    "images": ["dieteticaChia01.jpg","dieteticaChia02.webp","dieteticaChia03.webp" ,"dieteticaChia04.webp"]
+  },
+
+  {
+    "images": ["dieteticaOil02.jpg","hemb seed oil 1.webp","hemb seed oil 2.webp","hemb seed oil 3.webp"]
+  },
+  {
+    "images":[ "dieteticaGreens03.jpg","super green 1.webp","super green 2.webp","super green 3.webp"]
+  },
+  {
+    "images": ["dieteticaGluten04.jpg","bio 1.webp","bio 2.webp","bio 3.webp"]
+  },
+  {
+    "images": ["veggieBlackRice05.jpg","rice 1.webp","rice 2.webp","rice 3.webp"]
+  },
+  {
+    "images":[ "veggieJuice06.jpg","juice 1.webp","juice 2.webp","juice 3.webp"]
+  },
+  {
+    "images": ["veggieSoup07.jpg","miso 1.webp","miso 2.webp","miso 3.webp"]
+  },
+  {
+    "images": ["veggieChews08.jpg","gin 1.webp","gin 2.webp","gin 3.webp"]
+  },
+  {
+    "images": ["snacksKeto09.jpg","keto 1.webp","keto 2.webp","keto 3.webp"]
+  },
+  {
+    "images":[ "snacksNuduBites10.jpg","air 1.webp","air 2.webp","air 3.webp"]
+  },
+  {
+    "images": ["snacksVege11.jpg","vigi 1.webp","vigi 2.webp","vigi 3.webp"]
+  },
+  {
+    "images": ["snacksGuru12.jpg","puf 1.webp","puf 2.webp","puf 3.webp"]
+  },
+  {
+    "images": ["suplementosVitC13.jpg","ener 1.webp","ener 2.webp","ener 3.webp"]
+  },
+  {
+    "images": ["suplementosPowder14jpg.jpg","natural 1.webp","natural 2.webp","natural 3.webp"]
+  },
+  {
+    "images": ["suplementosSpirulina15.jpg","spi 1.webp","spi 2.webp","spi 3.webp"]
+  },
+  {
+    "images": ["suplementosOil16.jpg","hemb seed oil 1.webp","hemb seed oil 2.webp","hemb seed oil 3.webp"]
+  },
+  {
+    "images": ["variosWash17.jpg","eco 1.webp","eco 2.webp","eco 3.webp"]
+  },
+  {
+    "images": ["variosBodySalt18.jpg","sal 1.webp","sal 2.webp","sal 3.webp"]
+  },
+  {
+    "images": ["variosFace19.jpg","face 1.webp","face 2.webp","face 3.webp"]
+  },
+  {
+    "images": ["variosWater20.jpg","water 1.webp","water 2.webp","water 3.webp"]
+  },
+  {
+    "images": ["defaul-image.jpeg","def 1.webp","def 2.webp","def 3.webp"]
+  }
 ]

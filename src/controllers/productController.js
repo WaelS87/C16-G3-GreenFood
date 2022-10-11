@@ -1,5 +1,7 @@
 const {loadProducts, storeProducts} = require("../data/productsModule")
 const {validationResult} = require("express-validator")
+const db = require('../database/models');
+const { Op } = require("sequelize");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
        
@@ -12,21 +14,34 @@ var camelSentence = function camelSentence(str) {
 
 module.exports = {
     index: (req, res) => {
-		const products= require('../data/products.json')
-		return res.render('products/products',{
-		   products,
-           toThousand
-		})
+		db.Product.findAll({
+            include:['images','category']
+        })
+        .then(products =>{ 
+            return res.render('products/products',{
+               products,
+               toThousand
+            })
+        })
+        .catch((error)=>console.log(error))
+		
 
 	},
     detail : (req,res) => {
-        const products = loadProducts()
-		const product = products.find(product => product.id === +req.params.id)
-        return res.render("products/detalleProducto",{
-            title : "Detalle del producto",
-			product,
-			toThousand
-		})
+        db.Product.findByPk(req.params.id,{
+            include:['images']
+        })
+        .then((product)=>{
+            return res.render("products/detalleProducto",{
+                name : "Detalle del producto",
+                product,
+                toThousand
+           
+        })
+       
+      
+        })
+        .catch((error)=>console.log(error))
     },
     carrito : (req,res) => {
         return res.render("products/carrito",{
@@ -51,7 +66,7 @@ module.exports = {
 
     },
     search : (req,res) => {
-        const products = loadProducts()
+       /* const products = loadProducts()
 		const result = products.filter(product => product.title.toLowerCase().includes(req.query.keywords.toLowerCase()))
 
 		return res.render("products/searchProducts",{
@@ -60,9 +75,45 @@ module.exports = {
 			keywords : req.query.keywords,
 			toThousand,
             camelSentence
-		})
+		})*/
+        const {keywords}= req.query;
+        db.Product.findAll({
+            include:['images'],
+            where:{
+                [Op.or]:[
+                    {
+                        name:{
+                            [Op.substring]:keywords
+                        }
+                    },
+                    {
+                        description:{
+                            [Op.substring]:keywords
+                        }
+
+                    }
+
+                ],
+               
+            }
+        })
+        .then(products=>{
+            return res.render("products/searchProducts",{
+                products ,
+                keywords : req.query.keywords,
+                toThousand,
+                camelSentence
+               
+               /* title : "Busqueda",
+                products : result,
+                keywords : req.query.keywords,
+                toThousand,
+                 */
+
+        })
+    })
+    .catch(error=>console.log(error))
     },
-    
     /* ADMIN CONTROLLERS */
 
     addProduct : (req,res) => {

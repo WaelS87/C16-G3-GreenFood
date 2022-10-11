@@ -31,6 +31,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       avatar: {
+        
         type: Sequelize.STRING
       },
       rolId: {
