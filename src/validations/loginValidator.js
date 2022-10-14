@@ -1,6 +1,7 @@
 const { check,body } = require('express-validator');
-const users = require('../data/usersModule').loadUsers();
+//const users = require('../data/usersModule').loadUsers(req.body.email.trim());
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models');
 
 module.exports = [
     check('email').toLowerCase()
@@ -9,7 +10,16 @@ module.exports = [
     body('password')
         .notEmpty().withMessage('La contraseña es obligatoria').bail()
         .custom((value, {req}) => {
-            let user = users.find(user => user.email === req.body.email.trim() && bcryptjs.compareSync(value,user.password));
+            let user = db.User.findOne({
+                where : {
+                    email : req.body.email.trim()
+                }
+            })
+            .then(({password}) => {
+                return bcryptjs.compareSync(value, password)
+            })
+            .catch(error => console.log(error))
+
             return !!user
         }).withMessage('o Email o Contraseña no estan correctos')
 ]

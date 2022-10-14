@@ -1,8 +1,14 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 
-const loadUsers =() => {
-    return JSON.parse(fs.readFileSync(path.join(__dirname, 'users.json'),'utf-8'));
+const loadUsers = () => {
+    //return JSON.parse(fs.readFileSync(path.join(__dirname, 'users.json'),'utf-8'));
+    db.User.findAll()
+        .then(users => {
+            return users
+        })
+        .catch(error => console.log(error))
 };
 
 const storeUsers = (users) => {

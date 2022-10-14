@@ -143,7 +143,7 @@ module.exports = {
     /* ADMIN CONTROLLERS */
 
     addProduct : (req,res) => {
-        //if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
             /* const products = loadProducts()
             return res.render("products/addProduct",{
                 title : "Agregar producto",
@@ -162,14 +162,14 @@ module.exports = {
                 })
                 .catch(error => console.log(error))
 
-        /* } else {
+        } else {
             return res.redirect("/")
-        } */
+        }
         
     },
     
     store : (req,res) => {
-        //if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
             const errors = validationResult(req) 
 
             if(errors.isEmpty()){
@@ -205,9 +205,9 @@ module.exports = {
                     errors : errors.mapped()
                 })
             }
-        /* } else {
+        } else {
             return res.redirect("/")
-        } */
+        }
     },
 
     selectDelete : (req,res) =>{

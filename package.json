@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "node ./src/bin/www",
-    "start": "nodemon ./src/bin/www"
+    "start": "nodemon ./src/bin/www",
+    "rehacer": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

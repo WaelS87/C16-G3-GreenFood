@@ -3,7 +3,7 @@
       "name": "Damian Ezequiel",
       "surname": "Gonzalez Galarza",
       "email": "ezedrojas03@gmail.com",
-      "password": "$2a$12$ghPjwpleM/tTge5qaONFw.xpCVimpAZxVjVG8uzPMpPlLTCRmcVUa",
+      "password": "$2a$12$gJaAtGYIOTfjUAFu5r2.9uuKJzW5xTUjTVFsY7NajuKbA5mITEi8i",
       "rolId": 1,
       "username": "EzeD03"
    },
@@ -47,6 +47,13 @@
       "surname": "Gut",
       "email": "nic@gm.com",
       "password": "$2b$12$Cfi76krt2t0r/oUJxrLX/uw7d2Gvy6.DMwGB/gxXucV4datc2jW9S",
+      "rolId": 2
+   },
+   {
+      "name": "database",
+      "surname": "user",
+      "email": "qcyo@gmail.com",
+      "password": "$2a$12$gJaAtGYIOTfjUAFu5r2.9uuKJzW5xTUjTVFsY7NajuKbA5mITEi8i",
       "rolId": 2
    }
 ]
