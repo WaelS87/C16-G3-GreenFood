@@ -20,6 +20,6 @@ module.exports = [
         .notEmpty().withMessage("Debes dar una descripción al producto.").bail()
         .isLength({
             min : 10,
-            max : 225
-        }).withMessage("La descripción debe tener un largo de entre 10 a 225 letras.")
+            max : 500
+        }).withMessage("La descripción debe tener un largo de entre 10 a 500 letras.")
 ]

@@ -10,7 +10,7 @@
                     <select name="id" id="id">
                         <option value="" hidden selected>Seleccione un producto</option>
                         <% products.forEach(producto => { %>
-                            <option value="<%= producto.id %>"><%= producto.title %></option>
+                            <option value="<%= producto.id %>"><%= producto.name %></option>
                         <% }) %>
                     </select>
                 </div>

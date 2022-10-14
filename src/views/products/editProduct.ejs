@@ -10,20 +10,17 @@
                 <div class="form__l--container">
                     <div>
                         <label for="name">Nombre del producto</label>
-                        <input name="title" type="text" id="title" placeholder="Agregue un nombre" value="<%= product.title %>">
-                        <p class="errorText"><%= locals.errors && errors.title ? errors.title.msg : null %></p>
+                        <input name="name" type="text" id="name" placeholder="Agregue un nombre" value="<%= product.name %>">
+                        <p class="errorText"><%= locals.errors && errors.name ? errors.name.msg : null %></p>
                     </div>
                     <div>
-                        <label for="category">Categoria</label>
-                        <select name="category" type="text" id="category">
-                            <option value="<%= product.category %>" hidden selected><%= product.category %> </option>
-                            <option value="detetica">Dietética</option>
-                            <option value="veggie">Veggie</option>
-                            <option value="snacks">Snacks</option>
-                            <option value="suplementos">Suplementos</option>
-                            <option value="varios">Varios</option>
+                        <label for="categoryId">Categoria</label>
+                        <select name="categoryId" id="categoryId">
+                            <% categories.forEach(({id, name}) => { %>
+                                <option value="<%= id %>" <%= id === product.categoryId && 'selected' %>><%= name %></option>
+                            <% }) %>
                         </select>
-                        <p class="errorText"><%= locals.errors && errors.category ? errors.category.msg : null %></p>
+                        <p class="errorText"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %></p>
                     </div>
                     <div>
                         <label for="price">Precio</label>

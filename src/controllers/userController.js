@@ -66,7 +66,7 @@ module.exports = {
                     }
         
                     res.cookie("greenFood", req.session.userLogin,{
-                        maxAge : 1000 * 30
+                        maxAge : 1000 * 600
                     })
                     
                     return res.redirect("/")
