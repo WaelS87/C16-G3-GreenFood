@@ -23,14 +23,18 @@
             <div class="container2">
                 <h2 class="main__detalle__tittle"><%= product.name %> </h2>
                 <div class="main__detalle__precio">
-                    <h3 style="font-size: 28px;text-decoration-line: line-through;">$<%= toThousand(product.price) %> </h3><p style="margin: 0 2%; width: 100px;"> <%= product.discount %>% OFF</p>
+                    <h3 style="font-size: 28px;text-decoration-line: line-through;">$<%= toThousand(product.price) %> </h3><p style="margin: 0 2%; width: 100px;"> 
+                        <% if (product.discount) { %>
+                            <%= product.discount %>% OFF
+                        <% } %>
+                    </p>
                 </div>   
+                <% if (product.discount) { %>
                     <h1  style="font-size: 22px;">Precio Final  
-                          $<%= toThousand(product.price - (product.price * product.discount) /100) %>
-                    </h1>
-           
+                        $<%= toThousand(product.price - (product.price * product.discount) /100) %>
+                  </h1>
+                <% } %>
                     
-                
                 <% if (product.price > 1000) { %>
                     <h5 >12 cuotas de $<%= ((product.price)/12).toFixed(2) %> </h5>
                 <% } %>
