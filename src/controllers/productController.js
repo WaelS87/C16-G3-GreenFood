@@ -143,7 +143,7 @@ module.exports = {
     /* ADMIN CONTROLLERS */
 
     addProduct : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
             /* const products = loadProducts()
             return res.render("products/addProduct",{
                 title : "Agregar producto",
@@ -169,7 +169,7 @@ module.exports = {
     },
     
     store : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
             const errors = validationResult(req) 
 
             if(errors.isEmpty()){
@@ -199,11 +199,19 @@ module.exports = {
 
                 return res.redirect("/products")
             } else {
-                return res.render("products/addProduct",{
-                    title: "Agregar producto",
-                    old : req.body,
-                    errors : errors.mapped()
+
+                db.Category.findAll({
+                    attributes : ["id", "name"],
+                    order : ["name"]
                 })
+                    .then(categories => {
+                        return res.render("products/addProduct", {
+                            categories,
+                            old : req.body,
+                            title : "Agregar producto",
+                            errors : errors.mapped()
+                        })
+                    })
             }
         } else {
             return res.redirect("/")
@@ -211,7 +219,7 @@ module.exports = {
     },
 
     selectDelete : (req,res) =>{
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
             const products= loadProducts()
             return res.render('products/deleteProducts',{
                 products,
@@ -223,7 +231,7 @@ module.exports = {
     },
 
     deleteProduct:(req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
             const productId = +req.body.id
             const products= loadProducts()
             const productModify = products.filter(product=>product.id !== productId) 
@@ -235,19 +243,24 @@ module.exports = {
     },
 
     select : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
-            const products = loadProducts()
-            return res.render("products/editProduct-selector", {
-                title : "Selección de producto",
-                products
-            })
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
+            /* const products = loadProducts() */
+
+            db.Product.findAll()
+                .then(products => {
+                    return res.render("products/editProduct-selector", {
+                        title : "Selección de producto",
+                        products
+                    })
+                })
+                .catch(error => console.log(error));
         } else {
             return res.redirect("/")
         }
     },
     
     selected : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
             const productId = +req.body.id
             return res.redirect(productId)
         } else {
@@ -256,51 +269,73 @@ module.exports = {
     },
 
     editProduct : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
-            const products = loadProducts()
-            const product = products.find(product => product.id === +req.params.id)
-            return res.render("products/editProduct", {
-                title : "Editar producto",
-                product
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
+            /* const products = loadProducts() */
+
+            /* const product = products.find(product => product.id === +req.params.id) */
+
+            let product = db.Product.findByPk(req.params.id)
+
+            let categories = db.Category.findAll({
+                attributes : ["id", "name"],
+                order : ["name"]
             })
+
+            Promise.all([categories, product])
+                .then(([categories, product]) => {
+                    return res.render("products/editProduct", {
+                        title : "Editar producto",
+                        categories,
+                        product
+                    })
+                })
+                .catch(error => console.log(error));
+
         } else {
             return res.redirect("/")
         }
     },
 
     update : (req,res) => {
-        if(req.session.userLogin && res.locals.userLogin.category === "administrador"){
+        if(req.session.userLogin && res.locals.userLogin.rolId === 1){
             const errors = validationResult(req)
         
             if(errors.isEmpty()){
-                const products = loadProducts();
 
-                const {title, price,discount, description, category, image} = req.body;
-
-                const productModify = products.map(product => {
-                    if(product.id === +req.params.id){
-                        return {
-                            ...product,
-                            title : title.trim(),
-                            description : description.trim(),
-                            price : +price,
-                            discount : +discount,
-                            category : category.trim()
-                        }
+                db.Product.update(
+                    {
+                        ...req.body,
+                        name : req.body.name.trim(),
+                        description : req.body.description.trim(),
+                        price : +req.body.price,
+                        discount : +req.body.discount,
+                        categoryId : req.body.categoryId
+                    },{
+                        where : {id : req.params.id}
                     }
-                    return product
-                })
-
-                storeProducts(productModify)
-
-                return res.redirect('/products/detalleProducto/' + req.params.id);
+                )
+                .then( () => res.redirect("/products/detalleProducto/" + req.params.id))
+                .catch(error => console.log(error))
             
             } else {
-                return res.render("products/editProduct", {
-                    title : "Editar producto",
-                    errors : errors.mapped(),
-                    product : req.body
+
+                let product = db.Product.findByPk(req.params.id)
+
+                let categories = db.Category.findAll({
+                    attributes : ["id", "name"],
+                    order : ["name"]
                 })
+
+                Promise.all([categories, product])
+                    .then(([categories, product]) => {
+                        return res.render("products/editProduct", {
+                            title : "Editar producto",
+                            errors : errors.mapped(),
+                            categories,
+                            product
+                        })
+                    })
+                    .catch(error => console.log(error));
             }
         } else {
             return res.redirect("/")

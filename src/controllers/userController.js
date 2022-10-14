@@ -58,15 +58,20 @@ module.exports = {
                     email: req.body.email.trim()
                 }
             })
-                .then(({id, rolId}) => {
+                .then(({id, rolId, name, surname, username, password, email}) => {
 
                     req.session.userLogin = {
                         id,
-                        rolId
+                        rolId,
+                        name,
+                        surname,
+                        username,
+                        password,
+                        email
                     }
         
                     res.cookie("greenFood", req.session.userLogin,{
-                        maxAge : 1000 * 30
+                        maxAge : 1000 * 600
                     })
                     
                     return res.redirect("/")
