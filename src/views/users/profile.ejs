@@ -3,37 +3,37 @@
 <%- include("../partials/head") %> 
 
     
-<body class="profile <%= user.category %>">
+<body class="profile <%= user.rolId %>">
     <%- include("../partials/header") %> 
     <main class="profile__main">
         <section class="profile__section">
-            <% if (user.category === "normal") { %>
-                <h1 class="white__word">¡Bienvenido <p class="green__word"><%= user.nombreUsuario !== "" ? user.nombreUsuario : user.nombre %> %></p>!</h1>
+            <% if (user.rolId === "2") { %>
+                <h1 class="white__word">¡Bienvenido <p class="green__word"><%= user.username !== "" ? user.username : user.name %> %></p>!</h1>
             <% } else { %>
-                <h1 class="white__word">¡Bienvenido de vuelta <p class="green__word"><%= user.nombreUsuario !== "" ? user.nombreUsuario : user.nombre %></p>!</h1>
+                <h1 class="white__word">¡Bienvenido de vuelta <p class="green__word"><%= user.username !== "" ? user.username : user.name %></p>!</h1>
                 <h2 class="white__word">¿Qué tal has estado?</h2>
             <% } %>
             <form action="?_method=PUT" method="post" class="profile__form">
                 <div class="profile__form__l--container">
                     <div class="profile__imgPerfil">
-                        <img src="/images/<%= user.image ? user.image : 'perfil por defecto.jpg' %> " alt="imagenPerfil">
-                        <input name="image" type="file" id="image" placeholder="Seleccionar foto">
+                        <img src="/images/<%= user.avatar ? user.avatar : 'perfil por defecto.jpg' %> " alt="avatarnPerfil">
+                        <input name="avatar" type="file" id="avatar" placeholder="Seleccionar foto">
                     </div>
                     <div class="profile__formulario">
                         <div class="profile__form__box">
-                            <label class="form__label" for="nombre">Nombre</label>
-                            <input class="form__input" type="text" id="nombre" name="nombre" value="<%= user.nombre %>">
-                            <p class="errorText"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %></p>
+                            <label class="form__label" for="name">Nombre</label>
+                            <input class="form__input" type="text" id="name" name="name" value="<%= user.nombre %>">
+                            <p class="errorText"><%= locals.errors && errors.name ? errors.name.msg : null %></p>
                         </div>
                         <div class="profile__form__box">
                             <label class="form__label" for="apellido">Apellido</label>
-                            <input class="form__input" type="text" id="apellido" name="apellido" value="<%= user.apellido %>">
-                            <p class="errorText"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
+                            <input class="form__input" type="text" id="surname" name="surname" value="<%= user.surname %>">
+                            <p class="errorText"><%= locals.errors && errors.surname ? errors.surname.msg : null %></p>
                         </div>
                         <div class="profile__form__box">
                             <label class="form__label" for="usuario">Nombre de usuario</label>
-                            <input class="form__input" type="text" id="usuario" name="nombreUsuario" value="<%= user.nombreUsuario %>">
-                            <p class="errorText"><%= locals.errors && errors.nombreUsuario ? errors.nombreUsuario.msg : null %></p>
+                            <input class="form__input" type="text" id="user" name="username" value="<%= user.username %>">
+                            <p class="errorText"><%= locals.errors && errors.username ? errors.username.msg : null %></p>
                         </div>
                         <div class="profile__form__box">
                             <label class="form__label" for="email">Correo electrónico</label>

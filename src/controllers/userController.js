@@ -84,7 +84,7 @@ module.exports = {
     },
 
     profile : (req,res) => {
-        const users = loadUsers(); 
+       /*  const users = loadUsers(); 
         const user = users.find(user => user.id === +req.params.id)
        
         if(req.session.userLogin){
@@ -96,7 +96,21 @@ module.exports = {
             return res.redirect("/users/login")
         }
         
+    }, */
+    const user = req.session.userLogin;
+
+    if(req.session.userLogin){
+
+    return res.render('users/profile', {
+            title: "Perfil",
+            user,
+        })
+
+    } else {
+    return res.redirect("users/login")
+        }     
     },
+
 
     condiciones: (req, res) => {
         return res.render('users/condiciones', {

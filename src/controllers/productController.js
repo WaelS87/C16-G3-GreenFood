@@ -89,8 +89,8 @@ module.exports = {
         })
         .catch((error)=>console.log(error))
 		
-
 	},
+
     search : (req,res) => {
        /* const products = loadProducts()
 		const result = products.filter(product => product.title.toLowerCase().includes(req.query.keywords.toLowerCase()))
