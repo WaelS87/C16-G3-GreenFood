@@ -16,16 +16,21 @@
 
                 <div class="form__box">
                    
-                    <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
-                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.nombre ? errors.nombre.msg : null%></p>
+                    <input class="form__input" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>">
+                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.name? errors.name.msg : null%></p>
                     
                 </div>
                     
                 <div class="form__box">
                     
-                   <input class="form__input" type="text" name="apellido" id="nombre" placeholder="Apellido" value="<%= locals.old && old.apellido ? old.apellido : null %>">
-                   <p style="color:red;font-size: 16px;"><%= locals.errors && errors.apellido ? errors.apellido.msg : null%></p>
+                   <input class="form__input" type="text" name="surname" id="surname" placeholder="Apellido" value="<%= locals.old && old.surname ? old.surname : null %>">
+                   <p style="color:red;font-size: 16px;"><%= locals.errors && errors.surname ? errors.surname.msg : null%></p>
                 </div>
+                <div class="form__box">
+                    
+                    <input class="form__input" type="text" name="username" id="username" placeholder="Nombre de Usuario">
+                    <p style="color:red;font-size: 16px;"></p>
+                 </div>
                 <div class="form__box">
                     
                     <input class="form__input" type="text" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>">

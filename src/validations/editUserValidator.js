@@ -1,18 +1,20 @@
 const { check } = require("express-validator");
 
+
 module.exports = [
-    check("nombre")
+    check("name")
         .notEmpty().withMessage("Debes introducir un nombre").bail()
         .isLength({
         min : 2,
         max : 25
     }).withMessage("El nombre debe tener un largo de entre 2 a 25 letras."),
-    check("apellido")
+    check("surname")
     .notEmpty().withMessage("Debes introducir un apellido").bail()
     .isLength({
     min : 2,
     max : 25
-}).withMessage("El apellido debe tener un largo de entre 2 a 25 letras."),
+}).withMessage("El apellido debe tener un largo de entre 2 a 25 letras.")
+
     /* check("nombreUsuario")
     .notEmpty().withMessage("Debes introducir un apellido").bail()
     .isLength({
