@@ -1,12 +1,15 @@
 const {check , body} = require('express-validator');
 const users = require('../data/usersModule').loadUsers();
+const db = require("../database/models");
+const user = require('../database/models/user');
+
 module.exports=[
-    check('nombre')
+    check('name')
         .notEmpty().withMessage('Debe Entrar Tu Nombre Por Favor....').bail()
         /* .isAlpha().withMessage('Por Favor ingrése Tu Nombre Bien').bail() */
         .isLength({min:3}).withMessage('Por Favor ingrése Tu Nombre Bien'),
 
-    check('apellido')
+    check('surname')
         .notEmpty().withMessage('Debe Entrar Tu Apellido Por Favor....').bail()
         /* .isAlpha().withMessage('Por Favor ingrése Tu Apellido Bien').bail() */
         .isLength({min:3}).withMessage('Por Favor ingrése Tu Apellido Bien'),
@@ -15,13 +18,29 @@ module.exports=[
         .notEmpty().withMessage('Debe Entrar Tu mail').bail()
         .isEmail().withMessage('Email no es Valido').bail()
         .custom((value,{req})=> {
-            let user = users.find(user => user.email === value.trim())
-            if(user){
-                return false
-            }else{
-                return true
-            }
-       }).withMessage('el mail ya esta registrado'),
+            let user = db.User.findOne({
+                where : {
+                    email : value
+                }
+            })
+            .then(user=>{
+                if(user == null){
+                    return false
+                }else{
+                    return true
+                }
+                
+                
+            
+            })
+            .catch(error=>console.log(error))
+           
+            return !!user
+            
+        }).withMessage('el mail ya esta registrado'),
+
+      
+    
   
     check('password')
         .notEmpty().withMessage('por favor Entre Tu Contraseña').bail()
