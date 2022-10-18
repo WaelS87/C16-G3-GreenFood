@@ -105,7 +105,7 @@ module.exports = {
     const user = req.session.userLogin;
 
     if(req.session.userLogin){
-
+      
     return res.render('users/profile', {
             title: "Perfil",
             user,
