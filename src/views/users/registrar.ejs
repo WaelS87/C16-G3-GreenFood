@@ -10,8 +10,8 @@
     <main class="registrar__main">
         <p class="login--parapho"><a href="/">Inicio</a>/register</p>
 
-<!--         <h1 class="registrar__h1">Registro 😁</h1>
- -->        <div class="container__form">
+        <h3 class="login__ingresa">Registrate 😁</h3>
+        <div class="container__form">
             <form class="form" action="" method="post">
 
                 <div class="form__box">
@@ -49,12 +49,12 @@
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password2 ? errors.password2.msg : null%></p>
                 </div>
                 <div class="form__box">
-                    <label for="image">Subi Tu Imagen (OPCIONAL)</label><br>
+                    <label for="image">Sube tu avatar <small>(opcional)</small></label><br>
                     <input accept="image/*" name="image" type="file" id="image">
                 </div><br>
                 <div class="form__box">
                     <input  style="font-size: xx-large;" type="checkbox"  name="terminos">
-                    <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acceptar<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> términos y condiciones</a></label>
+                    <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acepta los<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> Términos y Condiciones</a></label>
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.terminos ? errors.terminos.msg : null%></p>
                 </div>
                
@@ -62,7 +62,7 @@
                     <button class="form__button--cuenta" type="submit">Crear cuenta</button>
                 </div>
                 <div class="form__box">
-                    <span style="color:aqua; margin-bottom: 40px;padding:10px">¿Ya Estàs Registrado?</span> <a href="/users/login" style="color:blanchedalmond">:) Ingresà</a>
+                    <span style="color:aqua; margin-bottom: 40px;padding:10px">¿Ya estás registrado?</span><a href="/users/login" style="color:blanchedalmond">| 😎 Ingresá</a>
                 </div>
             </form>
         </div>
