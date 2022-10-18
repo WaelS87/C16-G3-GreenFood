@@ -1,34 +1,55 @@
 const {check , body} = require('express-validator');
 const users = require('../data/usersModule').loadUsers();
-module.exports=[
-    check('nombre')
-        .notEmpty().withMessage('Debe Entrar Tu Nombre Por Favor....').bail()
-        /* .isAlpha().withMessage('Por Favor ingrése Tu Nombre Bien').bail() */
-        .isLength({min:3}).withMessage('Por Favor ingrése Tu Nombre Bien'),
+const db = require("../database/models");
+//const user = require('../database/models/user');
 
-    check('apellido')
-        .notEmpty().withMessage('Debe Entrar Tu Apellido Por Favor....').bail()
+let userFromEmail = (where) => {
+    db.User.findOne({
+        where : {
+            email : where
+        }
+    })
+    .then(user => {
+        return user === null
+    })
+    .catch(error => console.log(error))
+}
+
+
+module.exports=[
+    check('name')
+        .notEmpty().withMessage('Debe ingresar su nombre').bail()
+        /* .isAlpha().withMessage('Por Favor ingrése Tu Nombre Bien').bail() */
+        .isLength({min:3}).withMessage('El nombre ingresado no es válido'),
+
+    check('surname')
+        .notEmpty().withMessage('Debe ingresar su apellido').bail()
         /* .isAlpha().withMessage('Por Favor ingrése Tu Apellido Bien').bail() */
-        .isLength({min:3}).withMessage('Por Favor ingrése Tu Apellido Bien'),
+        .isLength({min:3}).withMessage('El apellido ingresado no es válido'),
 
     body('email').toLowerCase()
-        .notEmpty().withMessage('Debe Entrar Tu mail').bail()
-        .isEmail().withMessage('Email no es Valido').bail()
+        .notEmpty().withMessage('Debe ingresar una dirección email').bail()
+        .isEmail().withMessage('El email ingresado no es válido').bail()
         .custom((value,{req})=> {
-            let user = users.find(user => user.email === value.trim())
-            if(user){
-                return false
-            }else{
-                return true
-            }
-       }).withMessage('el mail ya esta registrado'),
+
+            return db.User.findOne({
+                where :{
+                    email : value.trim()
+                }
+            }).then(user => {
+                if(user){
+                    return Promise.reject()
+                }
+            }).catch( () => Promise.reject('El email ya se encuentra registrado a un usuario'))
+
+        }),
   
     check('password')
-        .notEmpty().withMessage('por favor Entre Tu Contraseña').bail()
-        .isLength({min:6}).withMessage('la contraseña minmo de 6 caracteres').bail(),
+        .notEmpty().withMessage('Ingrese una contraseña').bail()
+        .isLength({min:6}).withMessage('La contraseña debe tener un mínimo de 6 carácteres').bail(),
 
     body('password2')
-        .notEmpty().withMessage('por favor confirmar Tu Contraseña').bail()
+        .notEmpty().withMessage('Por favor, confirma tu contraseña').bail()
         .custom((value,{req}) => {
             if(value !== req.body.password ){
                 return false
@@ -38,7 +59,7 @@ module.exports=[
         }).withMessage('Las contraseñas no son igual'),
 
     check('terminos')  
-        .isString('on').withMessage('Debes Acceptar las Terminos y Condiciones')        
+        .isString('on').withMessage('Debes aceptar los "Términos y Condiciones"')        
 
         
         
