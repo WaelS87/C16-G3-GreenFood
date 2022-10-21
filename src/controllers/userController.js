@@ -62,14 +62,14 @@ module.exports = {
                         rolId
                     }
         
-                    res.cookie("greenFood", req.session.userLogin,{
-                        maxAge : 1000 * 600
-                    })
-                    
-                    return res.redirect("/")
-
+                res.cookie("greenFood", req.session.userLogin,{
+                    maxAge : 1000 * 600
                 })
-                .catch(error => console.log(error))
+                    
+                return res.redirect("/")
+
+              })
+              .catch(error => console.log(error))
 
         } else {
             return res.render("users/login",{
