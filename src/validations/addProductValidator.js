@@ -22,4 +22,5 @@ module.exports = [
             min : 10,
             max : 500
         }).withMessage("La descripción debe tener un largo de entre 10 a 500 letras.")
+    
 ]

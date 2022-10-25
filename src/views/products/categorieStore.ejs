@@ -12,7 +12,7 @@
                         <a href="/products/detalleProducto/<%= product.id %> ">
                             <div class="allProducts__div">
                                 <article class="allProducts__article">
-                                    <p class="allProducts__title"><%= product.title %></p>
+                                    <p class="allProducts__title"><%= product.name %></p>
                                     <img width='150' height="300" src="/images/productos/<%= product.images[0].file %> " alt="imagen de producto">
                                     <div class="allProducts__price">
                                         <h2>$<%= toThousand(product.price)%></h2><p><%= product.discount %>% OFF</p>
