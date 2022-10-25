@@ -128,7 +128,8 @@ module.exports = {
                 products ,
                 keywords : req.query.keywords,
                 toThousand,
-                camelSentence
+                camelSentence,
+                title : "Busqueda"
                
                /* title : "Busqueda",
                 products : result,

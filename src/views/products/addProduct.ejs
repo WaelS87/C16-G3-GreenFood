@@ -33,6 +33,7 @@
                     <div>
                         <label for="image">Imagen</label>
                         <input accept="image/*" name="image" type="file" id="image" multiple placeholder="Agregue una imagen">
+                        <p class="errorText"><%= locals.errors && errors.image ? errors.image.msg : null %></p>
                     </div>
                     <div>
                         <label for="discount">Descuento</label>
