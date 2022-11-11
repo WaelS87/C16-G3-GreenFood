@@ -119,3 +119,23 @@
 ## **Dejar de hacer**:
 - No jugar a contratiempo
 - No procrastinar tareas
+
+-----------------------------------------------------
+
+# **Retrospectiva para el Sprint 6**
+
+## **Empezar a hacer**:
+- Poner un poco más de esfuerzo para este tramo final.
+
+## **Hacer más**:
+- Asignarnos y/o ocuparnos de más tareas.
+
+## **Seguir Haciendo**:
+- Trabajar cada uno en sus tareas y avisar si necesita ayuda.
+
+## **Hacer menos**:
+- Dejar de lado los ejercicios e Playground.
+
+## **Dejar de hacer**:
+- No jugar a contratiempo
+- No procrastinar tareas
