@@ -173,7 +173,8 @@ $('password').addEventListener('blur',function(e){
 })
 /***********************confirmar la contraseña****************************************** */
 $('password2').addEventListener('focus',function(){
-    $('msgPas2').classList.remove('is-invalid','is-valid')
+    $('msgPas2').classList.remove('is-invalid')
+    $('msgPas2').classList.add('is-valid')
     $('msgPas2').innerHTML=null
 })
 $('password2').addEventListener('blur',function(e){
@@ -199,7 +200,7 @@ $('form').addEventListener('keydown',function(e){
     }
 })
 $('form').addEventListener('submit',function(e){
-    e.preventDefault();
+    
     let error = false;
     const elements = $('form').elements
     if(!$("terminos").checked){

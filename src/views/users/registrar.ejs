@@ -31,7 +31,7 @@
                 <div class="form__box">
                     
                     <input class="form__input" type="text" name="username" id="username" placeholder="Nombre de Usuario">
-                    <p style="color:red;font-size: 16px;"></p>
+                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.username ? errors.username.msg : null%></p>
                     <small id="msgUsr"></small>
                  </div>
                 <div class="form__box">
@@ -40,7 +40,7 @@
                     <small id="msgEma"></small>
                 </div>
                 <div class="form__box">
-                    <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña"><button id="pass-toggle">show</button>
+                    <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña"><p id="pass-toggle">show</p>
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password ? errors.password.msg : null%></p>
                     <small id="msgPas"></small>
 
@@ -53,7 +53,7 @@
                 </div>
                 <div class="form__box">
                     <label for="image">Sube tu avatar <small>(opcional)</small></label><br>
-                    <input accept="image/*" name="image" type="file" id="image" class="is-valid">
+                    <input accept="image/*" name="image" type="file" id="image" >
                     
                 </div><br>
                 <div class="form__box">

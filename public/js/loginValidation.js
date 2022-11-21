@@ -51,11 +51,12 @@ $('password').addEventListener('blur',function(e){
         $('msgPas').innerHTML=null
   })
   $('form').addEventListener('submit',function(e){
-           e.preventDefault()
+           
            let error = false
            let elements = $('form').elements
         for(let i = 0 ; i < elements.length-1 ; i++){
             if(!elements[i].value || elements[i].classList.contains('is-invalid')){
+                e.preventDefault()
                 error = true
                 elements[i].classList.add('is-invalid')
                 $('msgLog').innerText='hay error en el mail o conraseña'

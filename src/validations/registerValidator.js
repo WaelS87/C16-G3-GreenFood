@@ -8,6 +8,10 @@ module.exports=[
         .notEmpty().withMessage('Debe Entrar Tu Nombre Por Favor....').bail()
         /* .isAlpha().withMessage('Por Favor ingrése Tu Nombre Bien').bail() */
         .isLength({min:3}).withMessage('Por Favor ingrése Tu Nombre Bien'),
+        check('username')
+        .notEmpty().withMessage('Debe Entrar nombre de usuario Por Favor....').bail()
+        /* .isAlpha().withMessage('Por Favor ingrése Tu Nombre Bien').bail() */
+        .isLength({min:3}).withMessage('Por Favor ingrése Tu Nombre de usuario mas de 3 caracteres'),
 
     check('surname')
         .notEmpty().withMessage('Debe Entrar Tu Apellido Por Favor....').bail()

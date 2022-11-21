@@ -20,7 +20,7 @@ module.exports = {
         {
         name: name.trim(),
         surname: surname.trim(),
-        username:username.trim()? username:null,
+        username:username.trim(),
         email:email.trim(),
         password:bcryptjs.hashSync(password, 12),
         rolId:2,
