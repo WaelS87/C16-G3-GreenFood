@@ -50,8 +50,14 @@ $('password').addEventListener('blur',function(e){
         $('msgPas').classList.add('is-valid')
         $('msgPas').innerHTML=null
   })
+  $('form').addEventListener('keydown',function(e){
+    if(e.key==Enter){
+        e.preventDefault()
+    }
+})
+  
   $('form').addEventListener('submit',function(e){
-           
+         e.preventDefault()
            let error = false
            let elements = $('form').elements
         for(let i = 0 ; i < elements.length-1 ; i++){
@@ -62,6 +68,7 @@ $('password').addEventListener('blur',function(e){
                 $('msgLog').innerText='hay error en el mail o conraseña'
             }
         }
+        !error &&  $('form').submit()
   })
 
 

@@ -200,7 +200,7 @@ $('form').addEventListener('keydown',function(e){
     }
 })
 $('form').addEventListener('submit',function(e){
-    
+    e.preventDefault()
     let error = false;
     const elements = $('form').elements
     if(!$("terminos").checked){
@@ -210,11 +210,13 @@ $('form').addEventListener('submit',function(e){
     }
     for(let i = 0 ; i < elements.length-3 ; i++){
         if(!elements[i].value || elements[i].classList.contains('is-invalid')){
+            
             error = true
             elements[i].classList.add('is-invalid')
             $('msgReg').innerText='hay error en alguno o todo los campos'
         }
     }
+    !error &&  $('form').submit()
 })
 
 })
