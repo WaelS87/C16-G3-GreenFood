@@ -12,7 +12,7 @@
 
         <h3 class="login__ingresa">Registrate 😁</h3>
         <div class="container__form">
-            <form class="form" action="" method="post">
+            <form class="form" action="" id="form" method="post">
 
                 <div class="form__box">
                    
@@ -57,7 +57,7 @@
                     <small id="msgAva"></small>
                 </div><br>
                 <div class="form__box">
-                    <input  style="font-size: xx-large;" type="checkbox"  name="terminos">
+                    <input  style="font-size: xx-large;" type="checkbox"  name="terminos" id="terminos">
                     <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acepta los<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> Términos y Condiciones</a></label>
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.terminos ? errors.terminos.msg : null%></p>
                     <small id="msgTer"></small>
@@ -65,7 +65,8 @@
                
                 <div class="form__box">
                     <button class="form__button--cuenta" type="submit">Crear cuenta</button>
-                    <small id="msgReg"></small>
+                    <br>
+                    <small id="msgReg" class="is-invalid"></small>
                 </div>
                 <div class="form__box">
                     <span style="color:aqua; margin-bottom: 40px;padding:10px">¿Ya estás registrado?</span><a href="/users/login" style="color:blanchedalmond">| 😎 Ingresá</a>

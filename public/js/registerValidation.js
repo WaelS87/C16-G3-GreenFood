@@ -204,8 +204,8 @@ $('form').addEventListener('submit',function(e){
     const elements = $('form').elements
     if(!$("terminos").checked){
         error = true
-        $('terminos').classList.add('is-invalid')
-        $('terminos').innerHTML='Debe accpetar los terminos por favor'
+        $('msgTer').classList.add('is-invalid')
+        $('msgTer').innerHTML='Debe accpetar los terminos por favor'
     }
     for(let i = 0 ; i < elements.length-2 ; i++){
         if(!elements[i].value || elements[i].classList.contains('is-invalid')){

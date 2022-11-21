@@ -13,21 +13,24 @@
 
                 <h3 class="login__ingresa">Ingresá 😉</h3>
                 <div class="container__form">
-                    <form class="form" action="/users/login"  method="post">
+                    <form class="form" action="/users/login" id="form" method="post">
                         
                         <div class="form__box">
                             
                             <input class="form__input" type="text" name="email" id="email" placeholder="email">
                             <p style="color:red;font-size: 16px;"><%= locals.errors && errors.email ? errors.email.msg : null%></p>
+                            <small id="msgEma"></small>
                         </div>
                         <div class="form__box">
                             
                             <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña">
                             <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password ? errors.password.msg : null%></p>
+                            <small id="msgPas"></small>
                         </div>
                         
                         <div class="form__box">
                             <button class="form__button--cuenta" type="submit">Iniciar sesión</button>
+                            <p id="msgLog" class="is-invalid"></p>
                         </div>
                         <h5 class="olvide">¿Olvidaste tu contraseña?</h5>
                         <h5 class="olvide"><a href="/users/register">¿No tenés cuenta?, ¡registrate!</a></h5>
