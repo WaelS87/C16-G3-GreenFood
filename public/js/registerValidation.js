@@ -207,7 +207,7 @@ $('form').addEventListener('submit',function(e){
         $('msgTer').classList.add('is-invalid')
         $('msgTer').innerHTML='Debe accpetar los terminos por favor'
     }
-    for(let i = 0 ; i < elements.length-2 ; i++){
+    for(let i = 0 ; i < elements.length-3 ; i++){
         if(!elements[i].value || elements[i].classList.contains('is-invalid')){
             error = true
             elements[i].classList.add('is-invalid')
