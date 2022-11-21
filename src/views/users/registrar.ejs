@@ -18,6 +18,7 @@
                    
                     <input class="form__input" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null %>">
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.name? errors.name.msg : null%></p>
+                    <small  id="msgNom"></small>
                     
                 </div>
                     
@@ -25,41 +26,46 @@
                     
                    <input class="form__input" type="text" name="surname" id="surname" placeholder="Apellido" value="<%= locals.old && old.surname ? old.surname : null %>">
                    <p style="color:red;font-size: 16px;"><%= locals.errors && errors.surname ? errors.surname.msg : null%></p>
+                   <small id="msgSur"></small>
                 </div>
                 <div class="form__box">
                     
                     <input class="form__input" type="text" name="username" id="username" placeholder="Nombre de Usuario">
                     <p style="color:red;font-size: 16px;"></p>
+                    <small id="msgUsr"></small>
                  </div>
                 <div class="form__box">
-                    
                     <input class="form__input" type="text" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null %>">
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.email ? errors.email.msg : null%></p>
+                    <small id="msgEma"></small>
                 </div>
                 <div class="form__box">
-
-                   
-                    <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña">
+                    <input class="form__input" type="password" name="password" id="password" placeholder="Contraseña"><button id="pass-toggle">show</button>
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password ? errors.password.msg : null%></p>
+                    <small id="msgPas"></small>
 
                 </div>
                 <div class="form__box">
                     
                     <input class="form__input" type="password" name="password2" id="password2" placeholder="Reingrese su contraseña">
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.password2 ? errors.password2.msg : null%></p>
+                    <small id="msgPas2"></small>
                 </div>
                 <div class="form__box">
                     <label for="image">Sube tu avatar <small>(opcional)</small></label><br>
                     <input accept="image/*" name="image" type="file" id="image">
+                    <small id="msgAva"></small>
                 </div><br>
                 <div class="form__box">
                     <input  style="font-size: xx-large;" type="checkbox"  name="terminos">
                     <label style="color:rgb(133, 141, 221);padding-left: 2px;">Acepta los<a style="color:rgb(181, 228, 185)" href="/users/condiciones"> Términos y Condiciones</a></label>
                     <p style="color:red;font-size: 16px;"><%= locals.errors && errors.terminos ? errors.terminos.msg : null%></p>
+                    <small id="msgTer"></small>
                 </div>
                
                 <div class="form__box">
                     <button class="form__button--cuenta" type="submit">Crear cuenta</button>
+                    <small id="msgReg"></small>
                 </div>
                 <div class="form__box">
                     <span style="color:aqua; margin-bottom: 40px;padding:10px">¿Ya estás registrado?</span><a href="/users/login" style="color:blanchedalmond">| 😎 Ingresá</a>
@@ -109,6 +115,10 @@
     </main>
 
 <%- include("../partials/footer") %>
+<script src="/js/registerValidation.js">
+
+</script>
+
 </body>
 
 </html>
