@@ -81,7 +81,19 @@ module.exports = {
     },
 
     profile : (req,res) => {
-        const users = loadUsers(); 
+        db.User.findByPk(req.params.id,{
+            include:['images']
+        })
+        .then((user)=>{
+            return res.render("users/profile", {
+                title : "Perfil",
+                user
+            })
+        })
+        .catch((error)=>console.log(error))
+    },
+
+       /*  const users = loadUsers(); 
         const user = users.find(user => user.id === +req.params.id)
        
         if(req.session.userLogin){
@@ -91,9 +103,8 @@ module.exports = {
             })
         } else {
             return res.redirect("/users/login")
-        }
-        
-    },
+        } */
+  
 
   condiciones: (req, res) => {
         return res.render('users/condiciones', {
