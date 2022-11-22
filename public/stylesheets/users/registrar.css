@@ -3,6 +3,12 @@
     --color-verdeOscuro: #1E5128;
     --color-verde: #4E9F3D;
 }
+.is-valid{
+    color:green;
+}
+.is-invalid{
+    color:red;
+}
 
 .registrar__main{
         
