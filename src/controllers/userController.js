@@ -113,11 +113,12 @@ module.exports = {
         }     
     },
 
-    condiciones: (req, res) => {
+  condiciones: (req, res) => {
         return res.render('users/condiciones', {
             title: 'condiciones'
         })
     },
+
 
   logout: (req, res) => {
     req.session.destroy();
@@ -125,8 +126,35 @@ module.exports = {
     return res.redirect("/");
   },
 
+  
   update: (req, res) => {
-    const errors = validationResult(req);
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const { name, surname, email, password, username } = req.body;
+      db.User.create(
+        {
+        name: name.trim(),
+        surname: surname.trim(),
+        username:username.trim()? username:null,
+        email:email.trim(),
+        password:bcryptjs.hashSync(password, 12),
+        rolId:2,
+      }
+      )
+        .then(()=>{
+          return res.redirect("login");
+        })
+        .catch((error) => console.log(error));
+    } else {
+      return res.render("users/registrar", {
+        title: "Registro",
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    }
+  },
+
+/*     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
       const users = loadUsers();
@@ -161,5 +189,5 @@ module.exports = {
         user,
       });
     }
-  },
+  }, */
 };
