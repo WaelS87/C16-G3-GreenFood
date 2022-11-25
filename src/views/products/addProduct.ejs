@@ -15,19 +15,22 @@
                         <p id="nameMsg"></p>
                     </div>
                     <div>
-                        <label for="categoryId">Categoria</label>
-                        <select name="categoryId" id="categoryId">
+                        <label for="category">Categoria</label>
+                        <select name="categoryId" id="category">
                             <option value="" hidden selected>Seleccione...</option>
                             <% categories.forEach(({id, name}) => { %>
                                 <option value="<%= id %>"><%= name %></option>
                             <% }) %>
                         </select>
                         <p class="errorText"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %></p>
+                        <p id="categoryMsg"></p>
                     </div>
                     <div>
                         <label for="price">Precio</label>
                         <input name="price" type="text" id="price" placeholder="Agregue un precio" value="<%= locals.old && old.price ? old.price : null %>">
                         <p class="errorText"><%= locals.errors && errors.price ? errors.price.msg : null %></p>
+                        <p id="finalPrice"></p>
+                        <p id="priceMsg"></p>
                     </div>
                 </div>
                 <div class="form__r--container">
@@ -35,16 +38,19 @@
                         <label for="image">Imagen</label>
                         <input accept="image/*" name="image" type="file" id="image" multiple placeholder="Agregue una imagen">
                         <p class="errorText"><%= locals.errors && errors.image ? errors.image.msg : null %></p>
+                        <p id=""></p>
                     </div>
                     <div>
                         <label for="discount">Descuento</label>
                         <input name="discount" type="number" id="discount" min="0" max="100" step="5" value="<%= locals.old && old.discount ? old.discount : 0 %>">
                         <p class="errorText"><%= locals.errors && errors.discount ? errors.discount.msg : null %></p>
+                        <p id=""></p>
                     </div>
                     <div>
                         <label for="description">Descripción</label>
                         <textarea name="description" type="text" id="description" placeholder="Agregue una descripción" cols="50"><%= locals.old && old.description ? old.description : null %></textarea>
                         <p class="errorText"><%= locals.errors && errors.description ? errors.description.msg : null %></p>
+                        <p id=""></p>
                     </div>
                 </div>
                 <div class="actionButtons__container">

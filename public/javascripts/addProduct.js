@@ -83,3 +83,70 @@ $("name").addEventListener("blur", function (e) {
     /* Por último, checkea si todos los campos son válidos para habilitar el botón de "enviar" */
     checkFields()
 })
+
+/* Validación categoría del producto */
+$("category").addEventListener("blur", function (e) {
+    switch (true) {
+        case !this.value:
+        /* Si no se selecciona una categoría */
+            msgError("categoryMsg", "Debes elegir una categoría", e)
+            break;
+
+        /* Por defecto va a validar el campo */
+        default:
+            validField("categoryMsg", e)
+            break;
+    }
+    /* Por último, checkea si todos los campos son válidos para habilitar el botón de "enviar" */
+    checkFields()
+})
+
+/* Validación del precio del producto */
+/* Validación de datos ingresados */
+$("price").addEventListener("blur", function (e) {
+    switch (true) {
+        /* En el caso de que no exista el valor */
+        case !this.value.trim():
+            msgError("priceMsg" , "Debe declarar un precio")
+            break;
+        /* En el caso de que se ingrese un valor negativo */
+        case this.value < 9:
+            msgError("priceMsg" , "No puede ingresar un precio inferior a 0")
+            break;
+        /* Por defecto va a validar el campo */
+        default:
+            validField("priceMsg", e)
+            break;
+        }
+        
+    /* Por último, checkea si todos los campos son válidos para habilitar el botón de "enviar" */
+    checkFields()
+    })
+
+/* Se muestra en pantalla el precio final del producto, esto puede ser modificado por el descuento en el caso de que contenga */
+$("price").addEventListener("keyup", function (e) {
+    /* Guarda el valor del campo en la variable "Price" */
+    let price = this.value
+    /* Guarda el valor del campo "discount" en una variable */
+    let discount = $("discount").value; 
+    
+    /* El valor del campo "finalPrice" va a ser el resultado de restarle al precio la multiplicación del precio por el descuento dividido 100, en simples palabras, el precio con el descuento aplicado */
+    $("finalPrice").innerText = `Precio final: ${+price - (+price * +discount / 100)}`
+})
+
+
+/* Validación del descuento */
+/* Aplicación del descuento en el precio final */
+$("discount").addEventListener("keyup", function (e) {
+    /* Guarda el valor del campo "price" en una variable */
+    let price = $("price").value
+    /* Guarda el valor del campo en la variable "discount" */
+    let discount = this.value; 
+    
+    /* El valor del campo "finalPrice" va a ser el resultado de restarle al precio la multiplicación del precio por el descuento dividido 100, en simples palabras, el precio con el descuento aplicado */
+    $("finalPrice").innerText = `Precio final: ${+price - (+price * +discount / 100)}`
+})
+
+/* Validación de la descripción */
+
+
