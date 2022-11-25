@@ -20,7 +20,7 @@ module.exports = {
         {
         name: name.trim(),
         surname: surname.trim(),
-        username:username.trim()? username:null,
+        username:username.trim(),
         email:email.trim(),
         password:bcryptjs.hashSync(password, 12),
         rolId:2,
@@ -55,17 +55,12 @@ module.exports = {
                     email: req.body.email.trim()
                 }
             })
-              .then(({id, rolId, name, surname, username, password, email}) => {
+                .then(({id, rolId}) => {
 
-                req.session.userLogin = {
-                  id,
-                  rolId,
-                  name,
-                  surname,
-                  username,
-                  password,
-                  email
-                }
+                    req.session.userLogin = {
+                        id,
+                        rolId
+                    }
         
                 res.cookie("greenFood", req.session.userLogin,{
                     maxAge : 1000 * 600
@@ -86,7 +81,19 @@ module.exports = {
     },
 
     profile : (req,res) => {
-    /*  const users = loadUsers(); 
+        db.User.findByPk(req.params.id,{
+            include:['images'] 
+        })
+        .then((user)=>{
+            return res.render("users/profile", {
+                title : "Perfil",
+                user
+            })
+        })
+        .catch((error)=>console.log(error))
+    },
+
+       /*  const users = loadUsers(); 
         const user = users.find(user => user.id === +req.params.id)
        
         if(req.session.userLogin){
@@ -96,28 +103,15 @@ module.exports = {
             })
         } else {
             return res.redirect("/users/login")
-        }
-        
-    }, */
-    const user = req.session.userLogin;
+        } */
+  
 
-    if(req.session.userLogin){
-      
-    return res.render('users/profile', {
-            title: "Perfil",
-            user,
-        })
-
-    } else {
-    return res.redirect("users/login")
-        }     
-    },
-
-    condiciones: (req, res) => {
+  condiciones: (req, res) => {
         return res.render('users/condiciones', {
             title: 'condiciones'
         })
     },
+
 
   logout: (req, res) => {
     req.session.destroy();
@@ -125,8 +119,35 @@ module.exports = {
     return res.redirect("/");
   },
 
+  
   update: (req, res) => {
-    const errors = validationResult(req);
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const { name, surname, email, password, username } = req.body;
+      db.User.create(
+        {
+        name: name.trim(),
+        surname: surname.trim(),
+        username:username.trim()? username:null,
+        email:email.trim(),
+        password:bcryptjs.hashSync(password, 12),
+        rolId:2,
+      }
+      )
+        .then(()=>{
+          return res.redirect("login");
+        })
+        .catch((error) => console.log(error));
+    } else {
+      return res.render("users/registrar", {
+        title: "Registro",
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    }
+  },
+
+/*     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
       const users = loadUsers();
@@ -161,5 +182,5 @@ module.exports = {
         user,
       });
     }
-  },
+  }, */
 };
