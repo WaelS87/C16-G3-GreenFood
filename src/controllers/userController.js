@@ -81,10 +81,11 @@ module.exports = {
     },
 
     profile : (req,res) => {
-        db.User.findByPk(req.params.id,{
-            include:['images'] 
+        db.User.findByPk(req.params.Id,{
+            include:['avatar'] 
         })
         .then((user)=>{
+          //return res.send(user)
             return res.render("users/profile", {
                 title : "Perfil",
                 user

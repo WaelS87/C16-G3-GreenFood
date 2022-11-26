@@ -12,6 +12,8 @@ console.log("Agregar producto conectado exitosamente.");
 
 const formAddProduct = $("formAddProduct"); /* Encierro en una variable el nombre del ID del formulario */
 const elements = formAddProduct.elements; /* Declaro en otra variable el uso de la funcion "elements" del objeto formAddProducts */
+let totalCharacters = 500; /* Cantidad total de carácteres para utilizar en la descripción */
+let numberCharacters = 500; /* Número disponible de carácteres para usar en la descripción */
 
 /* Funciones para agregar/eliminar textos de error */
 const msgError = (element, msg, event) => {
@@ -43,6 +45,7 @@ const checkFields = () => {
         if(!elements[i].value || elements[i].classList.contains('errorText')) {
         error = true
         }
+
         console.log(error)
     }
 
@@ -132,10 +135,27 @@ $("price").addEventListener("keyup", function (e) {
     
     /* El valor del campo "finalPrice" va a ser el resultado de restarle al precio la multiplicación del precio por el descuento dividido 100, en simples palabras, el precio con el descuento aplicado */
     $("finalPrice").innerText = `Precio final: ${+price - (+price * +discount / 100)}`
+    $("discountApply").innerText = `Descuento aplicado: ${+price * +discount / 100}`
 })
 
 
 /* Validación del descuento */
+
+$("discount").addEventListener("blur", function (e) {
+    switch (true) {
+        /* Si el valor ingresado es menor a 0 (Lo cual debería ser imposible) o superior a 100 (Lo cual haría que tengamos que pagarle al cliente por el producto, algo ridículo) */
+        case this.value < 0 || this.value > 100:
+            msgError("discountMsg", "No puedes ingresar esa cantidad de descuento", e)
+            break;
+        /* Por defecto va a validar el campo */
+        default:
+            validField("discountMsg", e)
+            break;
+    }
+    /* Por último, checkea si todos los campos son válidos para habilitar el botón de "enviar" */
+    checkFields()
+})
+
 /* Aplicación del descuento en el precio final */
 $("discount").addEventListener("keyup", function (e) {
     /* Guarda el valor del campo "price" en una variable */
@@ -144,9 +164,60 @@ $("discount").addEventListener("keyup", function (e) {
     let discount = this.value; 
     
     /* El valor del campo "finalPrice" va a ser el resultado de restarle al precio la multiplicación del precio por el descuento dividido 100, en simples palabras, el precio con el descuento aplicado */
+    $("discountApply").innerText = `Descuento aplicado: ${+price * +discount / 100}`
     $("finalPrice").innerText = `Precio final: ${+price - (+price * +discount / 100)}`
 })
 
 /* Validación de la descripción */
 
+$("description").addEventListener("focus", function (e) {
+    /* Muestra la información de la descripción, o sea, la cantidad de carácteres disponibles para escribir*/
+    $("descriptionInfo").hidden = false;
+    $("numberCharacters").innerHTML = numberCharacters
 
+    /* Elimina el error si existía anteriormente */
+    cleanError("descriptionMsg", e)
+})
+
+$("description").addEventListener("blur", function (e) {
+    $("descriptionInfo").hidden = true;
+
+    switch (true) {
+        /* Si el valor es inexistente, arroja un error */
+        case !this.value.trim():
+            msgError("descriptionMsg", "Necesitas ingresar una descripción", e)
+            break;
+        /* Si el valor es inferior a los 20 carácteres */
+        case this.value.trim().length < 10:
+            msgError("descriptionMsg", "Debe contener mínimo 10 carácteres", e)
+            break;
+        /* Si el valor supera los 500 carácteres */
+        case this.value.trim().length >= 500:
+            msgError("descriptionMsg", "Debe contener máximo 500 carácteres", e)
+            break;
+        /* Por defecto va a validar el campo */
+        default:
+            validField("descriptionMsg", e)
+            break;
+    }
+    /* Por último, checkea si todos los campos son válidos para habilitar el botón de "enviar" */
+    checkFields()
+})
+
+$("description").addEventListener("keyup", function (e) {
+    /* En una variable guarda el resultado de la resta de los carácteres totales disponibles con la cantidad de carácteres ingresados en el campo. */
+    numberCharacters = totalCharacters - +this.value.length
+
+    /* En el campo muestra numéricamente la cantidad de carácteres disponibles */
+    $("numberCharacters").innerHTML = numberCharacters;
+
+    if (numberCharacters <= 0) {
+        /* Si la cantidad disponible de carácteres es igual o inferior a 0, se oculta los números y se muestra el texto de errorº */
+        $("descriptionInfo").hidden = true;
+        msgError("descriptionMsg", "No debe superarse los 500 carácteres", e)
+    } else {
+        /* Por defecto, valida el campo eliminando el anterior error en el caso de que existiese */
+        $("descriptionInfo").hidden = false;
+        cleanError("descriptionMsg", e)
+    }
+})
