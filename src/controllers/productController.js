@@ -213,6 +213,7 @@ module.exports = {
                             errors : errors.mapped()
                         })
                     })
+                    .catch(error => console.log(error))
             }
         } else {
             return res.redirect("/")
@@ -221,11 +222,14 @@ module.exports = {
 
     selectDelete : (req,res) =>{
         if(req.session.userLogin && res.locals.userLogin.rolId === 1){
-            const products= loadProducts()
-            return res.render('products/deleteProducts',{
-                products,
-                title: "Eliminar productos"
-            })
+            db.Product.findAll()
+                .then(products => {
+                    return res.render('products/deleteProducts',{
+                        products,
+                        title: "Eliminar productos"
+                    })
+                })
+                .catch(error => console.log(error))
         } else {
             return res.redirect("/")
         }

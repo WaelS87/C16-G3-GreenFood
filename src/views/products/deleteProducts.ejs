@@ -13,7 +13,7 @@
                             <select name="id" id="id">
                                 <option value="" hidden selected>Seleccione un producto</option>
                                 <% products.forEach(product => { %>
-                                    <option value="<%= product.id %>"><%= product.title %></option>
+                                    <option value="<%= product.id %>"><%= product.name %></option>
                                 <% }) %>
                                
                             </select>
@@ -22,11 +22,6 @@
                         <div class="actionButtons__container">
                             <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
                             <button class="btn btn-danger" type="submit">Eliminar producto</button>
-                            
-                                        
-                                
-                                    
-                                
                         </div>
                     </form>
                 </section>
