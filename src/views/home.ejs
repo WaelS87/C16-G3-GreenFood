@@ -25,76 +25,19 @@
                     <span class="green__word">Green</span>
                 </h1>
             <div class="carrousel">
-               <div class="carrousel__grande">
-                <div class="producto__superior__container">
-                    <div class="producto__izquierda">
-                        <a href="/products/detail">
-                            <div class="producto p1">
-                                <h4 class="producto__precio">$xxxx</h4>
-                            </div>    
+                <div class="carrousel__grande">
+                   <% products.forEach(product => { %>
+                        <a href="/products/detalleProducto/<%= product.id %> ">
+                            <img class="homeProducts" src="../images/productos/<%= product.images[0].file %> " alt="<%= product.name %> ">
                         </a>
-                        
-                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                    </div>
-                    <div class="producto__linea linea__dos"></div>
-                    <div class="producto__central">
-                        <a href="/detalleProducto">
-                        <div class="producto p3">
-                            <h4 class="producto__precio">$xxxx</h4>
-                        </div>    
-                        </a>
-                        
-                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                    </div>
-                    <div class="producto__linea"></div>
-                    <div class="producto__derecha">
-                        <a href="/detalleProducto">
-                        <div class="producto p2">
-                            <h4 class="producto__precio">$xxxx</h4>
-                        </div>    
-                        </a>
-                        
-                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                    </div>
+                   <% }) %>
                 </div>
-                <div class="producto__inferior__container">
-                    <div class="producto__izquierda">
-                        <a href="/detalleProducto">
-                        <div class="producto p2">
-                            <h4 class="producto__precio">$xxxx</h4>
-                        </div>    
-                        </a>
-                        
-                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                    </div>
-                    <div class="producto__linea linea__dos"></div>
-                    <div class="producto__central">
-                        <a href="/detalleProducto">
-                        <div class="producto p3">
-                            <h4 class="producto__precio">$xxxx</h4>
-                        </div>    
-                        </a>
-                        
-                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                    </div>
-                    <div class="producto__linea"></div>
-                    <div class="producto__derecha">
-                        <a href="/detalleProducto">
-                        <div class="producto p1">
-                            <h4 class="producto__precio">$xxxx</h4>
-                        </div>    
-                        </a>
-                        
-                        <h5 class="producto__nombre">Lorem, ipsum dolor.</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
                 <ul class="carrousel__puntos">
                     <li class="carrousel__punto activo"></li>
                     <li class="carrousel__punto"></li>
                 </ul>
             </div>
+        </div>
         </section>
         <section class="home__ayuda__container">
             <h1>¿Necesitas ayuda?</h1>
@@ -162,7 +105,11 @@
         </section>
         
     </main>
+    <!-- Footer -->
     <%- include("./partials/footer") %> 
+
+    <!-- Scripts -->
+    <script src="/js/carrousel.js"></script>
 </body>
 
 </html>

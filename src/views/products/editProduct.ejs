@@ -6,51 +6,65 @@
     <main class="addProduct__main">
         <section class="form__container">
             <h1>Editar</h1>
-            <form action="/products/update/<%=product.id%>?_method=PUT" method="POST">
+            <form action="/products/update/<%=product.id%>?_method=PUT" method="POST" id="formEditProduct">
                 <div class="form__l--container">
                     <div>
                         <label for="name">Nombre del producto</label>
                         <input name="name" type="text" id="name" placeholder="Agregue un nombre" value="<%= product.name %>">
                         <p class="errorText"><%= locals.errors && errors.name ? errors.name.msg : null %></p>
+                        <p id="nameMsg"></p>
                     </div>
                     <div>
                         <label for="categoryId">Categoria</label>
-                        <select name="categoryId" id="categoryId">
+                        <select name="categoryId" id="category">
                             <% categories.forEach(({id, name}) => { %>
                                 <option value="<%= id %>" <%= id === product.categoryId && 'selected' %>><%= name %></option>
                             <% }) %>
                         </select>
                         <p class="errorText"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %></p>
+                        <p id="categoryMsg"></p>
                     </div>
                     <div>
                         <label for="price">Precio</label>
                         <input name="price" type="text" id="price" placeholder="Agregue un precio" value="<%= product.price %>">
                         <p class="errorText"><%= locals.errors && errors.price ? errors.price.msg : null %></p>
+                        <p id="finalPrice"></p>
+                        <p id="priceMsg"></p>
                     </div>
                 </div>
                 <div class="form__r--container">
                     <div>
                         <label for="image">Imagen</label>
                         <input name="image" type="file" id="image" placeholder="Agregue una imagen" multiple value="<%= product.image %>">
+                        <p id=""></p>
                     </div>
                     <div>
                         <label for="discount">Descuento</label>
                         <input name="discount" type="number" id="discount" min="0" max="100" step="5" value="<%= product.discount %>">
                         <p class="errorText"><%= locals.errors && errors.discount ? errors.discount.msg : null %></p>
+                        <p id="discountApply"></p>
+                        <p id="discountMsg"></p>
                     </div>
                     <div>
                         <label for="description">Descripción</label>
                         <textarea name="description" type="text" id="description" placeholder="Agregue una descripción" cols="50"><%= product.description %></textarea>
                         <p class="errorText"><%= locals.errors && errors.description ? errors.description.msg : null %></p>
+                        <p id="descriptionInfo" hidden><span id="numberCharacters"></span> disponibles</p>
+                        <p id="descriptionMsg"></p>
                     </div>
                 </div>
                 <div class="actionButtons__container">
-                    <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
-                    <button class="enviar__button">Terminar</button>
+                    <a href="/users/profile/<%= locals.userLogin.id %> "><p class="cancelar__button">Cancelar</p></a>
+                    <button type="submit" class="enviar__button" id="btn-submit" disabled>Terminar</button>
                 </div>
             </form>
         </section>
     </main>
+    <!-- footer -->
     <%- include("../partials/footer") %> 
+
+    <!-- Scripts -->
+    <%- include("../partials/scripts") %> 
+    <script src="/js/editProductValidation.js"></script>
 </body>
 </html>

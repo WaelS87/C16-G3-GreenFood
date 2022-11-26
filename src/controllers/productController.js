@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path")
+
 const {loadProducts, storeProducts} = require("../data/productsModule")
 const {validationResult} = require("express-validator")
 const db = require('../database/models');
@@ -205,8 +208,10 @@ module.exports = {
                     attributes : ["id", "name"],
                     order : ["name"]
                 })
-                    .then(categories => {
-                        return res.render("products/addProduct", {
+                .then(categories => {
+
+                    
+                    return res.render("products/addProduct", {
                             categories,
                             old : req.body,
                             title : "Agregar producto",

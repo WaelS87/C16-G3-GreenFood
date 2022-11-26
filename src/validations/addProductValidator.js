@@ -1,4 +1,4 @@
-const { check } = require("express-validator");
+const { body, check } = require("express-validator");
 
 module.exports = [
     check("name")
@@ -21,6 +21,21 @@ module.exports = [
         .isLength({
             min : 10,
             max : 500
-        }).withMessage("La descripción debe tener un largo de entre 10 a 500 letras.")
-    
+        }).withMessage("La descripción debe tener un largo de entre 10 a 500 letras."),
+    body("image")
+        .custom((value, {req}) => {
+            if(req.files[0]){
+                return true
+            } else {
+                return false
+            }
+        }).withMessage("Debes agregar una imagen"),
+    body("image")
+        .custom((value, {req}) => {
+            if(req.files.length > 3){
+                return false
+            } else {
+                return true
+            }
+        }).withMessage("Solo se permiten 3 imágenes")
 ]
