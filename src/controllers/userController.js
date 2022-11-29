@@ -82,7 +82,7 @@ module.exports = {
 
     profile : (req,res) => {
         db.User.findByPk(req.params.id,{
-            include:['images'] 
+            include:['avatars'] 
         })
         .then((user)=>{
             return res.render("users/profile", {

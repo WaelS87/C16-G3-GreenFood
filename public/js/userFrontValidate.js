@@ -3,28 +3,8 @@ const exRegEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
 const exRegPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,12}/
 const $ = (element)=> document.getElementById(element)
 
-
-const msgError = (element, msg, {target}) => {
-    $(element).innerText = msg;
-    target.classList.add('errorText');
-};
-
-const cleanField = (element, target) => {
-    $(element).innerText = null;
-    target.classList.remove('errorText', 'is-valid')
-};
-
-const validField = (element,{target}) => {
-    cleanField(element, target)
-    target.classList.add('is-valid');
-    
-};
-
-window.addEventListener("load",function(){
-
-
-
-/* const verifyEmail = async (email) => {
+  /******************************verificar si esta el mail resistrado********* */
+  const verifyEmail = async (email) => {
     //llamado a la API
     try {
         const data = JSON.stringify({
@@ -48,7 +28,26 @@ window.addEventListener("load",function(){
     } catch (error) {
         console.error
     }
-} */
+}
+
+
+const msgError = (element, msg, {target}) => {
+    $(element).innerText = msg;
+    target.classList.add('errorText');
+};
+
+const cleanField = (element, target) => {
+    $(element).innerText = null;
+    target.classList.remove('errorText', 'is-valid')
+};
+
+const validField = (element,{target}) => {
+    cleanField(element, target)
+    target.classList.add('is-valid');
+    
+};
+
+window.addEventListener("load",function(){
 
 
 $('name').addEventListener('blur', function(e){
