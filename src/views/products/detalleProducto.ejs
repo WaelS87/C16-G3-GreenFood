@@ -55,7 +55,10 @@
                     <p>No se cual es mi codigo postal</p>
                 </div>
                 <div class="main__comprar">
-                    <button class="main__comprar__button">comprar</button>
+                    <button class="main__comprar__button">Comprar</button>
+                </div>
+                <div class="editButton <%= locals.userLogin && locals.userLogin.rolId === 1 ? "administrador" : null %>">
+                    <a href="/products/editProduct/<%= product.id %>">Editar</a>
                 </div>
             </div>
             <div class="detalleProducto__description__container">

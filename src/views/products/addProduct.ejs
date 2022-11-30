@@ -6,27 +6,31 @@
     <main class="addProduct__main">
         <section class="form__container">
             <h1>Agregar</h1>
-            <form action="/products/storeProduct" method="POST" enctype="multipart/form-data">
+            <form action="/products/storeProduct" method="POST" enctype="multipart/form-data" id="formAddProduct">
                 <div class="form__l--container">
                     <div>
                         <label for="name">Nombre del producto</label>
                         <input name="name" type="text" id="name" placeholder="Agregue un nombre" value="<%= locals.old && old.name ? old.name : null %>">
                         <p class="errorText"><%= locals.errors && errors.name ? errors.name.msg : null %></p>
+                        <p id="nameMsg"></p>
                     </div>
                     <div>
-                        <label for="categoryId">Categoria</label>
-                        <select name="categoryId" id="categoryId">
+                        <label for="category">Categoria</label>
+                        <select name="categoryId" id="category">
                             <option value="" hidden selected>Seleccione...</option>
                             <% categories.forEach(({id, name}) => { %>
                                 <option value="<%= id %>"><%= name %></option>
                             <% }) %>
                         </select>
                         <p class="errorText"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %></p>
+                        <p id="categoryMsg"></p>
                     </div>
                     <div>
                         <label for="price">Precio</label>
                         <input name="price" type="text" id="price" placeholder="Agregue un precio" value="<%= locals.old && old.price ? old.price : null %>">
                         <p class="errorText"><%= locals.errors && errors.price ? errors.price.msg : null %></p>
+                        <p id="finalPrice"></p>
+                        <p id="priceMsg"></p>
                     </div>
                 </div>
                 <div class="form__r--container">
@@ -34,25 +38,36 @@
                         <label for="image">Imagen</label>
                         <input accept="image/*" name="image" type="file" id="image" multiple placeholder="Agregue una imagen">
                         <p class="errorText"><%= locals.errors && errors.image ? errors.image.msg : null %></p>
+                        <p id=""></p>
                     </div>
                     <div>
                         <label for="discount">Descuento</label>
                         <input name="discount" type="number" id="discount" min="0" max="100" step="5" value="<%= locals.old && old.discount ? old.discount : 0 %>">
                         <p class="errorText"><%= locals.errors && errors.discount ? errors.discount.msg : null %></p>
+                        <p id="discountApply"></p>
+                        <p id="discountMsg"></p>
                     </div>
                     <div>
                         <label for="description">Descripción</label>
                         <textarea name="description" type="text" id="description" placeholder="Agregue una descripción" cols="50"><%= locals.old && old.description ? old.description : null %></textarea>
                         <p class="errorText"><%= locals.errors && errors.description ? errors.description.msg : null %></p>
+                        <p id="descriptionInfo" hidden><span id="numberCharacters"></span> disponibles</p>
+                        <p id="descriptionMsg"></p>
                     </div>
                 </div>
                 <div class="actionButtons__container">
                     <a href="/users/adminProfile"><p class="cancelar__button">Cancelar</p></a>
-                    <button class="enviar__button">Enviar</button>
+                    <button type="submit" class="enviar__button" id="btn-submit" disabled>Enviar</button>
                 </div>    
             </form>
         </section>
     </main>
+    <!-- footer -->
     <%- include("../partials/footer") %> 
+
+    <!-- Scripts -->
+    <%- include("../partials/scripts") %> 
+    <script src="/js/addProductValidation.js"></script>
+
 </body>
 </html>

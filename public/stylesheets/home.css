@@ -384,12 +384,13 @@
 .carrousel{
     width: 90%;
     max-width: 120em;
-    padding: 2em;
+    *padding: 1em 2em;
     overflow: hidden;
 }
 
 .carrousel__grande {
     width:200%;
+    height: 300px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -399,9 +400,10 @@
     transform: translateX(0%);
 }
 
-.carrousel img {
-    width: calc(100% / 2 -2em);
-    min-height: 10vh;
+.carrousel .homeProducts {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
 }
 
 .carrousel__puntos{
@@ -412,12 +414,15 @@
     align-items: center;
     flex-flow: row nowrap;
     margin: 1em 0 0;
+    list-style: none;
 }
 
 .carrousel__punto {
+    border-radius: 50px;
     width: 2em;
     height: 2em;
     margin: 1em 1em 0;
+    background-color: var(--color-blanco);
 }
 
 .carrousel__punto.activo{

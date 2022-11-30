@@ -15,7 +15,7 @@ router
     .get("/carrito", carrito)
     /* Agregar un producto */
     .get("/addProduct", addProduct)
-    .post("/storeProduct", uploadImageProduct.array('image', 3), addProductValidator, store)
+    .post("/storeProduct", uploadImageProduct.array('image'), addProductValidator, store)
     /* Eliminar un producto */
     .get("/selectDelete", selectDelete)
     .delete('/deleteProduct', deleteProduct)

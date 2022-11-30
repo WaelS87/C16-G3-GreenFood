@@ -3,7 +3,7 @@
 <%- include("../partials/head") %> 
 
     
-<body class="profile <%= user.rolId %>">
+<body class="profile <%= user.rolId === 1 ? "administrador" : none %>">
     <%- include("../partials/header") %> 
     <main class="profile__main">
         <section class="profile__section">
@@ -16,7 +16,7 @@
             <form action="?_method=PUT" method="post" class="profile__form">
                 <div class="profile__form__l--container">
                     <div class="profile__imgPerfil">
-                        <img src="/images/<%= user.avatar ? user.avatar : 'perfil por defecto.jpg' %> " alt="avatarnPerfil">
+                        <img src="/images/<%= user.avatar.file ? user.avatar.file : 'perfil por defecto.jpg' %>" alt="avatarPerfil">
                         <input name="avatar" type="file" id="avatar" placeholder="Seleccionar foto">
                         <p id="msgErrorAvatar" class="errorText" ></p>
                     </div>
