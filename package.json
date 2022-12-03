@@ -27,5 +27,8 @@
     "save": "^2.5.0",
     "sequelize": "^6.23.2",
     "sequelize-cli": "^6.5.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
