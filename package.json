@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "node ./src/bin/www",
-    "start": "nodemon ./src/bin/www",
+    "start": "node ./src/bin/www",
+    "server": "nodemon ./src/bin/www",
+    "client:start": "cd admin && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client:start\"",
     "rehacer": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all"
   },
   "dependencies": {
