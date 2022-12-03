@@ -31,6 +31,5 @@
     "sequelize-cli": "^6.5.1"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0"
-  }
+    "concurrently": "^7.6.0"  }
 }
