@@ -10,6 +10,7 @@ require("dotenv").config();
 const localsUserCheck = require('./middleware/localsUserCheck');
 
 const cookieCheck = require('./middleware/cookieCheck')
+const cors = require('cors');
 
 
 var indexRouter = require('./routes/index');
@@ -41,7 +42,10 @@ app.use(localsUserCheck)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/products", productRouter)
+app.use(cors())
 
+
+app.use("/api",require('./routes/api/apiMain'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
