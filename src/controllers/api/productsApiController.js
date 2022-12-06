@@ -1,6 +1,6 @@
 const db = require('../../database/models');
 module.exports = {
-    all : async(req,res)=>{
+    /*list : async(req,res)=>{
         try {
             const totalProducts = await db.Product.count()
             return res.status(200).json({
@@ -17,6 +17,37 @@ module.exports = {
             })
             
         }
+    },*/
+    list: async (req, res) => {
+      try {
+        let products = await db.Product.findAll({
+          order: ["name"],
+          attributes: {
+            exclude: ["created_at", "updated_at"],
+          },
+        });
+        if (products.length) {
+          return res.status(200).json({
+            ok: true,
+            meta: {
+              total: products.length,
+            },
+            data: products,
+          });
+        }
+        throw new Error({
+          ok: false,
+          msg: "hubo un error",
+        });
+      } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+          ok: false,
+          msg: error.message
+            ? error.message
+            : "comunica con elcontralador del sitio"
+        });
+      }
     },
     detail: async (req, res) => {
         /* OPTIONS DEFAULT */
