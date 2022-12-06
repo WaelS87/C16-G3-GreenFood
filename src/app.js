@@ -34,6 +34,7 @@ app.use(session({
   saveUninitialized : true
 }));
 
+app.use("/api", require("./routes/api/mainAPI"));
 app.use(cookieCheck);
 
 app.use(localsUserCheck)

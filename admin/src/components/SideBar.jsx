@@ -6,7 +6,7 @@ const SideBar = () => {
     <ul className ="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
        
-    <link className ="sidebar-brand d-flex" to="/">
+    <link className ="sidebar-brand" to="/">
         <div className ="sidebar-brand-icon">
             <img className ="w-100" src="/images/img.png" alt="logo GreenFood"/>
         </div>
