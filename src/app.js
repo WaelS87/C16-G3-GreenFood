@@ -46,7 +46,7 @@ app.use("/products", productRouter)
 app.use(cors())
 
 
-app.use("/api",require('./routes/api/apiMain'))
+app.use("/api",require('./routes/api/productApi'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

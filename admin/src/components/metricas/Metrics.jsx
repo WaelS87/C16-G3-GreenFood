@@ -14,12 +14,12 @@ export const Metrics = () => {
 
   useEffect(() => {
 
-    UseFetch('/total')
-      .then(({ data }) => {
+    UseFetch('/list')
+      .then(({ data,meta }) => {
         setState({
           products: {
             ...state.products,
-            value: data.totalProducts,
+            value: meta.total
           },
         });
       })
