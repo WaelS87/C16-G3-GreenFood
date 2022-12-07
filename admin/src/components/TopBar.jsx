@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TopBar = () => {
+export const TopBar = () => {
   return (
     <nav className ="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -16,7 +16,7 @@ const TopBar = () => {
             <a className ="nav-link dropdown-toggle" href="/" id="alertsDropdown">
                 <i className ="fas fa-bell fa-fw"></i>
             
-                <span className ="badge badge-danger badge-counter">3+</span>
+                <span className ="badge badge-danger badge-counter"></span>
             </a>
         </li>
 
@@ -25,7 +25,7 @@ const TopBar = () => {
             <a className ="nav-link dropdown-toggle" href="/" id="messagesDropdown">
                 <i className ="fas fa-envelope fa-fw"></i>
                
-                <span className ="badge badge-danger badge-counter">7</span>
+                <span className ="badge badge-danger badge-counter"></span>
             </a>
         </li>
 
@@ -34,7 +34,7 @@ const TopBar = () => {
        
         <li className ="nav-item dropdown no-arrow">
             <a className ="nav-link dropdown-toggle" href="/" id="userDropdown">
-                <span className ="mr-2 d-none d-lg-inline text-gray-600 small">Jordan Walke</span>
+                <span className ="mr-2 d-none d-lg-inline text-gray-600 small">GreenFood</span>
                 <img className ="img-profile rounded-circle" src="assets/images/jordan-walke.png" alt="Jordan Walke - Creador de React" width="60"/>
             </a>
         </li>
@@ -44,5 +44,3 @@ const TopBar = () => {
 </nav>
   )
 }
-
-export default TopBar
