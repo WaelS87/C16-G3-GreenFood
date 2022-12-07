@@ -10,11 +10,18 @@ export const Metrics = () => {
       value: 0,
       color: "primary",
     },
+
+    users: {
+      title: "Total de Usuarios",
+      icon: "fa-users",
+      value: 0,
+      color: "sucess",
+    },
   });
 
   useEffect(() => {
 
-    UseFetch('/list')
+    UseFetch('/totals')
       .then(({ data,meta }) => {
         setState({
           products: {
