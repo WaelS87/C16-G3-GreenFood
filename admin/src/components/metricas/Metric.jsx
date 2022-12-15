@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Metric = ({title, value, color, icon}) => {
+ export const Metric = ({title, value, color, icon}) => {
   return (
     <div className ="col-md-4 mb-4">
     <div className ={`card border-left-${color} shadow h-100 py-2`}>
@@ -20,4 +20,3 @@ const Metric = ({title, value, color, icon}) => {
   )
 }
 
-export default Metric

@@ -12,7 +12,7 @@ module.exports = {
         return res.status(200).json({
           ok: true,
           meta: {
-            total: count,
+            total:count
           },
           data: products
         });

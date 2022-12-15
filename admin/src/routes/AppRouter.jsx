@@ -3,6 +3,7 @@ import {Route,createBrowserRouter,createRoutesFromElements,RouterProvider} from 
 import {Root} from '../components/Root'
 import {Home} from '../pages/Home'
 import { Products } from '../pages/Products'
+import { Users } from '../pages/Users'
 
 
 const router = createBrowserRouter(

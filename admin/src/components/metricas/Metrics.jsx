@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Metric } from "./Metric";
+import { Metric } from './Metric'
 import { UseFetch } from '../../hooks/UseFetch'
 
 export const Metrics = () => {
@@ -21,8 +21,8 @@ export const Metrics = () => {
 
   useEffect(() => {
 
-    UseFetch('/totals')
-      .then(({ data,meta }) => {
+    UseFetch('/list')
+      .then(({ meta,data }) => {
         setState({
           products: {
             ...state.products,
