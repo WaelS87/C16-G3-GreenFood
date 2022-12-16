@@ -35,7 +35,8 @@ app.use(session({
   saveUninitialized : true
 }));
 
-app.use("/api", require("./routes/api/mainAPI"));
+
+
 app.use(cookieCheck);
 
 app.use(localsUserCheck)
@@ -46,7 +47,10 @@ app.use("/products", productRouter)
 app.use(cors())
 
 
-app.use("/api",require('./routes/api/productApi'))
+app.use("/api", require("./routes/api/mainAPI"));
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
