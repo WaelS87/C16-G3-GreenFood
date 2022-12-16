@@ -14,6 +14,7 @@ module.exports = {
           exclude: ["created_at", "updated_at"],
         },
       });
+     
       if (products.length) {
         return res.status(200).json({
           ok: true,

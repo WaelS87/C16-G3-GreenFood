@@ -1,40 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react'
+import { UseFetch } from '../../hooks/UseFetch';
 import { Metric } from './Metric'
-import { UseFetch } from '../../hooks/UseFetch'
 
 export const Metrics = () => {
-  const [state, setState] = useState({
-    products: {
-      title: "Total de Productos",
-      icon: "fa-store",
-      value: 0,
-      color: "primary",
-    },
 
-    users: {
-      title: "Total de Usuarios",
-      icon: "fa-users",
-      value: 0,
-      color: "sucess",
-    },
-  });
+    const [state, setState] = useState({
+        products : {
+            title : "Total Productos",
+            icon : "fa-boxes",
+            value : 0,
+            color : "primary"
+        },
+        users : {
+            title : "Usuarios registrados",
+            icon : "fa-users",
+            value : 0,
+            color : "success"
+        },
+        categories : {
+            title : "Categorias activas",
+            icon : "fa-folder",
+            value : 0,
+            color : "warning"
+        }
+    });
 
-  useEffect(() => {
-
-    UseFetch('/list')
-      .then(({ meta,data }) => {
-        setState({
-          products: {
-            ...state.products,
-            value: meta.total
-          },
-        });
-      })
-      .catch((error) => console.log(error));
-  }, []);
+    useEffect(() => {
+       
+        UseFetch('/totals')
+            .then(({ data }) => {
+                setState({
+                    products : {
+                        ...state.products,
+                        value : data.totalProducts
+                    },
+                    users : {
+                        ...state.users,
+                        value : data.totalUsers
+                    },
+                    categories : {
+                        ...state.categories,
+                        value : data.totalCategories
+                    }
+                })
+            }).catch((error)=> console.log(error))
+    
+    }, []);
+    
   return (
     <div className="row">
-      <Metric {...state.products} />
+        <Metric {...state.products}/>
+        <Metric {...state.users}/>
+        <Metric {...state.categories}/>
     </div>
-  );
-};
+
+  )
+}
