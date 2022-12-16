@@ -4,7 +4,7 @@ module.exports = {
     totals : async (req, res) => {
         try {
 
-            const totalProducts = await db.Product.count();
+           
             const totalUsers = await db.User.count(); 
             const totalCategories = await db.Category.count(); 
 
@@ -12,7 +12,6 @@ module.exports = {
                 ok: true,
                 data: {
                     totalCategories,
-                    totalProducts,
                     totalUsers
                 } 
             })

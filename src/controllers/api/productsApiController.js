@@ -1,4 +1,10 @@
+
+
+
+
 const db = require("../../database/models");
+
+const { sendJsonError } = require("../../helpers/sendJsonError");
 module.exports = {
   list: async (req, res) => {
     try {
@@ -22,7 +28,7 @@ module.exports = {
         msg: "hubo un error",
       });
     } catch (error) {
-      console.log(error);
+      
       return res.status(500).json({
         ok: false,
         msg: error.message
