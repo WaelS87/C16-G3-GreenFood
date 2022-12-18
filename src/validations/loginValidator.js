@@ -18,7 +18,7 @@ module.exports = [
                 if(!user || !bcryptjs.compareSync(value,user.password)){
                     return Promise.reject()
                 }
-            }).catch( () => Promise.reject('Email y/o contraseña inválidos'))
+            }).catch( () => Promise.reject('Email o contraseña inválidos'))
     
         })
 ]
