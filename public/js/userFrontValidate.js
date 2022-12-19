@@ -198,7 +198,7 @@ $('profile__form').addEventListener('submit', (e) => {
     let error = false;
     const elements = $('profile__form').elements;
 
-    for (let i = 0; i < elements.length - 2; i++) {
+    for (let i = 0; i < elements.length - 3; i++) {
         
         if(!elements[i].value || elements[i].classList.contains('errorText')){
             error = true;
