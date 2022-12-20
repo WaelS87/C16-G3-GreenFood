@@ -76,50 +76,28 @@
             <hr>
             <div class="productos__recomendados__container">
                 <div class="recomendado__container">
-                    <h3 class="recomendado__nombre">Lorem.</h3>
-                    <div class="producto recomendado1">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
+                  
+                        <div class="producto recomendado">
+                           
+                                <h3 class="recomendado__nombre"><%= product.name %> </h3>
+                                <img  src="/images/productos/<%= product.images[0].file %> " alt="imagen de producto">
+                                <h3 class="recomendado__estrellas">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </h3>
+                                <h2>$<%= toThousand(product.price)%></h2>
+                            </div>
+                        </div>
+                       
                     </div>
-                </div>
-                <div class="recomendado__container">
-                    <h3 class="recomendado__nombre">Lorem2.</h3>
-                    <div class="producto recomendado2">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-                <div class="recomendado__container">
-                    <h3 class="recomendado__nombre">Lorem3.</h3>
-                    <div class="producto recomendado3">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-                <div class="recomendado__container">
-                    <h3 class="recomendado__nombre">Lorem4.</h3>
-                    <div class="producto recomendado3">
-                        <h3 class="recomendado__estrellas">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i>
-                        </h3>
-                        <h3 class="producto__precio">$XXXX</h3>
-                    </div>
-                </div>
-            </div>
+                             
+                           
+                            
+                             
+                    
+                     
+           
         </section>
         <div class="detalle__truck">
             <img src="/images/envio-1.png" alt="logoEnvio">
@@ -131,3 +109,4 @@
 </body>
 
 </html>
+ 

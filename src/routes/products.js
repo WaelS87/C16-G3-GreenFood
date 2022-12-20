@@ -28,4 +28,5 @@ router
     .get("/categories/:category", categorieStore)
     /* Mostrar detalle del producto*/
     .get("/detalleProducto/:id", detail)
+    
 module.exports = router;

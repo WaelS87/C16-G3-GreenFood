@@ -8,7 +8,7 @@ module.exports = {
     
     home : (req,res) => {
         db.Product.findAll({
-            include:['images','category']
+            include:['images']
         })
         .then(products => {
             return res.render('home', { 

@@ -34,41 +34,33 @@ module.exports = {
 	},
     detail : (req,res) => {
         db.Product.findByPk(req.params.id,{
-            include:['images']
+            include: ['images']
+             
         })
-        .then((product)=>{
+       
+        .then((product,categories)=>{
             return res.render("products/detalleProducto",{
                 title : "Detalle del producto",
                 product,
-                toThousand
+                toThousand,
+                camelSentence,
+            
+             
         })
-       
+    
       
         })
         .catch((error)=>console.log(error))
+       
     },
+   
     carrito : (req,res) => {
         return res.render("products/carrito",{
             title : "Carrito"
         })
     },
     categorieStore : (req,res) => {
-     /*    const products = loadProducts();
-        //const category = products.find(product => product.category === +req.params.category)
-        const categoryParams = req.params.category;
-
-        const productsCategory = products.find(({category}) => category === categoryParams)
-
-
-        return res.render("products/categorieStore",{
-            title : categoryParams,
-            products,
-            categoryParams,
-            camelSentence,
-            toThousand
-        })
-
-    }, */
+   
 
     	db.Category.findOne( {
             where : {
