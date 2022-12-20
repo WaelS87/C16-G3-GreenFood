@@ -50,6 +50,10 @@ app.use(cors())
 app.use("/api", require("./routes/api/mainAPI"));
 
 
+app.use("/api/carts", require("./routes/api/apiCarts"));
+
+
+
 
 
 // catch 404 and forward to error handler
