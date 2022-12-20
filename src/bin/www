@@ -89,4 +89,4 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-console.log("Server running in port: http://localhost:3000");
+console.log(`Server running in port: http://localhost:${process.env.PORT}`);

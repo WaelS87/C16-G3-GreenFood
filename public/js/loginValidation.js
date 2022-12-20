@@ -1,55 +1,64 @@
 console.log('conexion exitosaaaaa!!!!!!')
+
+
+
 window.addEventListener('load',function(){
-    const $ =(element)=>document.getElementById(element)
+const $ =(element)=>document.getElementById(element)
+const exRegEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
+const exRegPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,12}/
+let errores = {};
+const msgError = (element, msg, event) => {
+    $(element).style.color = "red";
+    $(element).innerHTML = msg;
+    event.target.classList.add("is-invalid");
+};
+const cleanField = (element, target) => {
+    $(element).innerText = '';
+    target.classList.remove('is-invalid', 'is-valid')
+};
+const validField = (element,{target}) => {
+    cleanField(element, target)
+    target.classList.add('is-valid');
+    
+};
 
-  $('email').addEventListener('blur',function(e){
-    switch (true) {
-        case !this.value.trim():
-            $('msgEma').classList.add('is-invalid')
-            $('msgEma').innerHTML='el mail es obligatorio'
-            break;
-        case !/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(this.value):
-            $('msgEma').classList.add('is-invalid')
-            $('msgEma').innerHTML='"El email tiene un formato inválido"'
-            break;
-        default:
-            $('msgEma').classList.remove('is-invalid')
-            $('msgEma').classList.add('is-valid')
-            $('msgEma').innerHTML=null
-            break;
-    }$('email').addEventListener('focus',function(){
-        $('msgEma').classList.remove('is-invalid')
-        $('msgEma').classList.add('is-valid')
-        $('msgEma').innerHTML=null
-    })
 
-  })
 
-$('password').addEventListener('blur',function(e){
-    switch (true) {
-        case !this.value.trim():
-                $('msgPas').classList.add('is-invalid')
-                $('msgPas').innerHTML='conraseña es obligatoria'
-        break;
-        case this.value.trim().length < 6 :
-                $('msgPas').classList.add('is-invalid')
-                $('msgPas').innerHTML='debes escribir minimo 6 caracteres'
-        break;
-        case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,12}/.test(this.value):
-                $('msgPas').classList.add('is-invalid')
-                $('msgPas').innerHTML="La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial"
-        break;
-        default:
-                $('msgPas').classList.remove('is-invalid')
-                $('msgPas').classList.add('is-valid')
-                $('msgPas').innerHTML=null
-        break;
-        }
-    $('password').addEventListener('focus',function(){
-        $('msgPas').classList.remove('is-invalid')
-        $('msgPas').classList.add('is-valid')
-        $('msgPas').innerHTML=null
-  })
+
+    $('email').addEventListener('blur', function(e){
+        switch (true) {
+            case !this.value.trim():
+                errores.email = msgError('msgEma',"El email es obligatorio", e);
+                break;
+            case !exRegEmail.test(this.value):
+                errores.email = msgError('msgEma',"El email tiene un formato inválido", e);
+                break
+            default:
+                validField('msgEma',e)
+                delete errores.email
+                break;
+            }
+            console.log(errores);
+    });
+    
+   
+    $('password').addEventListener('blur', function(e){
+        switch (true) {
+            case !this.value.trim():
+                errores.password = msgError('msgPas',"La contraseña es obligatoria", e);
+                break;
+            case !exRegPass.test(this.value):
+                errores.password = msgError('msgPas',"La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial", e);
+                break
+            default:
+                validField('msgPas',e);
+                delete errores.password
+                break;
+            }
+            console.log(errores);
+    });
+    
+  
   $('form').addEventListener('keydown',function(e){
     if(e.key==Enter){
         e.preventDefault()
@@ -69,12 +78,10 @@ $('password').addEventListener('blur',function(e){
             }
         }
         !error &&  $('form').submit()
-  })
-
-
-
-
-
+       
+})
 })
 
-})
+
+
+

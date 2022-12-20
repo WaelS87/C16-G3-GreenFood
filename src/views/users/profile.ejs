@@ -3,7 +3,7 @@
 <%- include("../partials/head") %> 
 
     
-<body class="profile <%= user.rolId === 1 ? "administrador" : none %>">
+<body class="profile <%= user.rolId === 1 ? "administrador" : null %>">
     <%- include("../partials/header") %> 
     <main class="profile__main">
         <section class="profile__section">
@@ -16,7 +16,7 @@
             <form action="?_method=PUT" method="post" class="profile__form">
                 <div class="profile__form__l--container">
                     <div class="profile__imgPerfil">
-                        <img src="/images/<%= user.avatar.file ? user.avatar.file : 'perfil por defecto.jpg' %>" alt="avatarPerfil">
+                        <img src="/images/<%= user.avatar ? user.avatar : 'perfil por defecto.jpg' %>" alt="avatarPerfil">
                         <input name="avatar" type="file" id="avatar" placeholder="Seleccionar foto">
                         <p id="msgErrorAvatar" class="errorText" ></p>
                     </div>
@@ -49,10 +49,10 @@
                         
                         <div class="profile__form__box">
                             <label class="form__label" for="password">Contraseña</label>
-                            <input class="form__input" type="password" id="password" name="password">
+                            <input class="form__input" type="text" id="password" name="password" >
                             <p class="errorText"><%= locals.errors && errors.password ? errors.password.msg : null %></p>
                             <p id="msgErrorPass" class="errorText"></p>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="profile__actionButtons__container">

@@ -105,7 +105,13 @@ module.exports = {
 			toThousand,
             camelSentence
 		})*/
-        const {keywords}= req.query;
+  const {keywords}= req.query;
+    if(keywords==""){
+        
+        return res.redirect("/")
+    }
+    else{
+       
         db.Product.findAll({
             include:['images'],
             where:{
@@ -143,7 +149,7 @@ module.exports = {
         })
     })
     .catch(error=>console.log(error))
-    },
+    }},
     /* ADMIN CONTROLLERS */
 
     addProduct : (req,res) => {
