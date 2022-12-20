@@ -3,8 +3,9 @@
   <%- include("../partials/head") %>
   <body>
     <%- include("../partials/header") %>
+    
     <main class="allProducts__main" id="allProducts__main">
-      <form action="" id="search_form">
+      
         <% if (products.length > 0) { %>
         <h2 class="allProducts__price" id="allProducts__price">
           Resultados de: "<%= camelSentence(keywords) %>"
@@ -40,7 +41,7 @@
           No hay resultados de: "<%= camelSentence(keywords) %>"
         </h2>
         <% } %>
-      </form>
+     
     </main>
 
     <%- include("../partials/footer") %>

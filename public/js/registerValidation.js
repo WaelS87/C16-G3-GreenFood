@@ -341,12 +341,13 @@ $('password2').addEventListener('blur', function(e){
 $('password2').addEventListener('focus', function({target}){
     cleanField('msgPas2', target)
 });
-/*
+
 $('form').addEventListener('keydown',function(e){
     if(e.key==Enter){
         e.preventDefault()
     }
 })
+/*
 $('form').addEventListener('submit',function(e){
     e.preventDefault()
     let error = false;
