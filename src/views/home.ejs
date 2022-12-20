@@ -28,7 +28,10 @@
                 <div class="carrousel__grande">
                    <% products.forEach(product => { %>
                         <a href="/products/detalleProducto/<%= product.id %> ">
-                            <img class="homeProducts" src="../images/productos/<%= product.images[0].file %> " alt="<%= product.name %> ">
+                            <div class="productDiv__carrouselHome" >
+                                <img class="homeProducts" src="../images/productos/<%= product.images[0].file %> " alt="<%= product.name %> ">
+                                <div><p><%= product.name %></p></div>
+                            </div>
                         </a>
                    <% }) %>
                 </div>
