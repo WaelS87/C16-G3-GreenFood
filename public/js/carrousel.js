@@ -1,17 +1,18 @@
-const grande = ("/public/stylesheets/home").querySelector(".carrousel__grande")
-const punto =   ("/public/stylesheets/home").querySelectorAll(".carrousel__punto")
+console.log("Carrousel loaded!.");
 
-punto.forEach(cadaPunto, i => {
+const grande = document.querySelector(".carrousel__grande")
+const punto =   document.querySelectorAll(".carrousel__punto")
+
+punto.forEach((cadaPunto, i) => {
     punto[i].addEventListener("click", ()=> {
         let posicion = i
-        let operacion = posicion * -50
+        let operacion = posicion * -37
 
-        grande.style.translate =  `translateX(${ operacion }%)`
+        grande.style.transform =  `translateX(${ operacion }%)`
 
-        punto[i].classList.remove("activo", ()=> {
-            let posicion = i
-            let operacion = posicion * -50
-        });
+        punto.forEach( (cadaPunto, i) => {
+            punto[i].classList.remove("activo")
+        })
 
         punto[i].classList.add("activo")
 })
