@@ -124,24 +124,35 @@ module.exports = {
   update: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      const { name, surname, email, password, username } = req.body;
+      const { name, surname, email, username } = req.body;
       db.User.update(
         {
         name: name.trim(),
         surname: surname.trim(),
         username:username.trim()? username:null,
         email:email.trim(),
-        password:bcryptjs.hashSync(password, 12),
-        rolId:2,
-      }
+       },{
+        where:{
+          id : req.session.userLogin.id
+        }
+       }
       )
-        .then(()=>{
-          return res.redirect("login");
-        })
-        .catch((error) => console.log(error));
+      .then( () => {
+        req.session.userLogin = {
+         ...req.session.userLogin,
+          name : name.trim(),
+          surname: surname.trim(),
+          username:username.trim()? username:null,
+          email:email.trim()
+          
+        };
+        return res.redirect('/');
+      })
+  .catch(error => console.log(error))
+
     } else {
-      return res.render("users/registrar", {
-        title: "Registro",
+      return res.render("users/profile", {
+        title: "profile",
         errors: errors.mapped(),
         old: req.body,
       });
