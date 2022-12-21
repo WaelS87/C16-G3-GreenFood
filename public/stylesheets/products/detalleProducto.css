@@ -406,8 +406,8 @@
     }
 
     .detalle__main div.recomendado__container img {
-        width: 200px;
-        height: 180px;
+        width: 150px;
+        height: 100px;
         margin-top: 10px;
     }
 }
