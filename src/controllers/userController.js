@@ -125,7 +125,7 @@ module.exports = {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       const { name, surname, email, password, username } = req.body;
-      db.User.create(
+      db.User.update(
         {
         name: name.trim(),
         surname: surname.trim(),
