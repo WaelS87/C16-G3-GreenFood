@@ -12,9 +12,10 @@
         <section class="detalle__seccion">
             <div class="container">
                 <div class="main__images">
-                    <img src="/images/productos/<%= product.images[0].file %> "alt="image 2">
-                    <img src="/images/productos/<%= product.images[1].file %> "alt="image 3">
-                    <img src="/images/productos/<%= product.images[2].file %> "alt="image 4">
+                    <% product.images.forEach(image => { %>
+                        <img src="/images/productos/<%= image.file %> "alt="image 2">
+                    <% }) %>
+                   
                 </div>
                 <div class="main__div">
                     <img class="main__div--img" src="/images/productos/<%= product.images[0].file %> " alt="imagen producto">
