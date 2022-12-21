@@ -430,7 +430,7 @@
 }
 
 .carrousel__punto.activo{
-    background-color: orange;
+    background-color: var(--color-verde);
 }
 
 .productDiv__carrouselHome {
