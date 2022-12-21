@@ -6,7 +6,7 @@ const punto =   document.querySelectorAll(".carrousel__punto")
 punto.forEach((cadaPunto, i) => {
     punto[i].addEventListener("click", ()=> {
         let posicion = i
-        let operacion = posicion * -37
+        let operacion = posicion * -19
 
         grande.style.transform =  `translateX(${ operacion }%)`
 

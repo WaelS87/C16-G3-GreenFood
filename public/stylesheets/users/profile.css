@@ -158,7 +158,7 @@
 
 .profile__form__box label{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     width: 200px;
 }
 
