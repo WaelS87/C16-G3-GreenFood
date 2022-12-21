@@ -7,17 +7,22 @@
     background-color: var(--color-verde);
 }
 
+.allProducts__main__section{
+    width:100%;
+    text-align: center;
+    background-color: #191a1988;
+}
+
 .allProducts__main__section a{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.allProducts__main__section{
-    width:100%;
-    text-align: center;
-    background-color: #191a1988;
+.allProducts__article img{
+    width: 100%;
 }
+
 .allProducts__main .allProducts__price{
     color: var(--color-negro);
     background-color: rgba(255,255, 255, 0.5);
