@@ -32,7 +32,8 @@ module.exports = {
 		
 
 	},
-    detail : (req,res) => {
+
+   /*  detail : (req,res) => {
         db.Product.findByPk(req.params.id,{
             include:['images']
         })
@@ -46,8 +47,22 @@ module.exports = {
       
         })
         .catch((error)=>console.log(error))
-    },
-   
+    },*/
+    detail: (req, res) => {
+		// Do the magic
+		db.Product.findByPk(req.params.id,{
+			include : ['images']
+		})
+			.then(product => res. render("products/detalleProducto",{
+                title : "Detalle del producto",
+               category,
+               product,
+              toThousand
+			}))
+			.catch(error => console.log(error))
+	},
+            
+          
     carrito : (req,res) => {
         return res.render("products/carrito",{
             title : "Carrito"
