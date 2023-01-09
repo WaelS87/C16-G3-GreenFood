@@ -449,14 +449,15 @@
 .productDiv__carrouselHome div {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
     background-color: var(--color-verde);
     justify-content: center;
+    width: 100%;
 }
 
 .productDiv__carrouselHome div p {
+    height: 65px;
     text-align: center;
+    padding-top: 15px;
 }
 
 
